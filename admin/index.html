@@ -3,110 +3,42 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Newsroom desk — MeridianDesk (local editing tool)</title>
+<title>Kuonomics — Markets &amp; Macro</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/styles.css">
-<style>
-  body{padding-bottom:60px;}
-  .tool-header{border-bottom:2px solid var(--ink); padding:26px 0 20px;}
-  .tool-header h1{font-family:var(--font-serif); font-size:28px; margin:0 0 6px;}
-  .tool-header p{font-size:13.5px; color:var(--ink-soft); max-width:70ch; margin:0;}
-  .load-row{
-    display:flex; align-items:center; gap:14px; flex-wrap:wrap;
-    background:var(--paper-dim); border:1px solid var(--rule); padding:16px 20px; margin:24px 0;
-  }
-  .load-row label.file-btn{
-    font-family:var(--font-sans); font-size:13px; font-weight:500;
-    border:1px solid var(--ink); padding:8px 14px; cursor:pointer; border-radius:2px;
-  }
-  .load-row label.file-btn:hover{background:var(--ink); color:var(--paper);}
-  .load-row input[type=file]{display:none;}
-  .week-field{display:flex; align-items:center; gap:8px; font-family:var(--font-mono); font-size:12px;}
-  .week-field input{font-family:var(--font-mono); font-size:12px; padding:6px 8px; border:1px solid var(--ink); border-radius:2px;}
-</style>
+<link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-
-<header class="tool-header">
+<div class="topline">
   <div class="wrap">
-    <h1>Newsroom desk</h1>
-    <p>This is a local editing tool for preparing MeridianDesk's weekly content. It has no server of its own: load last week's <code>articles.json</code>, edit the stories below, then download the updated file and drop it into the site's <code>content/</code> folder to publish.</p>
+    <span id="clockLine">Markets desk</span>
+    <span id="memberLine">Reading as Free</span>
+  </div>
+</div>
+<header class="masthead">
+  <div class="wrap">
+    <div>
+      <div class="wordmark" onclick="goHome()">Kuo<span>nomics</span></div>
+      <div class="tagline">Independent coverage of index moves, macro data, and the sectors that carry them.</div>
+    </div>
+    <div class="mast-actions">
+      <button class="btn" onclick="goView('membership')">Membership</button>
+    </div>
   </div>
 </header>
-
-<main class="wrap">
-  <div class="load-row">
-    <label class="file-btn">Load existing articles.json
-      <input type="file" accept="application/json" onchange="loadJsonFile(this)">
-    </label>
-    <div class="week-field">
-      Week of <input type="date" id="weekOfInput">
-    </div>
-    <button class="btn solid" onclick="downloadJson()">Download articles.json</button>
-    <span class="form-msg" id="loadMsg" style="min-width:200px;"></span>
-  </div>
-
-  <div class="newsroom" style="border:1px solid var(--rule); background:var(--paper-dim); padding:28px 26px;">
-    <h2 id="formTitle">New story</h2>
-    <p class="sub">Stories in this batch: <span id="storyCount">0</span></p>
-    <div class="desk-grid">
-      <div>
-        <form id="storyForm" onsubmit="return false;">
-          <div class="field-row">
-            <div class="field">
-              <label>Section</label>
-              <select id="f-section"></select>
-            </div>
-            <div class="field">
-              <label>Access tier</label>
-              <select id="f-tier"></select>
-            </div>
-          </div>
-          <div class="field">
-            <label>Headline</label>
-            <input id="f-headline" type="text" placeholder="S&amp;P 500 holds key support as breadth improves">
-          </div>
-          <div class="field">
-            <label>Dek (one or two sentence summary)</label>
-            <textarea id="f-dek" rows="2" placeholder="A short summary shown on the front page and section list."></textarea>
-          </div>
-          <div class="field">
-            <label>Story body (blank line between paragraphs)</label>
-            <textarea id="f-body" rows="8" placeholder="Full story text..."></textarea>
-          </div>
-          <div class="field-row">
-            <div class="field">
-              <label>Byline</label>
-              <input id="f-author" type="text" placeholder="Reporter name">
-            </div>
-          </div>
-          <div class="field" style="border-top:1px dashed var(--rule); padding-top:16px; margin-top:4px;">
-            <label>Macroeconomic reasoning &mdash; theory (each comes with its standard textbook graph)</label>
-            <select id="f-theory-key"></select>
-          </div>
-          <div class="field">
-            <label>Graduate-level reasoning connecting this event to the theory</label>
-            <textarea id="f-theory-body" rows="6" placeholder="Explain the framework, then connect it explicitly to the event above."></textarea>
-          </div>
-          <div style="display:flex; gap:10px; align-items:center;">
-            <button class="btn solid" id="submitBtn" onclick="submitStory()">Add story</button>
-            <button class="btn" id="cancelBtn" onclick="cancelEdit()" style="display:none;">Cancel edit</button>
-          </div>
-          <div class="form-msg" id="formMsg"></div>
-        </form>
-      </div>
-      <div class="desk-list">
-        <h3>This week's batch</h3>
-        <div id="deskList"></div>
-      </div>
-    </div>
-  </div>
-</main>
-
-<script src="../assets/js/config.js"></script>
-<script src="../assets/js/theories.js"></script>
-<script src="../assets/js/utils.js"></script>
-<script src="admin.js"></script>
+<nav class="sections">
+  <div class="wrap" id="sectionNav"></div>
+</nav>
+<main class="wrap" id="app"></main>
+<footer>
+  Kuonomics is a demonstration publication. Figures and quotes shown are illustrative placeholders, not live market data.
+  <br>Content editors: prepare next week's stories with the <a href="admin/index.html">newsroom desk tool</a>.
+</footer>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/theories.js"></script>
+<script src="assets/js/content.js"></script>
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/render.js"></script>
+<script src="assets/js/app.js"></script>
 </body>
 </html>
