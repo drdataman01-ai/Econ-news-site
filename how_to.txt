@@ -1,0 +1,42 @@
+Now let's build the folder structure and assemble the real module files.Now let's assemble utils.js, render.js, and app.js:Now let's write the public `index.html`:Now let's write the standalone admin tool: `admin/admin.js` and `admin/index.html`.Now update `index.html` to include `config.js` first:Now let's build the admin `index.html`:Now let's validate every JS file parses correctly, check the full directory tree, and smoke-test that admin.js/content.js/render.js/app.js don't reference undefined globals:Good. Now let's smoke-test the actual site by serving it locally and fetching with curl/node to confirm the fetch path and rendering pipeline work end-to-end:Full runtime smoke test passes end-to-end: content loads via `fetch`, navigation works, the article view renders with its theory graph, and the membership table renders. Let's also sanity-check the admin tool the same way:I broke the single HTML file into a real folder structure where content is fully decoupled from code:
+
+```
+econ-news-site/
+├── index.html                 The public site (no article text inside it)
+├── README.md
+├── assets/
+│   ├── css/styles.css          All styling
+│   └── js/
+│       ├── config.js           Sections + membership tiers
+│       ├── theories.js         The 17-theory library + their SVG graphs
+│       ├── content.js          Fetches content/articles.json + tracks membership
+│       ├── utils.js            Shared helpers
+│       ├── render.js           Turns data into HTML
+│       └── app.js              Navigation/click handlers
+├── content/
+│   ├── articles.json           ← THIS WEEK'S CONTENT — the file you swap weekly
+│   └── schema.md                Field-by-field docs for that JSON
+└── admin/
+    ├── index.html               Newsroom desk: a local tool for preparing next week's JSON
+    └── admin.js
+```
+
+How it works: `index.html` contains zero article text. On load, `content.js` fetches `content/articles.json`, and everything — front page, the four desks, article pages, paywalls, theory panels — renders from whatever's in that file. To publish a new week, you don't touch any code:
+
+1. Open `admin/index.html` (a standalone local tool, no server needed).
+2. Load last week's `articles.json`, add/edit/retire stories, pick each story's tier and (optionally) its macro theory.
+3. Click "Download articles.json."
+4. Drop that file into `content/`, redeploy.
+
+I ran the whole thing end-to-end (content loading, navigation, article rendering with a theory graph, membership table, and the admin tool's add-story flow) in a headless test — it all works. One real constraint worth knowing: opening `index.html` directly from disk won't load the content, because browsers block local-file fetches; you need to serve the folder (`python3 -m http.server` or similar — noted in the README) or actually deploy it.
+
+Also flagged in the README: membership selection is stored in the browser (`localStorage`) and there's no real backend or auth yet — `loadData()` in `content.js` is the one place to swap in a real API later without touching anything else.
+
+------------------
+
+1. Put econ-news-site into GitHub.
+2. Deploy it to Firebase Hosting.
+3. Connect your custom domain.
+4. Keep using articles.json.
+5. Build the ADK news-agent separately.
+6. Later replace articles.json with Firestore.
