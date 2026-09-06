@@ -2,6 +2,7 @@ const THEORY_LIBRARY = {
   phillips: {
     name: 'New Keynesian Phillips curve',
     caption: 'Inflation rises with the output gap; a higher expected inflation path shifts the whole curve up.',
+    applications: ['Inflation reports', 'Fed policy meetings', 'Wage negotiations'],
     svg: `<svg viewBox="0 0 380 220" role="img" aria-label="Phillips curve diagram: inflation rising with the output gap, with a dashed curve shifted upward for higher expected inflation">
       <line x1="50" y1="190" x2="50" y2="18" stroke="#454C56" stroke-width="1"/>
       <line x1="50" y1="190" x2="360" y2="190" stroke="#454C56" stroke-width="1"/>
@@ -18,6 +19,7 @@ const THEORY_LIBRARY = {
   okun: {
     name: "Okun's law",
     caption: 'Growth above trend associates with falling unemployment; growth below trend associates with rising unemployment.',
+    applications: ['Jobs reports', 'GDP releases', 'Recession calls'],
     svg: `<svg viewBox="0 0 380 220" role="img" aria-label="Okun's law scatter diagram: a downward sloping line relating GDP growth relative to trend to the change in the unemployment rate">
       <line x1="50" y1="190" x2="50" y2="18" stroke="#454C56" stroke-width="1"/>
       <line x1="50" y1="190" x2="360" y2="190" stroke="#454C56" stroke-width="1"/>
@@ -38,6 +40,7 @@ const THEORY_LIBRARY = {
   uip: {
     name: 'Uncovered interest parity & the policy trilemma',
     caption: 'A country can hold any two of the three corners below, but not all three at once.',
+    applications: ['Currency pegs', 'Capital controls', 'Central bank independence', 'Open economies'],
     svg: `<svg viewBox="0 0 380 220" role="img" aria-label="The Mundell-Fleming trilemma triangle: fixed exchange rate, free capital mobility, and independent monetary policy as three corners of which only two can be held at once">
       <polygon points="190,22 50,188 330,188" fill="none" stroke="#14181F" stroke-width="1.5"/>
       <text x="190" y="14" text-anchor="middle" font-family="IBM Plex Sans" font-size="11" font-weight="500" fill="#14181F">Independent monetary policy</text>
@@ -54,6 +57,7 @@ const THEORY_LIBRARY = {
   passthrough: {
     name: 'Exchange-rate pass-through',
     caption: 'Prices rarely absorb the full currency move; the observed path settles below full pass-through.',
+    applications: ['Currency depreciation stories', 'Import price inflation', 'Tariff impact'],
     svg: `<svg viewBox="0 0 380 220" role="img" aria-label="Exchange rate pass-through chart: a step function for full pass-through versus a slower curve that settles below 100 percent for observed pass-through">
       <line x1="50" y1="190" x2="50" y2="18" stroke="#454C56" stroke-width="1"/>
       <line x1="50" y1="190" x2="360" y2="190" stroke="#454C56" stroke-width="1"/>
@@ -69,6 +73,7 @@ const THEORY_LIBRARY = {
   schumpeter: {
     name: 'Creative destruction & capital reallocation',
     caption: 'Capital shifts within the sector, from incumbents toward the firms holding the technological frontier.',
+    applications: ['Industry disruption', 'AI displacing incumbents', 'Tech sector coverage'],
     svg: `<svg viewBox="0 0 380 220" role="img" aria-label="Bar chart showing capital share shifting from incumbent firms toward frontier firms between an earlier and later period">
       <line x1="50" y1="190" x2="360" y2="190" stroke="#454C56" stroke-width="1"/>
       <rect x="90" y="54" width="26" height="136" fill="#14181F"/>
@@ -86,6 +91,7 @@ const THEORY_LIBRARY = {
   tobinq: {
     name: "Tobin's Q investment model",
     caption: 'Investment accelerates once market value exceeds the replacement cost of capital, at Q = 1.',
+    applications: ['Corporate investment', 'Capex cycles', 'M&A activity'],
     svg: `<svg viewBox="0 0 380 220" role="img" aria-label="Tobin's Q diagram: investment rate rising with Q, with a threshold line at Q equals 1 separating disinvest and invest regions">
       <line x1="50" y1="190" x2="50" y2="18" stroke="#454C56" stroke-width="1"/>
       <line x1="50" y1="190" x2="360" y2="190" stroke="#454C56" stroke-width="1"/>
@@ -101,6 +107,7 @@ const THEORY_LIBRARY = {
   accelerator: {
     name: 'Leading indicators & the inventory accelerator',
     caption: 'New orders (leading) turn ahead of production and shipments (coincident) by roughly one cycle phase.',
+    applications: ['Manufacturing PMI', 'Business cycle turning points', 'Supply chain stories'],
     svg: `<svg viewBox="0 0 400 220" role="img" aria-label="Two wavy lines over time, with new orders leading production by a phase shift, illustrating a leading indicator relationship">
       <line x1="50" y1="190" x2="50" y2="18" stroke="#454C56" stroke-width="1"/>
       <line x1="50" y1="190" x2="380" y2="190" stroke="#454C56" stroke-width="1"/>
@@ -115,6 +122,7 @@ const THEORY_LIBRARY = {
   islm: {
     name: 'IS-LM model',
     caption: 'The IS curve traces goods-market equilibrium, the LM curve money-market equilibrium; their crossing pins down output and the interest rate together.',
+    applications: ['Fed rate decisions', 'Fiscal stimulus', 'Monetary-fiscal interaction'],
     svg: `<svg viewBox="0 0 380 220" role="img" aria-label="IS-LM diagram: a downward sloping IS curve and an upward sloping LM curve crossing at the equilibrium output and interest rate">
       <line x1="50" y1="190" x2="50" y2="18" stroke="#454C56" stroke-width="1"/>
       <line x1="50" y1="190" x2="360" y2="190" stroke="#454C56" stroke-width="1"/>
@@ -131,6 +139,7 @@ const THEORY_LIBRARY = {
   adas: {
     name: 'Aggregate demand & aggregate supply',
     caption: 'Short-run equilibrium sits where aggregate demand meets short-run aggregate supply; the vertical line marks potential output.',
+    applications: ['Supply shocks', 'Demand shocks', 'Inflation vs. output tradeoffs'],
     svg: `<svg viewBox="0 0 380 220" role="img" aria-label="AD-AS diagram: a downward sloping aggregate demand curve, an upward sloping short run aggregate supply curve, and a vertical long run aggregate supply line at potential output">
       <line x1="50" y1="190" x2="50" y2="18" stroke="#454C56" stroke-width="1"/>
       <line x1="50" y1="190" x2="360" y2="190" stroke="#454C56" stroke-width="1"/>
@@ -148,6 +157,7 @@ const THEORY_LIBRARY = {
   solow: {
     name: 'Solow-Swan growth model',
     caption: 'Capital per worker converges to the steady state where investment per worker exactly offsets depreciation and population growth.',
+    applications: ['Long-run growth comparisons', 'Capital deepening', 'Emerging market catch-up'],
     svg: `<svg viewBox="0 0 380 220" role="img" aria-label="Solow growth model diagram: a concave output-per-worker curve, a scaled-down investment curve, and a straight depreciation line, crossing at the steady state capital per worker">
       <line x1="50" y1="190" x2="50" y2="18" stroke="#454C56" stroke-width="1"/>
       <line x1="50" y1="190" x2="360" y2="190" stroke="#454C56" stroke-width="1"/>
@@ -167,6 +177,7 @@ const THEORY_LIBRARY = {
   qtm: {
     name: 'Quantity theory of money',
     caption: 'In the long run, sustained money growth in excess of real output growth passes one-for-one into inflation.',
+    applications: ['Money supply growth', 'Hyperinflation cases', 'Central bank balance sheets'],
     svg: `<svg viewBox="0 0 380 220" role="img" aria-label="Quantity theory of money diagram: a 45 degree line showing inflation rising one for one with money supply growth in excess of output growth">
       <line x1="50" y1="190" x2="50" y2="18" stroke="#454C56" stroke-width="1"/>
       <line x1="50" y1="190" x2="360" y2="190" stroke="#454C56" stroke-width="1"/>
@@ -182,6 +193,7 @@ const THEORY_LIBRARY = {
   fisher: {
     name: 'Fisher equation',
     caption: 'The nominal rate tracks the roughly stable real rate plus expected inflation; the gap between the two lines is the expected inflation premium.',
+    applications: ['Real vs. nominal rates', 'Bond yields', 'TIPS / breakeven inflation'],
     svg: `<svg viewBox="0 0 380 220" role="img" aria-label="Fisher equation diagram: a flat real interest rate line and a rising nominal interest rate line, with the vertical gap between them equal to expected inflation">
       <line x1="50" y1="190" x2="50" y2="18" stroke="#454C56" stroke-width="1"/>
       <line x1="50" y1="190" x2="360" y2="190" stroke="#454C56" stroke-width="1"/>
@@ -198,6 +210,7 @@ const THEORY_LIBRARY = {
   taylorrule: {
     name: 'Taylor rule',
     caption: 'The rule recommends raising the policy rate by more than one-for-one with inflation above target, so the real rate rises when inflation runs hot.',
+    applications: ['Fed policy rate decisions', 'Rate-hike / cut debates', 'Central bank credibility'],
     svg: `<svg viewBox="0 0 380 220" role="img" aria-label="Taylor rule diagram: an upward sloping line with slope greater than one relating the inflation gap to the recommended policy rate">
       <line x1="50" y1="190" x2="50" y2="18" stroke="#454C56" stroke-width="1"/>
       <line x1="50" y1="190" x2="360" y2="190" stroke="#454C56" stroke-width="1"/>
@@ -214,6 +227,7 @@ const THEORY_LIBRARY = {
   ricardian: {
     name: 'Ricardian equivalence',
     caption: 'A deficit-financed tax cut leaves Ricardian consumption unchanged, since households save the windfall against a future tax bill.',
+    applications: ['Deficit-financed tax cuts', 'Stimulus effectiveness debates', 'Fiscal policy skepticism'],
     svg: `<svg viewBox="0 0 380 220" role="img" aria-label="Ricardian equivalence diagram: private consumption stays flat across a debt-financed tax cut under the Ricardian view, versus a temporary bump and reversal under the naive view">
       <line x1="50" y1="190" x2="50" y2="18" stroke="#454C56" stroke-width="1"/>
       <line x1="50" y1="190" x2="360" y2="190" stroke="#454C56" stroke-width="1"/>
@@ -230,6 +244,7 @@ const THEORY_LIBRARY = {
   yieldcurve: {
     name: 'Term structure of interest rates',
     caption: 'A normal curve rises with maturity; an inversion, where short rates exceed long rates, has historically preceded recessions.',
+    applications: ['Recession signals', 'Bond market coverage', 'Fed policy expectations'],
     svg: `<svg viewBox="0 0 380 220" role="img" aria-label="Yield curve diagram: an upward sloping normal yield curve versus a downward sloping inverted yield curve across bond maturities">
       <line x1="50" y1="190" x2="50" y2="18" stroke="#454C56" stroke-width="1"/>
       <line x1="50" y1="190" x2="360" y2="190" stroke="#454C56" stroke-width="1"/>
@@ -244,6 +259,7 @@ const THEORY_LIBRARY = {
   loanablefunds: {
     name: 'Loanable funds market',
     caption: 'Saving supplies loanable funds and investment demands them; the real interest rate clears the market where the two curves cross.',
+    applications: ['Savings and investment', 'Real interest rate moves', 'Government borrowing crowding out'],
     svg: `<svg viewBox="0 0 380 220" role="img" aria-label="Loanable funds diagram: an upward sloping supply of savings curve and a downward sloping investment demand curve crossing at the equilibrium real interest rate">
       <line x1="50" y1="190" x2="50" y2="18" stroke="#454C56" stroke-width="1"/>
       <line x1="50" y1="190" x2="360" y2="190" stroke="#454C56" stroke-width="1"/>
@@ -259,6 +275,7 @@ const THEORY_LIBRARY = {
   rbc: {
     name: 'Real business cycle theory',
     caption: 'A technology shock propagates through output, investment, and consumption together, with investment moving most and consumption least.',
+    applications: ['Productivity shocks', 'Tech-driven expansions', 'Supply-side recessions'],
     svg: `<svg viewBox="0 0 380 220" role="img" aria-label="Real business cycle impulse response diagram: output, investment, and consumption all rising after a technology shock then decaying back to trend, with investment moving the most and consumption the least">
       <line x1="50" y1="190" x2="50" y2="18" stroke="#454C56" stroke-width="1"/>
       <line x1="50" y1="190" x2="360" y2="190" stroke="#454C56" stroke-width="1"/>
@@ -276,6 +293,7 @@ const THEORY_LIBRARY = {
   nairu: {
     name: 'NAIRU (non-accelerating inflation rate of unemployment)',
     caption: 'Below the NAIRU, inflation keeps accelerating year after year rather than settling at a higher level.',
+    applications: ['Labor market stories', 'Wage growth', 'Fed decisions'],
     svg: `<svg viewBox="0 0 380 220" role="img" aria-label="NAIRU diagram: a vertical line marking the non-accelerating inflation rate of unemployment, with inflation spiraling upward for unemployment held below it and flat above it">
       <line x1="50" y1="190" x2="50" y2="18" stroke="#454C56" stroke-width="1"/>
       <line x1="50" y1="190" x2="360" y2="190" stroke="#454C56" stroke-width="1"/>
@@ -292,6 +310,7 @@ const THEORY_LIBRARY = {
   financial_accelerator: {
     name: 'Financial accelerator',
     caption: 'A shock to borrower net worth widens the external finance premium, which amplifies and propagates the initial shock through investment.',
+    applications: ['Credit crises', 'Bank lending', 'Commercial real estate', 'Private credit'],
     svg: `<svg viewBox="0 0 380 220" role="img" aria-label="Financial accelerator diagram: a downward sloping curve showing the external finance premium rising as borrower net worth falls, feeding back into a larger drop in investment">
       <line x1="50" y1="190" x2="50" y2="18" stroke="#454C56" stroke-width="1"/>
       <line x1="50" y1="190" x2="360" y2="190" stroke="#454C56" stroke-width="1"/>
@@ -307,6 +326,7 @@ const THEORY_LIBRARY = {
   minsky: {
     name: "Minsky's financial instability hypothesis",
     caption: 'Stability breeds risk-taking: balance sheets drift from hedge to speculative to Ponzi finance over the expansion, setting up the "Minsky moment."',
+    applications: ['Bubbles', 'Leverage', 'Housing markets', 'Crypto'],
     svg: `<svg viewBox="0 0 380 220" role="img" aria-label="Minsky financial instability diagram: leverage rising over the expansion from hedge finance through speculative finance to Ponzi finance, followed by a sharp deleveraging collapse">
       <line x1="50" y1="190" x2="50" y2="18" stroke="#454C56" stroke-width="1"/>
       <line x1="50" y1="190" x2="360" y2="190" stroke="#454C56" stroke-width="1"/>
@@ -324,6 +344,7 @@ const THEORY_LIBRARY = {
   behavioral_finance: {
     name: 'Behavioral finance & prospect theory',
     caption: 'The value function is steeper for losses than for equivalent gains, so a loss hurts more than a same-sized gain feels good.',
+    applications: ['Meme stocks', 'Retail investing', 'Market bubbles'],
     svg: `<svg viewBox="0 0 380 220" role="img" aria-label="Prospect theory value function diagram: an S shaped curve that is concave for gains and steeper convex for losses, kinked at a reference point">
       <line x1="50" y1="105" x2="360" y2="105" stroke="#454C56" stroke-width="1"/>
       <line x1="205" y1="18" x2="205" y2="190" stroke="#454C56" stroke-width="1"/>
@@ -340,6 +361,7 @@ const THEORY_LIBRARY = {
   comparative_advantage: {
     name: 'Comparative advantage & gains from trade',
     caption: 'Trade lets each country push consumption beyond its own production frontier by specializing where its opportunity cost is lowest.',
+    applications: ['Trade wars', 'Tariffs', 'Manufacturing'],
     svg: `<svg viewBox="0 0 380 220" role="img" aria-label="Comparative advantage diagram: a country's production possibility frontier compared with an outward-shifted consumption possibility line achievable through trade">
       <line x1="50" y1="190" x2="50" y2="18" stroke="#454C56" stroke-width="1"/>
       <line x1="50" y1="190" x2="360" y2="190" stroke="#454C56" stroke-width="1"/>
@@ -356,6 +378,7 @@ const THEORY_LIBRARY = {
   endogenous_growth: {
     name: 'Endogenous growth (AK / R&D-based)',
     caption: 'Unlike Solow, growth here does not converge to zero: sustained investment in ideas or capital keeps output growing without diminishing returns.',
+    applications: ['AI', 'Education', 'R&D', 'Innovation policy'],
     svg: `<svg viewBox="0 0 380 220" role="img" aria-label="Endogenous growth diagram: output per worker rising exponentially without bound, contrasted with a Solow-style path that flattens out at a steady state">
       <line x1="50" y1="190" x2="50" y2="18" stroke="#454C56" stroke-width="1"/>
       <line x1="50" y1="190" x2="360" y2="190" stroke="#454C56" stroke-width="1"/>
@@ -370,6 +393,7 @@ const THEORY_LIBRARY = {
   credit_cycle: {
     name: 'Credit cycle',
     caption: 'Credit growth and asset prices tend to reinforce each other on the way up and the way down, producing a boom-bust cycle around the real economy.',
+    applications: ['Bank lending', 'Housing', 'Recessions'],
     svg: `<svg viewBox="0 0 380 220" role="img" aria-label="Credit cycle diagram: credit growth and asset prices rising together in a boom then falling together in a bust, oscillating around a flatter real economic activity line">
       <line x1="50" y1="190" x2="50" y2="18" stroke="#454C56" stroke-width="1"/>
       <line x1="50" y1="190" x2="360" y2="190" stroke="#454C56" stroke-width="1"/>
@@ -387,6 +411,7 @@ const THEORY_LIBRARY = {
   debt_sustainability: {
     name: 'Debt sustainability (r &minus; g dynamics)',
     caption: 'The debt-to-GDP ratio is stable when the primary balance offsets (interest rate &minus; growth rate) times existing debt; when r exceeds g, debt compounds without a primary surplus.',
+    applications: ['U.S. debt', 'Sovereign debt crises', 'Fiscal policy'],
     svg: `<svg viewBox="0 0 380 220" role="img" aria-label="Debt sustainability diagram: debt to GDP ratio exploding upward when the interest rate exceeds the growth rate, versus stabilizing when growth exceeds the interest rate">
       <line x1="50" y1="190" x2="50" y2="18" stroke="#454C56" stroke-width="1"/>
       <line x1="50" y1="190" x2="360" y2="190" stroke="#454C56" stroke-width="1"/>

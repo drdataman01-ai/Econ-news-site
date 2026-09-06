@@ -158,16 +158,24 @@ function renderClassroomView(){
   keys.forEach(key=>{
     const t = THEORY_LIBRARY[key];
     const open = state.classroomOpen === key;
+    const apps = Array.isArray(t.applications) ? t.applications : [];
     html += `
-      <div class="theory-block classroom-item">
-        <button class="theory-toggle" aria-expanded="${open}" onclick="toggleClassroomTheory('${key}')">
-          <span class="label-name">${escapeHtml(t.name)}</span>
-          <span class="caret">${open ? 'Hide &uarr;' : 'Dig deeper &darr;'}</span>
-        </button>
-        ${open ? `
-        <div class="theory-panel">
-          <div class="theory-graph">${t.svg}</div>
-          <p class="theory-caption">${escapeHtml(t.caption)} Illustrative schematic, not fitted to data.</p>
+      <div class="classroom-row">
+        <div class="theory-block classroom-item">
+          <button class="theory-toggle" aria-expanded="${open}" onclick="toggleClassroomTheory('${key}')">
+            <span class="label-name">${escapeHtml(t.name)}</span>
+            <span class="caret">${open ? 'Hide &uarr;' : 'Dig deeper &darr;'}</span>
+          </button>
+          ${open ? `
+          <div class="theory-panel">
+            <div class="theory-graph">${t.svg}</div>
+            <p class="theory-caption">${escapeHtml(t.caption)} Illustrative schematic, not fitted to data.</p>
+          </div>` : ''}
+        </div>
+        ${apps.length ? `
+        <div class="classroom-apps">
+          <p class="apps-label">Use for</p>
+          <ul>${apps.map(a=>`<li>${escapeHtml(a)}</li>`).join('')}</ul>
         </div>` : ''}
       </div>`;
   });
