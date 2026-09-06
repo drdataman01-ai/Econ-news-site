@@ -174,7 +174,7 @@ function renderClassroomView(){
         </div>
         ${apps.length ? `
         <div class="classroom-apps">
-          <p class="apps-label">Use for</p>
+          <p class="apps-label">Applications</p>
           <ul>${apps.map(a=>`<li>${escapeHtml(a)}</li>`).join('')}</ul>
         </div>` : ''}
       </div>`;
