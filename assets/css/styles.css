@@ -258,6 +258,11 @@
   .theory-graph svg{width:100%; height:auto; display:block; max-width:440px; margin:0 auto;}
   .theory-caption{font-family:var(--font-mono); font-size:11px; color:var(--ink-soft); margin:8px 0 18px; line-height:1.5;}
 
+  /* ---- economics classroom ---- */
+  .classroom-list{max-width:760px;}
+  .classroom-item.theory-block{margin-top:0; padding-top:22px;}
+  .classroom-item.theory-block:first-child{border-top:none; padding-top:0;}
+
   /* ---- membership ---- */
   .membership{border-top:2px solid var(--ink); margin-top:56px; padding-top:40px;}
   .membership .section-head{margin-bottom:28px;}

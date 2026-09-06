@@ -4,6 +4,7 @@ function renderNav(){
   SECTIONS.forEach(s=>{
     html += `<button class="${state.view==='section' && state.sectionId===s.id ? 'active':''}" onclick="goSection('${s.id}')">${s.label}</button>`;
   });
+  html += `<button class="${state.view==='classroom'?'active':''}" onclick="goView('classroom')">Economics classroom</button>`;
   nav.innerHTML = html;
 }
 function lockTag(article){
@@ -145,6 +146,36 @@ function renderArticleView(){
   return html;
 }
 
+function renderClassroomView(){
+  const keys = Object.keys(THEORY_LIBRARY).sort((a,b)=> THEORY_LIBRARY[a].name.localeCompare(THEORY_LIBRARY[b].name));
+  let html = `<div class="section-head" style="margin-bottom:26px;">
+    <div class="kicker">Reference</div>
+    <h2>Economics classroom</h2>
+    <p>The frameworks our analysts reach for most often, gathered in one place with the underlying diagram and a plain-language walkthrough &mdash; independent of whatever story they're attached to this week.</p>
+  </div>`;
+
+  html += `<div class="classroom-list">`;
+  keys.forEach(key=>{
+    const t = THEORY_LIBRARY[key];
+    const open = state.classroomOpen === key;
+    html += `
+      <div class="theory-block classroom-item">
+        <button class="theory-toggle" aria-expanded="${open}" onclick="toggleClassroomTheory('${key}')">
+          <span class="label-name">${escapeHtml(t.name)}</span>
+          <span class="caret">${open ? 'Hide &uarr;' : 'Dig deeper &darr;'}</span>
+        </button>
+        ${open ? `
+        <div class="theory-panel">
+          <div class="theory-graph">${t.svg}</div>
+          <p class="theory-caption">${escapeHtml(t.caption)} Illustrative schematic, not fitted to data.</p>
+        </div>` : ''}
+      </div>`;
+  });
+  html += `</div>`;
+
+  return html;
+}
+
 function renderMembershipView(){
   let head = `<div class="section-head">
     <div class="kicker">Membership</div>
@@ -198,4 +229,5 @@ function render(){
   else if(state.view === 'section') app.innerHTML = renderSectionView();
   else if(state.view === 'article') app.innerHTML = renderArticleView();
   else if(state.view === 'membership') app.innerHTML = renderMembershipView();
+  else if(state.view === 'classroom') app.innerHTML = renderClassroomView();
 }

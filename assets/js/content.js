@@ -23,7 +23,8 @@ let state = {
   membership: 'free',
   loaded: false,
   loadError: false,
-  theoryOpen: false
+  theoryOpen: false,
+  classroomOpen: null
 };
 
 function sectionLabel(id){
