@@ -272,6 +272,131 @@ const THEORY_LIBRARY = {
       <path d="M60,150 C90,120 130,110 170,115 C220,125 280,140 340,148" fill="none" stroke="#14181F" stroke-width="2" stroke-dasharray="6,4"/>
       <text x="260" y="140" font-family="IBM Plex Mono" font-size="10" fill="#14181F">consumption</text>
     </svg>`
+  },
+  nairu: {
+    name: 'NAIRU (non-accelerating inflation rate of unemployment)',
+    caption: 'Below the NAIRU, inflation keeps accelerating year after year rather than settling at a higher level.',
+    svg: `<svg viewBox="0 0 380 220" role="img" aria-label="NAIRU diagram: a vertical line marking the non-accelerating inflation rate of unemployment, with inflation spiraling upward for unemployment held below it and flat above it">
+      <line x1="50" y1="190" x2="50" y2="18" stroke="#454C56" stroke-width="1"/>
+      <line x1="50" y1="190" x2="360" y2="190" stroke="#454C56" stroke-width="1"/>
+      <text x="205" y="212" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="#454C56">Unemployment rate</text>
+      <text x="20" y="105" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="#454C56" transform="rotate(-90 20 105)">Inflation, &#960;</text>
+      <line x1="210" y1="18" x2="210" y2="190" stroke="#14181F" stroke-width="1.5" stroke-dasharray="5,5"/>
+      <text x="210" y="14" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#14181F">NAIRU</text>
+      <path d="M100,175 C130,150 160,120 180,95 C195,75 200,55 208,32" fill="none" stroke="#A93A2E" stroke-width="2"/>
+      <text x="100" y="185" font-family="IBM Plex Mono" font-size="10" fill="#A93A2E">held below NAIRU: &#960; keeps rising</text>
+      <line x1="212" y1="150" x2="340" y2="150" stroke="#93701F" stroke-width="2"/>
+      <text x="240" y="167" font-family="IBM Plex Mono" font-size="10" fill="#93701F">at/above NAIRU: &#960; stabilizes</text>
+    </svg>`
+  },
+  financial_accelerator: {
+    name: 'Financial accelerator',
+    caption: 'A shock to borrower net worth widens the external finance premium, which amplifies and propagates the initial shock through investment.',
+    svg: `<svg viewBox="0 0 380 220" role="img" aria-label="Financial accelerator diagram: a downward sloping curve showing the external finance premium rising as borrower net worth falls, feeding back into a larger drop in investment">
+      <line x1="50" y1="190" x2="50" y2="18" stroke="#454C56" stroke-width="1"/>
+      <line x1="50" y1="190" x2="360" y2="190" stroke="#454C56" stroke-width="1"/>
+      <text x="205" y="212" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="#454C56">Borrower net worth</text>
+      <text x="20" y="105" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="#454C56" transform="rotate(-90 20 105)">External finance premium</text>
+      <path d="M60,25 C110,45 150,80 200,120 C250,155 290,172 340,180" fill="none" stroke="#93701F" stroke-width="2"/>
+      <circle cx="230" cy="112" r="4" fill="#14181F"/>
+      <text x="150" y="60" font-family="IBM Plex Mono" font-size="10" fill="#454C56">net worth shock &#8594;</text>
+      <path d="M230,112 L260,150" stroke="#A93A2E" stroke-width="1.5" marker-end="none"/>
+      <text x="245" y="170" font-family="IBM Plex Mono" font-size="10" fill="#A93A2E">premium rises &#8594; investment falls further</text>
+    </svg>`
+  },
+  minsky: {
+    name: "Minsky's financial instability hypothesis",
+    caption: 'Stability breeds risk-taking: balance sheets drift from hedge to speculative to Ponzi finance over the expansion, setting up the "Minsky moment."',
+    svg: `<svg viewBox="0 0 380 220" role="img" aria-label="Minsky financial instability diagram: leverage rising over the expansion from hedge finance through speculative finance to Ponzi finance, followed by a sharp deleveraging collapse">
+      <line x1="50" y1="190" x2="50" y2="18" stroke="#454C56" stroke-width="1"/>
+      <line x1="50" y1="190" x2="360" y2="190" stroke="#454C56" stroke-width="1"/>
+      <text x="205" y="212" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="#454C56">Time (expansion &#8594; bust)</text>
+      <text x="20" y="105" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="#454C56" transform="rotate(-90 20 105)">Leverage / risk-taking</text>
+      <path d="M60,175 C110,160 150,140 190,110 C220,88 250,65 275,45" fill="none" stroke="#93701F" stroke-width="2"/>
+      <path d="M275,45 C295,80 315,130 335,175" fill="none" stroke="#A93A2E" stroke-width="2"/>
+      <circle cx="275" cy="45" r="4" fill="#A93A2E"/>
+      <text x="240" y="35" font-family="IBM Plex Mono" font-size="10" fill="#A93A2E">Minsky moment</text>
+      <text x="65" y="185" font-family="IBM Plex Mono" font-size="9.5" fill="#454C56">hedge</text>
+      <text x="150" y="150" font-family="IBM Plex Mono" font-size="9.5" fill="#454C56">speculative</text>
+      <text x="215" y="100" font-family="IBM Plex Mono" font-size="9.5" fill="#454C56">Ponzi</text>
+    </svg>`
+  },
+  behavioral_finance: {
+    name: 'Behavioral finance & prospect theory',
+    caption: 'The value function is steeper for losses than for equivalent gains, so a loss hurts more than a same-sized gain feels good.',
+    svg: `<svg viewBox="0 0 380 220" role="img" aria-label="Prospect theory value function diagram: an S shaped curve that is concave for gains and steeper convex for losses, kinked at a reference point">
+      <line x1="50" y1="105" x2="360" y2="105" stroke="#454C56" stroke-width="1"/>
+      <line x1="205" y1="18" x2="205" y2="190" stroke="#454C56" stroke-width="1"/>
+      <text x="205" y="212" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="#454C56">Losses &#8592;   Gains &#8594;</text>
+      <text x="20" y="105" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="#454C56" transform="rotate(-90 20 105)">Perceived value</text>
+      <path d="M205,105 C240,75 280,60 335,50" fill="none" stroke="#93701F" stroke-width="2"/>
+      <path d="M205,105 C175,140 130,175 65,188" fill="none" stroke="#A93A2E" stroke-width="2"/>
+      <circle cx="205" cy="105" r="3.5" fill="#14181F"/>
+      <text x="212" y="118" font-family="IBM Plex Mono" font-size="10" fill="#14181F">reference point</text>
+      <text x="270" y="55" font-family="IBM Plex Mono" font-size="10" fill="#93701F">gains: diminishing sensitivity</text>
+      <text x="70" y="175" font-family="IBM Plex Mono" font-size="10" fill="#A93A2E">losses loom larger</text>
+    </svg>`
+  },
+  comparative_advantage: {
+    name: 'Comparative advantage & gains from trade',
+    caption: 'Trade lets each country push consumption beyond its own production frontier by specializing where its opportunity cost is lowest.',
+    svg: `<svg viewBox="0 0 380 220" role="img" aria-label="Comparative advantage diagram: a country's production possibility frontier compared with an outward-shifted consumption possibility line achievable through trade">
+      <line x1="50" y1="190" x2="50" y2="18" stroke="#454C56" stroke-width="1"/>
+      <line x1="50" y1="190" x2="360" y2="190" stroke="#454C56" stroke-width="1"/>
+      <text x="205" y="212" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="#454C56">Good A</text>
+      <text x="20" y="105" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="#454C56" transform="rotate(-90 20 105)">Good B</text>
+      <path d="M60,175 C140,165 220,140 300,80 C315,68 325,58 335,45" fill="none" stroke="#14181F" stroke-width="2"/>
+      <text x="130" y="192" font-family="IBM Plex Mono" font-size="10" fill="#14181F">PPF (autarky)</text>
+      <line x1="60" y1="185" x2="350" y2="35" stroke="#93701F" stroke-width="2" stroke-dasharray="6,4"/>
+      <text x="290" y="55" font-family="IBM Plex Mono" font-size="10" fill="#93701F">consumption via trade</text>
+      <circle cx="230" cy="98" r="4" fill="#A93A2E"/>
+      <text x="238" y="94" font-family="IBM Plex Mono" font-size="10" fill="#A93A2E">post-trade bundle (outside PPF)</text>
+    </svg>`
+  },
+  endogenous_growth: {
+    name: 'Endogenous growth (AK / R&D-based)',
+    caption: 'Unlike Solow, growth here does not converge to zero: sustained investment in ideas or capital keeps output growing without diminishing returns.',
+    svg: `<svg viewBox="0 0 380 220" role="img" aria-label="Endogenous growth diagram: output per worker rising exponentially without bound, contrasted with a Solow-style path that flattens out at a steady state">
+      <line x1="50" y1="190" x2="50" y2="18" stroke="#454C56" stroke-width="1"/>
+      <line x1="50" y1="190" x2="360" y2="190" stroke="#454C56" stroke-width="1"/>
+      <text x="205" y="212" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="#454C56">Time</text>
+      <text x="20" y="105" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="#454C56" transform="rotate(-90 20 105)">Output per worker (log)</text>
+      <path d="M60,180 C120,168 180,140 240,90 C280,58 310,35 340,20" fill="none" stroke="#93701F" stroke-width="2"/>
+      <text x="230" y="55" font-family="IBM Plex Mono" font-size="10" fill="#93701F">endogenous: growth sustained</text>
+      <path d="M60,180 C120,140 180,110 240,98 C280,92 310,90 340,89" fill="none" stroke="#14181F" stroke-width="2" stroke-dasharray="6,4"/>
+      <text x="255" y="105" font-family="IBM Plex Mono" font-size="10" fill="#14181F">Solow: converges, flattens</text>
+    </svg>`
+  },
+  credit_cycle: {
+    name: 'Credit cycle',
+    caption: 'Credit growth and asset prices tend to reinforce each other on the way up and the way down, producing a boom-bust cycle around the real economy.',
+    svg: `<svg viewBox="0 0 380 220" role="img" aria-label="Credit cycle diagram: credit growth and asset prices rising together in a boom then falling together in a bust, oscillating around a flatter real economic activity line">
+      <line x1="50" y1="190" x2="50" y2="18" stroke="#454C56" stroke-width="1"/>
+      <line x1="50" y1="190" x2="360" y2="190" stroke="#454C56" stroke-width="1"/>
+      <text x="205" y="212" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="#454C56">Time</text>
+      <text x="20" y="105" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="#454C56" transform="rotate(-90 20 105)">Deviation from trend</text>
+      <line x1="50" y1="120" x2="360" y2="120" stroke="#D6D0C2" stroke-width="1" stroke-dasharray="4,4"/>
+      <path d="M60,140 C110,90 150,70 190,80 C230,95 250,150 290,170 C310,178 330,165 340,150" fill="none" stroke="#93701F" stroke-width="2"/>
+      <text x="90" y="65" font-family="IBM Plex Mono" font-size="10" fill="#93701F">asset prices</text>
+      <path d="M60,150 C110,115 150,100 190,105 C230,112 250,140 290,155 C310,160 330,150 340,140" fill="none" stroke="#14181F" stroke-width="2" stroke-dasharray="6,4"/>
+      <text x="270" y="185" font-family="IBM Plex Mono" font-size="10" fill="#14181F">credit growth</text>
+      <path d="M60,122 C150,118 250,120 340,121" fill="none" stroke="#454C56" stroke-width="1.5"/>
+      <text x="245" y="130" font-family="IBM Plex Mono" font-size="9.5" fill="#454C56">real activity (steadier)</text>
+    </svg>`
+  },
+  debt_sustainability: {
+    name: 'Debt sustainability (r &minus; g dynamics)',
+    caption: 'The debt-to-GDP ratio is stable when the primary balance offsets (interest rate &minus; growth rate) times existing debt; when r exceeds g, debt compounds without a primary surplus.',
+    svg: `<svg viewBox="0 0 380 220" role="img" aria-label="Debt sustainability diagram: debt to GDP ratio exploding upward when the interest rate exceeds the growth rate, versus stabilizing when growth exceeds the interest rate">
+      <line x1="50" y1="190" x2="50" y2="18" stroke="#454C56" stroke-width="1"/>
+      <line x1="50" y1="190" x2="360" y2="190" stroke="#454C56" stroke-width="1"/>
+      <text x="205" y="212" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="#454C56">Time</text>
+      <text x="20" y="105" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="#454C56" transform="rotate(-90 20 105)">Debt / GDP</text>
+      <path d="M60,160 C120,150 180,130 230,95 C270,68 300,45 335,25" fill="none" stroke="#A93A2E" stroke-width="2"/>
+      <text x="235" y="55" font-family="IBM Plex Mono" font-size="10" fill="#A93A2E">r &gt; g: ratio compounds up</text>
+      <path d="M60,160 C120,155 180,150 230,148 C270,146 300,145 335,144" fill="none" stroke="#1E6B45" stroke-width="2" stroke-dasharray="6,4"/>
+      <text x="240" y="165" font-family="IBM Plex Mono" font-size="10" fill="#1E6B45">g &gt; r: ratio stabilizes/falls</text>
+    </svg>`
   }
 };
 function theoryInfo(key){ return key && THEORY_LIBRARY[key] ? THEORY_LIBRARY[key] : null; }
