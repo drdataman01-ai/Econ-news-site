@@ -2,7 +2,7 @@ const THEORY_LIBRARY = {
   phillips: {
     name: 'New Keynesian Phillips curve',
     caption: 'Inflation rises with the output gap; a higher expected inflation path shifts the whole curve up.',
-    applications: ['Inflation reports', 'Fed policy meetings', 'Wage negotiations'],
+    applications: ['Inflation reports', 'Fed policy meetings', 'Inflation forecasting'],
     svg: `<svg viewBox="0 0 380 220" role="img" aria-label="Phillips curve diagram: inflation rising with the output gap, with a dashed curve shifted upward for higher expected inflation">
       <line x1="50" y1="190" x2="50" y2="18" stroke="#454C56" stroke-width="1"/>
       <line x1="50" y1="190" x2="360" y2="190" stroke="#454C56" stroke-width="1"/>

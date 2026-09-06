@@ -12,7 +12,7 @@
 // Where this week's content lives. Swap this file weekly (or point it
 // at an API endpoint) to publish new stories without touching any code.
 const CONTENT_URL = 'content/articles.json';
-const MEMBERSHIP_STORAGE_KEY = 'meridiandesk_membership_tier';
+const MEMBERSHIP_STORAGE_KEY = 'kuonomics_membership_tier';
 
 let state = {
   view: 'home',
