@@ -96,6 +96,32 @@
       "ts": "2026-09-03T09:01:43.580Z",
       "theoryKey": "tobinq",
       "theoryBody": "Two complementary frameworks anchor most graduate treatments of corporate investment. Tobin's Q relates investment to the ratio of a firm's market valuation to the replacement cost of its capital: when Q is comfortably above one, the theory predicts firms should keep adding capital because financial markets are valuing that capital above what it costs to build. The accelerator model instead ties investment more mechanically to the expected growth rate of demand, treating capex as a derived response to the pace at which capacity needs to expand.\n\nThe three scenarios modeled in this note map fairly directly onto both lenses: the bull case is consistent with persistently high Q sustaining capex even as growth moderates, the base case reflects an accelerator-style deceleration as the rate of demand growth, not its level, slows, and the bear case models a scenario where public-market scrutiny compresses Q enough that even firms with strong underlying demand pull back on planned capital spending."
+    },
+    {
+      "id": "a9",
+      "section": "fedwatch",
+      "tier": "free",
+      "headline": "Fed Watch Today: a governor opens the door to a December move",
+      "dek": "Treasury yields slipped after a voting member said the committee could 'act before year end' if the next two inflation prints hold near target.",
+      "body": "A Federal Reserve governor said today the committee could act before year end if incoming inflation data continues to run near target, the most direct hint yet from a voting member about the December meeting.\n\nThe remarks came during a speech to a regional business group and were quickly picked up by rates desks parsing them for a shift from the more cautious tone struck after the last FOMC meeting. The speaker did not commit to a specific move, but the phrasing was read as more dovish than recent Fed communication.\n\nThe 2-year Treasury yield fell 5 basis points on the headline, futures markets nudged the implied odds of a December cut up several points, and the S&P 500 closed modestly higher into the bell.\n\nThe shift matters because it narrows the gap between what the Fed has been signaling and what markets have been pricing independently. If the next CPI and employment reports come in soft, today's comments give the committee more room to act without surprising markets; if inflation surprises to the upside instead, today's language will look premature.\n\nFed Watch take: the next two data prints now carry outsized weight for the December decision, more than the speech itself.",
+      "author": "R. Costa",
+      "ts": "2026-09-07T16:30:00.000Z",
+      "theoryKey": "",
+      "theoryBody": ""
     }
-  ]
+  ],
+{
+  "id": "a10",
+  "section": "fedwatch",
+  "tier": "free",
+  "headline": "Fed Watch Today: A hot jobs report puts a rate hike back on the table",
+  "dek": "August payrolls beat estimates by more than triple the consensus, undercutting a dovish read on Fed Governor Waller's remarks from earlier in the week.",
+  "body": "Federal Reserve Governor Christopher Waller said Thursday he could support holding rates steady this month if inflation data due before the meeting confirmed the recent disinflation trend, though he signaled he would back a hike if inflation ran hot. A day later, the Labor Department's August jobs report undercut the calmer read on his remarks: nonfarm payrolls jumped 162,000, more than triple the roughly 53,000 economists expected, while unemployment held at 4.1% and June and July figures were revised higher.\n\nU.S. markets are closed today for Labor Day, but Friday's session captured the shift. The Dow fell 271.86 points, the S&P 500 slipped 0.38% to 7,718.60, and the 2-year Treasury yield rose to 4.377%, its highest level since January 2025. Futures tracked by the CME FedWatch tool showed traders pricing roughly 60% odds of a quarter-point hike at the September 15-16 meeting, up sharply from earlier in the week.\n\nThe report puts full weight on next week's CPI and PPI releases, the last major inflation data before the FOMC meets. Waller has said his vote hinges on whether the disinflation trend seen in July's data continued into August; a hot print would likely tip him, and possibly other officials, toward a hike rather than a hold.\n\nFed Watch take: the labor market just took a hold off the table as the automatically safe outcome. Next week's inflation data now looks more likely to decide between a hike and a hold than between a hold and a cut.",
+  "author": "R. Costa",
+  "ts": "2026-09-07T14:00:00.000Z",
+  "theoryKey": "",
+  "theoryBody": ""
+}
+
+
 }
