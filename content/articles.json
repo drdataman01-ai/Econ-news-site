@@ -108,7 +108,7 @@
       "ts": "2026-09-07T16:30:00.000Z",
       "theoryKey": "",
       "theoryBody": ""
-    }
+    },
     {
       "id": "a10",
       "section": "fedwatch",
@@ -120,6 +120,6 @@
       "ts": "2026-09-07T14:00:00.000Z",
       "theoryKey": "",
       "theoryBody": ""
-    },
+    }
   ]
 }
