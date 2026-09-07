@@ -189,10 +189,27 @@ function pickLabelIndices(count){
   return Array.from({length: labelCount}, (_, i) => Math.round(i * (count - 1) / (labelCount - 1)));
 }
 
-/** Short display label for a date, e.g. 'Sep 1'. Accepts an ISO date or full timestamp. */
+/** Full display label for a date, e.g. 'Sep 7, 2026'. Accepts an ISO date or full timestamp. */
 function shortDateLabel(dateString){
   const d = new Date(dateString.length === 10 ? dateString + 'T00:00:00Z' : dateString);
-  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
+  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+}
+
+/**
+ * Builds x-axis labels for a list of Fed Watch posts. Normally each
+ * label is a full date ('Sep 7, 2026'). But if multiple posts landed
+ * on the same calendar day (as can happen with same-day updates), a
+ * date alone can't tell them apart, so this falls back to time-of-day
+ * ('2:00 PM UTC') for that set instead.
+ */
+function postDateLabels(posts){
+  const dayKeys = posts.map(a => a.ts.slice(0, 10));
+  const allSameDay = dayKeys.every(k => k === dayKeys[0]);
+  if (!allSameDay) return posts.map(a => shortDateLabel(a.ts));
+  return posts.map(a => {
+    const d = new Date(a.ts);
+    return d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: 'UTC' }) + ' UTC';
+  });
 }
 
 /** Label for a 'YYYY-MM' history entry, e.g. "'16" for 2016, used to keep long axis labels compact. */
@@ -250,7 +267,7 @@ function renderFedWatchChart(currentArticle){
   const oddsPanel = recentPosts.length >= 2 ? `
       <div class="fedwatch-chart-panel">
         <p class="apps-label">${moveLabel} &middot; last ${recentPosts.length} Fed Watch posts</p>
-        ${lineChartSVG(recentPosts.map(a => a.metrics.moveOdds), recentPosts.map(a => shortDateLabel(a.ts)), {label:moveLabel, suffix:'%'})}
+        ${lineChartSVG(recentPosts.map(a => a.metrics.moveOdds), postDateLabels(recentPosts), {label:moveLabel, suffix:'%'})}
       </div>` : '';
 
   return historyPanel + oddsPanel;
