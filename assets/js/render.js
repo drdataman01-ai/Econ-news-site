@@ -169,8 +169,8 @@ function renderClassroomView(){
           ${open ? `
           <div class="theory-panel">
             <div class="theory-graph">${t.svg}</div>
-            <p class="theory-caption">${escapeHtml(theory.caption)}</p>
-          </div>` : ''}
+            <p class="theory-caption">${escapeHtml(t.caption)}</p>
+          </div>
         </div>
         ${apps.length ? `
         <div class="classroom-apps">
