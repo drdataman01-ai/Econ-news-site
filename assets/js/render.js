@@ -147,74 +147,38 @@ function renderArticleView(){
 }
 
 function renderClassroomView(){
-  const keys = Object.keys(THEORY_LIBRARY)
-    .sort((a,b)=> THEORY_LIBRARY[a].name.localeCompare(THEORY_LIBRARY[b].name));
-
-  let html = `
-    <div class="section-head" style="margin-bottom:26px;">
-      <div class="kicker">Reference</div>
-      <h2>Economics classroom</h2>
-      <p>
-        The frameworks our analysts reach for most often, gathered in one place
-        with the underlying diagram and a plain-language walkthrough —
-        independent of whatever story they're attached to this week.
-      </p>
-    </div>
-  `;
+  const keys = Object.keys(THEORY_LIBRARY).sort((a,b)=> THEORY_LIBRARY[a].name.localeCompare(THEORY_LIBRARY[b].name));
+  let html = `<div class="section-head" style="margin-bottom:26px;">
+    <div class="kicker">Reference</div>
+    <h2>Economics classroom</h2>
+    <p>The frameworks our analysts reach for most often, gathered in one place with the underlying diagram and a plain-language walkthrough &mdash; independent of whatever story they're attached to this week.</p>
+  </div>`;
 
   html += `<div class="classroom-list">`;
-
-  keys.forEach(key => {
+  keys.forEach(key=>{
     const t = THEORY_LIBRARY[key];
     const open = state.classroomOpen === key;
     const apps = Array.isArray(t.applications) ? t.applications : [];
-
     html += `
       <div class="classroom-row">
         <div class="theory-block classroom-item">
-          <button
-            class="theory-toggle"
-            aria-expanded="${open}"
-            onclick="toggleClassroomTheory('${key}')"
-          >
+          <button class="theory-toggle" aria-expanded="${open}" onclick="toggleClassroomTheory('${key}')">
             <span class="label-name">${escapeHtml(t.name)}</span>
-            <span class="caret">
-              ${open ? 'Hide ↑' : 'Dig deeper ↓'}
-            </span>
+            <span class="caret">${open ? 'Hide &uarr;' : 'Dig deeper &darr;'}</span>
           </button>
-
           ${open ? `
-            <div class="theory-panel">
-              <div class="theory-graph">${t.svg}</div>
-              <p class="theory-caption">${escapeHtml(t.caption)}</p>
-
-              ${t.description ? `
-                <div class="theory-body">
-                  <p>${escapeHtml(t.description)}</p>
-                </div>
-              ` : ''}
-
-              ${t.citation ? `
-                <p class="theory-citation">
-                  <strong>Source:</strong> ${escapeHtml(t.citation)}
-                </p>
-              ` : ''}
-            </div>
-          ` : ''}
+          <div class="theory-panel">
+            <div class="theory-graph">${t.svg}</div>
+            <p class="theory-caption">${escapeHtml(t.caption)}</p>
         </div>
-
+        </div>
         ${apps.length ? `
-          <div class="classroom-apps">
-            <p class="apps-label">Applications</p>
-            <ul>
-              ${apps.map(a => `<li>${escapeHtml(a)}</li>`).join('')}
-            </ul>
-          </div>
-        ` : ''}
-      </div>
-    `;
+        <div class="classroom-apps">
+          <p class="apps-label">Applications</p>
+          <ul>${apps.map(a=>`<li>${escapeHtml(a)}</li>`).join('')}</ul>
+        </div>` : ''}
+      </div>`;
   });
-
   html += `</div>`;
 
   return html;
