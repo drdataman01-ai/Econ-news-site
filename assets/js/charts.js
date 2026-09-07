@@ -15,8 +15,8 @@
  */
 function lineChartSVG(values, dates, opts){
   opts = opts || {};
-  const width = opts.width || 320;
-  const height = opts.height || 160;
+  const width = opts.width || 480;
+  const height = opts.height || 170;
   const color = opts.color || '#7a4d1f';
   const fillColor = opts.fillColor || 'rgba(122, 77, 31, 0.10)';
   const suffix = opts.suffix || '';
@@ -95,15 +95,15 @@ function lineChartSVG(values, dates, opts){
         <p class="linechart-label">${opts.label || ''}</p>
         <p class="linechart-value">${last}${suffix} <span class="linechart-delta ${deltaClass}">${deltaStr}</span></p>
       </div>
-      <svg viewBox="0 0 ${width} ${height}" width="100%" height="${height}" role="img" aria-label="${opts.label || 'chart'} trend, currently ${last}${suffix}">
+      <svg viewBox="0 0 ${width} ${height}" preserveAspectRatio="none" role="img" aria-label="${opts.label || 'chart'} trend, currently ${last}${suffix}">
         ${gridlines}
         <path d="${areaPath}" fill="${fillColor}" stroke="none"/>
         <path d="${linePath}" fill="none" stroke="${color}" stroke-width="1.75"/>
         <circle cx="${lastPoint[0].toFixed(1)}" cy="${lastPoint[1].toFixed(1)}" r="3" fill="${color}"/>
         ${xLabels}
         <g class="chart-callout">
-          <rect x="${calloutX.toFixed(1)}" y="${calloutY.toFixed(1)}" width="${calloutW.toFixed(1)}" height="20" rx="3"/>
-          <text x="${(calloutX + calloutW / 2).toFixed(1)}" y="${(calloutY + 14).toFixed(1)}" text-anchor="middle">${calloutText}</text>
+          <rect x="${calloutX.toFixed(1)}" y="${calloutY.toFixed(1)}" width="${calloutW.toFixed(1)}" height="20" rx="3" fill="#2b2b28" fill-opacity="0.88"/>
+          <text x="${(calloutX + calloutW / 2).toFixed(1)}" y="${(calloutY + 14).toFixed(1)}" text-anchor="middle" fill="#ffffff">${calloutText}</text>
         </g>
       </svg>
     </div>`;
