@@ -128,7 +128,7 @@ function renderArticleView(){
           <p class="eyebrow">Framework applied to this story</p>
           <h4>${escapeHtml(theory.name)}</h4>
           <div class="theory-graph">${theory.svg}</div>
-          <p class="theory-caption">${escapeHtml(theory.caption)} Illustrative schematic, not fitted to data.</p>
+          <p class="theory-caption">${escapeHtml(theory.caption)}</p>
           <div class="theory-body">${a.theoryBody.split('\n').filter(p=>p.trim().length).map(p=>`<p>${escapeHtml(p)}</p>`).join('')}</div>
         </div>` : ''}
       </div>`;
@@ -169,7 +169,7 @@ function renderClassroomView(){
           ${open ? `
           <div class="theory-panel">
             <div class="theory-graph">${t.svg}</div>
-            <p class="theory-caption">${escapeHtml(t.caption)} Illustrative schematic, not fitted to data.</p>
+            <p class="theory-caption">${escapeHtml(theory.caption)}</p>
           </div>` : ''}
         </div>
         ${apps.length ? `
