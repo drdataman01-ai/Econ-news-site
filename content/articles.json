@@ -107,7 +107,14 @@
       "author": "R. Costa",
       "ts": "2026-09-07T16:30:00.000Z",
       "theoryKey": "",
-      "theoryBody": ""
+      "theoryBody": "",
+      "metrics": {
+        "fedFundsRate": 3.625,
+        "yield2y": 4.30,
+        "yield10y": 4.72,
+        "moveOdds": 55,
+        "moveDirection": "cut"
+      }
     },
     {
       "id": "a10",
@@ -119,7 +126,33 @@
       "author": "R. Costa",
       "ts": "2026-09-07T14:00:00.000Z",
       "theoryKey": "",
-      "theoryBody": ""
+      "theoryBody": "",
+      "metrics": {
+        "fedFundsRate": 3.625,
+        "yield2y": 4.377,
+        "yield10y": 4.784,
+        "moveOdds": 60,
+        "moveDirection": "hike"
+      }
+    },
+    {
+      "id": "a11",
+      "section": "fedwatch",
+      "tier": "free",
+      "headline": "Fed Watch Today: Hike odds cool slightly over the long weekend, still a coin flip",
+      "dek": "With no new economic data released, prediction markets did the adjusting instead \u2014 a 25-basis-point September hike now sits at 49%, down from Friday's post-jobs-report spike.",
+      "body": "No new economic data came out over the Labor Day weekend, but prediction markets kept moving anyway. Polymarket's contract on the September 15-16 FOMC decision now prices a hold at 52% and a quarter-point hike at 49%, easing back from the sharper hawkish tilt seen immediately after Friday's stronger-than-expected August jobs report.\n\nCash Treasury and equity markets are closed today for Labor Day, so Friday's close remains the last hard print: the 2-year Treasury yield at 4.377% and the 10-year at 4.784%, both up on the week. The Fed funds rate has held at 3.50%-3.75% since the July meeting.\n\nThe near-even split reflects a genuinely undecided committee. July's meeting itself split 9-3, with three dissenters favoring an immediate hike, and Governor Waller has said his own vote hinges specifically on whether August inflation data continued the disinflation trend seen in July. Next week's CPI and PPI reports are the last scheduled inflation data before officials vote.\n\nFed Watch take: the gap between hold and hike is now inside the market's own noise band this close to a meeting, which is unusual \u2014 a single soft or hot inflation print next week could tip the outcome either way.",
+      "author": "R. Costa",
+      "ts": "2026-09-07T18:00:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "metrics": {
+        "fedFundsRate": 3.625,
+        "yield2y": 4.377,
+        "yield10y": 4.784,
+        "moveOdds": 49,
+        "moveDirection": "hike"
+      }
     }
   ]
 }

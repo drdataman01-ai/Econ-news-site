@@ -99,6 +99,7 @@ function renderArticleView(){
     <h1>${escapeHtml(a.headline)}</h1>
     <p class="dek">${escapeHtml(a.dek)}</p>
     <div class="byline">By ${escapeHtml(a.author)} &middot; ${fmtDate(a.ts)} ${lockTag(a)}</div>
+    ${a.section === 'fedwatch' && a.metrics ? renderFedWatchChart(a) : ''}
     <div class="article-body">`;
 
   if(allowed){

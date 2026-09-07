@@ -1,0 +1,43 @@
+/* Fed Watch trend chart — append to assets/css/styles.css */
+
+.fedwatch-chart-panel {
+  margin: 18px 0 28px;
+  padding: 16px 18px;
+  border: 1px solid var(--rule, #e3ddd2);
+  border-radius: 6px;
+  background: var(--panel-bg, #faf7f0);
+}
+
+.fedwatch-sparklines {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 10px;
+}
+
+.sparkline {
+  min-width: 130px;
+}
+
+.sparkline-label {
+  font-family: var(--font-sans, sans-serif);
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft, #7a7264);
+  margin: 0 0 4px;
+}
+
+.sparkline-value {
+  font-family: var(--font-mono, monospace);
+  font-size: 13px;
+  margin: 4px 0 0;
+}
+
+.sparkline-delta {
+  font-size: 11.5px;
+}
+
+.sparkline-delta.up { color: #a8412f; }     /* rates/odds rising */
+.sparkline-delta.down { color: #2f6b4f; }   /* rates/odds falling */
+.sparkline-delta.flat { color: var(--ink-soft, #7a7264); }
