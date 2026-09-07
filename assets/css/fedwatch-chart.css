@@ -16,6 +16,10 @@
   margin-top: 10px;
 }
 
+.fedwatch-linecharts-single {
+  grid-template-columns: minmax(220px, 480px);
+}
+
 @media (max-width: 640px) {
   .fedwatch-linecharts {
     grid-template-columns: 1fr;

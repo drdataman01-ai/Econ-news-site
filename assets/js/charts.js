@@ -60,10 +60,17 @@ function lineChartSVG(values, dates, opts){
       <text x="${padLeft - 6}" y="${(y + 3).toFixed(1)}" class="chart-axis-label" text-anchor="end">${val.toFixed(1)}${suffix}</text>`;
   }
 
-  // x-axis labels: first, middle, last point (avoids crowding on longer series)
-  const xLabelIdxs = values.length <= 3
-    ? points.map((_, i) => i)
-    : [0, Math.round((values.length - 1) / 2), values.length - 1];
+  // x-axis labels: for short series show every point; for longer
+  // series (like 10-year history) space out up to 5 labels evenly.
+  let xLabelIdxs;
+  if (values.length <= 3){
+    xLabelIdxs = points.map((_, i) => i);
+  } else {
+    const labelCount = Math.min(5, values.length);
+    xLabelIdxs = Array.from({length: labelCount}, (_, i) =>
+      Math.round(i * (values.length - 1) / (labelCount - 1))
+    );
+  }
   let xLabels = '';
   xLabelIdxs.forEach(i => {
     xLabels += `<text x="${points[i][0].toFixed(1)}" y="${height - 6}" class="chart-axis-label" text-anchor="middle">${dates[i] || ''}</text>`;
@@ -102,34 +109,26 @@ function lineChartSVG(values, dates, opts){
     </div>`;
 }
 
-/**
- * Returns the Monday (UTC, YYYY-MM-DD) of the week containing the
- * given timestamp. Used to bucket daily Fed Watch posts into weeks.
- */
-function weekStartKey(tsString){
-  const d = new Date(tsString);
-  const day = d.getUTCDay(); // 0 = Sunday ... 6 = Saturday
-  const diffToMonday = (day === 0 ? -6 : 1 - day);
-  const monday = new Date(d);
-  monday.setUTCDate(d.getUTCDate() + diffToMonday);
-  monday.setUTCHours(0, 0, 0, 0);
-  return monday.toISOString().slice(0, 10); // 'YYYY-MM-DD'
-}
-
 /** Short display label for a date, e.g. 'Sep 1'. Accepts an ISO date or full timestamp. */
 function shortDateLabel(dateString){
   const d = new Date(dateString.length === 10 ? dateString + 'T00:00:00Z' : dateString);
   return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
 }
 
+/** Label for a 'YYYY-MM' history entry, e.g. "'16" for 2016, used to keep long axis labels compact. */
+function yearLabel(yearMonth){
+  const year = yearMonth.slice(0, 4);
+  return "'" + year.slice(2);
+}
+
 /**
- * Builds the Fed Watch trend panel, aggregated by week once enough
- * history exists. Each week's value is the most recent Fed Watch
- * post's `metrics` snapshot within that week (i.e. "where things
- * stood as of that week"), not an average. Falls back to a per-post
- * view when fewer than 2 distinct weeks of data exist yet, so the
- * chart doesn't just disappear while weekly history builds up.
- * Returns '' if there isn't enough history at all (fewer than 2 posts).
+ * Builds the Fed Watch trend panel. Fed funds rate, 2Y yield, and 10Y
+ * yield draw from FED_HISTORY (assets/js/fed-history-data.js) for a
+ * true 10-year view, with the most recent Fed Watch post's snapshot
+ * appended if it's newer than the last history point. Hike/cut odds
+ * has no meaningful 10-year equivalent (it's a forward-looking
+ * snapshot ahead of each specific meeting), so that panel stays on
+ * the recent per-post view.
  */
 function renderFedWatchChart(currentArticle){
   const withMetrics = sortedArticles(
@@ -139,43 +138,50 @@ function renderFedWatchChart(currentArticle){
   const moveLabel = currentArticle.metrics && currentArticle.metrics.moveDirection === 'cut'
     ? 'Cut odds' : 'Hike odds';
 
-  function panel(values2d, labels, subtitle){
-    return `
+  // --- 10-year history for the three macro series ---
+  let history = typeof FED_HISTORY !== 'undefined' ? FED_HISTORY.slice() : [];
+  const latestPost = withMetrics[withMetrics.length - 1];
+  if (latestPost){
+    const latestMonth = latestPost.ts.slice(0, 7); // 'YYYY-MM'
+    const lastHistoryMonth = history.length ? history[history.length - 1].date : null;
+    if (latestMonth > lastHistoryMonth){
+      history.push({
+        date: latestMonth,
+        fedFundsRate: latestPost.metrics.fedFundsRate,
+        yield2y: latestPost.metrics.yield2y,
+        yield10y: latestPost.metrics.yield10y
+      });
+    } else if (latestMonth === lastHistoryMonth){
+      // Replace the placeholder same-month entry with the live snapshot.
+      history[history.length - 1] = {
+        date: latestMonth,
+        fedFundsRate: latestPost.metrics.fedFundsRate,
+        yield2y: latestPost.metrics.yield2y,
+        yield10y: latestPost.metrics.yield10y
+      };
+    }
+  }
+
+  const historyLabels = history.map(h => yearLabel(h.date));
+  const historyPanel = history.length >= 2 ? `
       <div class="fedwatch-chart-panel">
-        <p class="apps-label">Fed Watch trend &middot; ${subtitle}</p>
+        <p class="apps-label">Fed funds rate &amp; Treasury yields &middot; 10-year history</p>
         <div class="fedwatch-linecharts">
-          ${lineChartSVG(values2d.fedFunds, labels, {label:'Fed funds rate', suffix:'%'})}
-          ${lineChartSVG(values2d.yield2y,  labels, {label:'2Y Treasury', suffix:'%'})}
-          ${lineChartSVG(values2d.yield10y, labels, {label:'10Y Treasury', suffix:'%'})}
-          ${lineChartSVG(values2d.moveOdds, labels, {label:moveLabel, suffix:'%'})}
+          ${lineChartSVG(history.map(h => h.fedFundsRate), historyLabels, {label:'Fed funds rate', suffix:'%'})}
+          ${lineChartSVG(history.map(h => h.yield2y), historyLabels, {label:'2Y Treasury', suffix:'%'})}
+          ${lineChartSVG(history.map(h => h.yield10y), historyLabels, {label:'10Y Treasury', suffix:'%'})}
         </div>
-      </div>`;
-  }
+      </div>` : '';
 
-  // Bucket into weeks, keeping the latest post's metrics per week.
-  const byWeek = {};
-  withMetrics.forEach(a => { byWeek[weekStartKey(a.ts)] = a.metrics; });
-  const weekKeys = Object.keys(byWeek).sort();
-  const recentWeeks = weekKeys.slice(-8);
-
-  if (recentWeeks.length >= 2){
-    const labels = recentWeeks.map(shortDateLabel);
-    return panel({
-      fedFunds: recentWeeks.map(k => byWeek[k].fedFundsRate),
-      yield2y:  recentWeeks.map(k => byWeek[k].yield2y),
-      yield10y: recentWeeks.map(k => byWeek[k].yield10y),
-      moveOdds: recentWeeks.map(k => byWeek[k].moveOdds)
-    }, labels, `weekly &middot; ${labels[0]} \u2013 ${labels[labels.length - 1]}`);
-  }
-
-  // Not enough distinct weeks yet — fall back to per-post trend.
+  // --- Recent hike/cut odds, from Fed Watch posts only ---
   const recentPosts = withMetrics.slice(-7);
-  if (recentPosts.length < 2) return '';
-  const labels = recentPosts.map(a => shortDateLabel(a.ts));
-  return panel({
-    fedFunds: recentPosts.map(a => a.metrics.fedFundsRate),
-    yield2y:  recentPosts.map(a => a.metrics.yield2y),
-    yield10y: recentPosts.map(a => a.metrics.yield10y),
-    moveOdds: recentPosts.map(a => a.metrics.moveOdds)
-  }, labels, `last ${recentPosts.length} posts &middot; weekly view starts once history spans 2+ weeks`);
+  const oddsPanel = recentPosts.length >= 2 ? `
+      <div class="fedwatch-chart-panel">
+        <p class="apps-label">${moveLabel} &middot; last ${recentPosts.length} Fed Watch posts</p>
+        <div class="fedwatch-linecharts fedwatch-linecharts-single">
+          ${lineChartSVG(recentPosts.map(a => a.metrics.moveOdds), recentPosts.map(a => shortDateLabel(a.ts)), {label:moveLabel, suffix:'%'})}
+        </div>
+      </div>` : '';
+
+  return historyPanel + oddsPanel;
 }
