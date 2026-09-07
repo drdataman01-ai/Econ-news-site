@@ -232,9 +232,6 @@ function renderFedWatchChart(currentArticle){
     state.articles.filter(a => a.section === 'fedwatch' && a.metrics)
   ).reverse(); // oldest -> newest
 
-  const moveLabel = currentArticle.metrics && currentArticle.metrics.moveDirection === 'cut'
-    ? 'Cut odds' : 'Hike odds';
-
   // --- 10-year combined history for the three macro series ---
   let history = typeof FED_HISTORY !== 'undefined' ? FED_HISTORY.slice() : [];
   const latestPost = withMetrics[withMetrics.length - 1];
@@ -262,13 +259,5 @@ function renderFedWatchChart(currentArticle){
         ], historyLabels, { suffix: '%' })}
       </div>` : '';
 
-  // --- Recent hike/cut odds, from Fed Watch posts only ---
-  const recentPosts = withMetrics.slice(-7);
-  const oddsPanel = recentPosts.length >= 2 ? `
-      <div class="fedwatch-chart-panel">
-        <p class="apps-label">${moveLabel} &middot; last ${recentPosts.length} Fed Watch posts</p>
-        ${lineChartSVG(recentPosts.map(a => a.metrics.moveOdds), postDateLabels(recentPosts), {label:moveLabel, suffix:'%'})}
-      </div>` : '';
-
-  return historyPanel + oddsPanel;
+  return historyPanel;
 }
