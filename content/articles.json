@@ -109,19 +109,17 @@
       "theoryKey": "",
       "theoryBody": ""
     }
-  ],
-{
-  "id": "a10",
-  "section": "fedwatch",
-  "tier": "free",
-  "headline": "Fed Watch Today: A hot jobs report puts a rate hike back on the table",
-  "dek": "August payrolls beat estimates by more than triple the consensus, undercutting a dovish read on Fed Governor Waller's remarks from earlier in the week.",
-  "body": "Federal Reserve Governor Christopher Waller said Thursday he could support holding rates steady this month if inflation data due before the meeting confirmed the recent disinflation trend, though he signaled he would back a hike if inflation ran hot. A day later, the Labor Department's August jobs report undercut the calmer read on his remarks: nonfarm payrolls jumped 162,000, more than triple the roughly 53,000 economists expected, while unemployment held at 4.1% and June and July figures were revised higher.\n\nU.S. markets are closed today for Labor Day, but Friday's session captured the shift. The Dow fell 271.86 points, the S&P 500 slipped 0.38% to 7,718.60, and the 2-year Treasury yield rose to 4.377%, its highest level since January 2025. Futures tracked by the CME FedWatch tool showed traders pricing roughly 60% odds of a quarter-point hike at the September 15-16 meeting, up sharply from earlier in the week.\n\nThe report puts full weight on next week's CPI and PPI releases, the last major inflation data before the FOMC meets. Waller has said his vote hinges on whether the disinflation trend seen in July's data continued into August; a hot print would likely tip him, and possibly other officials, toward a hike rather than a hold.\n\nFed Watch take: the labor market just took a hold off the table as the automatically safe outcome. Next week's inflation data now looks more likely to decide between a hike and a hold than between a hold and a cut.",
-  "author": "R. Costa",
-  "ts": "2026-09-07T14:00:00.000Z",
-  "theoryKey": "",
-  "theoryBody": ""
-}
-
-
+    {
+      "id": "a10",
+      "section": "fedwatch",
+      "tier": "free",
+      "headline": "Fed Watch Today: A hot jobs report puts a rate hike back on the table",
+      "dek": "August payrolls beat estimates by more than triple the consensus, undercutting a dovish read on Fed Governor Waller's remarks from earlier in the week.",
+      "body": "Federal Reserve Governor Christopher Waller said Thursday he could support holding rates steady this month if inflation data due before the meeting confirmed the recent disinflation trend, though he signaled he would back a hike if inflation ran hot. A day later, the Labor Department's August jobs report undercut the calmer read on his remarks: nonfarm payrolls jumped 162,000, more than triple the roughly 53,000 economists expected, while unemployment held at 4.1% and June and July figures were revised higher.\n\nU.S. markets are closed today for Labor Day, but Friday's session captured the shift. The Dow fell 271.86 points, the S&P 500 slipped 0.38% to 7,718.60, and the 2-year Treasury yield rose to 4.377%, its highest level since January 2025. Futures tracked by the CME FedWatch tool showed traders pricing roughly 60% odds of a quarter-point hike at the September 15-16 meeting, up sharply from earlier in the week.\n\nThe report puts full weight on next week's CPI and PPI releases, the last major inflation data before the FOMC meets. Waller has said his vote hinges on whether the disinflation trend seen in July's data continued into August; a hot print would likely tip him, and possibly other officials, toward a hike rather than a hold.\n\nFed Watch take: the labor market just took a hold off the table as the automatically safe outcome. Next week's inflation data now looks more likely to decide between a hike and a hold than between a hold and a cut.",
+      "author": "R. Costa",
+      "ts": "2026-09-07T14:00:00.000Z",
+      "theoryKey": "",
+      "theoryBody": ""
+    },
+  ]
 }
