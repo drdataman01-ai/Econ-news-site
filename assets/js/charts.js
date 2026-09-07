@@ -51,27 +51,83 @@ function sparklineSVG(values, opts){
 }
 
 /**
- * Builds the small Fed Watch trend panel from the last few Fed Watch
- * articles that carry a `metrics` snapshot. Returns '' if there isn't
- * enough history yet (fewer than 2 posts with metrics).
+ * Returns the Monday (UTC, YYYY-MM-DD) of the week containing the
+ * given timestamp. Used to bucket daily Fed Watch posts into weeks.
+ */
+function weekStartKey(tsString){
+  const d = new Date(tsString);
+  const day = d.getUTCDay(); // 0 = Sunday ... 6 = Saturday
+  const diffToMonday = (day === 0 ? -6 : 1 - day);
+  const monday = new Date(d);
+  monday.setUTCDate(d.getUTCDate() + diffToMonday);
+  monday.setUTCHours(0, 0, 0, 0);
+  return monday.toISOString().slice(0, 10); // 'YYYY-MM-DD'
+}
+
+/** Short display label for a week-start date, e.g. 'Sep 1'. */
+function shortDateLabel(isoDateString){
+  const d = new Date(isoDateString + 'T00:00:00Z');
+  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
+}
+
+/**
+ * Builds the small Fed Watch trend panel, aggregated by week. Each
+ * week's value is the most recent Fed Watch post's `metrics` snapshot
+ * within that week (i.e. "where things stood as of that week"), not
+ * an average. Returns '' if there isn't enough history yet (fewer
+ * than 2 distinct weeks with data).
  */
 function renderFedWatchChart(currentArticle){
-  const history = sortedArticles(
+  const withMetrics = sortedArticles(
     state.articles.filter(a => a.section === 'fedwatch' && a.metrics)
-  ).slice(0, 7).reverse(); // oldest -> newest, capped at last 7 posts
+  ).reverse(); // oldest -> newest
 
-  if (history.length < 2) return '';
+  // Bucket into weeks, keeping the latest post's metrics per week.
+  const byWeek = {};
+  withMetrics.forEach(a => {
+    byWeek[weekStartKey(a.ts)] = a.metrics;
+  });
 
-  const fedFunds = history.map(a => a.metrics.fedFundsRate);
-  const yield2y  = history.map(a => a.metrics.yield2y);
-  const yield10y = history.map(a => a.metrics.yield10y);
-  const moveOdds = history.map(a => a.metrics.moveOdds);
+  const weekKeys = Object.keys(byWeek).sort(); // ascending, e.g. '2026-09-01'
+  const recentWeeks = weekKeys.slice(-8); // cap at last 8 weeks
+
+  // Not enough distinct weeks yet (e.g. a new Fed Watch section with only
+  // a few same-week posts) — fall back to per-post trend so the chart
+  // doesn't just disappear while weekly history builds up.
+  if (recentWeeks.length < 2){
+    const recentPosts = withMetrics.slice(-7); // last 7 posts, oldest -> newest
+    if (recentPosts.length < 2) return '';
+
+    const fedFunds = recentPosts.map(a => a.metrics.fedFundsRate);
+    const yield2y  = recentPosts.map(a => a.metrics.yield2y);
+    const yield10y = recentPosts.map(a => a.metrics.yield10y);
+    const moveOdds = recentPosts.map(a => a.metrics.moveOdds);
+    const moveLabel = currentArticle.metrics && currentArticle.metrics.moveDirection === 'cut'
+      ? 'Cut odds' : 'Hike odds';
+
+    return `
+      <div class="fedwatch-chart-panel">
+        <p class="apps-label">Fed Watch trend &middot; last ${recentPosts.length} posts &middot; weekly view starts once history spans 2+ weeks</p>
+        <div class="fedwatch-sparklines">
+          ${sparklineSVG(fedFunds, {label:'Fed funds rate', suffix:'%'})}
+          ${sparklineSVG(yield2y,  {label:'2Y Treasury', suffix:'%'})}
+          ${sparklineSVG(yield10y, {label:'10Y Treasury', suffix:'%'})}
+          ${sparklineSVG(moveOdds, {label:moveLabel, suffix:'%'})}
+        </div>
+      </div>`;
+  }
+
+  const fedFunds = recentWeeks.map(k => byWeek[k].fedFundsRate);
+  const yield2y  = recentWeeks.map(k => byWeek[k].yield2y);
+  const yield10y = recentWeeks.map(k => byWeek[k].yield10y);
+  const moveOdds = recentWeeks.map(k => byWeek[k].moveOdds);
   const moveLabel = currentArticle.metrics && currentArticle.metrics.moveDirection === 'cut'
     ? 'Cut odds' : 'Hike odds';
+  const rangeLabel = `${shortDateLabel(recentWeeks[0])} \u2013 ${shortDateLabel(recentWeeks[recentWeeks.length - 1])}`;
 
   return `
     <div class="fedwatch-chart-panel">
-      <p class="apps-label">Fed Watch trend &middot; last ${history.length} posts</p>
+      <p class="apps-label">Fed Watch trend &middot; weekly &middot; ${rangeLabel}</p>
       <div class="fedwatch-sparklines">
         ${sparklineSVG(fedFunds, {label:'Fed funds rate', suffix:'%'})}
         ${sparklineSVG(yield2y,  {label:'2Y Treasury', suffix:'%'})}
