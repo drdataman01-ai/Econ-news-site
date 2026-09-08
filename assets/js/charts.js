@@ -288,14 +288,41 @@ function renderFedWatchChart(currentArticle){
 }
 
 /**
- * Builds the S&P 500 10-year trend chart, shown on every S&P 500
- * article. Draws from SP500_HISTORY (assets/js/sp500-history-data.js)
- * as the base, with the most recent S&P 500 post's `metrics.close`
- * appended (or merged into the same month) if it's newer than the
- * last history point — same pattern as the Fed Watch chart, so the
- * final point reflects "as of today" once your posts start carrying
- * a metrics snapshot.
+ * Builds a trend chart for any index or stock in MARKET_HISTORY,
+ * driven entirely by the article's own "chart" field:
+ *   article.chart = { key: "nikkei225" }   // or "INTC", "taiex", etc.
+ * Looks up the series by key, uses its own label/color, and renders
+ * with the same lineChartSVG used elsewhere. Returns '' if the
+ * article has no chart field or the key isn't found in the registry
+ * — so this is always safe to call unconditionally per section.
  */
+function renderMarketChart(article){
+  if (!article.chart || !article.chart.key) return '';
+  const registry = typeof MARKET_HISTORY !== 'undefined' ? MARKET_HISTORY : {};
+  const series = registry[article.chart.key];
+  if (!series || !series.data || series.data.length < 2) return '';
+
+  const isStock = series.type === 'stock';
+  const labels = series.data.map(d => yearLabel(d.date));
+  const values = series.data.map(d => d.value);
+  const lookback = isStock ? '5-year' : '10-year';
+  const suffix = isStock ? '' : '';
+  const color = isStock ? '#6b4a8a' : '#2f5d8a';
+  const fillColor = isStock ? 'rgba(107, 74, 138, 0.10)' : 'rgba(47, 93, 138, 0.10)';
+
+  return `
+    <div class="fedwatch-chart-panel">
+      <p class="apps-label">${escapeHtml(series.label)} &middot; ${lookback} history</p>
+      ${lineChartSVG(values, labels, {
+        label: series.label,
+        suffix: suffix,
+        color: color,
+        fillColor: fillColor
+      })}
+    </div>`;
+}
+
+
 function renderSP500Chart(currentArticle){
   let history = typeof SP500_HISTORY !== 'undefined' ? SP500_HISTORY.slice() : [];
   if (history.length < 2) return '';

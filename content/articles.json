@@ -135,7 +135,10 @@
       "author": "S. Okafor",
       "ts": "2026-09-08T15:35:00.000Z",
       "theoryKey": "",
-      "theoryBody": ""
+      "theoryBody": "",
+      "chart": {
+        "key": "nikkei225"
+      }
     },
     {
       "id": "a14",
@@ -147,7 +150,10 @@
       "author": "J. Lindqvist",
       "ts": "2026-09-08T15:40:00.000Z",
       "theoryKey": "",
-      "theoryBody": ""
+      "theoryBody": "",
+      "chart": {
+        "key": "taiex"
+      }
     },
     {
       "id": "a15",
@@ -159,7 +165,10 @@
       "author": "N. Suwannarat",
       "ts": "2026-09-08T15:45:00.000Z",
       "theoryKey": "",
-      "theoryBody": ""
+      "theoryBody": "",
+      "chart": {
+        "key": "vnindex"
+      }
     },
     {
       "id": "a16",
@@ -171,7 +180,10 @@
       "author": "J. Lindqvist",
       "ts": "2026-09-08T15:50:00.000Z",
       "theoryKey": "",
-      "theoryBody": ""
+      "theoryBody": "",
+      "chart": {
+        "key": "INTC"
+      }
     }
   ]
 }

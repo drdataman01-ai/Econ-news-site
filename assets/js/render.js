@@ -101,6 +101,7 @@ function renderArticleView(){
     <div class="byline">By ${escapeHtml(a.author)} &middot; ${fmtDate(a.ts)} ${lockTag(a)}</div>
     ${a.section === 'fedwatch' && a.metrics ? renderFedWatchChart(a) : ''}
     ${a.section === 'sp500' ? renderSP500Chart(a) : ''}
+    ${['japan','taiwan','sea','tech'].includes(a.section) ? renderMarketChart(a) : ''}
     <div class="article-body">`;
 
   if(allowed){
