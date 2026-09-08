@@ -1,1 +1,12 @@
-"Write today's Fed Watch — [what happened: a speech, a data release, a market move, etc.]"
+Do the following in turns and add them to articles.json:
+
+ - "Write today's Fed Watch — [what happened: a speech, a data release, a market move, etc.]"
+
+ - "Write today's Japan outlook — [what happened: a Nikkei/TOPIX move, a BOJ decision or speech, a yen move, an exporter story, etc.]"
+
+ - "Write today's Taiwan outlook — [what happened: a TAIEX move, TSMC or supply-chain news, cross-strait developments, export order data, etc.]"
+
+ - "Write today's Southeast Asia outlook — [which market: Singapore/Indonesia/Vietnam/Thailand/Malaysia/Philippines] — [what happened]"
+
+ - "Write today's Tech outlook — [what happened: an earnings report, an AI capex story, a semiconductor move, a big-tech stock move, etc.]"
+

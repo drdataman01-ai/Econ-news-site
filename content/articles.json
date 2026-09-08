@@ -105,6 +105,73 @@
         "moveOdds": 49,
         "moveDirection": "hike"
       }
+    },
+    {
+      "id": "a12",
+      "section": "fedwatch",
+      "tier": "free",
+      "headline": "Fed Watch Today: Yields tick higher as markets brace for inflation data",
+      "dek": "The 10-year Treasury climbed to 4.81% and hike odds held near 58% as traders looked ahead to this week's inflation reports ahead of the Sept. 15-16 Fed meeting.",
+      "body": "Treasury yields rose again today as markets reopened from the holiday weekend, with rising energy costs and a busy week of inflation data ahead pushing the 10-year yield up more than 2 basis points to 4.81%. The 2-year yield held roughly flat at 4.38%, while the 30-year climbed to 5.27%.\n\nThe move comes as CME FedWatch continues to show a roughly 58% probability of a quarter-point hike at the Sept. 15-16 FOMC meeting, little changed from Friday's post-jobs-report reading. Oil prices also rose Monday, adding another input to the inflation debate.\n\nMarkets are now looking to this week's wholesale inflation report and Wednesday's CPI print as the last major data before officials vote. Fed Chair Kevin Warsh's Jackson Hole remarks last month, which flagged the case for a hike, remain the hawkish anchor traders are measuring incoming data against.\n\nFed Watch take: with hike odds already elevated and largely priced in, this week's inflation prints carry outsized power to cement the case for a move or reopen the debate about a hold.",
+      "author": "R. Costa",
+      "ts": "2026-09-08T15:30:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "metrics": {
+        "fedFundsRate": 3.625,
+        "yield2y": 4.381,
+        "yield10y": 4.806,
+        "moveOdds": 58,
+        "moveDirection": "hike"
+      }
+    },
+    {
+      "id": "a13",
+      "section": "japan",
+      "tier": "free",
+      "headline": "Japan Outlook: Yen surges as markets price in a BOJ rate hike this month",
+      "dek": "The Nikkei touched a fresh high near 66,525 even as the yen strengthened, with traders increasingly convinced the Bank of Japan will raise rates at its September meeting.",
+      "body": "The yen surged Tuesday as Asian markets traded without clear direction, a day after the Nikkei 225 jumped 2.12% to close at 66,400 on a second straight session of gains led by tech shares. The index touched a fresh intraday high near 66,525 Tuesday morning in Tokyo.\n\nThe stronger yen is arriving alongside growing conviction that the Bank of Japan will raise rates at its September meeting, supported by July wage growth running at its fastest pace since 1997 and an upward revision to second-quarter GDP. A firmer yen typically pressures Japan's export-heavy industrials even as it eases import costs.\n\nMonday's rally was driven by chipmakers and AI-linked names -- Kioxia, SoftBank, and Advantest all posted strong gains -- on optimism tied to a rumored new OpenAI model that could lift demand for Japanese semiconductor equipment, while financial and consumer names lagged.\n\nWhat to watch: the BOJ's policy decision this month, alongside how a strengthening yen interacts with elevated oil prices tied to the ongoing Middle East conflict -- a combination that cuts both ways for Japan's inflation outlook.",
+      "author": "S. Okafor",
+      "ts": "2026-09-08T15:35:00.000Z",
+      "theoryKey": "",
+      "theoryBody": ""
+    },
+    {
+      "id": "a14",
+      "section": "taiwan",
+      "tier": "free",
+      "headline": "Taiwan Outlook: TAIEX nears record high as MediaTek surges on Nvidia bond deal",
+      "dek": "Taiwan's benchmark index climbed 1.9% toward its June record, with MediaTek jumping after Nvidia subscribed to $3.5 billion of a record $3.9 billion convertible bond offering.",
+      "body": "The TAIEX climbed 863 points, or 1.9%, to 47,414 in Monday trading, moving back toward the record high set on June 22. The advance was broad, with the electronics-heavy tech subindex up 2.3% on bets for stronger memory chip demand tied to a rumored new OpenAI model.\n\nMediaTek was the standout, surging as much as 9.7% after Nvidia subscribed to $3.5 billion of the company's record $3.9 billion overseas convertible bond offering -- a deal that also deepens the two companies' ties. TSMC, over 40% of the index's value, added roughly 2%, while ASE Technology jumped 5.3%.\n\nTraders are now looking ahead to Taiwan's August trade data, due later this week, as the next read on whether AI-driven chip demand is showing up in hard export numbers rather than just index-level optimism.\n\nWhat to watch: whether the trade data confirms the AI-demand narrative, and how TSMC's heavier 2026-2027 capex guidance is received once Q3 results land.",
+      "author": "J. Lindqvist",
+      "ts": "2026-09-08T15:40:00.000Z",
+      "theoryKey": "",
+      "theoryBody": ""
+    },
+    {
+      "id": "a15",
+      "section": "sea",
+      "tier": "free",
+      "headline": "Southeast Asia Outlook: Vietnam's emerging-market upgrade is two weeks away",
+      "dek": "FTSE Russell's reclassification of Vietnam from frontier to secondary emerging market status takes effect September 21, capping an eight-year reform process and opening the door to index-tracking capital inflows.",
+      "body": "Vietnam is entering the final stretch before a milestone for its capital markets: FTSE Russell's upgrade of the country from frontier to secondary emerging market status takes effect September 21, just under two weeks away. The reclassification caps an eight-year process since Vietnam joined the watchlist in 2018.\n\nThe upgrade places Vietnam alongside China, India, Indonesia, and the Philippines in FTSE's system and should trigger phased inflows from index-tracking funds as Vietnamese equities join the FTSE Global Equity Index Series through 2027. The VN-Index has already reflected much of that anticipation, roughly doubling since April 2025.\n\nA key reform behind the upgrade: removal of the pre-funding requirement that once forced foreign investors to fund trades in advance -- long the biggest access barrier to Vietnamese equities for institutional money.\n\nWhat to watch: with much of the upgrade already priced in, some analysts flag \"sell the news\" risk once September 21 arrives, even as the longer-term case for sustained inflows stays intact.",
+      "author": "N. Suwannarat",
+      "ts": "2026-09-08T15:45:00.000Z",
+      "theoryKey": "",
+      "theoryBody": ""
+    },
+    {
+      "id": "a16",
+      "section": "tech",
+      "tier": "free",
+      "headline": "Tech Outlook: Intel jumps on planned CPU price hikes and a foundry milestone",
+      "dek": "Intel shares rose as much as 5% Tuesday after reports the company plans to raise PC CPU prices roughly 10% in October, alongside an analyst upgrade and a foundry EUV milestone.",
+      "body": "Intel shares jumped as much as 5.4% Tuesday, extending last week's rally, after supply-chain sources told DigiTimes the company plans to raise PC CPU prices by roughly 10% starting in early October. Northland separately upgraded Intel to Outperform with a $120 price target, citing turnaround momentum and reported server CPU shortages.\n\nThe move also comes alongside a manufacturing milestone: Intel Foundry and ASML said more than one million wafers have now been processed using High-NA EUV lithography, technology ASML has also committed to Samsung and TSMC. Nvidia's roughly $30 billion stake in Intel continues to anchor investor conviction in the turnaround story.\n\nThe rally stood out against a softer broader tape -- the S&P 500 and Nasdaq were both slightly lower Tuesday -- underscoring the gains were company-specific rather than sector-wide.\n\nWhat to watch: whether the October price hikes land well with PC makers navigating a slow upgrade cycle, and further detail on Foundry's advanced packaging capacity as it competes for AI-driven demand.",
+      "author": "J. Lindqvist",
+      "ts": "2026-09-08T15:50:00.000Z",
+      "theoryKey": "",
+      "theoryBody": ""
     }
   ]
 }
