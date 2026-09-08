@@ -1,0 +1,70 @@
+name: Validate articles.json
+
+on:
+  pull_request:
+    paths:
+      - 'content/articles.json'
+  push:
+    branches:
+      - main
+    paths:
+      - 'content/articles.json'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Check JSON is well-formed
+        run: python3 -m json.tool content/articles.json > /dev/null
+
+      - name: Check required fields on every article
+        run: |
+          python3 << 'EOF'
+          import json
+          import sys
+
+          with open('content/articles.json') as f:
+              data = json.load(f)
+
+          required = ['id', 'section', 'tier', 'headline', 'dek', 'body', 'author', 'ts']
+          errors = []
+
+          if 'articles' not in data:
+              sys.exit('ERROR: articles.json is missing the top-level "articles" array.')
+
+          ids_seen = set()
+          for i, article in enumerate(data['articles']):
+              label = article.get('id', f'index {i}')
+
+              missing = [f for f in required if f not in article]
+              if missing:
+                  errors.append(f'Article "{label}": missing required field(s): {", ".join(missing)}')
+
+              aid = article.get('id')
+              if aid in ids_seen:
+                  errors.append(f'Article "{label}": duplicate id "{aid}"')
+              ids_seen.add(aid)
+
+              if article.get('tier') not in (None, 'free', 'plus', 'pro'):
+                  errors.append(f'Article "{label}": invalid tier "{article.get("tier")}"')
+
+              # If a metrics block exists, sanity-check its shape rather than requiring one at all.
+              metrics = article.get('metrics')
+              if metrics is not None and not isinstance(metrics, dict):
+                  errors.append(f'Article "{label}": "metrics" must be an object if present')
+
+          if errors:
+              print('articles.json failed validation:\n')
+              for e in errors:
+                  print(f'  - {e}')
+              sys.exit(1)
+
+          print(f'OK: {len(data["articles"])} articles validated, no errors.')
+          EOF
+
+      - name: Report success
+        if: success()
+        run: echo "✅ content/articles.json is valid JSON with all required fields."
