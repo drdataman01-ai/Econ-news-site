@@ -26,54 +26,6 @@
       "theoryBody": ""
     },
     {
-      "id": "a3",
-      "section": "us",
-      "tier": "free",
-      "headline": "Regional manufacturing surveys point to a soft but stabilizing summer",
-      "dek": "New orders components ticked up for the first time in five months across three of the four regional Fed surveys released this week.",
-      "body": "None of the four regional manufacturing gauges released this week crossed back into expansion territory, but the direction of travel was the more interesting signal.\n\nNew orders sub-indices rose in three of the four surveys, and inventory-to-sales ratios continued to normalize after two years of destocking. Taken together, the data reads less like a sector still contracting and more like one bottoming out.\n\nManufacturing remains a smaller share of the economy than services, but it tends to turn ahead of the broader cycle, which is why economists watch these regional prints closely even when the headline diffusion index stays below fifty.",
-      "author": "R. Costa",
-      "ts": "2026-09-04T15:01:43.580Z",
-      "theoryKey": "accelerator",
-      "theoryBody": "Business cycle theory distinguishes between leading indicators, which tend to turn before aggregate output, and coincident or lagging indicators, which confirm a turn only after it has already occurred. New orders components in manufacturing surveys sit closer to the leading end of that spectrum, because they reflect forward order books rather than output already realized.\n\nA classic mechanism linking these survey readings to the broader cycle is the inventory accelerator: when firms have spent an extended period drawing down stock built up during the prior expansion, even a modest pickup in expected demand can require a disproportionately large swing in production to rebuild inventory to a desired ratio with sales. That amplification is one reason small improvements in new orders can be read as more informative than the still-negative headline diffusion index suggests.\n\nThe caution graduate courses attach to this reading is that inventory cycles are shorter and more volatile than the underlying business cycle itself, so a single month of improving new orders is consistent with either a genuine turn or a temporary restocking pause within a longer soft patch."
-    },
-    {
-      "id": "a4",
-      "section": "us",
-      "tier": "pro",
-      "headline": "Dedicated note: reading through to Q3 GDP from this week's data run",
-      "dek": "Our house tracker moves half a point on the back of this week's releases. A full breakdown of the components driving the revision.",
-      "body": "This is a dedicated analyst note, available to Pro members.\n\nFollowing this week's retail sales, housing starts, and regional manufacturing releases, our internal GDP tracker for the current quarter moves from 1.8% to 2.3% on an annualized basis.\n\nThe revision is driven primarily by stronger-than-expected consumer durables spending and a smaller drag from residential investment than the prior estimate assumed. Government spending and net exports were roughly unchanged in the model.\n\nWe flag two risks to the upside estimate: first, that durables strength is partly pull-forward ahead of tariff-related price increases; second, that the labor market data due next week could reintroduce downside risk to the consumption assumption. We will update the tracker after that release.",
-      "author": "R. Costa",
-      "ts": "2026-09-03T19:01:43.580Z",
-      "theoryKey": "okun",
-      "theoryBody": "Okun's law provides the standard graduate-level bridge between an output estimate like this quarter's GDP tracker and the labor market: it posits a roughly stable, though country- and period-specific, relationship between the deviation of output growth from trend and the change in the unemployment rate. A revision of this size to the growth tracker is therefore not just a GDP story, it carries an implicit forecast for the labor market that the note flags as a risk to double check against next week's release.\n\nThe relationship is best treated as an empirical regularity rather than a structural law: the coefficient linking output and unemployment has drifted over time as labor hoarding, part-time work, and participation-rate responses to the cycle have changed the way firms adjust headcount to demand. Because of that drift, the analyst note above treats the labor data due next week as a genuine test of the revision rather than a formality, since a labor market that fails to firm alongside the growth revision would suggest the durables strength is not yet translating into broader hiring."
-    },
-    {
-      "id": "a5",
-      "section": "asia",
-      "tier": "free",
-      "headline": "Tokyo shares edge higher as the yen steadies near recent lows",
-      "dek": "Exporters led gains for a second day as currency traders found a temporary floor after last week's sharp move.",
-      "body": "Japanese equities extended a modest advance, with export-heavy names again among the best performers as the yen held in a tight range against the dollar following last week's volatility.\n\nTraders described the current calm as more a pause than a resolution: positioning had grown stretched on both sides of the currency trade, and the market appears to be waiting for the next policy signal before committing to a fresh direction.\n\nElsewhere in the region, mainland Chinese indices were little changed ahead of a batch of activity data due later in the week, while Korean semiconductor names tracked overnight moves in US chip stocks.",
-      "author": "S. Okafor",
-      "ts": "2026-09-05T13:01:43.580Z",
-      "theoryKey": "uip",
-      "theoryBody": "Open-economy macroeconomics at the graduate level typically introduces uncovered interest rate parity as a no-arbitrage condition: the expected change in an exchange rate should offset the interest rate differential between two currencies, so that expected returns on comparable assets are equalized once currency risk is priced in. Persistent, large currency swings like the one referenced here usually indicate that the market has revised its expectation of the future interest rate path in one or both countries, not merely that positioning has shifted.\n\nThe broader framework for a currency at a policy inflection point is the Mundell-Fleming trilemma, which holds that a country cannot simultaneously maintain free capital mobility, a fixed or tightly managed exchange rate, and independent monetary policy. A central bank operating with open capital markets and an independent policy rate should expect its currency to absorb the adjustment when interest rate expectations diverge from a trading partner's, which is the lens through which the desk is reading the current stabilization as a pause in an ongoing adjustment rather than a resolved trend."
-    },
-    {
-      "id": "a6",
-      "section": "asia",
-      "tier": "plus",
-      "headline": "What a steadier yen means for regional supply chain names",
-      "dek": "Extended coverage: a look at which exporters and component makers are most exposed to further currency swings.",
-      "body": "Available to Plus and Pro members.\n\nCurrency stability, even at current levels, is arguably more important to regional supply chain names than the absolute level of the yen. Component makers who price contracts in dollars but report in yen have spent much of the past year hedging aggressively, and a calmer currency reduces the cost of that hedging book.\n\nWe walk through three names across autos, machine tools, and electronics components where the margin impact of reduced hedging costs is likely to show up first in upcoming quarterly guidance.",
-      "author": "S. Okafor",
-      "ts": "2026-09-04T12:01:43.580Z",
-      "theoryKey": "passthrough",
-      "theoryBody": "The extent to which a currency move shows up in the prices exporters actually charge, rather than being absorbed into their margins, is what graduate trade and open-economy courses call exchange-rate pass-through. Pass-through is rarely complete: firms with pricing power in the destination market often choose to hold local currency prices steady and let their own margins absorb part of the swing, a behavior sometimes labeled pricing-to-market.\n\nThat is precisely the mechanism connecting currency stability to the supply-chain names discussed here. When the currency is volatile, firms with dollar-denominated contracts and yen-denominated costs typically hedge more aggressively to protect margins from pass-through risk they cannot pass on to customers; when the currency stabilizes, the same firms can reduce the hedging book, and the reduced hedging cost flows fairly directly to reported margin even before any change in underlying demand."
-    },
-    {
       "id": "a7",
       "section": "tech",
       "tier": "free",
@@ -110,7 +62,7 @@
       "theoryBody": "",
       "metrics": {
         "fedFundsRate": 3.625,
-        "yield2y": 4.30,
+        "yield2y": 4.3,
         "yield10y": 4.72,
         "moveOdds": 55,
         "moveDirection": "cut"

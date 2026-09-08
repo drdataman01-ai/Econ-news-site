@@ -8,8 +8,9 @@
 
 const SECTIONS = [
   {id:'sp500', label:'S&P 500 outlook'},
-  {id:'us', label:'US outlook'},
-  {id:'asia', label:'Asian outlook'},
+  {id:'japan', label:'Japan outlook'},
+  {id:'taiwan', label:'Taiwan outlook'},
+  {id:'sea', label:'Southeast Asia outlook'},
   {id:'tech', label:'Tech stocks outlook'},
   {id:'fedwatch', label:'Fed Watch'}
 ];
