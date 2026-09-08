@@ -100,6 +100,7 @@ function renderArticleView(){
     <p class="dek">${escapeHtml(a.dek)}</p>
     <div class="byline">By ${escapeHtml(a.author)} &middot; ${fmtDate(a.ts)} ${lockTag(a)}</div>
     ${a.section === 'fedwatch' && a.metrics ? renderFedWatchChart(a) : ''}
+    ${a.section === 'sp500' ? renderSP500Chart(a) : ''}
     <div class="article-body">`;
 
   if(allowed){

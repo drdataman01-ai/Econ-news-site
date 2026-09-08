@@ -261,3 +261,41 @@ function renderFedWatchChart(currentArticle){
 
   return historyPanel;
 }
+
+/**
+ * Builds the S&P 500 10-year trend chart, shown on every S&P 500
+ * article. Draws from SP500_HISTORY (assets/js/sp500-history-data.js)
+ * as the base, with the most recent S&P 500 post's `metrics.close`
+ * appended (or merged into the same month) if it's newer than the
+ * last history point — same pattern as the Fed Watch chart, so the
+ * final point reflects "as of today" once your posts start carrying
+ * a metrics snapshot.
+ */
+function renderSP500Chart(currentArticle){
+  let history = typeof SP500_HISTORY !== 'undefined' ? SP500_HISTORY.slice() : [];
+  if (history.length < 2) return '';
+
+  const latestPost = sortedArticles(
+    state.articles.filter(a => a.section === 'sp500' && a.metrics && typeof a.metrics.close === 'number')
+  )[0]; // sortedArticles is newest-first, so [0] is the latest
+
+  if (latestPost){
+    const latestMonth = latestPost.ts.slice(0, 7); // 'YYYY-MM'
+    const lastHistoryMonth = history[history.length - 1].date;
+    const snapshot = { date: latestMonth, close: latestPost.metrics.close };
+    if (latestMonth > lastHistoryMonth) history.push(snapshot);
+    else if (latestMonth === lastHistoryMonth) history[history.length - 1] = snapshot;
+  }
+
+  const labels = history.map(h => yearLabel(h.date));
+  return `
+    <div class="fedwatch-chart-panel">
+      <p class="apps-label">S&amp;P 500 &middot; 10-year history</p>
+      ${lineChartSVG(history.map(h => h.close), labels, {
+        label: 'S&P 500',
+        suffix: '',
+        color: '#2f5d8a',
+        fillColor: 'rgba(47, 93, 138, 0.10)'
+      })}
+    </div>`;
+}
