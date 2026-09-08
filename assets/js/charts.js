@@ -48,6 +48,20 @@ function lineChartSVG(values, dates, opts){
     return [x, y];
   });
 
+  // Event bands (e.g. "COVID crash", "2022 bear market") shade a
+  // range of data points, like the gray recession bars on a FRED
+  // chart. opts.events: [{startIndex, endIndex, label}], indices
+  // referring to positions in the values/dates arrays.
+  let eventBands = '';
+  (opts.events || []).forEach(ev => {
+    const xStart = padLeft + ev.startIndex * stepX;
+    const xEnd = padLeft + ev.endIndex * stepX;
+    const bandW = Math.max(1, xEnd - xStart);
+    eventBands += `
+      <rect x="${xStart.toFixed(1)}" y="${padTop}" width="${bandW.toFixed(1)}" height="${plotH.toFixed(1)}" fill="#8a8a86" fill-opacity="0.14"/>
+      <text x="${(xStart + bandW / 2).toFixed(1)}" y="${(padTop + 10).toFixed(1)}" text-anchor="middle" style="font-family:sans-serif; font-size:8px;" fill="#6b6b66">${ev.label}</text>`;
+  });
+
   const linePath = points.map((p, i) => (i === 0 ? 'M' : 'L') + p[0].toFixed(1) + ',' + p[1].toFixed(1)).join(' ');
   const baseline = padTop + plotH;
   const areaPath = `M${points[0][0].toFixed(1)},${baseline.toFixed(1)} ` +
@@ -84,6 +98,7 @@ function lineChartSVG(values, dates, opts){
         <p class="linechart-value">${last}${suffix} <span class="linechart-delta ${deltaClass}">${deltaStr}</span></p>
       </div>
       <svg viewBox="0 0 ${width} ${height}" preserveAspectRatio="none" overflow="visible" role="img" aria-label="${opts.label || 'chart'} trend, currently ${last}${suffix}">
+        ${eventBands}
         ${gridlines}
         <path d="${areaPath}" fill="${fillColor}" stroke="none"/>
         <path d="${linePath}" fill="none" stroke="${color}" stroke-width="1.75"/>
@@ -218,6 +233,16 @@ function yearLabel(yearMonth){
   return "'" + year.slice(2);
 }
 
+/** Finds the index in a history array (sorted by 'date') closest to the given 'YYYY-MM', for positioning event bands. */
+function historyIndexForMonth(history, yearMonth){
+  const exact = history.findIndex(h => h.date === yearMonth);
+  if (exact !== -1) return exact;
+  for (let i = 0; i < history.length; i++){
+    if (history[i].date > yearMonth) return Math.max(0, i - 1);
+  }
+  return history.length - 1;
+}
+
 /**
  * Builds the Fed Watch trend panel. Fed funds rate, 2Y, and 10Y yield
  * are combined into ONE multi-line chart from FED_HISTORY (assets/js/
@@ -288,6 +313,21 @@ function renderSP500Chart(currentArticle){
   }
 
   const labels = history.map(h => yearLabel(h.date));
+
+  // Known market events, marked as shaded bands like FRED's recession
+  // bars. Index ranges are based on the data points that bracket each
+  // event in SP500_HISTORY, not exact daily dates, since the history
+  // here is sampled every few months rather than daily.
+  const events = [
+    { start: '2019-12', end: '2020-06', label: 'COVID crash' },
+    { start: '2021-12', end: '2022-12', label: '2022 bear market' },
+    { start: '2024-12', end: '2025-09', label: 'Tariff selloff' }
+  ].map(ev => ({
+    startIndex: historyIndexForMonth(history, ev.start),
+    endIndex: historyIndexForMonth(history, ev.end),
+    label: ev.label
+  }));
+
   return `
     <div class="fedwatch-chart-panel">
       <p class="apps-label">S&amp;P 500 &middot; 10-year history</p>
@@ -295,7 +335,8 @@ function renderSP500Chart(currentArticle){
         label: 'S&P 500',
         suffix: '',
         color: '#2f5d8a',
-        fillColor: 'rgba(47, 93, 138, 0.10)'
+        fillColor: 'rgba(47, 93, 138, 0.10)',
+        events: events
       })}
     </div>`;
 }
