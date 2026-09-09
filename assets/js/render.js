@@ -62,7 +62,8 @@ function renderHome(){
   });
   gridHtml += `</div>`;
 
-  return `<div class="hero">${heroHtml}${sideHtml}</div>${gridHtml}`;
+  const mainHtml = `<div class="hero">${heroHtml}${sideHtml}</div>${gridHtml}`;
+  return `<div class="home-layout"><div class="home-main">${mainHtml}</div>${renderWatchlistPanel()}</div>`;
 }
 
 function renderSectionView(){

@@ -12,3 +12,7 @@ async function setTier(id){
 
 document.getElementById('clockLine').textContent = 'Markets desk \u00b7 ' + new Date().toLocaleDateString('en-US', {weekday:'long', month:'long', day:'numeric', year:'numeric'});
 loadData();
+
+loadWatchlists();
+fetchAllWatchlistQuotes();
+startWatchlistAutoRefresh();
