@@ -1,189 +1,72 @@
-{
-  "week_of": "2026-09-01",
-  "articles": [
-    {
-      "id": "a1",
-      "section": "sp500",
-      "tier": "free",
-      "headline": "S&P 500 holds the 5,500 line as breadth quietly improves",
-      "dek": "Advancers outpaced decliners for a fourth straight session even as the index itself barely moved, a divergence desk strategists read as a healthier base than the headline number suggests.",
-      "body": "The index closed little changed on the day, but the story underneath the flat print was more constructive than the tape implied.\n\nAdvance-decline data across the exchange showed the broadest participation in almost three weeks, with mid-cap industrials and regional financials doing quiet work while mega-cap technology names consolidated recent gains.\n\nDesk strategists framed the move as rotation rather than distribution: money leaving the most crowded trades and finding a home in names that had lagged the run since spring. That kind of internal rebalancing, when it happens without a drawdown in the index itself, has historically preceded further upside rather than a top.\n\nThe next real test arrives with next week's inflation print, which will shape whether the current rate path holds or whether the market has to reprice the number of cuts it expects before year end.",
-      "author": "M. Halvorsen",
-      "ts": "2026-09-05T18:01:43.580Z",
-      "theoryKey": "phillips",
-      "theoryBody": "Graduate treatments of inflation dynamics typically start from a New Keynesian Phillips curve, where current inflation is pinned down by expected future inflation plus a term reflecting the output gap or real marginal cost, rather than by past inflation alone. Because expectations of future inflation do most of the work in this framework, asset prices can move well ahead of any given data release: investors are effectively pricing in the inflation path implied by current output and labor market slack, then revising that path as new information arrives.\n\nThe breadth improvement described in this piece is consistent with that logic. If market participants believe underlying price pressure is being contained without a demand-side hard landing, both cyclical and previously lagging sectors can re-rate together, since the same expected inflation path feeds into the discount rate applied across the index rather than into a handful of names.\n\nThe risk to this reading sits in the same equation: because current pricing already embeds an expected inflation path, a data surprise does not just update the current inflation number, it forces a repricing of the entire expected path going forward, which is why single data releases can move markets by more than the surprise in the number alone would suggest."
+[
+  {
+    "id": "a01",
+    "section": "fedwatch",
+    "tier": "free",
+    "headline": "Tripled Treasury buyback pushes 10-year yield to a three-year high",
+    "dek": "Bessent's bond-buyback move and rising oil prices overshadowed next week's FOMC decision.",
+    "body": "The Headline: Treasury's tripled bond buyback sent the 10-year yield to its highest level since November 2023, adding to the case for a hawkish surprise at next week's Fed meeting.\n\nWhat Happened: Treasury Secretary Scott Bessent announced Wednesday that the department will triple its buyback of 10- to 20-year government debt to $6 billion, up from the $2 billion initially unveiled, in an effort to steady the bond market. The move follows an Aug. 19 pledge to at least double buybacks, and came as oil prices kept climbing toward $100 a barrel.\n\nMarket Reaction: The 10-year Treasury yield jumped to 4.857%, its highest since November 2023, while the 2-year yield held near 4.39%. The Dow fell 333 points (-0.6%), the S&P 500 lost 0.4%, and the Nasdaq slid 0.5%.\n\nWhy It Matters: Markets now price roughly a 58% chance of a 25-basis-point hike at next week's FOMC meeting, up from about 52% after Friday's strong August jobs report.\n\nFed Watch Take: If oil keeps climbing toward $100, the inflation argument for a hike gets harder for the committee's doves to wave away.",
+    "author": "D. Marsh",
+    "ts": "2026-09-09T19:05:00Z",
+    "metrics": {
+      "fedFundsRate": 3.625,
+      "yield2y": 4.39,
+      "yield10y": 4.857,
+      "moveOdds": 58,
+      "moveDirection": "hike"
     },
-    {
-      "id": "a2",
-      "section": "sp500",
-      "tier": "plus",
-      "headline": "Options desks are pricing a narrower range into month end",
-      "dek": "Implied volatility on the index has compressed to its lowest reading since January, and dealer positioning suggests the drift may continue.",
-      "body": "Extended coverage available to Plus and Pro members.\n\nDealer gamma exposure has flipped decisively positive, which tends to dampen realized volatility as market makers buy dips and sell rallies to stay hedged. That mechanical flow, more than any change in the macro narrative, explains why the index has traded in such a tight band over the past two weeks.\n\nThe desk's read: absent a genuine surprise in growth or inflation data, the path of least resistance is a grind rather than a sharp move in either direction, at least until the current options expiration cycle clears.",
-      "author": "M. Halvorsen",
-      "ts": "2026-09-04T19:01:43.580Z",
-      "theoryKey": "",
-      "theoryBody": ""
-    },
-    {
-      "id": "a7",
-      "section": "tech",
-      "tier": "free",
-      "headline": "Chipmakers diverge as the market separates AI capex winners from the rest",
-      "dek": "Foundry and memory names traded on very different notes this week even as the broader semiconductor index closed roughly flat.",
-      "body": "The semiconductor index closed the week almost exactly where it started, but that headline number masked a wide dispersion underneath.\n\nNames most directly tied to AI accelerator production continued to see estimate revisions move higher, while more diversified chipmakers with meaningful exposure to consumer electronics and legacy nodes lagged.\n\nThe split is becoming a defining feature of this earnings season: investors are increasingly unwilling to pay up for semiconductor exposure that isn't clearly levered to data center buildout, regardless of a company's broader quality.",
-      "author": "J. Lindqvist",
-      "ts": "2026-09-05T07:01:43.580Z",
-      "theoryKey": "schumpeter",
-      "theoryBody": "Schumpeterian growth theory, formalized in modern endogenous growth models, treats a wave of innovation not as a rising tide that lifts an entire sector, but as a process that reallocates capital and market share away from incumbents toward whichever firms hold the frontier technology at a given moment. Divergence within an industry index, rather than a uniform re-rating, is the signature this theory predicts when a genuine technological shift, rather than a cyclical demand swing, is underway.\n\nThe semiconductor split described in this piece is a fairly clean example: capital is not leaving the sector, it is being reallocated within it toward the firms positioned at the current technological frontier, which the theory would treat as an efficient, if uncomfortable for laggards, response to a real shift in the expected return on capital across different parts of the value chain."
-    },
-    {
-      "id": "a8",
-      "section": "tech",
-      "tier": "pro",
-      "headline": "Dedicated note: modeling three scenarios for data center capex into next year",
-      "dek": "Our base, bull, and bear cases for hyperscaler spending, and what each implies for the semiconductor supply chain.",
-      "body": "This is a dedicated analyst note, available to Pro members.\n\nWe present three scenarios for aggregate hyperscaler capital expenditure over the next four quarters, built from public guidance, historical capex-to-revenue ratios, and lead time data gathered from equipment suppliers.\n\nIn our base case, aggregate spend grows at a slower but still double-digit pace as the largest cloud providers digest the current build cycle. Our bull case assumes a further leg up tied to enterprise AI adoption running ahead of current guidance. Our bear case models a pause driven by return-on-investment scrutiny from public market investors.\n\nWe map each scenario to likely outcomes for equipment makers, memory pricing, and power infrastructure providers, with the position sizing implications for each.",
-      "author": "J. Lindqvist",
-      "ts": "2026-09-03T09:01:43.580Z",
-      "theoryKey": "tobinq",
-      "theoryBody": "Two complementary frameworks anchor most graduate treatments of corporate investment. Tobin's Q relates investment to the ratio of a firm's market valuation to the replacement cost of its capital: when Q is comfortably above one, the theory predicts firms should keep adding capital because financial markets are valuing that capital above what it costs to build. The accelerator model instead ties investment more mechanically to the expected growth rate of demand, treating capex as a derived response to the pace at which capacity needs to expand.\n\nThe three scenarios modeled in this note map fairly directly onto both lenses: the bull case is consistent with persistently high Q sustaining capex even as growth moderates, the base case reflects an accelerator-style deceleration as the rate of demand growth, not its level, slows, and the bear case models a scenario where public-market scrutiny compresses Q enough that even firms with strong underlying demand pull back on planned capital spending."
-    },
-    {
-      "id": "a9",
-      "section": "fedwatch",
-      "tier": "free",
-      "headline": "Fed Watch Today: a governor opens the door to a December move",
-      "dek": "Treasury yields slipped after a voting member said the committee could 'act before year end' if the next two inflation prints hold near target.",
-      "body": "A Federal Reserve governor said today the committee could act before year end if incoming inflation data continues to run near target, the most direct hint yet from a voting member about the December meeting.\n\nThe remarks came during a speech to a regional business group and were quickly picked up by rates desks parsing them for a shift from the more cautious tone struck after the last FOMC meeting. The speaker did not commit to a specific move, but the phrasing was read as more dovish than recent Fed communication.\n\nThe 2-year Treasury yield fell 5 basis points on the headline, futures markets nudged the implied odds of a December cut up several points, and the S&P 500 closed modestly higher into the bell.\n\nThe shift matters because it narrows the gap between what the Fed has been signaling and what markets have been pricing independently. If the next CPI and employment reports come in soft, today's comments give the committee more room to act without surprising markets; if inflation surprises to the upside instead, today's language will look premature.\n\nFed Watch take: the next two data prints now carry outsized weight for the December decision, more than the speech itself.",
-      "author": "R. Costa",
-      "ts": "2026-09-07T16:30:00.000Z",
-      "theoryKey": "",
-      "theoryBody": "",
-      "metrics": {
-        "fedFundsRate": 3.625,
-        "yield2y": 4.3,
-        "yield10y": 4.72,
-        "moveOdds": 55,
-        "moveDirection": "cut"
-      }
-    },
-    {
-      "id": "a10",
-      "section": "fedwatch",
-      "tier": "free",
-      "headline": "Fed Watch Today: A hot jobs report puts a rate hike back on the table",
-      "dek": "August payrolls beat estimates by more than triple the consensus, undercutting a dovish read on Fed Governor Waller's remarks from earlier in the week.",
-      "body": "Federal Reserve Governor Christopher Waller said Thursday he could support holding rates steady this month if inflation data due before the meeting confirmed the recent disinflation trend, though he signaled he would back a hike if inflation ran hot. A day later, the Labor Department's August jobs report undercut the calmer read on his remarks: nonfarm payrolls jumped 162,000, more than triple the roughly 53,000 economists expected, while unemployment held at 4.1% and June and July figures were revised higher.\n\nU.S. markets are closed today for Labor Day, but Friday's session captured the shift. The Dow fell 271.86 points, the S&P 500 slipped 0.38% to 7,718.60, and the 2-year Treasury yield rose to 4.377%, its highest level since January 2025. Futures tracked by the CME FedWatch tool showed traders pricing roughly 60% odds of a quarter-point hike at the September 15-16 meeting, up sharply from earlier in the week.\n\nThe report puts full weight on next week's CPI and PPI releases, the last major inflation data before the FOMC meets. Waller has said his vote hinges on whether the disinflation trend seen in July's data continued into August; a hot print would likely tip him, and possibly other officials, toward a hike rather than a hold.\n\nFed Watch take: the labor market just took a hold off the table as the automatically safe outcome. Next week's inflation data now looks more likely to decide between a hike and a hold than between a hold and a cut.",
-      "author": "R. Costa",
-      "ts": "2026-09-07T14:00:00.000Z",
-      "theoryKey": "",
-      "theoryBody": "",
-      "metrics": {
-        "fedFundsRate": 3.625,
-        "yield2y": 4.377,
-        "yield10y": 4.784,
-        "moveOdds": 60,
-        "moveDirection": "hike"
-      }
-    },
-    {
-      "id": "a11",
-      "section": "fedwatch",
-      "tier": "free",
-      "headline": "Fed Watch Today: Hike odds cool slightly over the long weekend, still a coin flip",
-      "dek": "With no new economic data released, prediction markets did the adjusting instead \u2014 a 25-basis-point September hike now sits at 49%, down from Friday's post-jobs-report spike.",
-      "body": "No new economic data came out over the Labor Day weekend, but prediction markets kept moving anyway. Polymarket's contract on the September 15-16 FOMC decision now prices a hold at 52% and a quarter-point hike at 49%, easing back from the sharper hawkish tilt seen immediately after Friday's stronger-than-expected August jobs report.\n\nCash Treasury and equity markets are closed today for Labor Day, so Friday's close remains the last hard print: the 2-year Treasury yield at 4.377% and the 10-year at 4.784%, both up on the week. The Fed funds rate has held at 3.50%-3.75% since the July meeting.\n\nThe near-even split reflects a genuinely undecided committee. July's meeting itself split 9-3, with three dissenters favoring an immediate hike, and Governor Waller has said his own vote hinges specifically on whether August inflation data continued the disinflation trend seen in July. Next week's CPI and PPI reports are the last scheduled inflation data before officials vote.\n\nFed Watch take: the gap between hold and hike is now inside the market's own noise band this close to a meeting, which is unusual \u2014 a single soft or hot inflation print next week could tip the outcome either way.",
-      "author": "R. Costa",
-      "ts": "2026-09-07T18:00:00.000Z",
-      "theoryKey": "",
-      "theoryBody": "",
-      "metrics": {
-        "fedFundsRate": 3.625,
-        "yield2y": 4.377,
-        "yield10y": 4.784,
-        "moveOdds": 49,
-        "moveDirection": "hike"
-      }
-    },
-    {
-      "id": "a12",
-      "section": "fedwatch",
-      "tier": "free",
-      "headline": "Fed Watch Today: Yields tick higher as markets brace for inflation data",
-      "dek": "The 10-year Treasury climbed to 4.81% and hike odds held near 58% as traders looked ahead to this week's inflation reports ahead of the Sept. 15-16 Fed meeting.",
-      "body": "Treasury yields rose again today as markets reopened from the holiday weekend, with rising energy costs and a busy week of inflation data ahead pushing the 10-year yield up more than 2 basis points to 4.81%. The 2-year yield held roughly flat at 4.38%, while the 30-year climbed to 5.27%.\n\nThe move comes as CME FedWatch continues to show a roughly 58% probability of a quarter-point hike at the Sept. 15-16 FOMC meeting, little changed from Friday's post-jobs-report reading. Oil prices also rose Monday, adding another input to the inflation debate.\n\nMarkets are now looking to this week's wholesale inflation report and Wednesday's CPI print as the last major data before officials vote. Fed Chair Kevin Warsh's Jackson Hole remarks last month, which flagged the case for a hike, remain the hawkish anchor traders are measuring incoming data against.\n\nFed Watch take: with hike odds already elevated and largely priced in, this week's inflation prints carry outsized power to cement the case for a move or reopen the debate about a hold.",
-      "author": "R. Costa",
-      "ts": "2026-09-08T15:30:00.000Z",
-      "theoryKey": "",
-      "theoryBody": "",
-      "metrics": {
-        "fedFundsRate": 3.625,
-        "yield2y": 4.381,
-        "yield10y": 4.806,
-        "moveOdds": 58,
-        "moveDirection": "hike"
-      }
-    },
-    {
-      "id": "a13",
-      "section": "japan",
-      "tier": "free",
-      "headline": "Japan Outlook: Yen surges as markets price in a BOJ rate hike this month",
-      "dek": "The Nikkei touched a fresh high near 66,525 even as the yen strengthened, with traders increasingly convinced the Bank of Japan will raise rates at its September meeting.",
-      "body": "The yen surged Tuesday as Asian markets traded without clear direction, a day after the Nikkei 225 jumped 2.12% to close at 66,400 on a second straight session of gains led by tech shares. The index touched a fresh intraday high near 66,525 Tuesday morning in Tokyo.\n\nThe stronger yen is arriving alongside growing conviction that the Bank of Japan will raise rates at its September meeting, supported by July wage growth running at its fastest pace since 1997 and an upward revision to second-quarter GDP. A firmer yen typically pressures Japan's export-heavy industrials even as it eases import costs.\n\nMonday's rally was driven by chipmakers and AI-linked names -- Kioxia, SoftBank, and Advantest all posted strong gains -- on optimism tied to a rumored new OpenAI model that could lift demand for Japanese semiconductor equipment, while financial and consumer names lagged.\n\nWhat to watch: the BOJ's policy decision this month, alongside how a strengthening yen interacts with elevated oil prices tied to the ongoing Middle East conflict -- a combination that cuts both ways for Japan's inflation outlook.",
-      "author": "S. Okafor",
-      "ts": "2026-09-08T15:35:00.000Z",
-      "theoryKey": "",
-      "theoryBody": "",
-      "chart": {
-        "key": "nikkei225"
-      }
-    },
-    {
-      "id": "a14",
-      "section": "taiwan",
-      "tier": "free",
-      "headline": "Taiwan Outlook: TAIEX nears record high as MediaTek surges on Nvidia bond deal",
-      "dek": "Taiwan's benchmark index climbed 1.9% toward its June record, with MediaTek jumping after Nvidia subscribed to $3.5 billion of a record $3.9 billion convertible bond offering.",
-      "body": "The TAIEX climbed 863 points, or 1.9%, to 47,414 in Monday trading, moving back toward the record high set on June 22. The advance was broad, with the electronics-heavy tech subindex up 2.3% on bets for stronger memory chip demand tied to a rumored new OpenAI model.\n\nMediaTek was the standout, surging as much as 9.7% after Nvidia subscribed to $3.5 billion of the company's record $3.9 billion overseas convertible bond offering -- a deal that also deepens the two companies' ties. TSMC, over 40% of the index's value, added roughly 2%, while ASE Technology jumped 5.3%.\n\nTraders are now looking ahead to Taiwan's August trade data, due later this week, as the next read on whether AI-driven chip demand is showing up in hard export numbers rather than just index-level optimism.\n\nWhat to watch: whether the trade data confirms the AI-demand narrative, and how TSMC's heavier 2026-2027 capex guidance is received once Q3 results land.",
-      "author": "J. Lindqvist",
-      "ts": "2026-09-08T15:40:00.000Z",
-      "theoryKey": "",
-      "theoryBody": "",
-      "chart": {
-        "key": "taiex"
-      }
-    },
-    {
-      "id": "a15",
-      "section": "sea",
-      "tier": "free",
-      "headline": "Southeast Asia Outlook: Vietnam's emerging-market upgrade is two weeks away",
-      "dek": "FTSE Russell's reclassification of Vietnam from frontier to secondary emerging market status takes effect September 21, capping an eight-year reform process and opening the door to index-tracking capital inflows.",
-      "body": "Vietnam is entering the final stretch before a milestone for its capital markets: FTSE Russell's upgrade of the country from frontier to secondary emerging market status takes effect September 21, just under two weeks away. The reclassification caps an eight-year process since Vietnam joined the watchlist in 2018.\n\nThe upgrade places Vietnam alongside China, India, Indonesia, and the Philippines in FTSE's system and should trigger phased inflows from index-tracking funds as Vietnamese equities join the FTSE Global Equity Index Series through 2027. The VN-Index has already reflected much of that anticipation, roughly doubling since April 2025.\n\nA key reform behind the upgrade: removal of the pre-funding requirement that once forced foreign investors to fund trades in advance -- long the biggest access barrier to Vietnamese equities for institutional money.\n\nWhat to watch: with much of the upgrade already priced in, some analysts flag \"sell the news\" risk once September 21 arrives, even as the longer-term case for sustained inflows stays intact.",
-      "author": "N. Suwannarat",
-      "ts": "2026-09-08T15:45:00.000Z",
-      "theoryKey": "",
-      "theoryBody": "",
-      "chart": {
-        "key": "vnindex"
-      }
-    },
-    {
-      "id": "a16",
-      "section": "tech",
-      "tier": "free",
-      "headline": "Tech Outlook: Intel jumps on planned CPU price hikes and a foundry milestone",
-      "dek": "Intel shares rose as much as 5% Tuesday after reports the company plans to raise PC CPU prices roughly 10% in October, alongside an analyst upgrade and a foundry EUV milestone.",
-      "body": "Intel shares jumped as much as 5.4% Tuesday, extending last week's rally, after supply-chain sources told DigiTimes the company plans to raise PC CPU prices by roughly 10% starting in early October. Northland separately upgraded Intel to Outperform with a $120 price target, citing turnaround momentum and reported server CPU shortages.\n\nThe move also comes alongside a manufacturing milestone: Intel Foundry and ASML said more than one million wafers have now been processed using High-NA EUV lithography, technology ASML has also committed to Samsung and TSMC. Nvidia's roughly $30 billion stake in Intel continues to anchor investor conviction in the turnaround story.\n\nThe rally stood out against a softer broader tape -- the S&P 500 and Nasdaq were both slightly lower Tuesday -- underscoring the gains were company-specific rather than sector-wide.\n\nWhat to watch: whether the October price hikes land well with PC makers navigating a slow upgrade cycle, and further detail on Foundry's advanced packaging capacity as it competes for AI-driven demand.",
-      "author": "J. Lindqvist",
-      "ts": "2026-09-08T15:50:00.000Z",
-      "theoryKey": "",
-      "theoryBody": "",
-      "chart": {
-        "key": "INTC"
-      }
-    }
-  ]
-}
+    "theoryKey": "",
+    "theoryBody": ""
+  },
+  {
+    "id": "a02",
+    "section": "japan",
+    "tier": "free",
+    "headline": "Yen's climb toward seven-month high pressures Nikkei exporters",
+    "dek": "Bessent's warning against yen-weakness bets sent the currency higher and knocked exporter stocks even as chip shares held up.",
+    "body": "The Nikkei 225 slipped 0.19% Wednesday to close at 65,143, giving back an early gain, while the TOPIX eased 0.09% to 4,046.64. The declines came after the yen strengthened to its highest level in nearly seven months, with USD/JPY falling to around 153.63, after U.S. Treasury Secretary Scott Bessent said he has \"pretty good insight\" into the Bank of Japan's intervention actions and warned traders against betting on further yen weakness.\n\nA stronger yen weighs directly on Japan's export-heavy names: Nintendo dropped 4%, Fast Retailing fell 2.7%, Advantest lost 2.8% and Mitsubishi UFJ slid 1.5%. Semiconductor and AI-linked shares offered some offset. Rising oil prices, pushing toward $100 a barrel, added to inflation pressure and kept rate-hike bets alive.\n\nTraders are watching the BOJ's next policy meeting, where hawkish signals from advisers close to Prime Minister Takaichi and the fastest wage growth since 1997 have fueled speculation of a September hike.",
+    "author": "S. Okafor",
+    "ts": "2026-09-09T19:06:00Z",
+    "chart": { "key": "nikkei225" },
+    "theoryKey": "",
+    "theoryBody": ""
+  },
+  {
+    "id": "a03",
+    "section": "taiwan",
+    "tier": "free",
+    "headline": "TAIEX edges higher as TSMC profit-taking caps early rally",
+    "dek": "Shares gave back early gains as investors turned cautious on TSMC ahead of this week's U.S. inflation data.",
+    "body": "The TAIEX closed up 77.58 points, or 0.16%, at 47,183.36 on Wednesday after swinging between 47,060.78 and 47,548.26. TSMC, which accounts for more than 40% of the index's total value, fell 0.20% to NT$2,465.00, down from an intraday high of NT$2,490.00, as investors booked profits after its American depositary receipts had jumped 2.35% overnight.\n\nMomentum stalled as the index approached its June intraday record of 48,218, with dealers citing caution ahead of this week's U.S. consumer price index release. TSMC's supply-chain partners stayed in focus after the company and ASML said they are moving to a larger-format EUV lithography photomask, and after ASML confirmed new tool orders from both TSMC and Samsung tied to AI-driven demand.\n\nInvestors are awaiting Taiwan's August export order data, a closely watched read on global chip demand, along with any follow-through from the CPI print's effect on U.S. rate expectations.",
+    "author": "J. Lindqvist",
+    "ts": "2026-09-09T19:07:00Z",
+    "chart": { "key": "taiex" },
+    "theoryKey": "",
+    "theoryBody": ""
+  },
+  {
+    "id": "a04",
+    "section": "sea",
+    "tier": "free",
+    "headline": "Vietnam's VN-Index slips as small-caps offset oil-led gains",
+    "dek": "Early strength from rising oil prices faded as small- and mid-cap declines dragged the benchmark lower.",
+    "body": "Vietnam's VN-Index fell 0.18% to close at 1,827.12 points on Wednesday, giving back an early advance built on gains in oil and gas names as global crude prices climbed. Morning leaders GAS (+1.54%) and BSR (+1.30%) faded as profit-taking set in, and the index turned negative in the afternoon on broad weakness in small- and mid-cap stocks, led lower by property majors Vinhomes (VHM, -2.04%) and Vingroup (VIC, -0.76%).\n\nMarket breadth was weak, with 190 decliners against 120 advancers. Foreign investors were net sellers of VND 270.8 billion, while turnover rose 2.8% from the prior session to VND 14.6 trillion, suggesting the pullback drew active participation rather than a quiet drift lower.\n\nThe index remains up double digits over the past year and close to record territory, so traders will watch whether rising oil prices keep supporting energy names even as the broader market digests recent gains. Vietnam's central bank policy stance, and any follow-through in Fed rate expectations given the dong's sensitivity to U.S. yields, are also on the radar.",
+    "author": "R. Suarez",
+    "ts": "2026-09-09T19:08:00Z",
+    "chart": { "key": "vnindex" },
+    "theoryKey": "",
+    "theoryBody": ""
+  },
+  {
+    "id": "a05",
+    "section": "tech",
+    "tier": "free",
+    "headline": "AMD jumps 3% as CFO lifts AI chip market forecast to $3 trillion",
+    "dek": "Chip stocks diverged from a broader tech pullback after AMD's finance chief raised her total addressable market call for AI silicon.",
+    "body": "AMD shares rose about 3% Wednesday after CFO Jean Hu said the company's total addressable market forecast for AI chips is trending toward $3 trillion, above the guidance AMD gave when it first outlined the opportunity. Hu said demand signals from anchor customers including Meta, OpenAI and Anthropic have come in above what AMD anticipated when those partnerships were struck. Intel shares also ticked higher on the read-through for foundry and packaging demand.\n\nThe move stood apart from a soft broader tape: the Nasdaq Composite slipped as Treasury yields jumped to a three-year high after the U.S. Treasury tripled its bond buyback program. AMD's data center revenue grew 107% year over year last quarter to $6.72 billion, 58% of total sales, underscoring how central AI infrastructure has become to its business. Hu also confirmed TSMC remains AMD's primary wafer supplier.\n\nWatch for confirmation of the higher TAM figure at AMD's next investor update, and Nvidia and Broadcom's upcoming earnings for whether hyperscaler capex guidance keeps climbing alongside it.",
+    "author": "J. Lindqvist",
+    "ts": "2026-09-09T19:09:00Z",
+    "theoryKey": "",
+    "theoryBody": ""
+  }
+]
