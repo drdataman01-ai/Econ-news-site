@@ -170,6 +170,7 @@
       "body": "Intel shares jumped as much as 5.4% Tuesday, extending last week's rally, after supply-chain sources told DigiTimes the company plans to raise PC CPU prices by roughly 10% starting in early October. Northland separately upgraded Intel to Outperform with a $120 price target, citing turnaround momentum and reported server CPU shortages.\n\nThe move also comes alongside a manufacturing milestone: Intel Foundry and ASML said more than one million wafers have now been processed using High-NA EUV lithography, technology ASML has also committed to Samsung and TSMC. Nvidia's roughly $30 billion stake in Intel continues to anchor investor conviction in the turnaround story.\n\nThe rally stood out against a softer broader tape -- the S&P 500 and Nasdaq were both slightly lower Tuesday -- underscoring the gains were company-specific rather than sector-wide.\n\nWhat to watch: whether the October price hikes land well with PC makers navigating a slow upgrade cycle, and further detail on Foundry's advanced packaging capacity as it competes for AI-driven demand.",
       "author": "J. Lindqvist",
       "ts": "2026-09-08T15:50:00.000Z",
+      "chart": { "key": "INTC" },
       "theoryKey": "",
       "theoryBody": ""
     },
