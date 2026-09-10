@@ -259,6 +259,18 @@
   .theory-caption{font-family:var(--font-mono); font-size:11px; color:var(--ink-soft); margin:8px 0 18px; line-height:1.5;}
 
   /* ---- economics classroom ---- */
+  .classroom-category{
+    font-family:var(--font-sans);
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.03em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin:36px 0 14px;
+    padding-bottom:8px;
+    border-bottom:2px solid var(--ink);
+  }
+  .classroom-category:first-child{margin-top:0;}
   .classroom-list{max-width:960px;}
   .classroom-row{
     display:flex;

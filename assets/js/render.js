@@ -4,6 +4,7 @@ function renderNav(){
   SECTIONS.forEach(s=>{
     html += `<button class="${state.view==='section' && state.sectionId===s.id ? 'active':''}" onclick="goSection('${s.id}')">${s.label}</button>`;
   });
+  html += `<button class="${state.view==='stockclassroom'?'active':''}" onclick="goView('stockclassroom')">Trading strategy classroom</button>`;
   html += `<button class="${state.view==='classroom'?'active':''}" onclick="goView('classroom')">Economics classroom</button>`;
   nav.innerHTML = html;
 }
@@ -190,6 +191,62 @@ function renderClassroomView(){
   return html;
 }
 
+/**
+ * Trading strategy classroom — same pattern as renderClassroomView(),
+ * but grouped by category (STRATEGY_CATEGORIES) since this library is
+ * expected to grow to 40+ entries and a flat alphabetical list would
+ * stop being scannable. Adding a new strategy to STRATEGY_LIBRARY with
+ * an existing `category` value requires no changes here.
+ */
+function renderStockClassroomView(){
+  let html = `<div class="section-head" style="margin-bottom:26px;">
+    <div class="kicker">Reference</div>
+    <h2>Trading strategy classroom</h2>
+    <p>The technical setups and strategy frameworks referenced across our coverage, gathered in one place with the underlying chart pattern and a plain-language walkthrough &mdash; independent of whatever story they're attached to this week.</p>
+  </div>`;
+
+  STRATEGY_CATEGORIES.forEach(category=>{
+    const keys = Object.keys(STRATEGY_LIBRARY).filter(k => STRATEGY_LIBRARY[k].category === category);
+    if(keys.length === 0) return;
+
+    html += `<h3 class="classroom-category">${escapeHtml(category)}</h3><div class="classroom-list">`;
+    keys.forEach(key=>{
+      const s = STRATEGY_LIBRARY[key];
+      const open = state.strategyClassroomOpen === key;
+      const apps = Array.isArray(s.applications) ? s.applications : [];
+      html += `
+        <div class="classroom-row">
+          <div class="theory-block classroom-item">
+            <button class="theory-toggle" aria-expanded="${open}" onclick="toggleStrategyClassroom('${key}')">
+              <span class="label-name">${escapeHtml(s.name)}</span>
+              <span class="caret">${open ? 'Hide &uarr;' : 'Dig deeper &darr;'}</span>
+            </button>
+            ${open ? `
+            <div class="theory-panel">
+              <div class="theory-graph">${s.svg}</div>
+              <p class="theory-caption">${escapeHtml(s.caption)}</p>
+              ${s.description ? `<div class="theory-body"><p>${escapeHtml(s.description)}</p></div>` : ''}
+              ${s.citation ? `<p class="theory-caption">${escapeHtml(s.citation)}</p>` : ''}
+            </div>` : ''}
+          </div>
+          ${apps.length ? `
+          <div class="classroom-apps">
+            <p class="apps-label">Best fits</p>
+            <ul>${apps.map(a=>`<li>${escapeHtml(a)}</li>`).join('')}</ul>
+          </div>` : ''}
+        </div>`;
+    });
+    html += `</div>`;
+  });
+
+  return html;
+}
+
+function toggleStrategyClassroom(key){
+  state.strategyClassroomOpen = (state.strategyClassroomOpen === key) ? null : key;
+  render();
+}
+
 function renderMembershipView(){
   let head = `<div class="section-head">
     <div class="kicker">Membership</div>
@@ -244,4 +301,5 @@ function render(){
   else if(state.view === 'article') app.innerHTML = renderArticleView();
   else if(state.view === 'membership') app.innerHTML = renderMembershipView();
   else if(state.view === 'classroom') app.innerHTML = renderClassroomView();
+  else if(state.view === 'stockclassroom') app.innerHTML = renderStockClassroomView();
 }
