@@ -4,8 +4,6 @@ function renderNav(){
   SECTIONS.forEach(s=>{
     html += `<button class="${state.view==='section' && state.sectionId===s.id ? 'active':''}" onclick="goSection('${s.id}')">${s.label}</button>`;
   });
-  html += `<button class="${state.view==='stockclassroom'?'active':''}" onclick="goView('stockclassroom')">Trading strategy classroom</button>`;
-  html += `<button class="${state.view==='classroom'?'active':''}" onclick="goView('classroom')">Economics classroom</button>`;
   nav.innerHTML = html;
 }
 function lockTag(article){
@@ -63,7 +61,28 @@ function renderHome(){
   });
   gridHtml += `</div>`;
 
-  const mainHtml = `<div class="hero">${heroHtml}${sideHtml}</div>${gridHtml}`;
+  const classroomPromo = `
+    <div class="classroom-promo">
+      <div class="classroom-promo-head">
+        <div class="kicker">Reference</div>
+        <h3>Need the background first?</h3>
+        <p>Two running libraries explain the frameworks and setups behind our coverage &mdash; independent of any single story.</p>
+      </div>
+      <div class="classroom-promo-cards">
+        <div class="classroom-promo-card" onclick="goView('classroom')">
+          <h4>Economics classroom</h4>
+          <p>The macroeconomic frameworks our analysts reach for most often &mdash; the Phillips curve, Okun's law, the policy trilemma, and more.</p>
+          <span class="classroom-promo-link">Browse the frameworks &rarr;</span>
+        </div>
+        <div class="classroom-promo-card" onclick="goView('stockclassroom')">
+          <h4>Trading strategy classroom</h4>
+          <p>47 technical and strategic setups referenced across our coverage, from trend structure through risk management.</p>
+          <span class="classroom-promo-link">Browse the strategies &rarr;</span>
+        </div>
+      </div>
+    </div>`;
+
+  const mainHtml = `<div class="hero">${heroHtml}${sideHtml}</div>${gridHtml}${classroomPromo}`;
   return `<div class="home-layout"><div class="home-main">${mainHtml}</div>${renderWatchlistPanel()}</div>`;
 }
 
