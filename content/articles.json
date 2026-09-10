@@ -92,8 +92,8 @@
       "section": "fedwatch",
       "tier": "free",
       "headline": "Fed Watch Today: Hike odds cool slightly over the long weekend, still a coin flip",
-      "dek": "With no new economic data released, prediction markets did the adjusting instead — a 25-basis-point September hike now sits at 49%, down from Friday's post-jobs-report spike.",
-      "body": "No new economic data came out over the Labor Day weekend, but prediction markets kept moving anyway. Polymarket's contract on the September 15-16 FOMC decision now prices a hold at 52% and a quarter-point hike at 49%, easing back from the sharper hawkish tilt seen immediately after Friday's stronger-than-expected August jobs report.\n\nCash Treasury and equity markets are closed today for Labor Day, so Friday's close remains the last hard print: the 2-year Treasury yield at 4.377% and the 10-year at 4.784%, both up on the week. The Fed funds rate has held at 3.50%-3.75% since the July meeting.\n\nThe near-even split reflects a genuinely undecided committee. July's meeting itself split 9-3, with three dissenters favoring an immediate hike, and Governor Waller has said his own vote hinges specifically on whether August inflation data continued the disinflation trend seen in July. Next week's CPI and PPI reports are the last scheduled inflation data before officials vote.\n\nFed Watch take: the gap between hold and hike is now inside the market's own noise band this close to a meeting, which is unusual — a single soft or hot inflation print next week could tip the outcome either way.",
+      "dek": "With no new economic data released, prediction markets did the adjusting instead \u2014 a 25-basis-point September hike now sits at 49%, down from Friday's post-jobs-report spike.",
+      "body": "No new economic data came out over the Labor Day weekend, but prediction markets kept moving anyway. Polymarket's contract on the September 15-16 FOMC decision now prices a hold at 52% and a quarter-point hike at 49%, easing back from the sharper hawkish tilt seen immediately after Friday's stronger-than-expected August jobs report.\n\nCash Treasury and equity markets are closed today for Labor Day, so Friday's close remains the last hard print: the 2-year Treasury yield at 4.377% and the 10-year at 4.784%, both up on the week. The Fed funds rate has held at 3.50%-3.75% since the July meeting.\n\nThe near-even split reflects a genuinely undecided committee. July's meeting itself split 9-3, with three dissenters favoring an immediate hike, and Governor Waller has said his own vote hinges specifically on whether August inflation data continued the disinflation trend seen in July. Next week's CPI and PPI reports are the last scheduled inflation data before officials vote.\n\nFed Watch take: the gap between hold and hike is now inside the market's own noise band this close to a meeting, which is unusual \u2014 a single soft or hot inflation print next week could tip the outcome either way.",
       "author": "R. Costa",
       "ts": "2026-09-07T18:00:00.000Z",
       "theoryKey": "",
@@ -170,7 +170,9 @@
       "body": "Intel shares jumped as much as 5.4% Tuesday, extending last week's rally, after supply-chain sources told DigiTimes the company plans to raise PC CPU prices by roughly 10% starting in early October. Northland separately upgraded Intel to Outperform with a $120 price target, citing turnaround momentum and reported server CPU shortages.\n\nThe move also comes alongside a manufacturing milestone: Intel Foundry and ASML said more than one million wafers have now been processed using High-NA EUV lithography, technology ASML has also committed to Samsung and TSMC. Nvidia's roughly $30 billion stake in Intel continues to anchor investor conviction in the turnaround story.\n\nThe rally stood out against a softer broader tape -- the S&P 500 and Nasdaq were both slightly lower Tuesday -- underscoring the gains were company-specific rather than sector-wide.\n\nWhat to watch: whether the October price hikes land well with PC makers navigating a slow upgrade cycle, and further detail on Foundry's advanced packaging capacity as it competes for AI-driven demand.",
       "author": "J. Lindqvist",
       "ts": "2026-09-08T15:50:00.000Z",
-      "chart": { "key": "INTC" },
+      "chart": {
+        "key": "INTC"
+      },
       "theoryKey": "",
       "theoryBody": ""
     },
@@ -247,6 +249,82 @@
       "body": "AMD shares rose about 3% Wednesday after CFO Jean Hu said the company's total addressable market forecast for AI chips is trending toward $3 trillion, above the guidance AMD gave when it first outlined the opportunity. Hu said demand signals from anchor customers including Meta, OpenAI and Anthropic have come in above what AMD anticipated when those partnerships were struck. Intel shares also ticked higher on the read-through for foundry and packaging demand.\n\nThe move stood apart from a soft broader tape: the Nasdaq Composite slipped as Treasury yields jumped to a three-year high after the U.S. Treasury tripled its bond buyback program. AMD's data center revenue grew 107% year over year last quarter to $6.72 billion, 58% of total sales, underscoring how central AI infrastructure has become to its business. Hu also confirmed TSMC remains AMD's primary wafer supplier.\n\nWhat to watch: confirmation of the higher TAM figure at AMD's next investor update, and Nvidia and Broadcom's upcoming earnings for whether hyperscaler capex guidance keeps climbing alongside it.",
       "author": "J. Lindqvist",
       "ts": "2026-09-09T19:09:00.000Z",
+      "theoryKey": "",
+      "theoryBody": ""
+    },
+    {
+      "id": "a22",
+      "section": "fedwatch",
+      "tier": "free",
+      "headline": "Fed Watch Today: 10-year eases to 4.84% as markets await Friday's CPI",
+      "dek": "Treasury yields ticked lower a day after hitting a three-year high, with traders now focused on the last inflation print before next week's FOMC decision.",
+      "body": "The 10-year Treasury yield eased to 4.84% Thursday, a basis point below Wednesday's 4.85% close -- itself the highest level since October 2023 -- as the market digested this week's tripled Treasury buyback. The 2-year yield held near 4.40%, little changed on the day.\n\nContinued Bank of Japan-linked selling of Treasuries, as Tokyo works to defend the yen, added another source of supply pressure even as yields ticked lower. Markets now price roughly 58% odds of a 25-basis-point hike at next week's Sept. 16 FOMC meeting, matching Wednesday's reading.\n\nFriday's August CPI report is the last major inflation print before the Fed meets, and traders are treating it as the swing factor: a hot number would likely push hike odds decisively higher, while an in-line or soft reading would revive the case for a hold.\n\nFed Watch take: with yields already near three-year highs and record AI-linked corporate debt issuance adding to supply, we'd lean toward the Fed erring hawkish rather than risk its inflation-fighting credibility this close to target.",
+      "author": "R. Costa",
+      "ts": "2026-09-10T14:00:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "metrics": {
+        "fedFundsRate": 3.625,
+        "yield2y": 4.396,
+        "yield10y": 4.84,
+        "moveOdds": 58,
+        "moveDirection": "hike"
+      }
+    },
+    {
+      "id": "a23",
+      "section": "japan",
+      "tier": "free",
+      "headline": "Japan Outlook: Nikkei recovers to 65,271 as oil rally cools",
+      "dek": "Japanese stocks edged higher Thursday as easing oil prices offset lingering yen strength, with the Bank of Japan's policy decision now just over a week away.",
+      "body": "The Nikkei 225 climbed 128.17 points, or 0.20%, to close at 65,270.95 Thursday, recovering modestly after Wednesday's pullback as a cooling in the recent oil-price rally gave exporters some room to breathe. The yen held near 153.4 per dollar, still close to its strongest level in roughly seven months.\n\nThe stronger yen continues to weigh on Japan's export-heavy names even as it eases some imported-energy costs, with Brent crude still trading above $100 a barrel on Strait of Hormuz-related tensions. The Bank of Japan is widely expected to raise its policy rate to 1.25% at next week's meeting -- its highest level in roughly 31 years -- which would further narrow the rate gap with the US that has driven the yen's recent strength.\n\nWhat to watch: Friday's US August CPI report and next week's BOJ decision as the next catalysts for USD/JPY -- a hawkish BOJ paired with a hot US inflation print could extend the yen's gains, adding renewed pressure to exporters like Toyota as they head into earnings season.",
+      "author": "S. Okafor",
+      "ts": "2026-09-10T14:05:00.000Z",
+      "chart": {
+        "key": "usdjpy"
+      },
+      "theoryKey": "",
+      "theoryBody": ""
+    },
+    {
+      "id": "a24",
+      "section": "taiwan",
+      "tier": "free",
+      "headline": "Taiwan Outlook: TSMC August revenue jumps 53% to a record on AI chip demand",
+      "dek": "Taiwan Semiconductor posted record monthly sales of NT$514.8 billion, reinforcing the AI-driven demand story even as the Taiex consolidates just below its record high.",
+      "body": "TSMC reported August revenue of NT$514.8 billion (about US$16.35 billion), up 53.3% year-over-year and a fresh monthly record, driven by continued strong demand for AI accelerators and advanced-node chips. The print extends a run of outsized growth that has TSMC tracking toward its raised 2026 revenue guidance of slightly above 40% growth.\n\nThe number lands as the Taiex holds just below its June record near 48,200, with TSMC alone representing more than 40% of the index's total value -- meaning the company's revenue trajectory functions as a rough proxy for the broader market's own AI-driven strength. It also follows this week's news that TSMC and ASML are moving to a larger-format EUV lithography photomask standard to support the next leg of capacity expansion.\n\nWhat to watch: Taiwan's broader August export order data, due in the coming days, for whether the strength shown in TSMC's own numbers is echoed economy-wide, and TSMC's Q3 earnings on October 15 for confirmation that heavier 2026-2027 capex guidance is translating into margin performance rather than just top-line growth.",
+      "author": "J. Lindqvist",
+      "ts": "2026-09-10T14:10:00.000Z",
+      "chart": {
+        "key": "taiex"
+      },
+      "theoryKey": "",
+      "theoryBody": ""
+    },
+    {
+      "id": "a25",
+      "section": "sea",
+      "tier": "free",
+      "headline": "Southeast Asia Outlook: Indonesia's IDX Composite falls 1.19% as oil surge weighs on risk appetite",
+      "dek": "Rising oil prices and hawkish Fed bets pressured Jakarta stocks Thursday, with Infrastructure, Financials, and Agriculture shares leading the decline.",
+      "body": "Indonesia's IDX Composite fell 1.19% at Thursday's close in Jakarta, as losses in the Infrastructure, Financials, and Agriculture sectors led shares lower. Falling stocks outnumbered advancers 530 to 160. Crude oil for October delivery rose 0.6% to $96.63 a barrel, while Brent added 0.5% to $101.71, extending a run driven by ongoing Middle East tensions. The rupiah weakened 0.33% to 17,542.90 per dollar.\n\nHigher oil prices are a particular strain for import-dependent economies like Indonesia, feeding directly into inflation risk just as regional central banks weigh their own policy paths alongside an increasingly hawkish Fed. Neighboring markets traded more mixed, with Singapore's STI holding up comparatively well on bank and REIT strength.\n\nWhat to watch: whether Friday's US CPI print adds to the oil-driven risk-off mood regionally, and any signal from Bank Indonesia on how it plans to balance currency stability against growth support heading into the fourth quarter.",
+      "author": "N. Suwannarat",
+      "ts": "2026-09-10T14:15:00.000Z",
+      "theoryKey": "",
+      "theoryBody": ""
+    },
+    {
+      "id": "a26",
+      "section": "tech",
+      "tier": "free",
+      "headline": "Tech Outlook: Intel closes at $106 as Nvidia-backed AI buildout accelerates",
+      "dek": "Intel shares extended their rally to $106.24, building on this week's $20 billion capital raise and Nvidia's roughly $30 billion equity stake in the chipmaker.",
+      "body": "Intel shares closed at $106.24 Wednesday, adding to Tuesday's 9.05% jump to $104.47 that followed the company's $20 billion common stock offering priced at $95 a share to fund AI and foundry capacity. Nvidia's roughly $30 billion equity stake in Intel, disclosed alongside the deal, has anchored investor confidence in Intel's role in the broader AI buildout.\n\nThe rally reflects a wider re-rating of Intel's foundry ambitions: SK Hynix is reportedly weighing Intel Foundry, alongside TSMC, to manufacture next-generation HBM4E memory base dies -- a potential validation of Intel's push into advanced packaging for AI accelerators, even as the stock offering brings an estimated 4%-5% near-term EPS dilution.\n\nWhat to watch: whether Intel holds above the $97 level that technical analysts have flagged as a breakout trigger toward $103-$110, and whether Intel Foundry lands a confirmed HBM4E customer win in the coming weeks -- a bigger validation of the AI-capex narrative than any single day's stock move.",
+      "author": "J. Lindqvist",
+      "ts": "2026-09-10T14:20:00.000Z",
+      "chart": {
+        "key": "INTC"
+      },
       "theoryKey": "",
       "theoryBody": ""
     }
