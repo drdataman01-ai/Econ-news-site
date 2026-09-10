@@ -24,7 +24,8 @@ let state = {
   loaded: false,
   loadError: false,
   theoryOpen: false,
-  classroomOpen: null
+  classroomOpen: null,
+  strategyClassroomOpen: null
 };
 
 function sectionLabel(id){

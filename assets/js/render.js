@@ -242,11 +242,6 @@ function renderStockClassroomView(){
   return html;
 }
 
-function toggleStrategyClassroom(key){
-  state.strategyClassroomOpen = (state.strategyClassroomOpen === key) ? null : key;
-  render();
-}
-
 function renderMembershipView(){
   let head = `<div class="section-head">
     <div class="kicker">Membership</div>

@@ -4,6 +4,7 @@ function goSection(id){ state.view='section'; state.sectionId=id; state.articleI
 function goArticle(id){ state.view='article'; state.articleId=id; state.theoryOpen=false; render(); window.scrollTo({top:0}); }
 function toggleTheory(){ state.theoryOpen = !state.theoryOpen; render(); }
 function toggleClassroomTheory(key){ state.classroomOpen = (state.classroomOpen === key ? null : key); render(); }
+function toggleStrategyClassroom(key){ state.strategyClassroomOpen = (state.strategyClassroomOpen === key ? null : key); render(); }
 async function setTier(id){
   state.membership = id;
   await persistMembership();
@@ -14,5 +15,6 @@ document.getElementById('clockLine').textContent = 'Markets desk \u00b7 ' + new 
 loadData();
 
 loadWatchlists();
+primeQuotesFromCache();
 fetchAllWatchlistQuotes();
 startWatchlistAutoRefresh();
