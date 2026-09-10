@@ -345,6 +345,7 @@
   .section-head .kicker{margin-bottom:6px;}
   .section-head h2{font-family:var(--font-serif); font-size:30px; font-weight:600; margin:0 0 8px;}
   .section-head p{font-family:var(--font-serif); font-size:16px; color:var(--ink-soft); max-width:60ch; margin:0;}
+  .classroom-head p{max-width:960px;}
 
   .ledger{border:1px solid var(--ink); border-collapse:collapse; width:100%; margin-top:8px;}
   .ledger th, .ledger td{border:1px solid var(--rule); padding:14px 18px; text-align:left; vertical-align:top;}

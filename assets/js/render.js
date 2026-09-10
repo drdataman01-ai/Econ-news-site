@@ -172,7 +172,7 @@ function renderArticleView(){
 
 function renderClassroomView(){
   const keys = Object.keys(THEORY_LIBRARY).sort((a,b)=> THEORY_LIBRARY[a].name.localeCompare(THEORY_LIBRARY[b].name));
-  let html = `<div class="section-head" style="margin-bottom:26px;">
+  let html = `<div class="section-head classroom-head" style="margin-bottom:26px;">
     <div class="kicker">Reference</div>
     <h2>Economics classroom</h2>
     <p>The frameworks our analysts reach for most often, gathered in one place with the underlying diagram and a plain-language walkthrough &mdash; independent of whatever story they're attached to this week.</p>
@@ -218,7 +218,7 @@ function renderClassroomView(){
  * an existing `category` value requires no changes here.
  */
 function renderStockClassroomView(){
-  let html = `<div class="section-head" style="margin-bottom:26px;">
+  let html = `<div class="section-head classroom-head" style="margin-bottom:26px;">
     <div class="kicker">Reference</div>
     <h2>Trading strategy classroom</h2>
     <p>The technical setups and strategy frameworks referenced across our coverage, gathered in one place with the underlying chart pattern and a plain-language walkthrough &mdash; independent of whatever story they're attached to this week.</p>
