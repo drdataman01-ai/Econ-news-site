@@ -26,7 +26,9 @@ const QUOTE_PROXY_URL = 'https://kuonomics-quote-proxy.drdataman01.workers.dev';
 
 const WATCHLISTS_STORAGE_KEY = 'kuonomics_watchlists';
 const ACTIVE_WATCHLIST_STORAGE_KEY = 'kuonomics_active_watchlist';
+const QUOTE_CACHE_STORAGE_KEY = 'kuonomics_quote_cache';
 const WATCHLIST_REFRESH_MS = 60000; // 1 minute — matches Finnhub's free-tier rate limit
+const QUOTE_STALE_MAX_AGE_MS = 24 * 60 * 60 * 1000; // beyond this, show Unavailable instead of a stale price
 
 const DEFAULT_WATCHLIST_NAME = 'Default';
 const DEFAULT_WATCHLIST_SYMBOLS = ['AAPL', 'MSFT', 'NVDA', 'TSM', 'INTC'];
@@ -65,6 +67,56 @@ function saveWatchlists(){
   } catch(e){
     console.error('Could not save watchlists', e);
   }
+}
+
+/* ---- last-known-price cache, independent of which watchlist a symbol is on ----
+   Keyed by symbol so a price survives switching watchlists, renaming, or a
+   fetch failure. Each entry is { price, change, changePercent, ts }. */
+function loadQuoteCache(){
+  try {
+    const saved = localStorage.getItem(QUOTE_CACHE_STORAGE_KEY);
+    return saved ? JSON.parse(saved) : {};
+  } catch(e){
+    return {};
+  }
+}
+
+function saveQuoteToCache(symbol, quote){
+  try {
+    const cache = loadQuoteCache();
+    cache[symbol] = {
+      price: quote.price,
+      change: quote.change,
+      changePercent: quote.changePercent,
+      ts: Date.now()
+    };
+    localStorage.setItem(QUOTE_CACHE_STORAGE_KEY, JSON.stringify(cache));
+  } catch(e){
+    console.error('Could not save quote cache', e);
+  }
+}
+
+/** Pre-fills watchlistState.quotes from the cache so the panel shows the last
+ * known price immediately on load (marked stale) instead of "Loading..."
+ * flashing to "Unavailable" before the first fetch resolves. Call this once,
+ * right after loadWatchlists(), before the first render(). */
+function primeQuotesFromCache(){
+  const cache = loadQuoteCache();
+  const symbols = watchlistState.lists[watchlistState.active] || [];
+  symbols.forEach(symbol => {
+    const cached = cache[symbol];
+    if (cached && (Date.now() - cached.ts) < QUOTE_STALE_MAX_AGE_MS){
+      watchlistState.quotes[symbol] = {
+        price: cached.price,
+        change: cached.change,
+        changePercent: cached.changePercent,
+        loading: false,
+        error: null,
+        stale: true,
+        staleTs: cached.ts
+      };
+    }
+  });
 }
 
 /** Switches the active watchlist and persists it — this is what makes
@@ -157,15 +209,37 @@ async function fetchWatchlistQuote(symbol){
     if (data.c === undefined || data.c === 0){
       throw new Error('No data for this symbol');
     }
-    watchlistState.quotes[symbol] = {
+    const quote = {
       price: data.c,
       change: data.d,
       changePercent: data.dp,
       loading: false,
-      error: null
+      error: null,
+      stale: false
     };
+    watchlistState.quotes[symbol] = quote;
+    saveQuoteToCache(symbol, quote);
   } catch(e){
-    watchlistState.quotes[symbol] = { loading: false, error: e.message === 'No proxy configured' ? 'Proxy not set up' : 'Unavailable' };
+    const cached = loadQuoteCache()[symbol];
+    if (cached && (Date.now() - cached.ts) < QUOTE_STALE_MAX_AGE_MS){
+      // Fetch failed (rate limit, worker down, market closed, etc.) but we
+      // have a recent price — show it instead of wiping the row to "Unavailable".
+      watchlistState.quotes[symbol] = {
+        price: cached.price,
+        change: cached.change,
+        changePercent: cached.changePercent,
+        loading: false,
+        error: null,
+        stale: true,
+        staleTs: cached.ts
+      };
+    } else {
+      watchlistState.quotes[symbol] = {
+        loading: false,
+        error: e.message === 'No proxy configured' ? 'Proxy not set up' : 'Unavailable',
+        stale: false
+      };
+    }
   }
   render();
 }
@@ -182,6 +256,15 @@ function startWatchlistAutoRefresh(){
 
 function fmtWatchlistNum(n){
   return typeof n === 'number' ? n.toFixed(2) : '--';
+}
+
+function fmtWatchlistStaleTime(ts){
+  if (!ts) return '';
+  const mins = Math.round((Date.now() - ts) / 60000);
+  if (mins < 1) return 'just now';
+  if (mins < 60) return `${mins}m ago`;
+  const hrs = Math.round(mins / 60);
+  return `${hrs}h ago`;
 }
 
 function renderWatchlistPanel(){
@@ -207,9 +290,13 @@ function renderWatchlistPanel(){
       } else {
         const dir = q.change > 0 ? 'up' : (q.change < 0 ? 'down' : 'flat');
         const sign = q.change >= 0 ? '+' : '';
+        const staleHtml = q.stale
+          ? `<span class="watchlist-stale" title="Last live price — updated ${fmtWatchlistStaleTime(q.staleTs)}">&#9203; ${fmtWatchlistStaleTime(q.staleTs)}</span>`
+          : '';
         priceHtml = `
           <span class="watchlist-price">${fmtWatchlistNum(q.price)}</span>
-          <span class="watchlist-change ${dir}">${sign}${fmtWatchlistNum(q.change)} (${sign}${fmtWatchlistNum(q.changePercent)}%)</span>`;
+          <span class="watchlist-change ${dir}">${sign}${fmtWatchlistNum(q.change)} (${sign}${fmtWatchlistNum(q.changePercent)}%)</span>
+          ${staleHtml}`;
       }
       rowsHtml += `
         <div class="watchlist-row">
