@@ -325,7 +325,7 @@
   }
   .classroom-promo-head{margin-bottom:20px;}
   .classroom-promo-head h3{font-family:var(--font-serif); font-size:22px; font-weight:600; margin:0 0 8px;}
-  .classroom-promo-head p{font-family:var(--font-serif); font-size:15px; color:var(--ink-soft); max-width:60ch; margin:0;}
+  .classroom-promo-head p{font-family:var(--font-serif); font-size:15px; color:var(--ink-soft); max-width:none; margin:0;}
   .classroom-promo-cards{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
   .classroom-promo-card{
     border:1px solid var(--rule); border-left:3px solid var(--gold);

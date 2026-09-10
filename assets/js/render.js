@@ -61,7 +61,19 @@ function renderHome(){
   });
   gridHtml += `</div>`;
 
-  const classroomPromo = `
+  const mainHtml = `<div class="hero">${heroHtml}${sideHtml}</div>${gridHtml}`;
+  return `<div class="home-layout"><div class="home-main">${mainHtml}</div>${renderWatchlistPanel()}</div>`;
+}
+
+/**
+ * Classroom promo — a persistent footer-style block linking to both
+ * classroom pages. Called from the main render() dispatcher below so
+ * it shows on every view (front page, sections, articles, and the
+ * classrooms themselves), the same way the top nav always shows every
+ * tab regardless of which one is active.
+ */
+function renderClassroomPromo(){
+  return `
     <div class="classroom-promo">
       <div class="classroom-promo-head">
         <div class="kicker">Reference</div>
@@ -81,9 +93,6 @@ function renderHome(){
         </div>
       </div>
     </div>`;
-
-  const mainHtml = `<div class="hero">${heroHtml}${sideHtml}</div>${gridHtml}${classroomPromo}`;
-  return `<div class="home-layout"><div class="home-main">${mainHtml}</div>${renderWatchlistPanel()}</div>`;
 }
 
 function renderSectionView(){
@@ -316,4 +325,8 @@ function render(){
   else if(state.view === 'membership') app.innerHTML = renderMembershipView();
   else if(state.view === 'classroom') app.innerHTML = renderClassroomView();
   else if(state.view === 'stockclassroom') app.innerHTML = renderStockClassroomView();
+
+  // Classroom promo shows on every view, same as the top nav always
+  // showing every tab — not just on the front page.
+  app.innerHTML += renderClassroomPromo();
 }
