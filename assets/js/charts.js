@@ -288,34 +288,71 @@ function renderFedWatchChart(currentArticle){
 }
 
 /**
- * Builds a trend chart for any index or stock in MARKET_HISTORY,
- * driven entirely by the article's own "chart" field:
- *   article.chart = { key: "nikkei225" }   // or "INTC", "taiex", etc.
- * Looks up the series by key, uses its own label/color, and renders
- * with the same lineChartSVG used elsewhere. Returns '' if the
- * article has no chart field or the key isn't found in the registry
- * — so this is always safe to call unconditionally per section.
+ * Fallback chart per section, used when an article either has no
+ * "chart" field or references a key that isn't (yet) registered in
+ * MARKET_HISTORY. Rather than showing no chart at all, we show the
+ * section's benchmark index — still real registered data, just not
+ * the specific instrument the article was about. Tech has no single
+ * benchmark index in the registry (articles reference varied
+ * individual stocks), so it's intentionally left out here; add one
+ * (e.g. a semiconductor index) if that becomes worth tracking.
+ */
+const DEFAULT_CHART_BY_SECTION = {
+  japan: 'nikkei225',
+  taiwan: 'taiex',
+  sea: 'vnindex'
+};
+
+/**
+ * Builds a trend chart for any index, stock, exchange rate, or
+ * commodity in MARKET_HISTORY, driven by the article's own "chart"
+ * field:
+ *   article.chart = { key: "nikkei225" }   // or "INTC", "usdjpy", "wti_crude", etc.
+ * Looks up the series by key. If the article has no chart field, or
+ * the key isn't found in the registry, falls back to the section's
+ * default benchmark chart (DEFAULT_CHART_BY_SECTION) instead of
+ * showing nothing — so every article in a chart-eligible section gets
+ * *a* chart, even if the specific instrument wasn't registered by
+ * whatever generated the article. Still never fabricates data: the
+ * fallback is always a real, already-registered series, never an
+ * invented one. Returns '' only if neither the requested key nor any
+ * section fallback resolves to real data.
  */
 function renderMarketChart(article){
-  if (!article.chart || !article.chart.key) return '';
   const registry = typeof MARKET_HISTORY !== 'undefined' ? MARKET_HISTORY : {};
-  const series = registry[article.chart.key];
+  let key = article.chart && article.chart.key;
+  let series = key ? registry[key] : null;
+
+  if (!series || !series.data || series.data.length < 2){
+    const fallbackKey = DEFAULT_CHART_BY_SECTION[article.section];
+    if (fallbackKey && registry[fallbackKey]){
+      key = fallbackKey;
+      series = registry[fallbackKey];
+    }
+  }
+
   if (!series || !series.data || series.data.length < 2) return '';
 
-  const isStock = series.type === 'stock';
   const labels = series.data.map(d => yearLabel(d.date));
   const values = series.data.map(d => d.value);
-  const lookback = isStock ? '5-year' : '10-year';
-  const suffix = isStock ? '' : '';
-  const color = isStock ? '#6b4a8a' : '#2f5d8a';
-  const fillColor = isStock ? 'rgba(107, 74, 138, 0.10)' : 'rgba(47, 93, 138, 0.10)';
+
+  let lookback, color, fillColor;
+  if (series.type === 'stock'){
+    lookback = '5-year'; color = '#6b4a8a'; fillColor = 'rgba(107, 74, 138, 0.10)';
+  } else if (series.type === 'fx'){
+    lookback = '10-year'; color = '#8a5a2f'; fillColor = 'rgba(138, 90, 47, 0.10)';
+  } else if (series.type === 'commodity'){
+    lookback = '10-year'; color = '#2f6b6b'; fillColor = 'rgba(47, 107, 107, 0.10)';
+  } else {
+    lookback = '10-year'; color = '#2f5d8a'; fillColor = 'rgba(47, 93, 138, 0.10)';
+  }
 
   return `
     <div class="fedwatch-chart-panel">
       <p class="apps-label">${escapeHtml(series.label)} &middot; ${lookback} history</p>
       ${lineChartSVG(values, labels, {
         label: series.label,
-        suffix: suffix,
+        suffix: '',
         color: color,
         fillColor: fillColor
       })}

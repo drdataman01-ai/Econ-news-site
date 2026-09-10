@@ -8,8 +8,9 @@
 
    Structure: MARKET_HISTORY[key] = { label, type, data: [{date, value}] }
    - key: a short identifier referenced from an article's "chart" field
-     (e.g. "nikkei225", "INTC")
-   - type: "index" or "stock" (informational, used for chart styling/labels)
+     (e.g. "nikkei225", "INTC", "usdjpy", "wti_crude")
+   - type: "index", "stock", "fx", or "commodity" (informational, used
+     for chart styling/labels and lookback length in charts.js)
    - data: [{date: 'YYYY-MM', value: number}], oldest first
 
    ACCURACY NOTE: current/recent points (2026) match figures already
@@ -18,6 +19,10 @@
    selloff, COVID crash, 2022 declines, 2024-2025 rallies/corrections)
    — directionally accurate, not verified point-by-point against a
    data vendor. Cross-check before treating as publication-grade.
+   Same convention applies to usdjpy and wti_crude: directionally
+   accurate against well-known historical turning points (2022 yen
+   weakness, the 2020 negative-price WTI episode, 2022 oil spike
+   around the Ukraine invasion), not tick-verified.
 ------------------------------------------------------------------- */
 
 const MARKET_HISTORY = {
@@ -115,6 +120,58 @@ const MARKET_HISTORY = {
       { date: '2026-03', value: 70.00 },
       { date: '2026-06', value: 140.94 },
       { date: '2026-09', value: 95.80 }
+    ]
+  },
+
+  usdjpy: {
+    label: 'USD/JPY',
+    type: 'fx',
+    data: [
+      { date: '2016-09', value: 101.50 },
+      { date: '2017-09', value: 111.90 },
+      { date: '2018-09', value: 113.20 },
+      { date: '2019-09', value: 107.90 },
+      { date: '2020-03', value: 108.50 },
+      { date: '2020-09', value: 105.60 },
+      { date: '2021-09', value: 111.00 },
+      { date: '2022-03', value: 121.70 },
+      { date: '2022-09', value: 144.70 },
+      { date: '2022-10', value: 151.90 },
+      { date: '2023-03', value: 133.50 },
+      { date: '2023-09', value: 149.40 },
+      { date: '2024-04', value: 158.00 },
+      { date: '2024-09', value: 142.00 },
+      { date: '2025-03', value: 149.00 },
+      { date: '2025-09', value: 148.00 },
+      { date: '2026-03', value: 143.00 },
+      { date: '2026-06', value: 138.00 },
+      { date: '2026-09', value: 149.30 }
+    ]
+  },
+
+  wti_crude: {
+    label: 'WTI Crude Oil',
+    type: 'commodity',
+    data: [
+      { date: '2016-09', value: 45.20 },
+      { date: '2017-09', value: 51.70 },
+      { date: '2018-09', value: 70.20 },
+      { date: '2018-12', value: 45.40 },
+      { date: '2019-09', value: 56.90 },
+      { date: '2020-04', value: 16.90 },
+      { date: '2020-09', value: 40.30 },
+      { date: '2021-09', value: 75.00 },
+      { date: '2022-03', value: 108.50 },
+      { date: '2022-06', value: 120.70 },
+      { date: '2022-09', value: 79.50 },
+      { date: '2023-09', value: 90.80 },
+      { date: '2024-04', value: 85.30 },
+      { date: '2024-09', value: 68.20 },
+      { date: '2025-03', value: 71.50 },
+      { date: '2025-09', value: 78.00 },
+      { date: '2026-03', value: 82.40 },
+      { date: '2026-06', value: 91.60 },
+      { date: '2026-09', value: 94.80 }
     ]
   }
 
