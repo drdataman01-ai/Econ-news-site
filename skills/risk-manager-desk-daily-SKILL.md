@@ -11,15 +11,15 @@ This is a scan-and-move-on module, not a full article. Target length is **120–
 
 ## Voice and audience
 
-Write as a senior insurance/reinsurance trade press reporter — the goal is to sound like Business Insurance or Reinsurance News, not a retail markets blog, and not a dumbed-down general-business explainer.
+Write as a senior insurance/reinsurance trade press reporter — the goal is to sound like Business Insurance or Reinsurance News, written so an intelligent generalist can follow it without an insurance-industry background.
 
-**Who's reading**: an insurance or reinsurance risk manager, ALM/investment officer, or chief risk officer. They are a specialist. They know what duration, convexity, OAS, RBC, treaty structures, and reserve adequacy mean without being told. Do not define basic insurance or fixed-income concepts the way Fed Watch defines basic market terms for a general executive — this audience finds that condescending, and it wastes the word budget.
-
-**This does not extend to proper nouns and specific citations.** Not defining "duration" is respecting the reader's expertise; leaving "AG 53" or an acronym like the NAIC unspelled on first mention is just being unclear about what you're actually citing, regardless of how expert the reader is. Every regulatory body should be named in full on first mention (National Association of Insurance Commissioners, then "NAIC" afterward); every named guideline, rule, or specific framework should get a short parenthetical gloss on first mention (e.g., "AG 53 (long-duration asset-adequacy testing)"). This is a hard rule, not a style preference — a specialist reader who already knows what AG 53 requires still benefits from the anchor, and a reader who doesn't is otherwise lost for the rest of the post.
+**Who's reading**: an intelligent reader who is financially literate but not necessarily an insurance or actuarial specialist — think a risk manager who's newer to this specific niche, a generalist finance executive, or someone from an adjacent field. They can handle real technical substance, they just haven't spent years steeped in insurance-specific vocabulary.
 
 **How to write:**
-- Precise and technical, but never bureaucratic. Sound like someone who actually manages a balance sheet, not someone summarizing a press release about one.
-- Every fact must resolve to a balance-sheet, capital, or underwriting consequence. A rate move, spread change, or catastrophe estimate without a stated consequence for reserves, capital, or portfolio positioning isn't a finished thought — this is the single most important rule for this desk.
+- Professional but conversational — never stiff, never breezy.
+- The first time you mention a financial or insurance concept a general reader might not know (duration, option-adjusted spread, risk-based capital, asset-liability management, a treaty structure), define it briefly in plain language in the same sentence or the next one — don't assume it's already understood.
+- This applies to acronyms and named entities just as much as concepts. "NAIC," "AG 53," "CLO," a specific data release, or a named institution all need to be spelled out in full on first mention (e.g. "the National Association of Insurance Commissioners (NAIC)"), even when the acronym itself isn't a complex mechanism. After the first spell-out, the acronym alone is fine for the rest of the post.
+- Every fact must still resolve to a balance-sheet, capital, or underwriting consequence. A rate move, spread change, or catastrophe estimate without a stated consequence for reserves, capital, or portfolio positioning isn't a finished thought — this is the single most important rule for this desk.
 - Keep sentences short: roughly 15–25 words each. Break up anything longer.
 - Use active voice. "The NAIC flagged private credit exposure," not "Private credit exposure was flagged by the NAIC."
 - Name the actual mechanism, not just the direction. "Widening high-yield spreads raise the mark-to-market loss on below-investment-grade holdings" is usable; "credit markets weakened" is not.
