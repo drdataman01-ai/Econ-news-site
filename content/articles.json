@@ -345,6 +345,97 @@
         "hySpread": 265,
         "spreadTrend": "tightening"
       }
+    },
+    {
+      "id": "a28",
+      "section": "fedwatch",
+      "tier": "free",
+      "headline": "Fed Watch: Jobless claims hold at 206,000 as hot PPI adds to inflation caution",
+      "dek": "Weekly claims data came in stable, but a firmer-than-expected August producer price reading gave the Fed one more reason for caution before Friday's CPI.",
+      "body": "Initial jobless claims came in at 206,000 for the week ending September 5, down 1,000 from an upwardly revised 207,000 and just above the 205,000 forecast. The four-week average held at 206,000, and continuing claims eased to 1.774 million. Separately, August producer prices rose 0.4% from July, a firmer reading than markets had penciled in.\n\nNeither number moves the needle dramatically on its own, but together they reinforce a labor market that's cooling gently rather than cracking, alongside a pipeline inflation reading that hasn't fully rolled over. The 10-year Treasury yield ticked up to roughly 4.86% on the data, extending its rise toward a three-year high.\n\nFriday's CPI report is now the last major data point before the Fed's September 16-17 meeting, and today's PPI print raises the bar for a soft CPI surprise to shift the committee toward a hold. Fed funds futures nudged their hike odds higher on the data.\n\nFed Watch take: with claims stable and PPI running hot, tomorrow's CPI carries outsized weight -- a firm core reading would all but lock in a September move.",
+      "author": "R. Costa",
+      "ts": "2026-09-10T16:00:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "metrics": {
+        "fedFundsRate": 3.625,
+        "yield2y": 4.41,
+        "yield10y": 4.86,
+        "moveOdds": 60,
+        "moveDirection": "hike"
+      }
+    },
+    {
+      "id": "a33",
+      "section": "riskmanager",
+      "tier": "free",
+      "headline": "Risk Manager Desk: Hot PPI print adds to bond portfolio mark-to-market pressure",
+      "dek": "A firmer-than-expected August producer price report pushed Treasury yields higher Thursday, adding fresh unrealized losses to insurers' long-duration bond portfolios ahead of next week's Fed decision.",
+      "body": "Treasury yields moved higher Thursday after August producer prices rose a stronger-than-expected 0.4% from July, reinforcing bets the Fed will lean hawkish at its September 16-17 meeting. The 10-year yield ticked up to roughly 4.86%, extending a rise that has already pushed it near a three-year high this month.\n\nFor insurers holding long-duration bond portfolios to match long-tail liabilities, each incremental yield increase adds to unrealized mark-to-market losses on existing holdings, even as it improves reinvestment yields on new purchases and maturing bonds. Credit spreads widened only modestly on the data -- investment-grade OAS ticked up to around 80 basis points from 78 -- suggesting the move is being read as a rates story rather than a credit-quality concern.\n\nRisk Desk take: the reinvestment-yield benefit of higher rates typically takes years to show up in reported earnings, while mark-to-market losses hit available-for-sale bond valuations immediately -- a timing mismatch worth flagging heading into third-quarter statutory filings.",
+      "author": "K. Fenwick",
+      "ts": "2026-09-10T16:30:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "metrics": {
+        "yield10y": 4.86,
+        "igSpread": 80,
+        "hySpread": 268,
+        "spreadTrend": "stable"
+      }
+    },
+    {
+      "id": "a29",
+      "section": "japan",
+      "tier": "free",
+      "headline": "Japan Outlook: Yen gives back gains as hot US PPI lifts dollar",
+      "dek": "The yen slipped in evening trading after a firmer-than-expected US producer price report, partly reversing Thursday's session gains ahead of next week's BOJ and Fed decisions.",
+      "body": "The yen weakened back toward 154 per dollar Thursday evening, giving up part of the session's gains after US producer prices for August rose a stronger-than-expected 0.4%. The reading briefly firmed the dollar broadly, pressuring the yen just hours after the currency had touched its strongest level in roughly seven months. Nikkei 225 futures slipped modestly in after-hours trading, tracking the currency move.\n\nThe reversal underscores how tightly the yen remains tied to the US-Japan rate differential heading into a stacked policy calendar: the Fed meets September 16-17, and the Bank of Japan follows on September 18, with markets pricing roughly 65% odds of a quarter-point BOJ hike to 1.25%. A firmer US inflation pulse this close to both decisions raises the stakes for whichever central bank surprises the other.\n\nWhat to watch: Friday's US CPI report now carries outsized weight for USD/JPY, sitting between two rate decisions in eight days -- a hot print would widen the policy divergence further, a soft one would hand the yen a cleaner path to strengthen into the BOJ meeting.",
+      "author": "S. Okafor",
+      "ts": "2026-09-10T20:00:00.000Z",
+      "chart": {
+        "key": "usdjpy"
+      },
+      "theoryKey": "",
+      "theoryBody": ""
+    },
+    {
+      "id": "a30",
+      "section": "taiwan",
+      "tier": "free",
+      "headline": "Taiwan Outlook: August exports accelerate to 41% YoY as AI-driven demand broadens",
+      "dek": "Taiwan's overall export growth jumped to 41% year-over-year in August, up from July's 32.9%, reinforcing the same AI-driven demand that lifted TSMC's own record monthly revenue this week.",
+      "body": "Taiwan's total exports grew 41.0% year-over-year in August, accelerating from July's already-strong 32.9% pace, according to data released this week. The acceleration extends a run of double-digit export growth that has continued through most of 2026, driven overwhelmingly by high-tech manufacturing and electronics shipments tied to global AI infrastructure spending.\n\nThe broader export strength lines up with TSMC's own record August revenue reported earlier this week, suggesting the AI-driven demand pulling in chip orders is showing up economy-wide, not just at the country's largest company. July's export order data, a forward-looking bellwether, had already hit a record near $98 billion, with the ministry forecasting a further rise to $97-99 billion for August itself.\n\nWhat to watch: September's export order figures, due in the coming weeks, will show whether the acceleration is still building or beginning to plateau off an increasingly high base -- and whether AI-related demand is broadening beyond TSMC's direct customers into the wider supply chain.",
+      "author": "J. Lindqvist",
+      "ts": "2026-09-10T20:10:00.000Z",
+      "chart": {
+        "key": "taiex"
+      },
+      "theoryKey": "",
+      "theoryBody": ""
+    },
+    {
+      "id": "a31",
+      "section": "sea",
+      "tier": "free",
+      "headline": "Southeast Asia Outlook: Singapore's STI slips 0.66% as regional risk appetite cools",
+      "dek": "Singapore shares fell for a second straight session as hawkish Fed rate expectations and rising Treasury yields weighed on regional risk sentiment.",
+      "body": "Singapore's Straits Times Index fell 37.82 points, or 0.66%, to 5,729.63, its second consecutive losing session, as banking and property names led the pullback. The move tracked a broader risk-off tone across Asian equities, with Hong Kong's Hang Seng and Japan's Nikkei both easing in the same session.\n\nThe pullback comes as a hotter-than-expected US producer price report reinforced expectations the Fed will lean hawkish at its September 16-17 meeting, pushing Treasury yields modestly higher and dimming the relative appeal of Asian equities. Singapore's rate-sensitive banking and REIT sectors, which had outperformed the broader region earlier this week, were among the session's weakest performers.\n\nWhat to watch: Friday's US CPI report as the next catalyst for the region's risk tone, and whether Singapore's banks -- among the highest-yielding names in the STI -- can hold up if US yields keep climbing into next week's Fed decision.",
+      "author": "N. Suwannarat",
+      "ts": "2026-09-10T20:20:00.000Z",
+      "theoryKey": "",
+      "theoryBody": ""
+    },
+    {
+      "id": "a32",
+      "section": "tech",
+      "tier": "free",
+      "headline": "Tech Outlook: Adobe tops Q3 estimates, but shares fall on AI monetization concerns",
+      "dek": "Adobe posted record Q3 revenue and raised its full-year guidance, but the stock slid nearly 4% between the regular session and after-hours as investors questioned how quickly its AI features can convert into revenue.",
+      "body": "Adobe reported record fiscal third-quarter revenue of $6.76 billion, up 13% year-over-year, with non-GAAP earnings of $6.13 a share, both ahead of Wall Street's roughly $6.69 billion and $6.08 estimates. The company also said it has surpassed 1 billion monthly active users and raised its full-year revenue and earnings guidance.\n\nDespite the beat, shares fell 2.32% in the regular session and slid a further 2.14% after hours to $243.50, extending a stock now down roughly 27% for the year. Investors focused less on the headline beat and more on AI monetization pace -- whether Firefly and other generative features can convert user growth into pricing power without disrupting Creative Cloud's subscription economics. The results also confirmed the previously announced CEO transition, with Anil Chakravarthy set to succeed Shantanu Narayen on December 1.\n\nWhat to watch: whether Adobe's next-quarter guidance commentary on AI-driven pricing gives investors more confidence than this quarter's beat did, and whether the stock's repeated post-earnings declines -- lower after 15 of its last 20 reports -- finally break with a results-driven rally rather than another sell-the-news reaction.",
+      "author": "J. Lindqvist",
+      "ts": "2026-09-10T21:30:00.000Z",
+      "theoryKey": "",
+      "theoryBody": ""
     }
   ]
 }
