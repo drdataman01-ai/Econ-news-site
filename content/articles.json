@@ -58,8 +58,8 @@
       "body": "A Federal Reserve governor said today the committee could act before year end if incoming inflation data continues to run near target, the most direct hint yet from a voting member about the December meeting.\n\nThe remarks came during a speech to a regional business group and were quickly picked up by rates desks parsing them for a shift from the more cautious tone struck after the last FOMC meeting. The speaker did not commit to a specific move, but the phrasing was read as more dovish than recent Fed communication.\n\nThe 2-year Treasury yield fell 5 basis points on the headline, futures markets nudged the implied odds of a December cut up several points, and the S&P 500 closed modestly higher into the bell.\n\nThe shift matters because it narrows the gap between what the Fed has been signaling and what markets have been pricing independently. If the next CPI and employment reports come in soft, today's comments give the committee more room to act without surprising markets; if inflation surprises to the upside instead, today's language will look premature.\n\nFed Watch take: the next two data prints now carry outsized weight for the December decision, more than the speech itself.",
       "author": "R. Costa",
       "ts": "2026-09-07T16:30:00.000Z",
-      "theoryKey": "",
-      "theoryBody": "",
+      "theoryKey": "taylorrule",
+      "theoryBody": "The Taylor rule frames Fed policy as a function of how far inflation sits from target and output from potential -- exactly the conditional logic in today's remarks: hold if inflation confirms disinflation, hike if it doesn't. Markets read the framing itself as informative, since a rule-like conditional statement is more credible than open-ended discretion.\n\nThe rule doesn't specify a single number here -- it's being invoked more as a communication device than a literal formula -- but the underlying idea, that policy should react systematically to incoming data rather than a fixed calendar, is doing real work in how traders priced the 2-year yield's reaction.",
       "metrics": {
         "fedFundsRate": 3.625,
         "yield2y": 4.3,
@@ -77,8 +77,8 @@
       "body": "Federal Reserve Governor Christopher Waller said Thursday he could support holding rates steady this month if inflation data due before the meeting confirmed the recent disinflation trend, though he signaled he would back a hike if inflation ran hot. A day later, the Labor Department's August jobs report undercut the calmer read on his remarks: nonfarm payrolls jumped 162,000, more than triple the roughly 53,000 economists expected, while unemployment held at 4.1% and June and July figures were revised higher.\n\nU.S. markets are closed today for Labor Day, but Friday's session captured the shift. The Dow fell 271.86 points, the S&P 500 slipped 0.38% to 7,718.60, and the 2-year Treasury yield rose to 4.377%, its highest level since January 2025. Futures tracked by the CME FedWatch tool showed traders pricing roughly 60% odds of a quarter-point hike at the September 15-16 meeting, up sharply from earlier in the week.\n\nThe report puts full weight on next week's CPI and PPI releases, the last major inflation data before the FOMC meets. Waller has said his vote hinges on whether the disinflation trend seen in July's data continued into August; a hot print would likely tip him, and possibly other officials, toward a hike rather than a hold.\n\nFed Watch take: the labor market just took a hold off the table as the automatically safe outcome. Next week's inflation data now looks more likely to decide between a hike and a hold than between a hold and a cut.",
       "author": "R. Costa",
       "ts": "2026-09-07T14:00:00.000Z",
-      "theoryKey": "",
-      "theoryBody": "",
+      "theoryKey": "nairu",
+      "theoryBody": "NAIRU is the unemployment rate consistent with stable inflation; when job growth this far outpaces expectations, markets infer the labor market may be tightening below whatever level policymakers currently view as consistent with target inflation. That's the logic connecting a payrolls beat to rekindled hike odds, even without a fresh inflation print.\n\nThe catch is that NAIRU itself isn't observable -- it's inferred, contested, and revised over time -- so today's reaction reflects a judgment call about labor-market tightness as much as a hard data point.",
       "metrics": {
         "fedFundsRate": 3.625,
         "yield2y": 4.377,
@@ -115,8 +115,8 @@
       "body": "Treasury yields rose again today as markets reopened from the holiday weekend, with rising energy costs and a busy week of inflation data ahead pushing the 10-year yield up more than 2 basis points to 4.81%. The 2-year yield held roughly flat at 4.38%, while the 30-year climbed to 5.27%.\n\nThe move comes as CME FedWatch continues to show a roughly 58% probability of a quarter-point hike at the Sept. 15-16 FOMC meeting, little changed from Friday's post-jobs-report reading. Oil prices also rose Monday, adding another input to the inflation debate.\n\nMarkets are now looking to this week's wholesale inflation report and Wednesday's CPI print as the last major data before officials vote. Fed Chair Kevin Warsh's Jackson Hole remarks last month, which flagged the case for a hike, remain the hawkish anchor traders are measuring incoming data against.\n\nFed Watch take: with hike odds already elevated and largely priced in, this week's inflation prints carry outsized power to cement the case for a move or reopen the debate about a hold.",
       "author": "R. Costa",
       "ts": "2026-09-08T15:30:00.000Z",
-      "theoryKey": "",
-      "theoryBody": "",
+      "theoryKey": "fisher",
+      "theoryBody": "The Fisher equation splits the nominal yield into a real rate and expected inflation. Rising oil prices ahead of this week's inflation reports are nudging up the inflation-expectations component specifically, which is a cleaner explanation for today's yield move than assuming investors suddenly expect faster real growth.\n\nThat distinction matters for what happens next: if this week's data confirms higher realized inflation, the move holds; if it doesn't, the inflation-expectations premium built into today's yield likely unwinds.",
       "metrics": {
         "fedFundsRate": 3.625,
         "yield2y": 4.381,
@@ -134,8 +134,8 @@
       "body": "The yen surged Tuesday as Asian markets traded without clear direction, a day after the Nikkei 225 jumped 2.12% to close at 66,400 on a second straight session of gains led by tech shares. The index touched a fresh intraday high near 66,525 Tuesday morning in Tokyo.\n\nThe stronger yen is arriving alongside growing conviction that the Bank of Japan will raise rates at its September meeting, supported by July wage growth running at its fastest pace since 1997 and an upward revision to second-quarter GDP. A firmer yen typically pressures Japan's export-heavy industrials even as it eases import costs.\n\nMonday's rally was driven by chipmakers and AI-linked names -- Kioxia, SoftBank, and Advantest all posted strong gains -- on optimism tied to a rumored new OpenAI model that could lift demand for Japanese semiconductor equipment, while financial and consumer names lagged.\n\nWhat to watch: the BOJ's policy decision this month, alongside how a strengthening yen interacts with elevated oil prices tied to the ongoing Middle East conflict -- a combination that cuts both ways for Japan's inflation outlook.",
       "author": "S. Okafor",
       "ts": "2026-09-08T15:35:00.000Z",
-      "theoryKey": "",
-      "theoryBody": ""
+      "theoryKey": "uip",
+      "theoryBody": "Uncovered interest parity ties currency moves to the expected gap between two countries' interest rates. Stronger Japanese wage growth and an upward GDP revision raise the odds of a BOJ hike, narrowing the expected rate gap with the US and giving the yen a fundamental reason to strengthen under UIP logic, not just a technical bounce.\n\nThe theory says the size of the expected policy gap matters more than either country's rate level in isolation -- which is why a single hike probability shift can move the currency this much in one session."
     },
     {
       "id": "a14",
@@ -146,8 +146,8 @@
       "body": "The TAIEX climbed 863 points, or 1.9%, to 47,414 in Monday trading, moving back toward the record high set on June 22. The advance was broad, with the electronics-heavy tech subindex up 2.3% on bets for stronger memory chip demand tied to a rumored new OpenAI model.\n\nMediaTek was the standout, surging as much as 9.7% after Nvidia subscribed to $3.5 billion of the company's record $3.9 billion overseas convertible bond offering -- a deal that also deepens the two companies' ties. TSMC, over 40% of the index's value, added roughly 2%, while ASE Technology jumped 5.3%.\n\nTraders are now looking ahead to Taiwan's August trade data, due later this week, as the next read on whether AI-driven chip demand is showing up in hard export numbers rather than just index-level optimism.\n\nWhat to watch: whether the trade data confirms the AI-demand narrative, and how TSMC's heavier 2026-2027 capex guidance is received once Q3 results land.",
       "author": "J. Lindqvist",
       "ts": "2026-09-08T15:40:00.000Z",
-      "theoryKey": "",
-      "theoryBody": ""
+      "theoryKey": "schumpeter",
+      "theoryBody": "Creative destruction describes capital reallocating toward whichever firms sit closest to a technology's frontier. Nvidia's direct investment in MediaTek's convertible bond is a capital-market version of that reallocation -- an established leader in AI compute explicitly backing a supplier positioned to benefit from the same demand wave, deepening ties rather than competing for the same capital.\n\nThe mechanism cuts both ways over time: firms that fail to secure this kind of frontier-adjacent capital access risk being structurally disadvantaged even if their current earnings look fine."
     },
     {
       "id": "a15",
@@ -173,8 +173,8 @@
       "chart": {
         "key": "INTC"
       },
-      "theoryKey": "",
-      "theoryBody": ""
+      "theoryKey": "tobinq",
+      "theoryBody": "Tobin's Q predicts firms invest more once the market values a dollar of new capital above its replacement cost. Intel's foundry milestone, alongside reported capacity tightness prompting price hikes, is consistent with a market reassessing Intel's capital as worth building rather than simply holding -- the logic behind the accompanying analyst upgrade.\n\nPrice hikes and capacity announcements are lagging confirmation of an investment case markets had already started pricing in via the stock's recent rally, rather than the original cause of it."
     },
     {
       "id": "a17",
@@ -185,8 +185,8 @@
       "body": "Treasury Secretary Scott Bessent announced Wednesday that the department will triple its buyback of 10- to 20-year government debt to $6 billion, up from the $2 billion initially unveiled last month, in an effort to steady a bond market under pressure from rising yields. The move follows an Aug. 19 pledge to at least double buybacks and came as oil prices kept climbing toward $100 a barrel.\n\nThe announcement had the opposite of its intended effect on yields: the 10-year Treasury yield jumped to 4.857%, its highest level since November 2023, while the 2-year yield held near 4.39%. Equities slid alongside the move, with the Dow falling 333 points (-0.6%), the S&P 500 losing 0.4%, and the Nasdaq down 0.5%.\n\nMarkets now price roughly a 58% chance of a 25-basis-point hike at next week's FOMC meeting, up from about 52% after Friday's stronger-than-expected August jobs report. Rising yields and oil prices are reinforcing the hawkish case just as the committee prepares to decide.\n\nFed Watch take: if oil keeps climbing toward $100 a barrel, the inflation argument for a hike gets harder for the committee's doves to wave away.",
       "author": "R. Costa",
       "ts": "2026-09-09T19:05:00.000Z",
-      "theoryKey": "",
-      "theoryBody": "",
+      "theoryKey": "loanablefunds",
+      "theoryBody": "The loanable funds framework treats government debt operations as a direct lever on the supply and demand for lendable funds. A buyback is meant to reduce the effective supply of long-dated bonds in the market, which should support prices and lower yields -- but today's reaction was the opposite, suggesting the market read the move as a signal of funding stress rather than a straightforward supply reduction.\n\nThis is a case where the simple supply-and-demand mechanism gets overridden by what the policy action reveals about the issuer's own confidence, a wrinkle the basic loanable-funds model doesn't capture on its own.",
       "metrics": {
         "fedFundsRate": 3.625,
         "yield2y": 4.39,
@@ -207,8 +207,8 @@
       "chart": {
         "key": "nikkei225"
       },
-      "theoryKey": "",
-      "theoryBody": ""
+      "theoryKey": "uip",
+      "theoryBody": "Verbal intervention works through the same channel uncovered interest parity describes: a credible signal that policymakers may act to narrow the effective return gap between currencies can move the exchange rate even without an actual rate change, since traders adjust their expected future path.\n\nBessent's comments function as exactly this kind of signal -- not a change in current rates, but a shift in the market's expectation of future currency-supportive action, which is enough to move the yen and hit exporter equities through the same earnings-translation channel."
     },
     {
       "id": "a19",
@@ -249,8 +249,8 @@
       "body": "AMD shares rose about 3% Wednesday after CFO Jean Hu said the company's total addressable market forecast for AI chips is trending toward $3 trillion, above the guidance AMD gave when it first outlined the opportunity. Hu said demand signals from anchor customers including Meta, OpenAI and Anthropic have come in above what AMD anticipated when those partnerships were struck. Intel shares also ticked higher on the read-through for foundry and packaging demand.\n\nThe move stood apart from a soft broader tape: the Nasdaq Composite slipped as Treasury yields jumped to a three-year high after the U.S. Treasury tripled its bond buyback program. AMD's data center revenue grew 107% year over year last quarter to $6.72 billion, 58% of total sales, underscoring how central AI infrastructure has become to its business. Hu also confirmed TSMC remains AMD's primary wafer supplier.\n\nWhat to watch: confirmation of the higher TAM figure at AMD's next investor update, and Nvidia and Broadcom's upcoming earnings for whether hyperscaler capex guidance keeps climbing alongside it.",
       "author": "J. Lindqvist",
       "ts": "2026-09-09T19:09:00.000Z",
-      "theoryKey": "",
-      "theoryBody": ""
+      "theoryKey": "schumpeter",
+      "theoryBody": "AMD's upward TAM revision is a direct claim about how much value is shifting toward AI-frontier chip designers, the core mechanism behind creative destruction: capital and demand concentrating on whichever firms are closest to the new technology, at the expense of firms further from it.\n\nThe stock's divergence from a weak broader tape is the market pricing that reallocation in real time -- rewarding AMD specifically for evidence its position in the reallocation is stronger than previously assumed, not for any change in economy-wide conditions."
     },
     {
       "id": "a22",
@@ -261,8 +261,8 @@
       "body": "The 10-year Treasury yield eased to 4.84% Thursday, a basis point below Wednesday's 4.85% close -- itself the highest level since October 2023 -- as the market digested this week's tripled Treasury buyback. The 2-year yield held near 4.40%, little changed on the day.\n\nContinued Bank of Japan-linked selling of Treasuries, as Tokyo works to defend the yen, added another source of supply pressure even as yields ticked lower. Markets now price roughly 58% odds of a 25-basis-point hike at next week's Sept. 16 FOMC meeting, matching Wednesday's reading.\n\nFriday's August CPI report is the last major inflation print before the Fed meets, and traders are treating it as the swing factor: a hot number would likely push hike odds decisively higher, while an in-line or soft reading would revive the case for a hold.\n\nFed Watch take: with yields already near three-year highs and record AI-linked corporate debt issuance adding to supply, we'd lean toward the Fed erring hawkish rather than risk its inflation-fighting credibility this close to target.",
       "author": "R. Costa",
       "ts": "2026-09-10T14:00:00.000Z",
-      "theoryKey": "",
-      "theoryBody": "",
+      "theoryKey": "loanablefunds",
+      "theoryBody": "BOJ-linked Treasury sales function as an increase in the supply of bonds competing for the same pool of loanable funds -- all else equal, more supply should push yields up, working against the modest easing seen elsewhere in today's session.\n\nThe net effect (a small easing despite added supply pressure) suggests other forces, like softer near-term positioning ahead of Friday's CPI, are currently outweighing this particular supply channel, not that the mechanism doesn't apply.",
       "metrics": {
         "fedFundsRate": 3.625,
         "yield2y": 4.396,
@@ -283,8 +283,8 @@
       "chart": {
         "key": "usdjpy"
       },
-      "theoryKey": "",
-      "theoryBody": ""
+      "theoryKey": "uip",
+      "theoryBody": "With a BOJ decision now just over a week away, uncovered interest parity puts the expected US-Japan rate gap at the center of the yen's path: a hike narrows that gap and should support the currency, while anything perceived as dovish would widen it again.\n\nThe theory predicts the yen should be highly sensitive to any repricing of hike odds between now and the decision -- which is exactly the dynamic connecting today's oil-driven Nikkei recovery to the currency's own separate, rate-driven story."
     },
     {
       "id": "a24",
@@ -298,8 +298,8 @@
       "chart": {
         "key": "taiex"
       },
-      "theoryKey": "",
-      "theoryBody": ""
+      "theoryKey": "schumpeter",
+      "theoryBody": "TSMC's record revenue is a direct read on capital and demand concentrating at the technological frontier of chip manufacturing -- the core creative-destruction mechanism, where firms furthest ahead in a technology capture a disproportionate share of a fast-growing pie.\n\nBecause TSMC represents such a large share of Taiwan's own index, this frontier-firm dynamic doesn't stay contained to one company -- it functions as a rough proxy for how much of the broader economy's growth is being pulled along by the same reallocation."
     },
     {
       "id": "a25",
@@ -310,8 +310,8 @@
       "body": "Indonesia's IDX Composite fell 1.19% at Thursday's close in Jakarta, as losses in the Infrastructure, Financials, and Agriculture sectors led shares lower. Falling stocks outnumbered advancers 530 to 160. Crude oil for October delivery rose 0.6% to $96.63 a barrel, while Brent added 0.5% to $101.71, extending a run driven by ongoing Middle East tensions. The rupiah weakened 0.33% to 17,542.90 per dollar.\n\nHigher oil prices are a particular strain for import-dependent economies like Indonesia, feeding directly into inflation risk just as regional central banks weigh their own policy paths alongside an increasingly hawkish Fed. Neighboring markets traded more mixed, with Singapore's STI holding up comparatively well on bank and REIT strength.\n\nWhat to watch: whether Friday's US CPI print adds to the oil-driven risk-off mood regionally, and any signal from Bank Indonesia on how it plans to balance currency stability against growth support heading into the fourth quarter.",
       "author": "N. Suwannarat",
       "ts": "2026-09-10T14:15:00.000Z",
-      "theoryKey": "",
-      "theoryBody": ""
+      "theoryKey": "passthrough",
+      "theoryBody": "Pass-through theory describes how much of a cost shock -- traditionally a currency move, but the same logic extends to an oil-price shock for a net energy importer -- actually shows up in domestic prices rather than being absorbed elsewhere in the economy.\n\nFor an import-dependent economy like Indonesia, elevated oil prices pass through into domestic inflation more directly than they would for an energy exporter, which is the mechanism connecting today's crude move to the risk-off reaction in local equities and the currency."
     },
     {
       "id": "a26",
@@ -325,8 +325,8 @@
       "chart": {
         "key": "INTC"
       },
-      "theoryKey": "",
-      "theoryBody": ""
+      "theoryKey": "tobinq",
+      "theoryBody": "Nvidia's roughly $30 billion equity stake is itself a market-value signal Tobin's Q captures directly: a sophisticated investor putting a specific price on Intel's capital being worth more than its replacement cost, which is the condition under which the model predicts further investment follows.\n\nThe stock offering funding additional AI and foundry capacity is the predicted next step -- capital chasing a high-Q asset -- though the near-term EPS dilution shows the model's investment signal and a company's reported earnings can move in opposite directions in the short run."
     },
     {
       "id": "a27",
@@ -337,8 +337,8 @@
       "body": "State insurance regulators can now override previously automatic credit ratings on insurer investments, adding a new layer of capital-charge risk on top of ordinary credit risk.\n\nThe National Association of Insurance Commissioners (NAIC) adopted the change at its Summer National Meeting, letting regulators challenge ratings insurers had previously relied on automatically for capital purposes. It follows an April NAIC brief showing collateralized loan obligation (CLO) holdings hit a record pace near $200 billion, with life insurers holding 82% of exposure. Private-equity-owned (PE-owned) insurers hold a lower-quality slice: about 65% investment-grade versus 80% industry-wide.\n\nAn override that reclassifies a private-letter rating downward converts directly into a higher capital charge, no default required. The PE-owned subset faces the most direct hit.\n\nThe change lands alongside strengthened AG 53 (a regulatory standard for long-duration asset-adequacy testing) and Treasury plans to consult regulators on private-credit rating consistency. Investment desks leaning into private credit for yield now carry rating-override risk on top of ordinary credit risk.\n\nRisk Desk take: model capital charges off a conservative override outcome, not the most favorable public rating available.",
       "author": "K. Fenwick",
       "ts": "2026-09-10T14:25:00.000Z",
-      "theoryKey": "",
-      "theoryBody": "",
+      "theoryKey": "financial_accelerator",
+      "theoryBody": "The financial accelerator describes how a shock to how risk is priced can amplify beyond its initial size through a feedback loop -- traditionally via a net-worth shock raising a borrower's cost of external finance. NAIC's rating-override authority works through an analogous channel: a regulatory reassessment of credit quality, not a change in the underlying asset, can directly raise the capital cost of holding it.\n\nFor PE-owned insurers with already-thinner credit quality, this creates the same kind of amplification the theory describes: the initial shock becomes larger in its balance-sheet effect than the underlying credit event that prompted the scrutiny.",
       "metrics": {
         "yield10y": 4.84,
         "igSpread": 78,
@@ -355,8 +355,8 @@
       "body": "Initial jobless claims came in at 206,000 for the week ending September 5, down 1,000 from an upwardly revised 207,000 and just above the 205,000 forecast. The four-week average held at 206,000, and continuing claims eased to 1.774 million. Separately, August producer prices rose 0.4% from July, a firmer reading than markets had penciled in.\n\nNeither number moves the needle dramatically on its own, but together they reinforce a labor market that's cooling gently rather than cracking, alongside a pipeline inflation reading that hasn't fully rolled over. The 10-year Treasury yield ticked up to roughly 4.86% on the data, extending its rise toward a three-year high.\n\nFriday's CPI report is now the last major data point before the Fed's September 16-17 meeting, and today's PPI print raises the bar for a soft CPI surprise to shift the committee toward a hold. Fed funds futures nudged their hike odds higher on the data.\n\nFed Watch take: with claims stable and PPI running hot, tomorrow's CPI carries outsized weight -- a firm core reading would all but lock in a September move.",
       "author": "R. Costa",
       "ts": "2026-09-10T16:00:00.000Z",
-      "theoryKey": "",
-      "theoryBody": "",
+      "theoryKey": "phillips",
+      "theoryBody": "The New Keynesian Phillips curve ties current inflation to real marginal cost and forward-looking inflation expectations, not just past prices. A stable labor market alongside a hotter pipeline-inflation reading is consistent with cost pressures building from the supply side even without labor-market tightening doing the work -- a distinct channel from the curve's more commonly cited wage-price spiral story.\n\nThis is also why the piece treats the two data points as jointly informative: the curve's framework says today's marginal-cost pressure only becomes tomorrow's consumer inflation if it's not offset by slack elsewhere in the economy, which is what the stable claims number is being used to assess.",
       "metrics": {
         "fedFundsRate": 3.625,
         "yield2y": 4.41,
@@ -374,8 +374,8 @@
       "body": "Treasury yields moved higher Thursday after August producer prices rose a stronger-than-expected 0.4% from July, reinforcing bets the Fed will lean hawkish at its September 16-17 meeting. The 10-year yield ticked up to roughly 4.86%, extending a rise that has already pushed it near a three-year high this month.\n\nFor insurers holding long-duration bond portfolios to match long-tail liabilities, each incremental yield increase adds to unrealized mark-to-market losses on existing holdings, even as it improves reinvestment yields on new purchases and maturing bonds. Credit spreads widened only modestly on the data: the investment-grade option-adjusted spread (OAS, the extra yield over Treasuries investors demand for credit risk) ticked up to around 80 basis points from 78, suggesting the move is being read as a rates story rather than a credit-quality concern.\n\nRisk Desk take: the reinvestment-yield benefit of higher rates typically takes years to show up in reported earnings, while mark-to-market losses hit available-for-sale bond valuations immediately -- a timing mismatch worth flagging heading into third-quarter statutory filings.",
       "author": "K. Fenwick",
       "ts": "2026-09-10T16:30:00.000Z",
-      "theoryKey": "",
-      "theoryBody": "",
+      "theoryKey": "fisher",
+      "theoryBody": "The Fisher equation splits a bond's nominal yield into two pieces: the real interest rate and expected inflation. A hotter-than-expected producer price report doesn't necessarily change what investors think the real rate should be -- it changes what they expect inflation to run at, which shows up as a higher nominal yield even if underlying real economic conditions haven't shifted.\n\nThat's the cleanest way to read today's move: the 10-year yield ticked up not because investors suddenly expect stronger real growth, but because the PPI print nudged up the inflation-expectations component of the rate. For an insurer's ALM desk, this distinction matters -- a real-rate-driven yield rise and an inflation-driven one can imply different things for how long elevated yields might persist.\n\nThe relationship isn't exact day to day, since term premia, liquidity effects, and Fed policy expectations all layer on top of the simple real-rate-plus-inflation decomposition -- but as a first-order explanation for why yields moved on an inflation data point rather than a growth one, it holds up well here.",
       "metrics": {
         "yield10y": 4.86,
         "igSpread": 80,
@@ -395,8 +395,8 @@
       "chart": {
         "key": "usdjpy"
       },
-      "theoryKey": "",
-      "theoryBody": ""
+      "theoryKey": "uip",
+      "theoryBody": "Uncovered interest parity holds that a currency should move to offset differences in interest rate expectations between two countries, so expected returns come out similar regardless of which currency an investor holds. When US rate expectations firm up relative to Japan's -- exactly what a hotter-than-expected PPI print does by reinforcing hawkish Fed bets -- the theory predicts the yen should weaken against the dollar to compensate, which is the mechanism behind today's reversal.\n\nThis is also why the story sits on a knife's edge between two decisions eight days apart: the Fed on September 16-17 and the Bank of Japan on September 18. Under UIP logic, it isn't the absolute level of either country's rates that matters most, but the gap between them and how it's expected to change -- a BOJ hike that narrows the gap should support the yen, while a hawkish Fed surprise that widens it again works against that support.\n\nThe theory doesn't always hold cleanly in the short run, though -- carry trade positioning, intervention risk from Japan's Ministry of Finance, and shifting risk sentiment can all cause the yen to diverge from what the simple rate-differential story alone would predict, sometimes for extended stretches."
     },
     {
       "id": "a30",
@@ -410,8 +410,8 @@
       "chart": {
         "key": "taiex"
       },
-      "theoryKey": "",
-      "theoryBody": ""
+      "theoryKey": "comparative_advantage",
+      "theoryBody": "Comparative advantage explains why Taiwan's economy is capitalizing so disproportionately on global AI demand: the country specializes heavily in advanced semiconductor manufacturing, an area where its opportunity cost of production is unusually low relative to nearly every other economy, so global demand growth in that category flows disproportionately through Taiwanese exports.\n\nThe acceleration from July to August is consistent with the theory's prediction that specialization gains compound as global demand for the specialized good grows, rather than requiring Taiwan's overall economy to grow uniformly across sectors."
     },
     {
       "id": "a31",
@@ -422,8 +422,8 @@
       "body": "Singapore's Straits Times Index fell 37.82 points, or 0.66%, to 5,729.63, its second consecutive losing session, as banking and property names led the pullback. The move tracked a broader risk-off tone across Asian equities, with Hong Kong's Hang Seng and Japan's Nikkei both easing in the same session.\n\nThe pullback comes as a hotter-than-expected US producer price report reinforced expectations the Fed will lean hawkish at its September 16-17 meeting, pushing Treasury yields modestly higher and dimming the relative appeal of Asian equities. Singapore's rate-sensitive banking and REIT sectors, which had outperformed the broader region earlier this week, were among the session's weakest performers.\n\nWhat to watch: Friday's US CPI report as the next catalyst for the region's risk tone, and whether Singapore's banks -- among the highest-yielding names in the STI -- can hold up if US yields keep climbing into next week's Fed decision.",
       "author": "N. Suwannarat",
       "ts": "2026-09-10T20:20:00.000Z",
-      "theoryKey": "",
-      "theoryBody": ""
+      "theoryKey": "loanablefunds",
+      "theoryBody": "Rising US yields raise the relative return available in dollar-denominated loanable funds, which competes directly with the return available from holding Singapore equities -- a loanable funds/relative-yield story extended across borders. As US real yields rise, some capital that would otherwise flow into or stay in regional equities has an incentive to shift toward the newly more attractive US alternative.\n\nSingapore's rate-sensitive banking and REIT sectors are the most directly exposed to this channel, since their own valuations depend heavily on the same relative-yield comparison the theory describes."
     },
     {
       "id": "a32",
@@ -434,8 +434,8 @@
       "body": "Adobe reported record fiscal third-quarter revenue of $6.76 billion, up 13% year-over-year, with non-GAAP earnings of $6.13 a share, both ahead of Wall Street's roughly $6.69 billion and $6.08 estimates. The company also said it has surpassed 1 billion monthly active users and raised its full-year revenue and earnings guidance.\n\nDespite the beat, shares fell 2.32% in the regular session and slid a further 2.14% after hours to $243.50, extending a stock now down roughly 27% for the year. Investors focused less on the headline beat and more on AI monetization pace -- whether Firefly and other generative features can convert user growth into pricing power without disrupting Creative Cloud's subscription economics. The results also confirmed the previously announced CEO transition, with Anil Chakravarthy set to succeed Shantanu Narayen on December 1.\n\nWhat to watch: whether Adobe's next-quarter guidance commentary on AI-driven pricing gives investors more confidence than this quarter's beat did, and whether the stock's repeated post-earnings declines -- lower after 15 of its last 20 reports -- finally break with a results-driven rally rather than another sell-the-news reaction.",
       "author": "J. Lindqvist",
       "ts": "2026-09-10T21:30:00.000Z",
-      "theoryKey": "",
-      "theoryBody": ""
+      "theoryKey": "schumpeter",
+      "theoryBody": "Adobe's results sit at an unusual point in the creative-destruction cycle: it's simultaneously an incumbent being disrupted by generative AI and a firm racing to become the new technological frontier itself through Firefly and related features. The market's skepticism reflects genuine uncertainty about which side of that reallocation Adobe ultimately lands on.\n\nA beat on legacy financial metrics doesn't resolve that uncertainty, which is why the stock fell despite the numbers -- investors are pricing the outcome of the reallocation, not just the current quarter's results."
     }
   ]
 }
