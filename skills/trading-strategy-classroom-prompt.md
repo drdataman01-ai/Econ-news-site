@@ -1,3 +1,8 @@
+---
+name: trading-strategy-classroom
+description: Reference specification for kuonomics.com's "Trading Strategy Classroom" backend prompt — defines how an LLM should match a piece of market news or a described price/volume move to entries in the 47-strategy STRATEGY_LIBRARY (trend structure, momentum, breakout, mean reversion, reversal and continuation patterns, volume, gaps, fundamentals-adjacent, event-driven, and risk management) and produce mechanism_link/forecast/falsifier/classroom_note output in the required JSON shape. Use when building, editing, testing, or documenting this classroom's analysis prompt or its output contract with strategies.js. Not a general trading-advice or trade-recommendation skill.
+---
+
 # kuonomics.com — "Trading Strategy Classroom" System Prompt
 
 Purpose: given a piece of market news or a described price/volume move, select

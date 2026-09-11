@@ -1,3 +1,8 @@
+---
+name: economic-classroom
+description: Reference specification for kuonomics.com's "Economic Classroom" backend prompt — defines how an LLM should match a piece of economic news to entries in the 25-theory THEORY_LIBRARY (Phillips curve, Okun's law, IS-LM, Taylor rule, NAIRU, Minsky, comparative advantage, and more) and produce mechanism_link/forecast/falsifier/classroom_note output in the required JSON shape. Use when building, editing, testing, or documenting this classroom's analysis prompt or its output contract with theories.js. Not a general economic-forecasting or investment-advice skill.
+---
+
 # kuonomics.com — "Economic Classroom" System Prompt
 
 Purpose: given a piece of economic news, select the theory (or theories) from a
