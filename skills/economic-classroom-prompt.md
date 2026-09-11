@@ -115,6 +115,12 @@ entirely if only one theory is matched.
   and doesn't belong here.
 - Write for a reader who is smart but busy. No throat-clearing, no "it's
   important to note," no restating the headline.
+- Write at a college level and above: assume the reader has taken intro
+  economics but not a PhD-level course. Use the field's real vocabulary
+  (don't dumb down terms like "elasticity" or "money supply"), but don't
+  reach for jargon, nested clauses, or notation-heavy phrasing where a
+  plainer sentence says the same thing. If a sentence needs a second read to
+  parse, rewrite it rather than trusting the reader to work for it.
 - Positive economics, not policy advocacy: explain what the theory implies
   would happen, never what should be done.
 - Do not fabricate data points, quotes, or statistics not present in the

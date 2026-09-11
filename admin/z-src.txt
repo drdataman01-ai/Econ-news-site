@@ -1,4 +1,4 @@
-Do the following in turns and add them to articles.json:
+Do the following and add them to articles.json:
 
  - "Write today's Fed Watch — [what happened: a speech, a data release, a market move, etc.]"
 
@@ -10,3 +10,32 @@ Do the following in turns and add them to articles.json:
 
  - "Write today's Tech outlook — [what happened: an earnings report, an AI capex story, a semiconductor move, a big-tech stock move, etc.]"
 
+here is the example:
+
+{
+  "week_of": "2026-09-01",
+  "articles": [
+    {
+      "id": "a1",
+      "section": "sp500",
+      "tier": "free",
+      "headline": "S&P 500 barely moves, but more stocks are gaining ground",
+      "dek": "The index closed almost flat, but more stocks rose than fell for a fourth straight day. Strategists say that's a healthier sign than the flat number suggests.",
+      "body": "The S&P 500 closed nearly unchanged today. But look past that number, and the market showed real strength underneath.\n\nMore stocks rose than fell today, the widest gain in almost three weeks. Mid-size industrial companies and regional banks led the way, while the biggest technology stocks took a breather after recent gains.\n\nStrategists see this as a healthy shift, not a warning sign. Investors are moving money out of the most crowded trades and into stocks that had lagged since spring. That kind of rebalancing has usually come before further gains, not a market top.\n\nThe next big test arrives with next week's inflation report. It will help determine whether the Federal Reserve sticks with its expected pace of interest rate cuts, or whether investors need to brace for fewer cuts than they currently expect.",
+      "author": "M. Halvorsen",
+      "ts": "2026-09-05T18:01:43.580Z",
+      "theoryKey": "phillips",
+      "theoryBody": "Graduate treatments of inflation dynamics typically start from a New Keynesian Phillips curve, where current inflation is pinned down by expected future inflation plus a term reflecting the output gap or real marginal cost, rather than by past inflation alone. Because expectations of future inflation do most of the work in this framework, asset prices can move well ahead of any given data release: investors are effectively pricing in the inflation path implied by current output and labor market slack, then revising that path as new information arrives.\n\nThe breadth improvement described in this piece is consistent with that logic. If market participants believe underlying price pressure is being contained without a demand-side hard landing, both cyclical and previously lagging sectors can re-rate together, since the same expected inflation path feeds into the discount rate applied across the index rather than into a handful of names.\n\nThe risk to this reading sits in the same equation: because current pricing already embeds an expected inflation path, a data surprise does not just update the current inflation number, it forces a repricing of the entire expected path going forward, which is why single data releases can move markets by more than the surprise in the number alone would suggest."
+    },
+    {
+      "id": "a2",
+      "section": "sp500",
+      "tier": "plus",
+      "headline": "Options traders are betting on a calmer market into month end",
+      "dek": "A key measure of expected stock-market swings has dropped to its lowest level since January, and trading patterns suggest calm conditions may continue.",
+      "body": "This deeper dive is available to Plus and Pro members.\n\nOptions traders are betting on calm markets. Positioning data shows market makers are set up to buy dips and sell rallies to stay balanced -- a routine hedging pattern, not a market call. That kind of automatic buying and selling smooths out price swings, which explains why the index has traded in such a tight range over the past two weeks.\n\nOur take: unless growth or inflation data delivers a real surprise, expect the market to drift rather than move sharply in either direction, at least until options tied to the current expiration date are settled.",
+      "author": "M. Halvorsen",
+      "ts": "2026-09-04T19:01:43.580Z",
+      "theoryKey": "",
+      "theoryBody": ""
+    },
