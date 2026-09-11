@@ -288,6 +288,66 @@ function renderFedWatchChart(currentArticle){
 }
 
 /**
+ * Risk Manager Desk chart — same merge pattern as renderFedWatchChart
+ * (a static multi-year history file, with the current month's value
+ * overwritten or appended from the latest article's own `metrics`
+ * snapshot), but split into TWO panels rather than one combined
+ * chart. Yield (~4-5%) and credit spreads (~80-300 basis points)
+ * cannot share one y-axis without the yield line flattening to
+ * nothing, so this renders a single-line yield panel (reusing
+ * FED_HISTORY's yield10y, since it's the same underlying rate Fed
+ * Watch already tracks) and a separate two-line spread panel from
+ * CREDIT_SPREAD_HISTORY.
+ */
+function renderRiskManagerChart(currentArticle){
+  const withMetrics = sortedArticles(
+    state.articles.filter(a => a.section === 'riskmanager' && a.metrics)
+  ).reverse(); // oldest -> newest
+  const latestPost = withMetrics[withMetrics.length - 1];
+  const latestMonth = latestPost ? latestPost.ts.slice(0, 7) : null; // 'YYYY-MM'
+
+  // --- Panel 1: 10-year Treasury yield, reusing FED_HISTORY ---
+  let yieldHistory = typeof FED_HISTORY !== 'undefined' ? FED_HISTORY.slice() : [];
+  if (latestPost && latestPost.metrics.yield10y !== undefined){
+    const lastMonth = yieldHistory.length ? yieldHistory[yieldHistory.length - 1].date : null;
+    const snapshot = { date: latestMonth, yield10y: latestPost.metrics.yield10y };
+    if (latestMonth > lastMonth) yieldHistory.push(snapshot);
+    else if (latestMonth === lastMonth) yieldHistory[yieldHistory.length - 1] = { ...yieldHistory[yieldHistory.length - 1], ...snapshot };
+  }
+  const yieldLabels = yieldHistory.map(h => yearLabel(h.date));
+  const yieldPanel = yieldHistory.length >= 2 ? `
+      <div class="fedwatch-chart-panel">
+        <p class="apps-label">10-year Treasury yield &middot; ALM anchor rate &middot; 10-year history</p>
+        ${lineChartSVG(yieldHistory.map(h => h.yield10y), yieldLabels, {
+          label: '10Y Treasury',
+          suffix: '%',
+          color: '#4a5d8a',
+          fillColor: 'rgba(74, 93, 138, 0.10)'
+        })}
+      </div>` : '';
+
+  // --- Panel 2: IG vs. HY credit spreads ---
+  let spreadHistory = typeof CREDIT_SPREAD_HISTORY !== 'undefined' ? CREDIT_SPREAD_HISTORY.slice() : [];
+  if (latestPost && latestPost.metrics.igSpread !== undefined && latestPost.metrics.hySpread !== undefined){
+    const lastMonth = spreadHistory.length ? spreadHistory[spreadHistory.length - 1].date : null;
+    const snapshot = { date: latestMonth, igSpread: latestPost.metrics.igSpread, hySpread: latestPost.metrics.hySpread };
+    if (latestMonth > lastMonth) spreadHistory.push(snapshot);
+    else if (latestMonth === lastMonth) spreadHistory[spreadHistory.length - 1] = snapshot;
+  }
+  const spreadLabels = spreadHistory.map(h => yearLabel(h.date));
+  const spreadPanel = spreadHistory.length >= 2 ? `
+      <div class="fedwatch-chart-panel">
+        <p class="apps-label">Investment-grade vs. high-yield OAS &middot; 10-year history</p>
+        ${multiLineChartSVG([
+          { name: 'IG OAS', values: spreadHistory.map(h => h.igSpread), color: '#2f6b4f' },
+          { name: 'HY OAS', values: spreadHistory.map(h => h.hySpread), color: '#A93A2E' }
+        ], spreadLabels, { suffix: 'bps' })}
+      </div>` : '';
+
+  return yieldPanel + spreadPanel;
+}
+
+/**
  * Fallback chart per section, used when an article either has no
  * "chart" field or references a key that isn't (yet) registered in
  * MARKET_HISTORY. Rather than showing no chart at all, we show the
