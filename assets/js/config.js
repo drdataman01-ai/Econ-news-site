@@ -12,6 +12,7 @@ const SECTIONS = [
   {id:'taiwan', label:'Taiwan outlook'},
   {id:'sea', label:'Southeast Asia outlook'},
   {id:'tech', label:'Tech stocks outlook'},
+  {id:'riskmanager', label:'Risk Manager Desk'},
   {id:'fedwatch', label:'Fed Watch'}
 ];
 const TIERS = [
