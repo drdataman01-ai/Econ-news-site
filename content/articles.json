@@ -436,6 +436,97 @@
       "ts": "2026-09-10T21:30:00.000Z",
       "theoryKey": "schumpeter",
       "theoryBody": "Adobe's results sit at an unusual point in the creative-destruction cycle: it's simultaneously an incumbent being disrupted by generative AI and a firm racing to become the new technological frontier itself through Firefly and related features. The market's skepticism reflects genuine uncertainty about which side of that reallocation Adobe ultimately lands on.\n\nA beat on legacy financial metrics doesn't resolve that uncertainty, which is why the stock fell despite the numbers -- investors are pricing the outcome of the reallocation, not just the current quarter's results."
+    },
+    {
+      "id": "a34",
+      "section": "fedwatch",
+      "tier": "free",
+      "headline": "Fed Watch: August CPI comes in hot, hike odds surge to ~87% ahead of next week's FOMC",
+      "dek": "Core inflation topped forecasts for the second straight month, pushing Fed rate-hike odds from the low-70s to near 90% in the minutes after Friday's report -- the last major data point before next week's decision.",
+      "body": "August's Consumer Price Index rose 0.4% for the month, in line with expectations, putting the annual rate at 3.4%. But core CPI, which excludes food and energy, rose 0.3% -- a tenth above the 0.2% consensus -- with the annual core rate easing slightly to 2.4% from July's 2.5%. Gasoline prices, up 3.9% in August, accounted for more than a third of the headline monthly increase.\n\nThe upside surprise on core inflation moved markets immediately: CME FedWatch-implied hike odds for next week's September 15-16 Federal Open Market Committee (FOMC) meeting jumped from roughly 72% to nearly 87% within hours, with odds of a follow-on October hike also climbing to almost 60%. \"The fate of the September meeting lies with August CPI,\" Citigroup economists wrote ahead of the release -- the data broke toward a hike.\n\nFed Watch take: a single tenth-of-a-point miss on core CPI turned a coin-flip into a probable hike five days out -- a reminder of how little room the Fed has left to look past incoming data with inflation still running meaningfully above target.",
+      "author": "R. Costa",
+      "ts": "2026-09-11T13:15:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "metrics": {
+        "fedFundsRate": 3.625,
+        "yield2y": 4.44,
+        "yield10y": 4.88,
+        "moveOdds": 87,
+        "moveDirection": "hike"
+      }
+    },
+    {
+      "id": "a35",
+      "section": "japan",
+      "tier": "free",
+      "headline": "Japan Outlook: Nikkei tumbles 2.8% even as yen holds firm on BOJ hike bets",
+      "dek": "Japanese stocks fell sharply in a broad Asia risk-off move tied to surging Fed hike odds, even as the yen strengthened on its own separate BOJ-driven rate story.",
+      "body": "The Nikkei 225 tumbled 2.76%, or roughly 1,802 points, to 63,469.39, part of a broad selloff across Asian equities after August's hotter-than-expected core CPI reading pushed US Fed rate-hike odds above 85%. South Korea's KOSPI fell 2.42% and Hong Kong's Hang Seng dropped 1.27% in the same session.\n\nThe yen, meanwhile, told a different story: USD/JPY briefly spiked to 154.49 immediately after the CPI release before reversing to trade around 153.60, down 0.54% on the day, as expectations for a Bank of Japan (BOJ) rate hike at next week's meeting reasserted themselves over the dollar's initial CPI-driven bounce. The divergence -- equities selling off broadly while the yen strengthens -- reflects carry-trade unwinding layering on top of Japan's own separate rate story.\n\nWhat to watch: whether next week's back-to-back Fed (Sept 15-16) and BOJ (Sept 18) decisions confirm both sides of today's move, and whether Japanese equities can stabilize once the initial shock from the US inflation print fades, or whether the yen's own strength becomes the next headwind for exporters heading into the decisions.",
+      "author": "S. Okafor",
+      "ts": "2026-09-11T13:20:00.000Z",
+      "chart": {
+        "key": "usdjpy"
+      },
+      "theoryKey": "uip",
+      "theoryBody": "Uncovered interest parity explains the yen side of today's split reaction: a Bank of Japan hike next week would narrow the expected US-Japan rate gap, giving the yen a fundamental reason to strengthen even as US rate expectations firm up too, since both currencies' hike odds are rising together rather than diverging.\n\nWhat UIP alone doesn't explain is the equity side -- the sharp Nikkei selloff reflects carry-trade unwinding and broad risk-off flows layered on top of the currency's own rate story, a reminder that UIP describes currency-pair dynamics specifically and isn't a complete model of how a single news event moves every asset class at once.\n\nThe two effects can coexist because they run through different channels: the yen's move is about relative expected returns between two currencies, while the equity selloff is about a higher discount rate applied to future earnings across all risk assets, Japanese equities included."
+    },
+    {
+      "id": "a36",
+      "section": "taiwan",
+      "tier": "free",
+      "headline": "Taiwan Outlook: Chip stocks slide despite TSMC's record revenue as CPI lifts yields",
+      "dek": "AI-linked chip stocks fell broadly Friday even after TSMC's blowout August revenue report, as a hotter-than-expected US inflation reading pushed Treasury yields higher and pressured high-multiple tech valuations.",
+      "body": "Nvidia, AMD, and Intel all declined Friday even as TSMC's record 53% August revenue surge -- reported earlier this week -- underscored continued strength in underlying AI chip demand. The disconnect highlights a valuation story rather than a demand story: rising Treasury yields following a hotter-than-expected August core CPI reading raise the discount rate applied to future earnings, hitting richly-valued growth and semiconductor names hardest.\n\nThe reaction extended into Taiwan's own market, with chip-sector shares under pressure alongside the broader Asia selloff tied to surging Fed hike odds, even though nothing in TSMC's own fundamentals changed. TSMC's US-listed shares closed at $428.03 Thursday, still well off their June 30 record high of $477.57.\n\nWhat to watch: whether the divergence between strong AI chip fundamentals and weaker chip-stock prices closes once next week's Fed decision removes the current rate uncertainty, or whether valuation concerns -- flagged repeatedly by strategists through 2026 -- finally start to bite regardless of how the underlying demand picture looks.",
+      "author": "J. Lindqvist",
+      "ts": "2026-09-11T13:25:00.000Z",
+      "chart": {
+        "key": "taiex"
+      },
+      "theoryKey": "fisher",
+      "theoryBody": "The Fisher equation explains why today's yield move hits chip stocks specifically: the CPI-driven rise in Treasury yields reflects higher expected inflation, not a change in the real economy's growth prospects, but the nominal yield increase still raises the discount rate applied to distant future cash flows -- exactly the kind of long-duration earnings stream a high-multiple semiconductor stock represents.\n\nThat's the mechanism connecting an inflation data point to an equity selloff that has nothing to do with chip demand: a stock's valuation is the present value of its future earnings, and a higher discount rate lowers that present value even when the earnings forecast itself hasn't changed.\n\nThis is also why the reaction should, in theory, be temporary if the yield move itself is temporary -- if next week's Fed decision resolves the uncertainty without a lasting shift in inflation expectations, the discount-rate effect should partially unwind."
+    },
+    {
+      "id": "a37",
+      "section": "sea",
+      "tier": "free",
+      "headline": "Southeast Asia Outlook: Malaysia's KLCI slides as regional selloff follows hot US CPI",
+      "dek": "Malaysian shares fell alongside a broad Asia-wide risk-off move after a hotter-than-expected US inflation reading pushed Fed rate-hike odds close to 90%.",
+      "body": "Malaysia's FTSE Bursa Malaysia KLCI fell 12.71 points, or 0.745%, to 1,692.81, part of a region-wide selloff after August's US core CPI reading came in hotter than expected. The move rippled across Asian markets broadly, with Hong Kong's Hang Seng down 1.27%, Indonesia's benchmark off 1.37%, and the Philippines' PSEi down 0.78% in the same session.\n\nThe CPI-driven repricing pushed Fed rate-hike odds for next week's meeting to nearly 87%, from roughly 72% ahead of the report, lifting the relative appeal of dollar assets over regional equities across the board. Singapore's STI held up comparatively well, down just 0.21%, while Thailand's SET slipped a modest 0.17% -- a reminder that the selloff's intensity varied significantly by market even as the underlying catalyst was the same.\n\nWhat to watch: whether the region stabilizes once next week's Fed decision removes the current uncertainty, and whether individual markets' differing sensitivity to today's move -- Malaysia and Indonesia notably harder hit than Singapore or Thailand -- says anything about relative capital-flow exposure heading into the decision.",
+      "author": "N. Suwannarat",
+      "ts": "2026-09-11T13:30:00.000Z",
+      "theoryKey": "loanablefunds",
+      "theoryBody": "Rising US yields raise the return available in dollar-denominated loanable funds, competing directly with the return available from holding regional equities -- a relative-yield story extended across borders. As US real and nominal yields rise together on a hawkish repricing, capital that would otherwise flow into or stay in Southeast Asian markets has an incentive to shift toward the newly more attractive US alternative.\n\nThe uneven intensity across markets -- Malaysia and Indonesia falling harder than Singapore or Thailand -- is consistent with differing sensitivity to this capital-flow channel, since markets with more foreign portfolio ownership tend to see sharper reactions to a shift in relative yields than markets more dominated by domestic institutional holders."
+    },
+    {
+      "id": "a38",
+      "section": "tech",
+      "tier": "free",
+      "headline": "Tech Outlook: Oracle's cloud revenue jumps 62%, but shares fall on margin and debt concerns",
+      "dek": "Oracle's cloud infrastructure revenue soared 121% and topped Wall Street estimates, but the stock slipped nearly 2% as investors weighed narrowing margins against the company's $125 billion AI-buildout debt load.",
+      "body": "Oracle reported fiscal first-quarter revenue of $19.35 billion, up nearly 30% from a year earlier, with cloud revenue rising 62% to $11.61 billion -- driven by a 121% jump in cloud infrastructure revenue to $7.4 billion, ahead of the roughly $7.19 billion analysts expected. Remaining performance obligations, a measure of contracted future revenue, reached $664 billion, up $209 billion year-over-year, after the company booked over $30 billion in new AI cloud contracts this quarter.\n\nDespite the beat, shares whipsawed and closed nearly 2% lower as investors focused on gross margin, which narrowed to 61% from 66.3% in the prior quarter, and on Oracle's ballooning debt load -- now $125 billion -- taken on to fund its AI data center buildout. The company posted $5.4 billion in negative free cash flow for the quarter, versus a negative $362 million a year earlier.\n\nWhat to watch: whether Oracle's investor day gives more visibility on GPU-rental economics at scale, a question Morgan Stanley flagged in maintaining an equal-weight rating, versus Citi's more bullish read on favorable estimate revisions ahead.",
+      "author": "J. Lindqvist",
+      "ts": "2026-09-11T13:35:00.000Z",
+      "theoryKey": "tobinq",
+      "theoryBody": "Oracle's $125 billion debt-funded data center buildout is a direct real-world test of Tobin's Q: the company is betting the market values a dollar of new AI infrastructure capital above what it costs to build, which is the condition under which the model predicts continued investment makes sense.\n\nThe quarter's results are genuinely ambiguous on this point -- record contracted revenue (the $664 billion in remaining performance obligations) supports the high-Q thesis, while narrowing gross margins and mounting negative free cash flow raise the question of whether the market's implied valuation of that capital is actually being earned back yet.\n\nThis is why the stock fell despite the headline beat: investors are pricing the sustainability of the investment case, not just the current quarter's growth rate, and margin compression is exactly the kind of evidence that could indicate the Q ratio driving this capex isn't as favorable as the top-line numbers suggest."
+    },
+    {
+      "id": "a39",
+      "section": "riskmanager",
+      "tier": "free",
+      "headline": "Risk Manager Desk: Catastrophe bond spreads keep falling as capital floods a softening reinsurance market",
+      "dek": "Cat bond coupons fell another 4.5% in August and now sit 13% below year-ago levels, as record alternative capital keeps pushing risk-adjusted reinsurance pricing lower even with elevated geopolitical and catastrophe risk in the background.",
+      "body": "Catastrophe bond coupons fell 4.5% in August, now 13% below year-ago levels, per Plenum's monthly index, as record capital inflows keep compressing pricing across the reinsurance-linked securities market. Total alternative reinsurance capital reached $144 billion as of June 30, up from $136 billion at the end of 2025, with outstanding cat bonds hitting a record $63 billion over the same period.\n\nThe compression reflects a genuine buyers' market: Guy Carpenter's Global Property Catastrophe Rate-on-Line Index fell 16% year-to-date through July, the steepest annual decline in roughly 25 years, driven by three straight years of strong reinsurer returns and the lowest first-half catastrophe losses in five years. Cat bond investors are accepting less compensation per unit of risk than at any point since spreads last bottomed in 2021.\n\nRisk Desk take: pricing this soft, this far into a low-loss stretch, is exactly the setup where a single active hurricane season or a major non-peak-peril loss (wildfire, cyber) could snap spreads back sharply -- worth stress-testing reinsurance recoverables against a repricing scenario now, not after the next event forces the market's hand.",
+      "author": "K. Fenwick",
+      "ts": "2026-09-11T13:40:00.000Z",
+      "theoryKey": "minsky",
+      "theoryBody": "Minsky's financial instability hypothesis argues that long stretches of calm breed more risk-taking, not less -- exactly the dynamic described here. Three consecutive years of strong reinsurer returns and the lowest first-half catastrophe losses in five years have pulled in record capital and pushed pricing down 16% year-to-date, even as the underlying risks (geopolitical tension, climate-linked catastrophe exposure) haven't necessarily declined by the same amount.\n\nThe theory's core warning applies directly to the Risk Desk take above: as pricing keeps softening through a calm stretch, the market becomes progressively less prepared for the shock that eventually arrives, since capital has been priced and allocated on the assumption the calm continues.\n\nThe parallel isn't exact -- Minsky's original framework is about credit and leverage cycles, not insurance pricing cycles -- but the underlying mechanism, stability itself generating the complacency that produces instability, transfers cleanly to a reinsurance market this far into a low-loss, high-capital environment.",
+      "metrics": {
+        "yield10y": 4.88,
+        "igSpread": 82,
+        "hySpread": 270,
+        "spreadTrend": "stable"
+      }
     }
   ]
 }
