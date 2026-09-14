@@ -529,4 +529,94 @@
       }
     }
   ]
+,
+  "articles": [
+    {
+      "id": "a1",
+      "section": "fedwatch",
+      "tier": "free",
+      "headline": "Fed weighs first hike in years as inflation stays hot",
+      "dek": "Traders now price 60% odds of a quarter-point increase at Wednesday's meeting, even as the White House pushes back.",
+      "body": "The Federal Reserve's rate-setting committee meets Tuesday and Wednesday, and futures markets now assign roughly a 60% chance it raises its benchmark rate a quarter point, to a range of 3.75%-4.00%. The case for a hike: August's consumer price index ran at 3.4% annually, well above the Fed's 2% target, while employers added 162,000 jobs and unemployment held at 4.1%. Treasury Secretary Scott Bessent and White House adviser Peter Navarro are publicly urging the Fed not to raise rates.\n\nThe 10-year Treasury yield, which helps set rates on mortgages and corporate loans, climbed to 4.968% Monday, its highest since October 2023. The 2-year yield, more sensitive to near-term Fed moves, sits at 4.63%.\n\nA hike would raise borrowing costs for households and businesses just as growth cools. It would also mark a rare moment where the Fed visibly overrides political pressure from the White House.\n\nFed Watch take: a quarter-point hike looks like the base case, but 60% odds aren't a mandate -- expect a divided vote and a cautious statement.",
+      "author": "R. Costa",
+      "ts": "2026-09-14T14:00:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "metrics": {
+        "fedFundsRate": 3.625,
+        "yield2y": 4.63,
+        "yield10y": 4.968,
+        "moveOdds": 60,
+        "moveDirection": "hike"
+      }
+    },
+    {
+      "id": "a2",
+      "section": "japan",
+      "tier": "free",
+      "headline": "Nikkei slips as yen strengthens ahead of BOJ hike",
+      "dek": "Japan's benchmark index trades near 64,000, 12% off its 2026 high, with a Bank of Japan rate increase expected Friday.",
+      "body": "The Nikkei 225 is trading around 64,000, down about 12% from its 2026 peak, as chip and technology shares -- including SoftBank -- sold off following warnings from AI industry leaders about slowing development. The yen has strengthened to 153.53 per dollar, up 6.4% from its 2026 low point, as traders position for the Bank of Japan's policy meeting Friday.\n\nThe BOJ is expected to raise its benchmark rate a quarter point, to about 1.25% -- its highest level in more than 30 years. A stronger yen makes Japanese exports pricier abroad, squeezing profit margins at automakers and electronics makers that sell heavily into the U.S. and Europe.\n\nWatch Friday's BOJ decision and Japan's August inflation data, due the same week, with core prices expected near 2.1%. Rising Japanese government bond yields, now near 2.98%, and Brent crude above $107 a barrel add further pressure on rate-sensitive exporters.",
+      "author": "S. Okafor",
+      "ts": "2026-09-14T14:05:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "chart": { "key": "nikkei225" }
+    },
+    {
+      "id": "a3",
+      "section": "taiwan",
+      "tier": "free",
+      "headline": "TAIEX drops as TSMC slides, financials cushion the fall",
+      "dek": "Taiwan's benchmark index fell 0.7% Monday as chipmakers wobbled on AI-slowdown warnings before bargain hunters stepped in.",
+      "body": "The TAIEX fell 322.33 points, or 0.7%, to close at 45,862.52 Monday, according to the Taiwan Stock Exchange. TSMC, the world's largest contract chipmaker and the index's biggest weight, closed at its session low of NT$2,380, alone subtracting roughly 240 points from the index. Foreign institutional investors sold a net NT$36.96 billion of Taiwanese shares.\n\nThe initial slide followed comments from AI industry leaders calling for slower development of the technology, which spooked chip stocks worldwide before buyers returned. Financial stocks, insulated from that story, rose 1.94%, led by Fubon Financial's 3.7% gain. Chip designer Global Unichip jumped 4.58%, while foundry rival UMC added 1.42%.\n\nTSMC makes the advanced chips that power AI data centers, so its swings ripple through smartphone and server makers worldwide that depend on its foundry (contract manufacturing) capacity. Watch TSMC's next earnings call and Taiwan's monthly export order data for signs of whether AI-related demand is genuinely cooling or just repricing.",
+      "author": "J. Lindqvist",
+      "ts": "2026-09-14T14:10:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "chart": { "key": "taiex" }
+    },
+    {
+      "id": "a4",
+      "section": "sea",
+      "tier": "free",
+      "headline": "Singapore's STI nears record high on bank earnings",
+      "dek": "The Straits Times Index closed at 5,722.86 Monday, powered by record profits at DBS and Singapore Exchange.",
+      "body": "Singapore's Straits Times Index rose 26.93 points, or 0.47%, to close at 5,722.86 -- within striking distance of its all-time high of 5,801.96, set September 4. The index is up roughly 35% over the past year. DBS Group, Singapore's largest bank, posted record quarterly net profit of S$3.08 billion, up 9%, on stronger wealth-management and fee income.\n\nSingapore Exchange, the city-state's stock market operator, reported net revenue up 13.9% to S$1.48 billion as trading volumes climbed, while grocery chain Sheng Siong grew revenue 11.9%. Strong bank and exchange earnings matter for Singapore because financial services make up a large share of its economy and its role as a regional wealth hub.\n\nWatch whether DBS, OCBC and UOB can keep growing fee income as rate cuts elsewhere squeeze lending margins, and whether trading volumes stay high enough to sustain SGX's record results.",
+      "author": "N. Suwannarat",
+      "ts": "2026-09-14T14:15:00.000Z",
+      "theoryKey": "",
+      "theoryBody": ""
+    },
+    {
+      "id": "a5",
+      "section": "tech",
+      "tier": "free",
+      "headline": "AI slowdown warnings from Amodei, Altman spark chip selloff",
+      "dek": "Nasdaq 100 futures fell 1.72% Monday after top AI executives called for slower development of the technology.",
+      "body": "Anthropic CEO Dario Amodei urged AI companies to slow the pace at which they advance model capabilities, a view OpenAI's Sam Altman and xAI's Elon Musk echoed publicly. The comments followed an Anthropic researcher's resignation over fears the technology could pose catastrophic risks within a decade. Nasdaq 100 futures fell 1.72% and S&P 500 futures dropped 0.7% in early Monday trading.\n\nChipmakers, whose sales depend on the massive computing buildouts behind AI models, took the sharpest hits: Intel fell roughly 6%, AMD 5%, and Marvell 6%, while Nvidia dropped more than 2%. Software companies like ServiceNow, Adobe and Workday -- which don't need to buy that hardware -- climbed 2% to 3%, as investors bet a slowdown would ease competition for their own AI products.\n\nSkeptics, including investor Michael Burry, questioned whether the warnings reflect genuine safety concerns or an attempt by established players to slow rivals' progress. Watch upcoming earnings from Nvidia and the major cloud providers for signs of whether AI data-center spending plans are actually changing.",
+      "author": "J. Lindqvist",
+      "ts": "2026-09-14T14:20:00.000Z",
+      "theoryKey": "",
+      "theoryBody": ""
+    },
+    {
+      "id": "a6",
+      "section": "riskmanager",
+      "tier": "free",
+      "headline": "10-year yield nears 5% as insurers face hike-or-hold Fed",
+      "dek": "Rising Treasury yields cut two ways for insurer balance sheets ahead of Wednesday's Federal Reserve rate decision.",
+      "body": "The 10-year Treasury yield climbed to 4.968% Monday, its highest since October 2023, as markets priced roughly 60% odds the Federal Reserve raises its benchmark rate a quarter point at Wednesday's meeting. The move came despite public pressure from Treasury Secretary Scott Bessent and White House adviser Peter Navarro against a hike, with August's consumer price index still running at 3.4% annually.\n\nHigher long-term yields cut today's bond values but lift reinvestment yields on new premium inflows and maturing debt -- a net positive over time for life insurers' asset-liability management (ALM, matching investment durations to policy obligations), though a near-term drag on surplus for insurers holding longer-duration paper.\n\nSeparately, Verisk estimates the industry should budget for $171 billion in average annual insured catastrophe losses globally, up $19 billion from last year, driven mainly by frequent severe thunderstorms rather than single mega-events. That, with a higher-for-longer rate path, pushes reserve adequacy and capital charges toward year-end reassessment.\n\nRisk Desk take: insurers under-allocated to floating-rate and short-duration assets should use this print to stress-test reinvestment assumptions before Wednesday's decision, not after.",
+      "author": "H. Vogel",
+      "ts": "2026-09-14T14:25:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "metrics": {
+        "yield10y": 4.97,
+        "igSpread": 80,
+        "hySpread": 270,
+        "spreadTrend": "stable"
+      }
+    }
+  ]
 }
