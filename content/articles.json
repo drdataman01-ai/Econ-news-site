@@ -92,8 +92,8 @@
       "section": "fedwatch",
       "tier": "free",
       "headline": "Fed Watch Today: Hike odds cool slightly over the long weekend, still a coin flip",
-      "dek": "With no new economic data released, prediction markets did the adjusting instead \u2014 a 25-basis-point September hike now sits at 49%, down from Friday's post-jobs-report spike.",
-      "body": "No new economic data came out over the Labor Day weekend, but prediction markets kept moving anyway. Polymarket's contract on the September 15-16 FOMC decision now prices a hold at 52% and a quarter-point hike at 49%, easing back from the sharper hawkish tilt seen immediately after Friday's stronger-than-expected August jobs report.\n\nCash Treasury and equity markets are closed today for Labor Day, so Friday's close remains the last hard print: the 2-year Treasury yield at 4.377% and the 10-year at 4.784%, both up on the week. The Fed funds rate has held at 3.50%-3.75% since the July meeting.\n\nThe near-even split reflects a genuinely undecided committee. July's meeting itself split 9-3, with three dissenters favoring an immediate hike, and Governor Waller has said his own vote hinges specifically on whether August inflation data continued the disinflation trend seen in July. Next week's CPI and PPI reports are the last scheduled inflation data before officials vote.\n\nFed Watch take: the gap between hold and hike is now inside the market's own noise band this close to a meeting, which is unusual \u2014 a single soft or hot inflation print next week could tip the outcome either way.",
+      "dek": "With no new economic data released, prediction markets did the adjusting instead — a 25-basis-point September hike now sits at 49%, down from Friday's post-jobs-report spike.",
+      "body": "No new economic data came out over the Labor Day weekend, but prediction markets kept moving anyway. Polymarket's contract on the September 15-16 FOMC decision now prices a hold at 52% and a quarter-point hike at 49%, easing back from the sharper hawkish tilt seen immediately after Friday's stronger-than-expected August jobs report.\n\nCash Treasury and equity markets are closed today for Labor Day, so Friday's close remains the last hard print: the 2-year Treasury yield at 4.377% and the 10-year at 4.784%, both up on the week. The Fed funds rate has held at 3.50%-3.75% since the July meeting.\n\nThe near-even split reflects a genuinely undecided committee. July's meeting itself split 9-3, with three dissenters favoring an immediate hike, and Governor Waller has said his own vote hinges specifically on whether August inflation data continued the disinflation trend seen in July. Next week's CPI and PPI reports are the last scheduled inflation data before officials vote.\n\nFed Watch take: the gap between hold and hike is now inside the market's own noise band this close to a meeting, which is unusual — a single soft or hot inflation print next week could tip the outcome either way.",
       "author": "R. Costa",
       "ts": "2026-09-07T18:00:00.000Z",
       "theoryKey": "",
@@ -527,12 +527,9 @@
         "hySpread": 270,
         "spreadTrend": "stable"
       }
-    }
-  ]
-,
-  "articles": [
+    },
     {
-      "id": "a1",
+      "id": "a40",
       "section": "fedwatch",
       "tier": "free",
       "headline": "Fed weighs first hike in years as inflation stays hot",
@@ -551,7 +548,7 @@
       }
     },
     {
-      "id": "a2",
+      "id": "a41",
       "section": "japan",
       "tier": "free",
       "headline": "Nikkei slips as yen strengthens ahead of BOJ hike",
@@ -561,10 +558,12 @@
       "ts": "2026-09-14T14:05:00.000Z",
       "theoryKey": "",
       "theoryBody": "",
-      "chart": { "key": "nikkei225" }
+      "chart": {
+        "key": "nikkei225"
+      }
     },
     {
-      "id": "a3",
+      "id": "a42",
       "section": "taiwan",
       "tier": "free",
       "headline": "TAIEX drops as TSMC slides, financials cushion the fall",
@@ -574,10 +573,12 @@
       "ts": "2026-09-14T14:10:00.000Z",
       "theoryKey": "",
       "theoryBody": "",
-      "chart": { "key": "taiex" }
+      "chart": {
+        "key": "taiex"
+      }
     },
     {
-      "id": "a4",
+      "id": "a43",
       "section": "sea",
       "tier": "free",
       "headline": "Singapore's STI nears record high on bank earnings",
@@ -589,7 +590,7 @@
       "theoryBody": ""
     },
     {
-      "id": "a5",
+      "id": "a44",
       "section": "tech",
       "tier": "free",
       "headline": "AI slowdown warnings from Amodei, Altman spark chip selloff",
@@ -601,13 +602,13 @@
       "theoryBody": ""
     },
     {
-      "id": "a6",
+      "id": "a45",
       "section": "riskmanager",
       "tier": "free",
       "headline": "10-year yield nears 5% as insurers face hike-or-hold Fed",
       "dek": "Rising Treasury yields cut two ways for insurer balance sheets ahead of Wednesday's Federal Reserve rate decision.",
       "body": "The 10-year Treasury yield climbed to 4.968% Monday, its highest since October 2023, as markets priced roughly 60% odds the Federal Reserve raises its benchmark rate a quarter point at Wednesday's meeting. The move came despite public pressure from Treasury Secretary Scott Bessent and White House adviser Peter Navarro against a hike, with August's consumer price index still running at 3.4% annually.\n\nHigher long-term yields cut today's bond values but lift reinvestment yields on new premium inflows and maturing debt -- a net positive over time for life insurers' asset-liability management (ALM, matching investment durations to policy obligations), though a near-term drag on surplus for insurers holding longer-duration paper.\n\nSeparately, Verisk estimates the industry should budget for $171 billion in average annual insured catastrophe losses globally, up $19 billion from last year, driven mainly by frequent severe thunderstorms rather than single mega-events. That, with a higher-for-longer rate path, pushes reserve adequacy and capital charges toward year-end reassessment.\n\nRisk Desk take: insurers under-allocated to floating-rate and short-duration assets should use this print to stress-test reinvestment assumptions before Wednesday's decision, not after.",
-      "author": "H. Vogel",
+      "author": "K. Fenwick",
       "ts": "2026-09-14T14:25:00.000Z",
       "theoryKey": "",
       "theoryBody": "",
@@ -615,6 +616,97 @@
         "yield10y": 4.97,
         "igSpread": 80,
         "hySpread": 270,
+        "spreadTrend": "stable"
+      }
+    },
+    {
+      "id": "a46",
+      "section": "fedwatch",
+      "tier": "free",
+      "headline": "Fed hike odds jump to 93% as 10-year yield tops 5%",
+      "dek": "Markets are almost certain the Fed raises rates Wednesday, and the bond market is already pricing it in.",
+      "body": "The Federal Reserve's rate-setting committee began its two-day meeting Tuesday, and CME FedWatch data now puts the odds of a quarter-point rate hike at 92.7%, up sharply from last week. A Duke University survey found 29 of 32 former Fed officials think the Fed should raise rates this week, citing inflation pressure from tariffs and energy costs.\n\nThe 10-year Treasury yield, which helps set mortgage and corporate borrowing costs, hit 4.998% Tuesday and briefly touched 5.041% intraday, its highest level in more than a year. The 2-year yield, more sensitive to near-term Fed moves, rose to 4.652%.\n\nFed Chair Kevin Warsh is the wildcard. Inflation data supports raising rates, but some analysts think he may hope tough talk alone will do the job without an actual increase. With a hike this heavily priced in, backing off could unsettle bond markets just as much as hiking would.\n\nFed Watch take: a quarter-point hike Wednesday looks like the safer bet for market stability than a surprise hold.",
+      "author": "R. Costa",
+      "ts": "2026-09-15T16:40:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "metrics": {
+        "fedFundsRate": 3.625,
+        "yield2y": 4.652,
+        "yield10y": 4.998,
+        "moveOdds": 93,
+        "moveDirection": "hike"
+      }
+    },
+    {
+      "id": "a47",
+      "section": "japan",
+      "tier": "free",
+      "headline": "Nikkei rebounds on tech as yen weakens past 154.87",
+      "dek": "Japan's benchmark rose 0.38% Tuesday even as the yen slid for a second session ahead of this week's Fed and BOJ decisions.",
+      "body": "The Nikkei 225 closed up 242 points, or 0.38%, at 63,735 Tuesday, as technology shares rebounded from recent losses. SoftBank Group jumped 6.3%, chip-equipment maker Lasertec rose 3.8%, and memory-chip maker Kioxia Holdings gained 2.5% on reports it plans to raise more than $10 billion through a U.S. stock listing. Banking stocks lagged, with Sumitomo Mitsui Financial down 2.5% and Mitsubishi UFJ Financial down 1.53%.\n\nThe yen weakened for a second straight session, with the dollar buying 154.87 yen, even though the Bank of Japan is expected to raise its own rate to 1.25% Friday -- its highest since 1995. A weaker yen usually helps Japanese exporters by making their goods cheaper abroad, but rising oil prices are offsetting that benefit by raising Japan's import costs.\n\nThe dollar's strength reflects traders betting the U.S. Federal Reserve will raise rates Wednesday, a day before the Bank of Japan's own decision. Watch both meetings this week, plus Kioxia's listing plans, for the next moves in Japanese tech and currency markets.",
+      "author": "S. Okafor",
+      "ts": "2026-09-15T16:45:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "chart": {
+        "key": "nikkei225"
+      }
+    },
+    {
+      "id": "a48",
+      "section": "taiwan",
+      "tier": "free",
+      "headline": "TAIEX falls on chip selloff, but TSMC bucks the trend",
+      "dek": "Taiwan's benchmark dropped 0.77% Tuesday after U.S. chip stocks sank overnight, though TSMC itself managed a small gain.",
+      "body": "The TAIEX fell 351.03 points, or 0.77%, to close at 45,511.49 Tuesday, according to the Taiwan Stock Exchange. The decline followed a 5.86% overnight drop in the Philadelphia Semiconductor Index, a gauge of major U.S. chip stocks, after AI industry leaders renewed warnings about the pace of AI development. Foreign investors sold a net NT$62.70 billion of Taiwanese shares.\n\nTSMC, the world's largest contract chipmaker (a company that manufactures chips designed by other firms) and the index's biggest weight, actually rose 0.21% to NT$2,385, cushioning the broader decline. Other chip names fell harder: MediaTek dropped 2.85%, chip-packager ASE Technology fell 3.27%, and memory-chip maker Nanya Technology lost 1.59%.\n\nTSMC's resilience matters because it supplies the advanced chips behind most AI systems worldwide, so its stock price is often read as a referendum on AI demand itself, separate from the broader semiconductor sector's mood swings. Watch Wednesday's Fed decision and any follow-up comments from AI executives for the sector's next direction.",
+      "author": "J. Lindqvist",
+      "ts": "2026-09-15T16:50:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "chart": {
+        "key": "taiex"
+      }
+    },
+    {
+      "id": "a49",
+      "section": "sea",
+      "tier": "free",
+      "headline": "Vietnam's VN-Index slips as oil prices, Fed decision loom",
+      "dek": "Vietnam's benchmark fell about 0.29% Tuesday as rising oil prices and this week's Fed meeting prompted profit-taking.",
+      "body": "Vietnam's VN-Index, the Ho Chi Minh City benchmark, fell roughly 0.29% Tuesday to 1,783.16, down from Monday's close of 1,788.23. The Hanoi Stock Exchange's HNX index slipped about 0.27% to 271.94. Banking and real estate stocks, the index's largest sectors, led the decline.\n\nBrent crude oil topped $106 a barrel on U.S.-Iran tensions, raising costs for Vietnamese importers and fueling inflation worries. Investors also booked profits after a rally ahead of a public holiday, while U.S. Treasury yields near 5% ahead of Wednesday's Federal Reserve meeting made investors more cautious about riskier emerging-market stocks.\n\nHigher oil prices squeeze margins at Vietnamese manufacturers and shippers that rely on imported fuel, a real cost for an export-driven economy. Watch Wednesday's Fed decision and any further escalation in Middle East tensions, both of which could extend the pressure on oil-sensitive emerging markets like Vietnam.",
+      "author": "N. Suwannarat",
+      "ts": "2026-09-15T16:55:00.000Z",
+      "theoryKey": "",
+      "theoryBody": ""
+    },
+    {
+      "id": "a50",
+      "section": "tech",
+      "tier": "free",
+      "headline": "Chip stocks slide as AI safety debate splits tech leaders",
+      "dek": "The Philadelphia Semiconductor Index sank 5.86% as Nvidia's CEO publicly rejected AI-extinction warnings from rival executives.",
+      "body": "The Philadelphia Semiconductor Index, a gauge of major U.S. chipmakers, fell 5.86% and the Nasdaq dropped about 0.8% Monday, after Anthropic CEO Dario Amodei renewed calls to slow the pace of AI development, joined publicly by OpenAI's Sam Altman and xAI's Elon Musk. Nvidia CEO Jensen Huang pushed back, calling AI-extinction warnings \"complete nonsense\" and suggesting some of the concern serves rivals' cybersecurity business interests.\n\nCybersecurity stocks were the clearest winners: Okta rose 5% and CrowdStrike and Palo Alto Networks each gained 4.5% in premarket trading, as investors bet a more cautious approach to AI would increase demand for safety and security tools. Microsoft is reportedly drafting its own code of conduct for AI models, a sign the debate is reaching corporate policy, not just public statements.\n\nThe split among AI's biggest builders -- safety-first versus full-speed-ahead -- could shape how much computing power gets built out over the next few years. Watch Nvidia's next earnings guidance, and whether other chipmakers follow Huang's dismissal or side with the safety camp.",
+      "author": "J. Lindqvist",
+      "ts": "2026-09-15T17:00:00.000Z",
+      "theoryKey": "",
+      "theoryBody": ""
+    },
+    {
+      "id": "a51",
+      "section": "riskmanager",
+      "tier": "free",
+      "headline": "10-year yield tops 5% for the first time in a year",
+      "dek": "A fresh high in Treasury yields, one day before the Fed's rate decision, cuts both ways for insurer balance sheets.",
+      "body": "The 10-year Treasury yield -- the anchor rate for insurer asset-liability management (ALM, matching investment durations to policy obligations) -- touched 5.041% intraday Tuesday before settling at 4.998%, its highest level in over a year. CME FedWatch-implied odds of a quarter-point Fed hike Wednesday jumped to 92.7%, after a Duke University survey found 29 of 32 former Fed officials now favor one.\n\nA 10-year yield above 5% deepens mark-to-market losses on existing long-duration bonds, but raises the yield insurers earn reinvesting new premium and maturing debt -- a net long-term positive for most life insurers, even as it pressures near-term statutory surplus.\n\nCredit markets are calmer: investment-grade spreads sit near 80 basis points and high-yield spreads near 265, both little changed, per ICE BofA index data. That gap points reserve adequacy and duration reviews squarely at interest-rate risk, not credit risk, for now.\n\nRisk Desk take: insurers should stress-test a surprise no-hike outcome too -- if the Fed disappoints odds this lopsided, the resulting bond-market repricing could be just as disruptive as the hike itself.",
+      "author": "K. Fenwick",
+      "ts": "2026-09-15T17:05:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "metrics": {
+        "yield10y": 5.0,
+        "igSpread": 80,
+        "hySpread": 265,
         "spreadTrend": "stable"
       }
     }
