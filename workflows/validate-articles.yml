@@ -56,6 +56,33 @@ jobs:
               if metrics is not None and not isinstance(metrics, dict):
                   errors.append(f'Article "{label}": "metrics" must be an object if present')
 
+              # Stock Position Desk articles carry a required "position" block
+              # with its own fields, since they drive the entry/target/stop
+              # chart and the risk-tier / trading-style badges.
+              if article.get('section') == 'stockposition':
+                  position = article.get('position')
+                  if not isinstance(position, dict):
+                      errors.append(f'Article "{label}": section "stockposition" requires a "position" object')
+                  else:
+                      pos_required = ['ticker', 'company', 'tradingStyle', 'riskTier', 'holdingPeriod',
+                                       'expectedReturnLow', 'expectedReturnHigh', 'entryPrice', 'targetPrice', 'stopLoss']
+                      pos_missing = [f for f in pos_required if f not in position]
+                      if pos_missing:
+                          errors.append(f'Article "{label}": "position" missing required field(s): {", ".join(pos_missing)}')
+
+                      valid_styles = ('core', 'income', 'swing', 'momentum', 'catalyst')
+                      if 'tradingStyle' not in pos_missing and position.get('tradingStyle') not in valid_styles:
+                          errors.append(f'Article "{label}": invalid "position.tradingStyle" "{position.get("tradingStyle")}"')
+
+                      valid_risk_tiers = ('conservative', 'moderate', 'aggressive', 'speculative')
+                      if 'riskTier' not in pos_missing and position.get('riskTier') not in valid_risk_tiers:
+                          errors.append(f'Article "{label}": invalid "position.riskTier" "{position.get("riskTier")}"')
+
+                      numeric_fields = ['expectedReturnLow', 'expectedReturnHigh', 'entryPrice', 'targetPrice', 'stopLoss']
+                      for nf in numeric_fields:
+                          if nf not in pos_missing and not isinstance(position.get(nf), (int, float)):
+                              errors.append(f'Article "{label}": "position.{nf}" must be a number')
+
           if errors:
               print('articles.json failed validation:\n')
               for e in errors:

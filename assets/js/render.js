@@ -15,6 +15,56 @@ function theoryTag(article){
   return article.theoryKey && theoryInfo(article.theoryKey) ? `<span class="theory-tag">&#0952; Theory</span>` : '';
 }
 
+/**
+ * Stock Position Desk helpers. `position` is an optional object on any
+ * article (see content/schema.md); in practice only "stockposition"
+ * section articles carry one. Kept independent of the tier paywall,
+ * the same way renderFedWatchChart/renderRiskManagerChart run before
+ * the canRead() check — a reader always sees the setup itself, tier
+ * gating only ever applies to the prose explaining it.
+ */
+function tradingStyleInfo(id){
+  return TRADING_STYLES.find(s => s.id === id) || null;
+}
+function riskTierInfo(id){
+  return RISK_TIERS.find(r => r.id === id) || null;
+}
+function positionTag(article){
+  if(!article.position) return '';
+  const risk = riskTierInfo(article.position.riskTier);
+  if(!risk) return '';
+  return `<span class="risk-tag risk-${risk.id}">${escapeHtml(article.position.ticker || '')} &middot; ${escapeHtml(risk.label)}</span>`;
+}
+
+function renderStockPositionPanel(article){
+  const p = article.position;
+  const style = tradingStyleInfo(p.tradingStyle);
+  const risk = riskTierInfo(p.riskTier);
+  const returnLabel = (typeof p.expectedReturnLow === 'number' && typeof p.expectedReturnHigh === 'number')
+    ? `${p.expectedReturnLow > 0 ? '+' : ''}${p.expectedReturnLow}% to ${p.expectedReturnHigh > 0 ? '+' : ''}${p.expectedReturnHigh}%`
+    : '';
+
+  return `
+    <div class="position-panel">
+      <div class="position-panel-head">
+        <div>
+          <span class="position-ticker">${escapeHtml(p.ticker || '')}</span>
+          <span class="position-company">${escapeHtml(p.company || '')}</span>
+        </div>
+        <div class="position-tags">
+          ${risk ? `<span class="risk-tag risk-${risk.id}">${escapeHtml(risk.label)}</span>` : ''}
+          ${style ? `<span class="style-tag">${escapeHtml(style.label)}</span>` : ''}
+        </div>
+      </div>
+      <div class="position-stats">
+        <div class="position-stat"><span class="stat-label">Holding period</span><span class="stat-value">${escapeHtml(p.holdingPeriod || '&mdash;')}</span></div>
+        <div class="position-stat"><span class="stat-label">Expected return</span><span class="stat-value">${returnLabel || '&mdash;'}</span></div>
+      </div>
+      ${renderStockPositionChart(p)}
+      <p class="position-disclaimer">Editorial analysis, not personalized investment advice. Targets and stop-losses are illustrative planning levels tied to the thesis above, not guarantees.</p>
+    </div>`;
+}
+
 function renderHome(){
   const all = sortedArticles(state.articles);
   if(all.length === 0){
@@ -101,6 +151,9 @@ function renderSectionView(){
     <div class="kicker">Desk</div>
     <h2>${sectionLabel(state.sectionId)}</h2>
   </div>`;
+  if(state.sectionId === 'stockposition'){
+    html += `<p class="position-disclaimer">Editorial analysis, not personalized investment advice. Expected returns, targets, and stop-losses are illustrative planning levels tied to the stated thesis, not guarantees &mdash; consult a licensed financial advisor before trading.</p>`;
+  }
   if(items.length === 0){
     html += `<div class="empty-note">No stories yet in this section.</div>`;
     return html;
@@ -109,6 +162,7 @@ function renderSectionView(){
   items.forEach(a=>{
     html += `
       <div class="side-item" onclick="goArticle('${a.id}')" style="padding:18px 0;">
+        ${positionTag(a)}
         <p class="headline" style="font-size:19px;">${escapeHtml(a.headline)}</p>
         <p style="font-family:var(--font-serif); color:var(--ink-soft); font-size:14.5px; margin:4px 0 8px;">${escapeHtml(a.dek)}</p>
         <div class="meta-row"><span>By ${escapeHtml(a.author)}</span><span>&middot;</span><span>${fmtDate(a.ts)}</span>${lockTag(a)}${theoryTag(a)}</div>
@@ -133,6 +187,7 @@ function renderArticleView(){
     ${a.section === 'sp500' ? renderSP500Chart(a) : ''}
     ${a.section === 'riskmanager' && a.metrics ? renderRiskManagerChart(a) : ''}
     ${['japan','taiwan','sea','tech'].includes(a.section) ? renderMarketChart(a) : ''}
+    ${a.section === 'stockposition' && a.position ? renderStockPositionPanel(a) : ''}
     <div class="article-body">`;
 
   if(allowed){
