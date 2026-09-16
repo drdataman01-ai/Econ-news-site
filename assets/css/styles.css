@@ -326,7 +326,7 @@
   .classroom-promo-head{margin-bottom:20px;}
   .classroom-promo-head h3{font-family:var(--font-serif); font-size:22px; font-weight:600; margin:0 0 8px;}
   .classroom-promo-head p{font-family:var(--font-serif); font-size:15px; color:var(--ink-soft); max-width:none; margin:0;}
-  .classroom-promo-cards{display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px;}
+  .classroom-promo-cards{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
   .classroom-promo-card{
     border:1px solid var(--rule); border-left:3px solid var(--gold);
     background:var(--paper-dim); padding:20px 22px; cursor:pointer;
@@ -335,9 +335,6 @@
   .classroom-promo-card h4{font-family:var(--font-serif); font-size:18px; font-weight:600; margin:0 0 8px;}
   .classroom-promo-card p{font-family:var(--font-sans); font-size:13.5px; color:var(--ink-soft); line-height:1.5; margin:0 0 12px;}
   .classroom-promo-link{font-family:var(--font-mono); font-size:11.5px; color:var(--gold);}
-  @media (max-width:960px){
-    .classroom-promo-cards{grid-template-columns:1fr 1fr;}
-  }
   @media (max-width:720px){
     .classroom-promo-cards{grid-template-columns:1fr;}
   }
@@ -606,51 +603,50 @@
 }
 
 /* ---- Stock Position Desk ---- */
-/* One badge color per position style — conservative/income read as
-   low-risk (green), swing as moderate (gold), momentum as elevated
-   risk (outlined red), catalyst as the highest, binary risk (filled
-   red) — same green/gold/red convention the rest of the site uses. */
-.style-tag{
+.risk-tag{
   display:inline-flex; align-items:center; gap:4px;
   font-family:var(--font-mono); font-size:10px;
   border-radius:2px; padding:1px 5px; white-space:nowrap;
 }
-.style-tag.style-core{ color:var(--gain); border:1px solid var(--gain); }
-.style-tag.style-income{ color:var(--gain); border:1px solid var(--gain); }
-.style-tag.style-swing{ color:var(--gold); border:1px solid var(--gold); }
-.style-tag.style-momentum{ color:var(--loss); border:1px solid var(--loss); }
-.style-tag.style-catalyst{ color:var(--paper); background:var(--loss); border:1px solid var(--loss); }
+.risk-tag.risk-conservative{ color:var(--gain); border:1px solid var(--gain); }
+.risk-tag.risk-moderate{ color:var(--gold); border:1px solid var(--gold); }
+.risk-tag.risk-aggressive{ color:var(--loss); border:1px solid var(--loss); }
+.risk-tag.risk-speculative{ color:var(--paper); background:var(--loss); border:1px solid var(--loss); }
 
-.position-disclaimer{
-  margin:0 0 20px; font-size:11px; color:var(--ink-soft); line-height:1.5;
+.style-tag{
+  display:inline-flex; align-items:center;
+  font-family:var(--font-mono); font-size:10px;
+  color:var(--ink-soft); border:1px solid var(--rule); border-radius:2px;
+  padding:1px 5px; white-space:nowrap;
 }
 
-/* Weekly rankings grid — five cards, one per position style, each a
-   simple ranked table the site owner fills in from their own
-   analysis (state.rankings). */
-.ranking-grid{
-  display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr));
-  gap:16px; margin-bottom:8px;
-}
-.ranking-card{
+.position-panel{
+  margin:22px 0 28px; padding:20px 22px; background:var(--paper-dim);
   border:1px solid var(--rule); border-left:3px solid var(--gold);
-  background:var(--paper-dim); padding:16px 16px 10px;
 }
-.ranking-card-head{
-  display:flex; flex-direction:column; align-items:flex-start; gap:6px;
-  margin-bottom:12px; padding-bottom:10px; border-bottom:1px solid var(--rule);
+.position-panel-head{
+  display:flex; align-items:flex-start; justify-content:space-between;
+  flex-wrap:wrap; gap:10px; margin-bottom:14px;
 }
-.ranking-meta{ font-family:var(--font-mono); font-size:10px; color:var(--ink-soft); }
-.ranking-table{ width:100%; border-collapse:collapse; }
-.ranking-table td{
-  font-family:var(--font-sans); font-size:13px; color:var(--ink);
-  padding:7px 4px; vertical-align:top; border-bottom:1px solid var(--rule);
+.position-ticker{
+  font-family:var(--font-mono); font-size:17px; font-weight:600; color:var(--ink);
+  margin-right:8px;
 }
-.ranking-table tr:last-child td{ border-bottom:none; }
-.rank-num{
-  font-family:var(--font-mono); font-size:12px; color:var(--ink-soft);
-  width:20px;
+.position-company{
+  font-family:var(--font-sans); font-size:13px; color:var(--ink-soft);
 }
-.rank-ticker{ font-family:var(--font-mono); font-weight:600; white-space:nowrap; }
-.rank-company{ color:var(--ink-soft); }
-.rank-note{ display:block; font-size:11.5px; color:var(--ink-soft); font-style:italic; margin-top:2px; }
+.position-tags{ display:flex; gap:6px; flex-wrap:wrap; }
+.position-stats{
+  display:flex; gap:28px; flex-wrap:wrap; margin-bottom:6px;
+  padding-bottom:14px; border-bottom:1px solid var(--rule);
+}
+.position-stat{ display:flex; flex-direction:column; gap:2px; }
+.position-stat .stat-label{
+  font-family:var(--font-mono); font-size:10px; letter-spacing:0.03em;
+  text-transform:uppercase; color:var(--ink-soft);
+}
+.position-stat .stat-value{ font-family:var(--font-sans); font-size:15px; font-weight:600; color:var(--ink); }
+.position-disclaimer{
+  margin:10px 0 0; font-size:11px; color:var(--ink-soft); line-height:1.5; font-style:italic;
+}
+p.position-disclaimer{ margin:0 0 20px; font-style:normal; }

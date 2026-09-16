@@ -465,9 +465,66 @@ function renderSP500Chart(currentArticle){
     </div>`;
 }
 
-/* Stock Position Desk: per-article entry/target/stop charts were
-   removed here — the shape of each position style is now taught once,
-   in the Stock Position Classroom (assets/js/position-styles.js),
-   rather than redrawn per article. Weekly picks live in
-   state.rankings and render as tables (see renderPositionRankings()
-   in render.js), not as individual price charts. */
+/**
+ * Stock Position Desk range chart — deliberately NOT wired to
+ * MARKET_HISTORY. That registry holds indices, FX, and commodities
+ * with real historical series; individual stock tickers aren't in it
+ * and adding one per position idea isn't worth it for a single static
+ * marker chart. Instead this draws only the three numbers the article
+ * itself states (entry/target/stop), the same "never fabricate what
+ * isn't there" rule the rest of charts.js follows — it just means the
+ * thing being visualized is the idea's own stated risk/reward, not a
+ * price history.
+ */
+function fmtUsd(v){
+  if (typeof v !== 'number') return '';
+  return '$' + v.toLocaleString('en-US', { minimumFractionDigits: v % 1 === 0 ? 0 : 2, maximumFractionDigits: 2 });
+}
+function pctFromEntry(v, entry){
+  if (typeof v !== 'number' || typeof entry !== 'number' || entry === 0) return '';
+  const pct = ((v - entry) / entry) * 100;
+  return (pct >= 0 ? '+' : '') + pct.toFixed(1) + '%';
+}
+function renderStockPositionChart(position){
+  const width = 480, height = 130;
+  const padX = 34;
+  const trackY = 66;
+  const trackH = 10;
+
+  const stop = position.stopLoss, entry = position.entryPrice, target = position.targetPrice;
+  const vals = [stop, entry, target].filter(v => typeof v === 'number');
+  if (vals.length < 3) return '';
+
+  const min = Math.min(...vals);
+  const max = Math.max(...vals);
+  const span = (max - min) || Math.max(1, entry * 0.05) || 1;
+  const plotW = width - padX * 2;
+  const xFor = v => padX + ((v - min) / span) * plotW;
+
+  const xStop = xFor(stop), xEntry = xFor(entry), xTarget = xFor(target);
+  const downX = Math.min(xStop, xEntry), downW = Math.abs(xEntry - xStop);
+  const upX = Math.min(xEntry, xTarget), upW = Math.abs(xTarget - xEntry);
+  const midY = trackY + trackH / 2;
+
+  return `
+    <div class="fedwatch-chart-panel">
+      <p class="apps-label">Stop / entry / target &middot; stated risk-reward for this idea</p>
+      <svg viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg">
+        <rect x="${downX}" y="${trackY}" width="${downW}" height="${trackH}" fill="rgba(169,58,46,0.16)"/>
+        <rect x="${upX}" y="${trackY}" width="${upW}" height="${trackH}" fill="rgba(30,107,69,0.16)"/>
+        <line x1="${padX}" y1="${midY}" x2="${width - padX}" y2="${midY}" stroke="${CHART_GRID_STROKE}" stroke-width="1"/>
+
+        <circle cx="${xStop}" cy="${midY}" r="4.5" fill="#A93A2E"/>
+        <circle cx="${xEntry}" cy="${midY}" r="4.5" fill="#93701F"/>
+        <circle cx="${xTarget}" cy="${midY}" r="4.5" fill="#1E6B45"/>
+
+        <text x="${xStop}" y="${trackY - 14}" text-anchor="middle" style="${CHART_AXIS_STYLE}" fill="#A93A2E">Stop ${fmtUsd(stop)}</text>
+        <text x="${xStop}" y="${trackY + 30}" text-anchor="middle" style="${CHART_AXIS_STYLE}" fill="${CHART_AXIS_FILL}">${pctFromEntry(stop, entry)}</text>
+
+        <text x="${xEntry}" y="${trackY - 14}" text-anchor="middle" style="${CHART_AXIS_STYLE}" fill="#93701F">Entry ${fmtUsd(entry)}</text>
+
+        <text x="${xTarget}" y="${trackY - 14}" text-anchor="middle" style="${CHART_AXIS_STYLE}" fill="#1E6B45">Target ${fmtUsd(target)}</text>
+        <text x="${xTarget}" y="${trackY + 30}" text-anchor="middle" style="${CHART_AXIS_STYLE}" fill="${CHART_AXIS_FILL}">${pctFromEntry(target, entry)}</text>
+      </svg>
+    </div>`;
+}

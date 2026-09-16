@@ -721,7 +721,18 @@
       "ts": "2026-09-16T14:00:00.000Z",
       "theoryKey": "",
       "theoryBody": "",
-      "styleKey": "core"
+      "position": {
+        "ticker": "JNJ",
+        "company": "Johnson & Johnson",
+        "tradingStyle": "core",
+        "riskTier": "conservative",
+        "holdingPeriod": "6-12 months",
+        "expectedReturnLow": 8,
+        "expectedReturnHigh": 15,
+        "entryPrice": 267.2,
+        "targetPrice": 295.0,
+        "stopLoss": 245.0
+      }
     },
     {
       "id": "a53",
@@ -734,7 +745,18 @@
       "ts": "2026-09-16T14:05:00.000Z",
       "theoryKey": "",
       "theoryBody": "",
-      "styleKey": "income"
+      "position": {
+        "ticker": "KO",
+        "company": "The Coca-Cola Company",
+        "tradingStyle": "income",
+        "riskTier": "conservative",
+        "holdingPeriod": "12+ months",
+        "expectedReturnLow": 6,
+        "expectedReturnHigh": 12,
+        "entryPrice": 88.71,
+        "targetPrice": 96.0,
+        "stopLoss": 80.0
+      }
     },
     {
       "id": "a54",
@@ -747,7 +769,18 @@
       "ts": "2026-09-16T14:10:00.000Z",
       "theoryKey": "",
       "theoryBody": "",
-      "styleKey": "swing"
+      "position": {
+        "ticker": "AMD",
+        "company": "Advanced Micro Devices",
+        "tradingStyle": "swing",
+        "riskTier": "moderate",
+        "holdingPeriod": "2-4 months",
+        "expectedReturnLow": 20,
+        "expectedReturnHigh": 30,
+        "entryPrice": 504.2,
+        "targetPrice": 650.0,
+        "stopLoss": 430.0
+      }
     },
     {
       "id": "a55",
@@ -760,7 +793,18 @@
       "ts": "2026-09-16T14:15:00.000Z",
       "theoryKey": "",
       "theoryBody": "",
-      "styleKey": "momentum"
+      "position": {
+        "ticker": "PLTR",
+        "company": "Palantir Technologies",
+        "tradingStyle": "momentum",
+        "riskTier": "aggressive",
+        "holdingPeriod": "3-6 weeks",
+        "expectedReturnLow": 40,
+        "expectedReturnHigh": 45,
+        "entryPrice": 172.56,
+        "targetPrice": 250.0,
+        "stopLoss": 150.0
+      }
     },
     {
       "id": "a56",
@@ -773,14 +817,18 @@
       "ts": "2026-09-16T14:20:00.000Z",
       "theoryKey": "",
       "theoryBody": "",
-      "styleKey": "catalyst"
+      "position": {
+        "ticker": "SVRA",
+        "company": "Savara Inc.",
+        "tradingStyle": "catalyst",
+        "riskTier": "speculative",
+        "holdingPeriod": "Through Nov. 22 FDA decision",
+        "expectedReturnLow": -60,
+        "expectedReturnHigh": 130,
+        "entryPrice": 5.28,
+        "targetPrice": 12.0,
+        "stopLoss": 2.0
+      }
     }
-  ],
-  "rankings": {
-    "core": [],
-    "income": [],
-    "swing": [],
-    "momentum": [],
-    "catalyst": []
-  }
+  ]
 }
