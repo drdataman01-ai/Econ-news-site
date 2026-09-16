@@ -92,8 +92,8 @@
       "section": "fedwatch",
       "tier": "free",
       "headline": "Fed Watch Today: Hike odds cool slightly over the long weekend, still a coin flip",
-      "dek": "With no new economic data released, prediction markets did the adjusting instead \u2014 a 25-basis-point September hike now sits at 49%, down from Friday's post-jobs-report spike.",
-      "body": "No new economic data came out over the Labor Day weekend, but prediction markets kept moving anyway. Polymarket's contract on the September 15-16 FOMC decision now prices a hold at 52% and a quarter-point hike at 49%, easing back from the sharper hawkish tilt seen immediately after Friday's stronger-than-expected August jobs report.\n\nCash Treasury and equity markets are closed today for Labor Day, so Friday's close remains the last hard print: the 2-year Treasury yield at 4.377% and the 10-year at 4.784%, both up on the week. The Fed funds rate has held at 3.50%-3.75% since the July meeting.\n\nThe near-even split reflects a genuinely undecided committee. July's meeting itself split 9-3, with three dissenters favoring an immediate hike, and Governor Waller has said his own vote hinges specifically on whether August inflation data continued the disinflation trend seen in July. Next week's CPI and PPI reports are the last scheduled inflation data before officials vote.\n\nFed Watch take: the gap between hold and hike is now inside the market's own noise band this close to a meeting, which is unusual \u2014 a single soft or hot inflation print next week could tip the outcome either way.",
+      "dek": "With no new economic data released, prediction markets did the adjusting instead — a 25-basis-point September hike now sits at 49%, down from Friday's post-jobs-report spike.",
+      "body": "No new economic data came out over the Labor Day weekend, but prediction markets kept moving anyway. Polymarket's contract on the September 15-16 FOMC decision now prices a hold at 52% and a quarter-point hike at 49%, easing back from the sharper hawkish tilt seen immediately after Friday's stronger-than-expected August jobs report.\n\nCash Treasury and equity markets are closed today for Labor Day, so Friday's close remains the last hard print: the 2-year Treasury yield at 4.377% and the 10-year at 4.784%, both up on the week. The Fed funds rate has held at 3.50%-3.75% since the July meeting.\n\nThe near-even split reflects a genuinely undecided committee. July's meeting itself split 9-3, with three dissenters favoring an immediate hike, and Governor Waller has said his own vote hinges specifically on whether August inflation data continued the disinflation trend seen in July. Next week's CPI and PPI reports are the last scheduled inflation data before officials vote.\n\nFed Watch take: the gap between hold and hike is now inside the market's own noise band this close to a meeting, which is unusual — a single soft or hot inflation print next week could tip the outcome either way.",
       "author": "R. Costa",
       "ts": "2026-09-07T18:00:00.000Z",
       "theoryKey": "",
@@ -774,6 +774,97 @@
       "theoryKey": "",
       "theoryBody": "",
       "styleKey": "catalyst"
+    },
+    {
+      "id": "a57",
+      "section": "fedwatch",
+      "tier": "free",
+      "headline": "Fed raises rates 25 basis points, first hike since 2023",
+      "dek": "The Federal Reserve unanimously lifted its benchmark rate to 3.75%-4.00% Wednesday, with Chair Warsh warning inflation remains too high.",
+      "body": "The Federal Reserve raised its benchmark interest rate a quarter point Wednesday, to a range of 3.75% to 4.00%, in a unanimous vote -- its first increase since July 2023, after five straight meetings on hold. Fed Chair Kevin Warsh said \"the plain fact is that inflation is too high and has been for too long,\" adding that \"this summer's inflation readings do not tell me that underlying trends have meaningfully improved.\"\n\nTreasury yields eased on the news: the 10-year slipped to about 4.95% and the 2-year to roughly 4.64%, both down modestly from Tuesday's highs above 5%. Stocks fell further into the announcement, with the Dow down more than 700 points and the S&P 500 off 0.76%.\n\nThe Fed's updated dot plot showed 12 of 18 officials expect one more quarter-point hike before year-end -- a sign this week's move may not be the last.\n\nFed Watch take: with two-thirds of the committee already penciling in another hike, markets should treat this week's move as the first of two, not a one-and-done.",
+      "author": "R. Costa",
+      "ts": "2026-09-16T19:00:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "metrics": {
+        "fedFundsRate": 3.875,
+        "yield2y": 4.64,
+        "yield10y": 4.95,
+        "moveOdds": 67,
+        "moveDirection": "hike"
+      }
+    },
+    {
+      "id": "a58",
+      "section": "japan",
+      "tier": "free",
+      "headline": "Nikkei slips a fourth day as TOPIX climbs on broader gains",
+      "dek": "Japan's price-weighted benchmark fell for a fourth straight session Wednesday while the broader TOPIX rose, ahead of Friday's Bank of Japan decision.",
+      "body": "The Nikkei 225 slipped 0.03% Wednesday to 63,462.01, its fourth consecutive daily decline, even as the broader TOPIX index rose 0.79% to 4,069.02. The divergence points to weakness concentrated in a handful of heavyweight, richly valued names that carry outsized influence over the price-weighted Nikkei, while gains spread more evenly across the market-capitalization-weighted TOPIX.\n\nJapan's trade data added a complication: exports rose 19.3% year-over-year in August, but imports jumped 28%, leaving a trade deficit of 1.106 trillion yen ($7.5 billion) as energy costs climbed. Monex Securities analyst Yoshitaka Araya said traders are unlikely to make sharp moves before the Fed and Bank of Japan decisions land.\n\nThe Bank of Japan meets Friday and is widely expected to raise its own benchmark rate, a step toward normalizing years of ultra-loose policy. Wednesday's Federal Reserve hike raises the stakes: a widening U.S.-Japan rate gap has been a key driver of yen weakness this year.\n\nJapan Outlook take: watch whether Friday's BOJ decision narrows or widens that gap -- it matters more for the yen than either country's stock market reaction alone.",
+      "author": "S. Okafor",
+      "ts": "2026-09-16T19:05:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "chart": {
+        "key": "nikkei225"
+      }
+    },
+    {
+      "id": "a59",
+      "section": "taiwan",
+      "tier": "free",
+      "headline": "TAIEX rebounds 0.74% as optical and memory stocks surge",
+      "dek": "Taiwan's benchmark bounced back Wednesday on AI-server demand and a memory-sector recovery, even as TSMC itself closed flat.",
+      "body": "The TAIEX rose 337.41 points, or 0.74%, to close at 45,848.9 Wednesday, with trading volume hitting NT$643.8 billion ($20.3 billion). TSMC, the index's largest weight, closed unchanged at NT$2,380, sitting out the rally even as it powered it.\n\nOptical-communications stocks led the gains, with three names hitting daily trading limits after Goldman Sachs pointed to \"continued growth in AI server racks and broader adoption of optical modules.\" Memory chipmakers also rebounded sharply from last week's Kioxia-driven weakness: ESMT rose 6.44%, Nanya and Winbond both gained more than 5%, and PSMC added 4.48%.\n\nThe rally came despite headwinds that have pressured high-valuation names all week -- oil prices near $109 a barrel and the 10-year Treasury yield hovering close to 5% -- suggesting investors are still willing to pay up for AI-linked hardware demand even as broader financial conditions tighten.\n\nTaiwan Outlook take: TSMC sitting out a rally driven by its own supply chain is worth watching -- a widening gap between TSMC and the names it feeds would signal the rally is thinner than the index suggests.",
+      "author": "J. Lindqvist",
+      "ts": "2026-09-16T19:10:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "chart": {
+        "key": "taiex"
+      }
+    },
+    {
+      "id": "a60",
+      "section": "sea",
+      "tier": "free",
+      "headline": "Vietnam's VN-Index holds steady as traders track the Fed",
+      "dek": "Vietnam's benchmark slipped a marginal 0.06% Wednesday, a quiet session after a choppier stretch tied to oil prices and this week's Fed meeting.",
+      "body": "Vietnam's VN-Index fell 0.06% Wednesday to 1,810.11, a modest move following a choppier stretch earlier in the week. The near-flat session suggests some of the selling pressure from rising oil prices and pre-Fed caution has eased, at least for now.\n\nWednesday's Federal Reserve decision -- a quarter-point hike to 3.75%-4.00%, its first increase since 2023 -- lands after Vietnamese investors had already spent days pricing in the move. With that uncertainty resolved, attention now shifts to how the Fed's updated projections, which point to a possible second hike later this year, affect the dollar and capital flows into emerging markets like Vietnam.\n\nA stronger-for-longer Fed typically pressures currencies and equities across emerging Southeast Asia by making dollar assets more attractive, though Vietnam's export-driven economy also depends heavily on U.S. demand holding up.\n\nSoutheast Asia Outlook take: a quiet reaction to a hike this widely expected is itself informative -- it suggests the market had already done its adjusting in advance, not that the news didn't matter.",
+      "author": "N. Suwannarat",
+      "ts": "2026-09-16T19:15:00.000Z",
+      "theoryKey": "",
+      "theoryBody": ""
+    },
+    {
+      "id": "a61",
+      "section": "tech",
+      "tier": "free",
+      "headline": "Wall Street calls AI chip stocks its most crowded trade",
+      "dek": "A BofA fund manager survey found more than half see semiconductors as overcrowded, even as hyperscalers push 2026 AI spending toward $700 billion.",
+      "body": "Bank of America's Global Fund Manager Survey, conducted Sept. 4-10 among 190 managers overseeing $512 billion, found 53% now call semiconductor stocks the market's most crowded trade. At the same time, 42% named AI infrastructure spending as the most likely source of a systemic credit event, up from 38% in August.\n\nThe five biggest spenders -- Amazon, Alphabet, Meta, Microsoft, and Oracle -- are on pace to spend roughly $700 billion combined on capital expenditures this year, with Wall Street forecasting more than $1 trillion in 2027. A third of survey respondents said companies are already overinvesting.\n\nThe tension is straightforward: the same AI buildout driving chip demand and hyperscaler earnings is also the thing investors are most nervous is overextended -- crowded and risky aren't contradictory labels for the same trade, both can be true at once.\n\nTech Outlook take: watch capital-expenditure guidance in the next round of hyperscaler earnings closely -- any sign of spending discipline would ease the crowding concern without necessarily hurting the chip names still fulfilling existing orders.",
+      "author": "J. Lindqvist",
+      "ts": "2026-09-16T19:20:00.000Z",
+      "theoryKey": "",
+      "theoryBody": ""
+    },
+    {
+      "id": "a62",
+      "section": "riskmanager",
+      "tier": "free",
+      "headline": "Hyperscaler credit-default swaps hit 8-year high on AI spending",
+      "dek": "Five-year CDS on Amazon, Google, Microsoft, and Oracle topped 100 basis points as the Fed's rate hike added its own pressure on portfolio credit risk.",
+      "body": "Five-year credit-default swaps on a basket of hyperscalers -- Amazon, Alphabet, Microsoft, and Oracle -- climbed above 100 basis points this week, the highest level Apollo Chief Economist Torsten Slok has recorded in eight years of tracking. He attributed the widening to \"a debt-financed spending cycle with rising leverage, negative free cash flow, and an uncertain payback on assets that lose value over time.\" Bank CDS sat flat near 40 basis points by comparison.\n\nThe move came the same day the Fed raised its benchmark rate a quarter point, to 3.75%-4.00% -- its first hike since 2023 -- pushing the 10-year Treasury yield to about 4.95%. Broader investment-grade and high-yield spreads barely moved, near 80 and 265 basis points.\n\nThat gap matters: broad credit indexes show no stress, but the hyperscaler CDS widening is a concentrated signal in a handful of large, AI-capex-heavy issuers common across investment-grade portfolios.\n\nRisk Desk take: a name-specific signal inside index-level calm is what concentration limits exist for -- check hyperscaler bond exposure now, rather than waiting for the broad index to move.",
+      "author": "K. Fenwick",
+      "ts": "2026-09-16T19:25:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "metrics": {
+        "yield10y": 4.95,
+        "igSpread": 80,
+        "hySpread": 265,
+        "spreadTrend": "stable"
+      }
     }
   ],
   "rankings": {
