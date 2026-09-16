@@ -16,53 +16,61 @@ function theoryTag(article){
 }
 
 /**
- * Stock Position Desk helpers. `position` is an optional object on any
- * article (see content/schema.md); in practice only "stockposition"
- * section articles carry one. Kept independent of the tier paywall,
- * the same way renderFedWatchChart/renderRiskManagerChart run before
- * the canRead() check — a reader always sees the setup itself, tier
- * gating only ever applies to the prose explaining it.
+ * Stock Position Desk helpers. Every article in the "stockposition"
+ * section carries a `styleKey` (see content/schema.md) naming one of
+ * the five POSITION_STYLES — the same simple label-and-badge pattern
+ * as theoryTag() above, not a per-article trade panel. The actual
+ * ranked ideas for each style come from renderPositionRankings()
+ * below, driven by state.rankings, which the site owner fills in from
+ * their own analysis rather than from anything in the article text.
  */
-function tradingStyleInfo(id){
-  return TRADING_STYLES.find(s => s.id === id) || null;
+function positionStyleInfo(id){
+  return POSITION_STYLES.find(s => s.id === id) || null;
 }
-function riskTierInfo(id){
-  return RISK_TIERS.find(r => r.id === id) || null;
-}
-function positionTag(article){
-  if(!article.position) return '';
-  const risk = riskTierInfo(article.position.riskTier);
-  if(!risk) return '';
-  return `<span class="risk-tag risk-${risk.id}">${escapeHtml(article.position.ticker || '')} &middot; ${escapeHtml(risk.label)}</span>`;
+function styleTag(article){
+  const style = positionStyleInfo(article.styleKey);
+  return style ? `<span class="style-tag style-${style.id}">${escapeHtml(style.label)}</span>` : '';
 }
 
-function renderStockPositionPanel(article){
-  const p = article.position;
-  const style = tradingStyleInfo(p.tradingStyle);
-  const risk = riskTierInfo(p.riskTier);
-  const returnLabel = (typeof p.expectedReturnLow === 'number' && typeof p.expectedReturnHigh === 'number')
-    ? `${p.expectedReturnLow > 0 ? '+' : ''}${p.expectedReturnLow}% to ${p.expectedReturnHigh > 0 ? '+' : ''}${p.expectedReturnHigh}%`
-    : '';
-
-  return `
-    <div class="position-panel">
-      <div class="position-panel-head">
-        <div>
-          <span class="position-ticker">${escapeHtml(p.ticker || '')}</span>
-          <span class="position-company">${escapeHtml(p.company || '')}</span>
-        </div>
-        <div class="position-tags">
-          ${risk ? `<span class="risk-tag risk-${risk.id}">${escapeHtml(risk.label)}</span>` : ''}
-          ${style ? `<span class="style-tag">${escapeHtml(style.label)}</span>` : ''}
-        </div>
-      </div>
-      <div class="position-stats">
-        <div class="position-stat"><span class="stat-label">Holding period</span><span class="stat-value">${escapeHtml(p.holdingPeriod || '&mdash;')}</span></div>
-        <div class="position-stat"><span class="stat-label">Expected return</span><span class="stat-value">${returnLabel || '&mdash;'}</span></div>
-      </div>
-      ${renderStockPositionChart(p)}
-      <p class="position-disclaimer">Editorial analysis, not personalized investment advice. Targets and stop-losses are illustrative planning levels tied to the thesis above, not guarantees.</p>
-    </div>`;
+/**
+ * Rankings table for one style, from state.rankings[styleId] — an
+ * array of {rank, ticker, company, note}. Left as an explicit empty
+ * state (not hidden) when the site owner hasn't published rankings
+ * for a style yet, the same way renderSectionView shows "No stories
+ * yet" rather than nothing.
+ */
+function renderPositionRankingTable(style){
+  const rows = (state.rankings && Array.isArray(state.rankings[style.id])) ? state.rankings[style.id] : [];
+  const sorted = rows.slice().sort((a,b)=> (a.rank||999) - (b.rank||999));
+  let html = `
+    <div class="ranking-card">
+      <div class="ranking-card-head">
+        <span class="style-tag style-${style.id}">${escapeHtml(style.label)}</span>
+        <span class="ranking-meta">${escapeHtml(style.typicalPeriod)} &middot; ${escapeHtml(style.typicalReturn)}</span>
+      </div>`;
+  if(sorted.length === 0){
+    html += `<div class="empty-note">No ranked picks published yet for this style.</div>`;
+  } else {
+    html += `<table class="ranking-table"><tbody>`;
+    sorted.forEach(r=>{
+      html += `<tr>
+        <td class="rank-num">${r.rank != null ? escapeHtml(String(r.rank)) : '&mdash;'}</td>
+        <td class="rank-ticker">${escapeHtml(r.ticker || '')}</td>
+        <td class="rank-company">${escapeHtml(r.company || '')}${r.note ? `<span class="rank-note">${escapeHtml(r.note)}</span>` : ''}</td>
+      </tr>`;
+    });
+    html += `</table>`;
+  }
+  html += `</div>`;
+  return html;
+}
+function renderPositionRankings(){
+  let html = `<div class="ranking-grid">`;
+  POSITION_STYLES.forEach(style=>{
+    html += renderPositionRankingTable(style);
+  });
+  html += `</div>`;
+  return html;
 }
 
 function renderHome(){
@@ -141,6 +149,11 @@ function renderClassroomPromo(){
           <p>47 technical and strategic setups referenced across our coverage, from trend structure through risk management.</p>
           <span class="classroom-promo-link">Browse the strategies &rarr;</span>
         </div>
+        <div class="classroom-promo-card" onclick="goView('positionclassroom')">
+          <h4>Stock position classroom</h4>
+          <p>The five position styles behind the Stock Position Desk's rankings &mdash; from conservative core holdings through speculative, single-event catalyst bets.</p>
+          <span class="classroom-promo-link">Browse the styles &rarr;</span>
+        </div>
       </div>
     </div>`;
 }
@@ -152,7 +165,10 @@ function renderSectionView(){
     <h2>${sectionLabel(state.sectionId)}</h2>
   </div>`;
   if(state.sectionId === 'stockposition'){
-    html += `<p class="position-disclaimer">Editorial analysis, not personalized investment advice. Expected returns, targets, and stop-losses are illustrative planning levels tied to the stated thesis, not guarantees &mdash; consult a licensed financial advisor before trading.</p>`;
+    html += `<p class="position-disclaimer">Editorial analysis, not personalized investment advice. Rankings, targets, and holding periods are the desk's own planning levels, not guarantees &mdash; consult a licensed financial advisor before trading.</p>`;
+    html += `<div class="section-head" style="margin:8px 0 14px;"><h3 style="font-family:var(--font-serif); font-size:19px; margin:0;">This week's rankings</h3></div>`;
+    html += renderPositionRankings();
+    html += `<div class="section-head" style="margin:32px 0 14px;"><h3 style="font-family:var(--font-serif); font-size:19px; margin:0;">Desk commentary</h3></div>`;
   }
   if(items.length === 0){
     html += `<div class="empty-note">No stories yet in this section.</div>`;
@@ -162,7 +178,7 @@ function renderSectionView(){
   items.forEach(a=>{
     html += `
       <div class="side-item" onclick="goArticle('${a.id}')" style="padding:18px 0;">
-        ${positionTag(a)}
+        ${styleTag(a)}
         <p class="headline" style="font-size:19px;">${escapeHtml(a.headline)}</p>
         <p style="font-family:var(--font-serif); color:var(--ink-soft); font-size:14.5px; margin:4px 0 8px;">${escapeHtml(a.dek)}</p>
         <div class="meta-row"><span>By ${escapeHtml(a.author)}</span><span>&middot;</span><span>${fmtDate(a.ts)}</span>${lockTag(a)}${theoryTag(a)}</div>
@@ -182,12 +198,11 @@ function renderArticleView(){
     <div class="kicker">${sectionLabel(a.section)}</div>
     <h1>${escapeHtml(a.headline)}</h1>
     <p class="dek">${escapeHtml(a.dek)}</p>
-    <div class="byline">By ${escapeHtml(a.author)} &middot; ${fmtDate(a.ts)} ${lockTag(a)}</div>
+    <div class="byline">By ${escapeHtml(a.author)} &middot; ${fmtDate(a.ts)} ${lockTag(a)} ${a.section === 'stockposition' ? styleTag(a) : ''}</div>
     ${a.section === 'fedwatch' && a.metrics ? renderFedWatchChart(a) : ''}
     ${a.section === 'sp500' ? renderSP500Chart(a) : ''}
     ${a.section === 'riskmanager' && a.metrics ? renderRiskManagerChart(a) : ''}
     ${['japan','taiwan','sea','tech'].includes(a.section) ? renderMarketChart(a) : ''}
-    ${a.section === 'stockposition' && a.position ? renderStockPositionPanel(a) : ''}
     <div class="article-body">`;
 
   if(allowed){
@@ -326,6 +341,53 @@ function renderStockClassroomView(){
   return html;
 }
 
+/**
+ * Stock position classroom — same pattern as renderClassroomView(),
+ * flat rather than grouped by category since POSITION_STYLE_LIBRARY
+ * only ever holds the five fixed styles in POSITION_STYLES, always
+ * shown in that same risk-ascending order rather than alphabetically.
+ */
+function renderPositionClassroomView(){
+  let html = `<div class="section-head classroom-head" style="margin-bottom:26px;">
+    <div class="kicker">Reference</div>
+    <h2>Stock position classroom</h2>
+    <p>The five position styles behind the Stock Position Desk's weekly rankings, gathered in one place with the shape of the trade and a plain-language walkthrough &mdash; independent of any single week's picks.</p>
+  </div>`;
+
+  html += `<div class="classroom-list">`;
+  POSITION_STYLES.forEach(style=>{
+    const s = POSITION_STYLE_LIBRARY[style.id];
+    if(!s) return;
+    const open = state.positionClassroomOpen === style.id;
+    const apps = Array.isArray(s.applications) ? s.applications : [];
+    html += `
+      <div class="classroom-row">
+        <div class="theory-block classroom-item">
+          <button class="theory-toggle" aria-expanded="${open}" onclick="togglePositionClassroom('${style.id}')">
+            <span class="label-name">${escapeHtml(s.name)}</span>
+            <span class="caret">${open ? 'Hide &uarr;' : 'Dig deeper &darr;'}</span>
+          </button>
+          ${open ? `
+          <div class="theory-panel">
+            <p class="eyebrow">${escapeHtml(style.typicalPeriod)} &middot; typical target ${escapeHtml(style.typicalReturn)}</p>
+            <div class="theory-graph">${s.svg}</div>
+            <p class="theory-caption">${escapeHtml(s.caption)}</p>
+            ${s.description ? `<div class="theory-body"><p>${escapeHtml(s.description)}</p></div>` : ''}
+            ${s.citation ? `<p class="theory-caption">${escapeHtml(s.citation)}</p>` : ''}
+          </div>` : ''}
+        </div>
+        ${apps.length ? `
+        <div class="classroom-apps">
+          <p class="apps-label">Best fits</p>
+          <ul>${apps.map(a=>`<li>${escapeHtml(a)}</li>`).join('')}</ul>
+        </div>` : ''}
+      </div>`;
+  });
+  html += `</div>`;
+
+  return html;
+}
+
 function renderMembershipView(){
   let head = `<div class="section-head">
     <div class="kicker">Membership</div>
@@ -381,6 +443,7 @@ function render(){
   else if(state.view === 'membership') app.innerHTML = renderMembershipView();
   else if(state.view === 'classroom') app.innerHTML = renderClassroomView();
   else if(state.view === 'stockclassroom') app.innerHTML = renderStockClassroomView();
+  else if(state.view === 'positionclassroom') app.innerHTML = renderPositionClassroomView();
 
   // Classroom promo shows on every view, same as the top nav always
   // showing every tab — not just on the front page.

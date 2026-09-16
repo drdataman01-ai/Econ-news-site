@@ -19,13 +19,15 @@ let state = {
   sectionId: null,
   articleId: null,
   articles: [],
+  rankings: {},
   weekOf: null,
   membership: 'free',
   loaded: false,
   loadError: false,
   theoryOpen: false,
   classroomOpen: null,
-  strategyClassroomOpen: null
+  strategyClassroomOpen: null,
+  positionClassroomOpen: null
 };
 
 function sectionLabel(id){
@@ -59,6 +61,7 @@ async function loadData(){
     if(!res.ok) throw new Error('HTTP ' + res.status);
     const data = await res.json();
     state.articles = Array.isArray(data.articles) ? data.articles : [];
+    state.rankings = (data.rankings && typeof data.rankings === 'object') ? data.rankings : {};
     state.weekOf = data.week_of || null;
     state.loadError = false;
   }catch(e){

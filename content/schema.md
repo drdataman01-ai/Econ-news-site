@@ -42,73 +42,101 @@ code needs to change when you publish a new week.
 
 ## Stock Position Desk (`section: "stockposition"`)
 
-Articles in this section require one additional field, `position`, which
-drives the risk-tier badge, trading-style tag, and the entry/target/stop
-chart on the article page. Everything else (`headline`, `dek`, `body`,
-`author`, `ts`, `tier`) works exactly the same as any other section — the
-`body` field is the thesis, written the same way as any other desk's
-article body.
+This desk has two independent parts, and it's important to keep them
+separate: **rankings** (the actual ranked stock picks, sourced from your
+own analysis, shown as tables) and **news** (commentary articles, shown
+the same way as any other desk, just labeled with a style). Neither one
+generates the other — a news article's `styleKey` is only a label, not a
+trade recommendation with its own numbers.
+
+### Rankings — top-level `rankings` object
+
+Add a `rankings` object at the top level of `articles.json`, alongside
+`week_of` and `articles`:
+
+```json
+{
+  "week_of": "2026-09-01",
+  "articles": [ ... ],
+  "rankings": {
+    "core": [
+      { "rank": 1, "ticker": "JNJ", "company": "Johnson & Johnson", "note": "Optional one-line rationale" }
+    ],
+    "income": [],
+    "swing": [],
+    "momentum": [],
+    "catalyst": []
+  }
+}
+```
+
+All five keys (`core`, `income`, `swing`, `momentum`, `catalyst`) should
+be present, each an array of ranked entries — empty arrays are fine and
+render as "No ranked picks published yet for this style." This is the
+one part of the site meant to be filled in from your own local stock
+analysis, not written as prose; there's no formula converting a research
+score into these fields; you decide the ranking and hand over the ticker,
+company, and (optionally) a short note per row.
+
+| Field | Required | Notes |
+|---|---|---|
+| `rank` | yes | Number. 1 = your top pick in that style this week. Rows are sorted by this when rendered. |
+| `ticker` | yes | Exchange ticker, e.g. `JNJ`. |
+| `company` | yes | Full company name. |
+| `note` | no | Short free-text rationale, shown under the company name. |
+
+### News — `styleKey` on an article
+
+Any article can carry a `styleKey`, but it's only meaningful (and
+required) when `section` is `"stockposition"`. It's a plain label — like
+`theoryKey` — not a structured trade object, and everything else about
+the article (`headline`, `dek`, `body`, `author`, `ts`, `tier`) works
+exactly the same as any other desk's article.
 
 ```json
 {
   "id": "a52",
   "section": "stockposition",
   "tier": "plus",
-  "headline": "AMD's post-selloff bounce sets up a swing back toward $600",
+  "headline": "AMD's post-selloff bounce reinforces the swing case in chip names",
   "dek": "AMD rebounded 2.2% Tuesday after Monday's chip selloff, with Piper Sandler holding a $600 target.",
-  "body": "First paragraph of the thesis.\n\nSecond paragraph.",
+  "body": "First paragraph.\n\nSecond paragraph.",
   "author": "T. Marchetti",
   "ts": "2026-09-16T14:00:00.000Z",
   "theoryKey": "",
   "theoryBody": "",
-  "position": {
-    "ticker": "AMD",
-    "company": "Advanced Micro Devices",
-    "tradingStyle": "swing",
-    "riskTier": "moderate",
-    "holdingPeriod": "2-4 months",
-    "expectedReturnLow": 20,
-    "expectedReturnHigh": 30,
-    "entryPrice": 504.20,
-    "targetPrice": 650.00,
-    "stopLoss": 430.00
-  }
+  "styleKey": "swing"
 }
 ```
 
-### `position` field reference
-
 | Field | Required | Notes |
 |---|---|---|
-| `ticker` | yes | Exchange ticker, e.g. `AMD`. Shown as the headline of the position panel. |
-| `company` | yes | Full company name. |
-| `tradingStyle` | yes | One of `core`, `income`, `swing`, `momentum`, `catalyst` — must match an id in `TRADING_STYLES` in `assets/js/config.js`. |
-| `riskTier` | yes | One of `conservative`, `moderate`, `aggressive`, `speculative` — must match an id in `RISK_TIERS` in `assets/js/config.js`. |
-| `holdingPeriod` | yes | Free text, e.g. `"2-4 months"`. Shown as-is; not parsed. |
-| `expectedReturnLow` / `expectedReturnHigh` | yes | Numbers (percent, no `%` sign, can be negative for a stated downside range). |
-| `entryPrice` / `targetPrice` / `stopLoss` | yes | Numbers (USD). Drive the range chart on the article page — `renderStockPositionChart` in `assets/js/charts.js` draws a marker for each and shades the downside (stop-to-entry) and upside (entry-to-target) zones. |
+| `styleKey` | yes, for `section: "stockposition"` | One of `core`, `income`, `swing`, `momentum`, `catalyst` — must match an id in `POSITION_STYLES` in `assets/js/config.js`. Renders as a colored badge next to the headline and byline. |
 
-### Trading styles (`assets/js/config.js` → `TRADING_STYLES`)
+### The five position styles (`assets/js/config.js` → `POSITION_STYLES`)
 
 | id | Label | Typical holding period | Typical expected return |
 |---|---|---|---|
-| `core` | Conservative Core | 6-12+ months | 8-15% |
+| `core` | Conservative / Core | 6-12+ months | 8-15% |
 | `income` | Income / Dividend Growth | 12+ months | 6-12% + yield |
-| `swing` | Moderate Swing | 2-4 months | 20-40% |
-| `momentum` | Aggressive Momentum | 3-6 weeks | 40-80% |
-| `catalyst` | Speculative Catalyst | Days-weeks (event-driven) | Wide / binary |
+| `swing` | Moderate / Swing | 2-4 months | 20-40% |
+| `momentum` | Aggressive / Momentum | 3-6 weeks | 40-80% |
+| `catalyst` | Speculative / Catalyst | Days-weeks (event-driven) | Wide / binary |
 
-These are display defaults for the filter UI only — every article's own
-`holdingPeriod` and `expectedReturnLow`/`expectedReturnHigh` are what
-actually render, so a specific idea can sit outside its style's typical
-range if the thesis calls for it.
+These five ids are explained in full — with a diagram of the shape of
+each trade — in the **Stock Position Classroom**
+(`assets/js/position-styles.js` → `POSITION_STYLE_LIBRARY`, rendered by
+`renderPositionClassroomView()` in `render.js`), linked from the
+classroom promo block at the bottom of every page, the same way the
+Economics and Trading Strategy classrooms are. Add a new style by adding
+an entry to both `POSITION_STYLES` (config.js) and
+`POSITION_STYLE_LIBRARY` (position-styles.js) with a matching id.
 
-Every Stock Position Desk article should carry a real, stated risk in its
-body — these are not personalized investment advice, and the site shows a
-standing disclaimer to that effect above the entry/target/stop chart and
-at the top of the section page. Keep that framing in mind when writing
-the thesis: state the catalyst or setup, the real numbers behind it, and
-the realistic case for being wrong, not a confident guarantee.
+The Stock Position Desk page shows a standing "not personalized
+investment advice" disclaimer above the rankings. Keep that framing in
+mind in both places: a ranking row is a stated position, not a promise,
+and a news article's job is to explain the setup and the realistic case
+for being wrong, not to guarantee an outcome.
 
 ## Adding a new theory to the library
 

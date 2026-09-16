@@ -56,32 +56,45 @@ jobs:
               if metrics is not None and not isinstance(metrics, dict):
                   errors.append(f'Article "{label}": "metrics" must be an object if present')
 
-              # Stock Position Desk articles carry a required "position" block
-              # with its own fields, since they drive the entry/target/stop
-              # chart and the risk-tier / trading-style badges.
+              # Stock Position Desk articles are labeled with one of the five
+              # position styles, the same simple tag pattern as theoryKey —
+              # not a per-article trade panel (that data lives in the
+              # top-level "rankings" object, checked separately below).
+              valid_styles = ('core', 'income', 'swing', 'momentum', 'catalyst')
               if article.get('section') == 'stockposition':
-                  position = article.get('position')
-                  if not isinstance(position, dict):
-                      errors.append(f'Article "{label}": section "stockposition" requires a "position" object')
-                  else:
-                      pos_required = ['ticker', 'company', 'tradingStyle', 'riskTier', 'holdingPeriod',
-                                       'expectedReturnLow', 'expectedReturnHigh', 'entryPrice', 'targetPrice', 'stopLoss']
-                      pos_missing = [f for f in pos_required if f not in position]
-                      if pos_missing:
-                          errors.append(f'Article "{label}": "position" missing required field(s): {", ".join(pos_missing)}')
+                  if article.get('styleKey') not in valid_styles:
+                      errors.append(f'Article "{label}": "styleKey" must be one of {", ".join(valid_styles)} for section "stockposition"')
 
-                      valid_styles = ('core', 'income', 'swing', 'momentum', 'catalyst')
-                      if 'tradingStyle' not in pos_missing and position.get('tradingStyle') not in valid_styles:
-                          errors.append(f'Article "{label}": invalid "position.tradingStyle" "{position.get("tradingStyle")}"')
-
-                      valid_risk_tiers = ('conservative', 'moderate', 'aggressive', 'speculative')
-                      if 'riskTier' not in pos_missing and position.get('riskTier') not in valid_risk_tiers:
-                          errors.append(f'Article "{label}": invalid "position.riskTier" "{position.get("riskTier")}"')
-
-                      numeric_fields = ['expectedReturnLow', 'expectedReturnHigh', 'entryPrice', 'targetPrice', 'stopLoss']
-                      for nf in numeric_fields:
-                          if nf not in pos_missing and not isinstance(position.get(nf), (int, float)):
-                              errors.append(f'Article "{label}": "position.{nf}" must be a number')
+          # Top-level "rankings" object (optional): the site owner's own
+          # ranked picks per position style, shown as tables on the Stock
+          # Position Desk page. When present, each of the five style keys
+          # must map to an array of {rank, ticker, company} entries (note
+          # is optional free text).
+          rankings = data.get('rankings')
+          if rankings is not None:
+              if not isinstance(rankings, dict):
+                  errors.append('"rankings" must be an object if present')
+              else:
+                  unknown_keys = [k for k in rankings.keys() if k not in valid_styles]
+                  if unknown_keys:
+                      errors.append(f'"rankings" has unrecognized style key(s): {", ".join(unknown_keys)}')
+                  for style_key, rows in rankings.items():
+                      if style_key not in valid_styles:
+                          continue
+                      if not isinstance(rows, list):
+                          errors.append(f'"rankings.{style_key}" must be an array')
+                          continue
+                      for j, row in enumerate(rows):
+                          row_label = f'rankings.{style_key}[{j}]'
+                          if not isinstance(row, dict):
+                              errors.append(f'"{row_label}" must be an object')
+                              continue
+                          row_required = ['rank', 'ticker', 'company']
+                          row_missing = [f for f in row_required if f not in row]
+                          if row_missing:
+                              errors.append(f'"{row_label}" missing required field(s): {", ".join(row_missing)}')
+                          if 'rank' in row and not isinstance(row.get('rank'), (int, float)):
+                              errors.append(f'"{row_label}.rank" must be a number')
 
           if errors:
               print('articles.json failed validation:\n')
