@@ -464,3 +464,10 @@ function renderSP500Chart(currentArticle){
       })}
     </div>`;
 }
+
+/* Stock Position Desk: per-article entry/target/stop charts were
+   removed here — the shape of each position style is now taught once,
+   in the Stock Position Classroom (assets/js/position-styles.js),
+   rather than redrawn per article. Weekly picks live in
+   state.rankings and render as tables (see renderPositionRankings()
+   in render.js), not as individual price charts. */
