@@ -329,24 +329,6 @@
       "theoryBody": "Nvidia's roughly $30 billion equity stake is itself a market-value signal Tobin's Q captures directly: a sophisticated investor putting a specific price on Intel's capital being worth more than its replacement cost, which is the condition under which the model predicts further investment follows.\n\nThe stock offering funding additional AI and foundry capacity is the predicted next step -- capital chasing a high-Q asset -- though the near-term EPS dilution shows the model's investment signal and a company's reported earnings can move in opposite directions in the short run."
     },
     {
-      "id": "a27",
-      "section": "riskmanager",
-      "tier": "free",
-      "headline": "Risk Manager Desk: NAIC's new rating-override authority puts private credit capital charges in play",
-      "dek": "State regulators can now challenge credit ratings insurers previously relied on automatically, landing just as CLO holdings hit a record pace and credit spreads sit near historic tights.",
-      "body": "State insurance regulators can now override previously automatic credit ratings on insurer investments, adding a new layer of capital-charge risk on top of ordinary credit risk.\n\nThe National Association of Insurance Commissioners (NAIC) adopted the change at its Summer National Meeting, letting regulators challenge ratings insurers had previously relied on automatically for capital purposes. It follows an April NAIC brief showing collateralized loan obligation (CLO) holdings hit a record pace near $200 billion, with life insurers holding 82% of exposure. Private-equity-owned (PE-owned) insurers hold a lower-quality slice: about 65% investment-grade versus 80% industry-wide.\n\nAn override that reclassifies a private-letter rating downward converts directly into a higher capital charge, no default required. The PE-owned subset faces the most direct hit.\n\nThe change lands alongside strengthened AG 53 (a regulatory standard for long-duration asset-adequacy testing) and Treasury plans to consult regulators on private-credit rating consistency. Investment desks leaning into private credit for yield now carry rating-override risk on top of ordinary credit risk.\n\nRisk Desk take: model capital charges off a conservative override outcome, not the most favorable public rating available.",
-      "author": "K. Fenwick",
-      "ts": "2026-09-10T14:25:00.000Z",
-      "theoryKey": "financial_accelerator",
-      "theoryBody": "The financial accelerator describes how a shock to how risk is priced can amplify beyond its initial size through a feedback loop -- traditionally via a net-worth shock raising a borrower's cost of external finance. NAIC's rating-override authority works through an analogous channel: a regulatory reassessment of credit quality, not a change in the underlying asset, can directly raise the capital cost of holding it.\n\nFor PE-owned insurers with already-thinner credit quality, this creates the same kind of amplification the theory describes: the initial shock becomes larger in its balance-sheet effect than the underlying credit event that prompted the scrutiny.",
-      "metrics": {
-        "yield10y": 4.84,
-        "igSpread": 78,
-        "hySpread": 265,
-        "spreadTrend": "tightening"
-      }
-    },
-    {
       "id": "a28",
       "section": "fedwatch",
       "tier": "free",
@@ -363,24 +345,6 @@
         "yield10y": 4.86,
         "moveOdds": 60,
         "moveDirection": "hike"
-      }
-    },
-    {
-      "id": "a33",
-      "section": "riskmanager",
-      "tier": "free",
-      "headline": "Risk Manager Desk: Hot PPI print adds to bond portfolio mark-to-market pressure",
-      "dek": "A firmer-than-expected August producer price report pushed Treasury yields higher Thursday, adding fresh unrealized losses to insurers' long-duration bond portfolios ahead of next week's Fed decision.",
-      "body": "Treasury yields moved higher Thursday after August producer prices rose a stronger-than-expected 0.4% from July, reinforcing bets the Fed will lean hawkish at its September 16-17 meeting. The 10-year yield ticked up to roughly 4.86%, extending a rise that has already pushed it near a three-year high this month.\n\nFor insurers holding long-duration bond portfolios to match long-tail liabilities, each incremental yield increase adds to unrealized mark-to-market losses on existing holdings, even as it improves reinvestment yields on new purchases and maturing bonds. Credit spreads widened only modestly on the data: the investment-grade option-adjusted spread (OAS, the extra yield over Treasuries investors demand for credit risk) ticked up to around 80 basis points from 78, suggesting the move is being read as a rates story rather than a credit-quality concern.\n\nRisk Desk take: the reinvestment-yield benefit of higher rates typically takes years to show up in reported earnings, while mark-to-market losses hit available-for-sale bond valuations immediately -- a timing mismatch worth flagging heading into third-quarter statutory filings.",
-      "author": "K. Fenwick",
-      "ts": "2026-09-10T16:30:00.000Z",
-      "theoryKey": "fisher",
-      "theoryBody": "The Fisher equation splits a bond's nominal yield into two pieces: the real interest rate and expected inflation. A hotter-than-expected producer price report doesn't necessarily change what investors think the real rate should be -- it changes what they expect inflation to run at, which shows up as a higher nominal yield even if underlying real economic conditions haven't shifted.\n\nThat's the cleanest way to read today's move: the 10-year yield ticked up not because investors suddenly expect stronger real growth, but because the PPI print nudged up the inflation-expectations component of the rate. For an insurer's ALM desk, this distinction matters -- a real-rate-driven yield rise and an inflation-driven one can imply different things for how long elevated yields might persist.\n\nThe relationship isn't exact day to day, since term premia, liquidity effects, and Fed policy expectations all layer on top of the simple real-rate-plus-inflation decomposition -- but as a first-order explanation for why yields moved on an inflation data point rather than a growth one, it holds up well here.",
-      "metrics": {
-        "yield10y": 4.86,
-        "igSpread": 80,
-        "hySpread": 268,
-        "spreadTrend": "stable"
       }
     },
     {
@@ -511,24 +475,6 @@
       "theoryBody": "Oracle's $125 billion debt-funded data center buildout is a direct real-world test of Tobin's Q: the company is betting the market values a dollar of new AI infrastructure capital above what it costs to build, which is the condition under which the model predicts continued investment makes sense.\n\nThe quarter's results are genuinely ambiguous on this point -- record contracted revenue (the $664 billion in remaining performance obligations) supports the high-Q thesis, while narrowing gross margins and mounting negative free cash flow raise the question of whether the market's implied valuation of that capital is actually being earned back yet.\n\nThis is why the stock fell despite the headline beat: investors are pricing the sustainability of the investment case, not just the current quarter's growth rate, and margin compression is exactly the kind of evidence that could indicate the Q ratio driving this capex isn't as favorable as the top-line numbers suggest."
     },
     {
-      "id": "a39",
-      "section": "riskmanager",
-      "tier": "free",
-      "headline": "Risk Manager Desk: Catastrophe bond spreads keep falling as capital floods a softening reinsurance market",
-      "dek": "Cat bond coupons fell another 4.5% in August and now sit 13% below year-ago levels, as record alternative capital keeps pushing risk-adjusted reinsurance pricing lower even with elevated geopolitical and catastrophe risk in the background.",
-      "body": "Catastrophe bond coupons fell 4.5% in August, now 13% below year-ago levels, per Plenum's monthly index, as record capital inflows keep compressing pricing across the reinsurance-linked securities market. Total alternative reinsurance capital reached $144 billion as of June 30, up from $136 billion at the end of 2025, with outstanding cat bonds hitting a record $63 billion over the same period.\n\nThe compression reflects a genuine buyers' market: Guy Carpenter's Global Property Catastrophe Rate-on-Line Index fell 16% year-to-date through July, the steepest annual decline in roughly 25 years, driven by three straight years of strong reinsurer returns and the lowest first-half catastrophe losses in five years. Cat bond investors are accepting less compensation per unit of risk than at any point since spreads last bottomed in 2021.\n\nRisk Desk take: pricing this soft, this far into a low-loss stretch, is exactly the setup where a single active hurricane season or a major non-peak-peril loss (wildfire, cyber) could snap spreads back sharply -- worth stress-testing reinsurance recoverables against a repricing scenario now, not after the next event forces the market's hand.",
-      "author": "K. Fenwick",
-      "ts": "2026-09-11T13:40:00.000Z",
-      "theoryKey": "minsky",
-      "theoryBody": "Minsky's financial instability hypothesis argues that long stretches of calm breed more risk-taking, not less -- exactly the dynamic described here. Three consecutive years of strong reinsurer returns and the lowest first-half catastrophe losses in five years have pulled in record capital and pushed pricing down 16% year-to-date, even as the underlying risks (geopolitical tension, climate-linked catastrophe exposure) haven't necessarily declined by the same amount.\n\nThe theory's core warning applies directly to the Risk Desk take above: as pricing keeps softening through a calm stretch, the market becomes progressively less prepared for the shock that eventually arrives, since capital has been priced and allocated on the assumption the calm continues.\n\nThe parallel isn't exact -- Minsky's original framework is about credit and leverage cycles, not insurance pricing cycles -- but the underlying mechanism, stability itself generating the complacency that produces instability, transfers cleanly to a reinsurance market this far into a low-loss, high-capital environment.",
-      "metrics": {
-        "yield10y": 4.88,
-        "igSpread": 82,
-        "hySpread": 270,
-        "spreadTrend": "stable"
-      }
-    },
-    {
       "id": "a40",
       "section": "fedwatch",
       "tier": "free",
@@ -602,24 +548,6 @@
       "theoryBody": ""
     },
     {
-      "id": "a45",
-      "section": "riskmanager",
-      "tier": "free",
-      "headline": "10-year yield nears 5% as insurers face hike-or-hold Fed",
-      "dek": "Rising Treasury yields cut two ways for insurer balance sheets ahead of Wednesday's Federal Reserve rate decision.",
-      "body": "The 10-year Treasury yield climbed to 4.968% Monday, its highest since October 2023, as markets priced roughly 60% odds the Federal Reserve raises its benchmark rate a quarter point at Wednesday's meeting. The move came despite public pressure from Treasury Secretary Scott Bessent and White House adviser Peter Navarro against a hike, with August's consumer price index still running at 3.4% annually.\n\nHigher long-term yields cut today's bond values but lift reinvestment yields on new premium inflows and maturing debt -- a net positive over time for life insurers' asset-liability management (ALM, matching investment durations to policy obligations), though a near-term drag on surplus for insurers holding longer-duration paper.\n\nSeparately, Verisk estimates the industry should budget for $171 billion in average annual insured catastrophe losses globally, up $19 billion from last year, driven mainly by frequent severe thunderstorms rather than single mega-events. That, with a higher-for-longer rate path, pushes reserve adequacy and capital charges toward year-end reassessment.\n\nRisk Desk take: insurers under-allocated to floating-rate and short-duration assets should use this print to stress-test reinvestment assumptions before Wednesday's decision, not after.",
-      "author": "K. Fenwick",
-      "ts": "2026-09-14T14:25:00.000Z",
-      "theoryKey": "",
-      "theoryBody": "",
-      "metrics": {
-        "yield10y": 4.97,
-        "igSpread": 80,
-        "hySpread": 270,
-        "spreadTrend": "stable"
-      }
-    },
-    {
       "id": "a46",
       "section": "fedwatch",
       "tier": "free",
@@ -691,24 +619,6 @@
       "ts": "2026-09-15T17:00:00.000Z",
       "theoryKey": "",
       "theoryBody": ""
-    },
-    {
-      "id": "a51",
-      "section": "riskmanager",
-      "tier": "free",
-      "headline": "10-year yield tops 5% for the first time in a year",
-      "dek": "A fresh high in Treasury yields, one day before the Fed's rate decision, cuts both ways for insurer balance sheets.",
-      "body": "The 10-year Treasury yield -- the anchor rate for insurer asset-liability management (ALM, matching investment durations to policy obligations) -- touched 5.041% intraday Tuesday before settling at 4.998%, its highest level in over a year. CME FedWatch-implied odds of a quarter-point Fed hike Wednesday jumped to 92.7%, after a Duke University survey found 29 of 32 former Fed officials now favor one.\n\nA 10-year yield above 5% deepens mark-to-market losses on existing long-duration bonds, but raises the yield insurers earn reinvesting new premium and maturing debt -- a net long-term positive for most life insurers, even as it pressures near-term statutory surplus.\n\nCredit markets are calmer: investment-grade spreads sit near 80 basis points and high-yield spreads near 265, both little changed, per ICE BofA index data. That gap points reserve adequacy and duration reviews squarely at interest-rate risk, not credit risk, for now.\n\nRisk Desk take: insurers should stress-test a surprise no-hike outcome too -- if the Fed disappoints odds this lopsided, the resulting bond-market repricing could be just as disruptive as the hike itself.",
-      "author": "K. Fenwick",
-      "ts": "2026-09-15T17:05:00.000Z",
-      "theoryKey": "",
-      "theoryBody": "",
-      "metrics": {
-        "yield10y": 5.0,
-        "igSpread": 80,
-        "hySpread": 265,
-        "spreadTrend": "stable"
-      }
     },
     {
       "id": "a52",
@@ -847,24 +757,6 @@
       "ts": "2026-09-16T19:20:00.000Z",
       "theoryKey": "",
       "theoryBody": ""
-    },
-    {
-      "id": "a62",
-      "section": "riskmanager",
-      "tier": "free",
-      "headline": "Hyperscaler credit-default swaps hit 8-year high on AI spending",
-      "dek": "Five-year CDS on Amazon, Google, Microsoft, and Oracle topped 100 basis points as the Fed's rate hike added its own pressure on portfolio credit risk.",
-      "body": "Five-year credit-default swaps on a basket of hyperscalers -- Amazon, Alphabet, Microsoft, and Oracle -- climbed above 100 basis points this week, the highest level Apollo Chief Economist Torsten Slok has recorded in eight years of tracking. He attributed the widening to \"a debt-financed spending cycle with rising leverage, negative free cash flow, and an uncertain payback on assets that lose value over time.\" Bank CDS sat flat near 40 basis points by comparison.\n\nThe move came the same day the Fed raised its benchmark rate a quarter point, to 3.75%-4.00% -- its first hike since 2023 -- pushing the 10-year Treasury yield to about 4.95%. Broader investment-grade and high-yield spreads barely moved, near 80 and 265 basis points.\n\nThat gap matters: broad credit indexes show no stress, but the hyperscaler CDS widening is a concentrated signal in a handful of large, AI-capex-heavy issuers common across investment-grade portfolios.\n\nRisk Desk take: a name-specific signal inside index-level calm is what concentration limits exist for -- check hyperscaler bond exposure now, rather than waiting for the broad index to move.",
-      "author": "K. Fenwick",
-      "ts": "2026-09-16T19:25:00.000Z",
-      "theoryKey": "",
-      "theoryBody": "",
-      "metrics": {
-        "yield10y": 4.95,
-        "igSpread": 80,
-        "hySpread": 265,
-        "spreadTrend": "stable"
-      }
     }
   ],
   "rankings": {

@@ -30,7 +30,7 @@ code needs to change when you publish a new week.
 |---|---|---|
 | `week_of` | yes | An ISO date (`YYYY-MM-DD`) for your own bookkeeping. Not shown to readers. |
 | `id` | yes | Unique string. The admin tool generates one automatically; if you hand-edit the JSON, just keep every `id` unique. |
-| `section` | yes | One of `sp500`, `japan`, `taiwan`, `sea`, `tech`, `riskmanager`, `fedwatch`, `stockposition` — must match a section `id` in `assets/js/config.js`. |
+| `section` | yes | One of `sp500`, `japan`, `taiwan`, `sea`, `tech`, `fedwatch`, `stockposition` — must match a section `id` in `assets/js/config.js`. |
 | `tier` | yes | One of `free`, `plus`, `pro`. Controls the paywall on the article and its theory panel. |
 | `headline` | yes | Plain text. HTML is escaped automatically, so don't pre-encode it. |
 | `dek` | yes | Plain text, one or two sentences. |
