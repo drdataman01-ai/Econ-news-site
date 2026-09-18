@@ -360,25 +360,26 @@ function renderMarketChart(article){
 }
 
 /**
- * S&P 500 Outlook chart — a forward-looking forecast visual, separate
- * from renderSP500Chart's historical price chart below it. Reads the
- * article's `sp500Outlook` field (a call for each of four horizons:
- * threeMonth, sixMonth, twelveMonth, twentyFourMonth, each one of the
- * ids in SP500_OUTLOOK_LEVELS) and draws:
+ * Outlook chart — a forward-looking forecast visual, shared across
+ * every outlook desk (sp500, japan, taiwan, sea, tech). Separate from
+ * each section's historical price chart, which renders below it.
+ * Reads the article's `outlook` field (a call for each of four
+ * horizons: threeMonth, sixMonth, twelveMonth, twentyFourMonth, each
+ * one of the ids in OUTLOOK_LEVELS) and draws:
  *   1. a line across the four horizons, plotted at each call's row on
  *      a Down/Flat/Slightly Up/Up y-axis, with a colored dot per point;
  *   2. a color strip directly under the line restating each horizon's
  *      call in its own color, so the takeaway reads at a glance
  *      without following the line itself;
  *   3. a small legend spelling out what each of the four colors means.
- * This is the standing visual for S&P 500 outlook posts going forward
- * — reuse it via the `sp500Outlook` field rather than building a new
- * forecast graphic per post. Returns '' if the article has no
- * `sp500Outlook` field (e.g. a routine, non-outlook S&P 500 post).
+ * This is the standing visual for outlook posts on any of the five
+ * desks above — reuse it via the `outlook` field rather than building
+ * a new forecast graphic per post or per desk. Returns '' if the
+ * article has no `outlook` field (e.g. a routine, non-outlook post).
  */
-function renderSP500OutlookChart(article){
-  const outlook = article.sp500Outlook;
-  if (!outlook || typeof SP500_OUTLOOK_LEVELS === 'undefined') return '';
+function renderOutlookChart(article){
+  const outlook = article.outlook;
+  if (!outlook || typeof OUTLOOK_LEVELS === 'undefined') return '';
 
   const horizons = [
     { key: 'threeMonth', label: '3M' },
@@ -389,8 +390,8 @@ function renderSP500OutlookChart(article){
 
   const levelById = {};
   const levelIndexById = {};
-  SP500_OUTLOOK_LEVELS.forEach((lvl, i) => { levelById[lvl.id] = lvl; levelIndexById[lvl.id] = i; });
-  const fallbackLevel = SP500_OUTLOOK_LEVELS[1]; // "flat" — used only if a horizon is missing/unrecognized
+  OUTLOOK_LEVELS.forEach((lvl, i) => { levelById[lvl.id] = lvl; levelIndexById[lvl.id] = i; });
+  const fallbackLevel = OUTLOOK_LEVELS[1]; // "flat" — used only if a horizon is missing/unrecognized
 
   const calls = horizons.map(h => {
     const level = levelById[outlook[h.key]] || fallbackLevel;
@@ -406,7 +407,7 @@ function renderSP500OutlookChart(article){
   const plotW = width - padLeft - padRight;
   const plotH = height - padTop - padBottom;
 
-  const rowCount = SP500_OUTLOOK_LEVELS.length;
+  const rowCount = OUTLOOK_LEVELS.length;
   const stepX = plotW / (calls.length - 1);
 
   function yForRow(rowIndex){
@@ -418,7 +419,7 @@ function renderSP500OutlookChart(article){
   const linePath = points.map((p, i) => (i === 0 ? 'M' : 'L') + p[0].toFixed(1) + ',' + p[1].toFixed(1)).join(' ');
 
   let rowLines = '';
-  SP500_OUTLOOK_LEVELS.forEach((lvl, i) => {
+  OUTLOOK_LEVELS.forEach((lvl, i) => {
     const y = yForRow(i);
     rowLines += `
       <line x1="${padLeft}" y1="${y.toFixed(1)}" x2="${width - padRight}" y2="${y.toFixed(1)}" stroke="${CHART_GRID_STROKE}" stroke-width="1"/>
@@ -433,7 +434,8 @@ function renderSP500OutlookChart(article){
     dots += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="5" fill="${c.level.color}" stroke="#F7F5F0" stroke-width="1.5"/>`;
   });
 
-  const ariaLabel = 'S&P 500 outlook: ' + calls.map(c => c.label + ' ' + c.level.label).join(', ');
+  const sectionName = (typeof sectionLabel === 'function' ? sectionLabel(article.section) : article.section) || 'Outlook';
+  const ariaLabel = sectionName + ' outlook: ' + calls.map(c => c.label + ' ' + c.level.label).join(', ');
 
   const svg = `
       <svg viewBox="0 0 ${width} ${height}" preserveAspectRatio="none" overflow="visible" role="img" aria-label="${escapeHtml(ariaLabel)}">
@@ -449,14 +451,14 @@ function renderSP500OutlookChart(article){
           <div style="font-family:sans-serif; font-size:10.5px; margin-top:2px;">${escapeHtml(c.level.label)}</div>
         </div>`).join('');
 
-  const legend = SP500_OUTLOOK_LEVELS.map(lvl => `
+  const legend = OUTLOOK_LEVELS.map(lvl => `
         <span style="display:inline-flex; align-items:center; gap:5px; margin-right:14px; font-family:sans-serif; font-size:10.5px; color:${CHART_AXIS_FILL};">
           <span style="display:inline-block; width:9px; height:9px; border-radius:2px; background:${lvl.color};"></span>${lvl.label}
         </span>`).join('');
 
   return `
-    <div class="linechart sp500-outlook-chart">
-      <p class="apps-label">S&amp;P 500 outlook &middot; next 3, 6, 12, and 24 months</p>
+    <div class="linechart outlook-chart">
+      <p class="apps-label">${escapeHtml(sectionName)} outlook &middot; next 3, 6, 12, and 24 months</p>
       ${svg}
       <div style="display:flex; gap:2px; margin-top:10px; border-radius:4px; overflow:hidden;">
         ${strip}

@@ -200,7 +200,7 @@ function renderArticleView(){
     <p class="dek">${escapeHtml(a.dek)}</p>
     <div class="byline">By ${escapeHtml(a.author)} &middot; ${fmtDate(a.ts)} ${lockTag(a)} ${a.section === 'stockposition' ? styleTag(a) : ''}</div>
     ${a.section === 'fedwatch' && a.metrics ? renderFedWatchChart(a) : ''}
-    ${a.section === 'sp500' && a.sp500Outlook ? renderSP500OutlookChart(a) : ''}
+    ${['sp500','japan','taiwan','sea','tech'].includes(a.section) && a.outlook ? renderOutlookChart(a) : ''}
     ${a.section === 'sp500' ? renderSP500Chart(a) : ''}
     ${['japan','taiwan','sea','tech'].includes(a.section) ? renderMarketChart(a) : ''}
     <div class="article-body">`;

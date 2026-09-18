@@ -98,3 +98,64 @@ This is the default for Taiwan outlook posts, since the beat is usually about th
 ```
 
 Leave `theoryKey`/`theoryBody` as empty strings unless the user explicitly wants a "Macroeconomic reasoning" panel tied to an existing framework in the site's theory library.
+
+## Full outlook post (multi-month forecast, distinct from the daily post above)
+
+Separate from the daily 120–180 word desk update above, this desk also
+publishes a longer-form outlook post periodically: a 400–500 word
+analysis that commits to an explicit call on the next 3, 6, 12, and 24
+months, rendered as a color-coded forecast chart above the article
+body. Both formats coexist on this desk — use the daily template for
+routine updates, and this one when the user asks for something like
+"write the Taiwan outlook analysis," "update the Taiwan 3/6/12/24
+month view," or "do the full Taiwan outlook."
+
+**Structure** (~400–500 words total):
+1. Opening paragraph: the current state of the TAIEX/TSMC/supply-chain
+   story, with exact figures and named sources — same evidentiary
+   standard as the daily post, just more room to set the scene.
+2. One paragraph per horizon (3-month, 6-month, 12-month, 24-month),
+   each opening with "Next [N] months: [flat/slightly up/up/down]."
+   and then giving the specific reasoning behind that call — a color
+   is a conclusion the paragraph has to earn, not a label. Vary the
+   calls across horizons where the reasoning actually supports it;
+   don't default to a straight line from flat to up.
+3. Closing line: "Taiwan Outlook take:" followed by one sentence
+   naming the single most important thing to watch.
+
+**The `outlook` field** — add this alongside the normal article fields
+to render the forecast chart:
+
+```json
+"outlook": {
+  "threeMonth": "flat",
+  "sixMonth": "slight_up",
+  "twelveMonth": "slight_up",
+  "twentyFourMonth": "up"
+}
+```
+
+Each value must be one of `down`, `flat`, `slight_up`, or `up` —
+defined once in `OUTLOOK_LEVELS` (`assets/js/config.js`) and shared
+across all five outlook desks (sp500, japan, taiwan, sea, tech), not
+redefined per desk. The site's `renderOutlookChart()`
+(`assets/js/charts.js`) reads this field and draws the line-and-color-
+strip forecast chart automatically, before the article body and
+before the historical TAIEX chart — don't build a new chart per post,
+just supply this field. See `content/schema.md` for the full field
+reference.
+
+Still include the normal `chart` field too (default `taiex`, per the
+Chart field section above) — the outlook chart and the historical
+trend chart both show on these posts, with the outlook chart first.
+
+**Voice**: same Fortune 500-executive audience and plain-language
+rules as the daily post above (including the banned-phrases list),
+just with room to develop the reasoning behind each horizon rather
+than compressing everything into one paragraph.
+
+**Byline**: given that any multi-month Taiwan outlook is almost always
+anchored in TSMC and the semiconductor cycle, default to "J.
+Lindqvist" for this longer format unless the piece is genuinely a
+broader, non-tech Taiwan story — ask the user which they prefer if
+that's the case, per the daily post's byline note above.

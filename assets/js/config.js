@@ -41,17 +41,19 @@ const POSITION_STYLES = [
 ];
 
 /* ------------------------------------------------------------------
-   S&P 500 Outlook chart — the four-color forecast scale.
+   Outlook chart — the four-color forecast scale.
 
-   Every S&P 500 outlook post can carry an `sp500Outlook` object with
-   a call for four horizons (three, six, twelve, and twenty-four
-   months out). Each call is one of these four ids, ordered worst to
-   best — that order also fixes each level's row position on the
-   outlook chart's y-axis (renderSP500OutlookChart in charts.js).
-   Single source of truth for the label, line/dot color, and the
-   color-strip legend shown under the chart.
+   Any outlook-desk post (sp500, japan, taiwan, sea, tech) can carry
+   an `outlook` object with a call for four horizons (three, six,
+   twelve, and twenty-four months out). Each call is one of these
+   four ids, ordered worst to best — that order also fixes each
+   level's row position on the outlook chart's y-axis
+   (renderOutlookChart in charts.js). Single source of truth for the
+   label, line/dot color, and the color-strip legend shown under the
+   chart, reused across every desk that carries this field rather
+   than each desk defining its own palette.
 ------------------------------------------------------------------- */
-const SP500_OUTLOOK_LEVELS = [
+const OUTLOOK_LEVELS = [
   {id:'down', label:'Down', color:'#A93A2E', textColor:'#F7F5F0'},
   {id:'flat', label:'Flat', color:'#93701F', textColor:'#F7F5F0'},
   {id:'slight_up', label:'Slightly Up', color:'#7FAE8E', textColor:'#14181F'},

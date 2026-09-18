@@ -40,16 +40,17 @@ code needs to change when you publish a new week.
 | `theoryKey` | no | One of the keys in `assets/js/theories.js` (e.g. `phillips`, `okun`, `islm`, `solow` — see that file for the full list). Leave as `""` or omit for no theory. |
 | `theoryBody` | no | Required if `theoryKey` is set. Plain text, paragraphs separated by `\n\n`. This is the article-specific reasoning; the theory's name, graph, and caption come automatically from `assets/js/theories.js`. |
 
-## S&P 500 Outlook chart (`section: "sp500"`)
+## Outlook chart (`section`: `sp500`, `japan`, `taiwan`, `sea`, or `tech`)
 
-Any `sp500` article can carry an `sp500Outlook` object to render the
-standing S&P 500 outlook chart (`renderSP500OutlookChart()` in
-`charts.js`) above the article body, before `renderSP500Chart()`'s
-historical price chart. This is the reusable visual for S&P 500
-outlook posts going forward — reuse it via this field rather than
-building a new forecast graphic each time. Articles without this
-field (routine, non-outlook S&P 500 posts) just skip the chart, same
-as `theoryKey`.
+Any article in one of these five desks can carry an `outlook` object
+to render the standing outlook chart (`renderOutlookChart()` in
+`charts.js`) above the article body, before that section's historical
+price chart (`renderSP500Chart()` for `sp500`, `renderMarketChart()`
+for the other four). This is the reusable visual for outlook-style
+posts going forward, across all five desks — reuse it via this field
+rather than building a new forecast graphic per post or per desk.
+Articles without this field (routine, non-outlook posts) just skip
+the chart, same as `theoryKey`.
 
 ```json
 {
@@ -63,7 +64,7 @@ as `theoryKey`.
   "ts": "2026-09-17T14:00:00.000Z",
   "theoryKey": "",
   "theoryBody": "",
-  "sp500Outlook": {
+  "outlook": {
     "threeMonth": "flat",
     "sixMonth": "slight_up",
     "twelveMonth": "slight_up",
@@ -74,15 +75,16 @@ as `theoryKey`.
 
 | Field | Required | Notes |
 |---|---|---|
-| `sp500Outlook` | no | Object with four keys below. Omit entirely for a routine S&P 500 post with no forecast call. |
-| `sp500Outlook.threeMonth` | yes, if `sp500Outlook` present | The 3-month call. |
-| `sp500Outlook.sixMonth` | yes, if `sp500Outlook` present | The 6-month call. |
-| `sp500Outlook.twelveMonth` | yes, if `sp500Outlook` present | The 12-month call. |
-| `sp500Outlook.twentyFourMonth` | yes, if `sp500Outlook` present | The 24-month call. |
+| `outlook` | no | Object with four keys below. Omit entirely for a routine post with no forecast call. |
+| `outlook.threeMonth` | yes, if `outlook` present | The 3-month call. |
+| `outlook.sixMonth` | yes, if `outlook` present | The 6-month call. |
+| `outlook.twelveMonth` | yes, if `outlook` present | The 12-month call. |
+| `outlook.twentyFourMonth` | yes, if `outlook` present | The 24-month call. |
 
 Each of the four calls above must be one of the ids in
-`SP500_OUTLOOK_LEVELS` (`assets/js/config.js`), which is the single
-source of truth for the label and color of each:
+`OUTLOOK_LEVELS` (`assets/js/config.js`), which is the single source
+of truth for the label and color of each — shared across all five
+desks, not redefined per desk:
 
 | id | Label | Color |
 |---|---|---|

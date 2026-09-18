@@ -772,11 +772,95 @@
       "metrics": {
         "close": 7637.14
       },
-      "sp500Outlook": {
+      "outlook": {
         "threeMonth": "flat",
         "sixMonth": "slight_up",
         "twelveMonth": "slight_up",
         "twentyFourMonth": "up"
+      }
+    },
+    {
+      "id": "a63",
+      "section": "japan",
+      "tier": "free",
+      "headline": "Japan outlook: a historic BOJ hike, then a carry-trade waiting game",
+      "dek": "The Bank of Japan is expected to raise rates to a 31-year high Friday. Kuonomics sees choppy months ahead before Japan's rate-normalization story reasserts itself.",
+      "body": "The Bank of Japan is widely expected to raise its benchmark interest rate a quarter point Friday, to 1.25% from 1%, a level not seen in roughly three decades. Futures markets are already pricing the move as close to certain, following July inflation of 1.9% -- just under the Bank's 2% target and the fastest pace in seven months -- alongside second-quarter growth of 1.4% on an annualized basis and rising wages. The decision lands the same week the U.S. Federal Reserve raised its own rate, an unusual moment of the world's two largest central banks tightening at once. The Nikkei 225 closed at 64,136.25 Thursday, up 0.33%, as investors positioned for the announcement.\n\nNext three months: flat. A rate increase this large and well-telegraphed still needs digesting, and there is a specific mechanism to watch: for years, investors have borrowed cheaply in yen to buy higher-returning assets elsewhere, a trade known as the yen carry trade. A genuine, sustained rate increase makes that borrowing more expensive and can trigger a rush to unwind those positions, a pattern that has briefly rattled global markets before. Expect choppiness while that plays out rather than a clear direction.\n\nNext six months: flat. The yen has weakened past 160 per dollar in recent weeks even after government intervention, and it is not yet clear whether one rate hike reverses that trend or simply slows it. A stronger yen would help Japanese households and importers but squeeze the earnings of the export-heavy companies that dominate the Nikkei, since a stronger currency makes their overseas sales worth less once converted back to yen. That tension, layered on top of the carry-trade unwind risk above, argues for more of the same chop rather than a clear trend.\n\nNext 12 months: slightly up. By this point, markets should have absorbed both this week's hike and whatever follow-through it brings. The underlying economy has real strength behind it: wages are rising, growth beat expectations last quarter, and a central bank finally willing to raise rates after decades near zero is, on balance, a sign of an economy that no longer needs emergency-level support -- a healthier starting point than the alternative.\n\nNext 24 months: up. Japan's exit from three decades of near-zero rates and deflation is a structural story, not a one-quarter event, and it has arrived alongside years of corporate governance reform that has pushed Japanese companies toward higher shareholder returns and stock buybacks. Wall Street strategists have specifically floated fresh record highs for Japanese stocks as this transition completes. The risk to that view is the transition itself: if the Bank of Japan moves faster than the economy can absorb, or the yen swings sharply in either direction, that could delay the payoff this outlook expects by 2028.\n\nJapan Outlook take: watch the yen more than the Nikkei itself over the next few months -- how currency markets absorb a genuine, multi-hike tightening cycle will tell you more about the next year than any single day's index move.",
+      "author": "S. Okafor",
+      "ts": "2026-09-18T15:00:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "chart": {
+        "key": "nikkei225"
+      },
+      "outlook": {
+        "threeMonth": "flat",
+        "sixMonth": "flat",
+        "twelveMonth": "slight_up",
+        "twentyFourMonth": "up"
+      }
+    },
+    {
+      "id": "a64",
+      "section": "taiwan",
+      "tier": "free",
+      "headline": "Taiwan outlook: TAIEX steadies as TSMC's ex-dividend bounce signals underlying demand",
+      "dek": "The TAIEX rebounded 0.74% Wednesday after a four-session slide, with TSMC snapping back to its pre-dividend price within minutes. Kuonomics sees the index tracking TSMC's own AI-driven capex and earnings cycle over the next two years.",
+      "body": "Taiwan's benchmark TAIEX closed at 45,848.9 Wednesday, up 0.74%, rebounding from a four-session slide that had knocked 3.54% off the index. Trading stayed light -- turnover of NT$643.7 billion came in below the five-day average -- as investors held back ahead of the U.S. Federal Reserve's rate decision the same week. Taiwan Semiconductor Manufacturing Co., whose weighting anchors the index, closed unchanged at NT$2,380 after going ex-dividend, but snapped back to its pre-dividend price within 27 minutes of the open -- a sign that demand for the stock, and by extension the index, is holding up even while the broader market marks time.\n\nNext three months: flat. The pullback-then-bounce pattern of the past week looks like consolidation rather than a new trend: light volume, hesitant buyers, and a market waiting on a Fed decision it doesn't control. TSMC's next scheduled earnings report, in October, falls just outside this window, so there isn't yet a fresh catalyst to push the index decisively in either direction.\n\nNext six months: slightly up. By this point TSMC will have reported third-quarter results and given fresh guidance for 2027 capital spending, after a year of repeatedly raising its 2026 capex plans to as much as $64 billion on the back of AI chip demand. If that guidance holds up, it should support the broader index, which leans heavily on TSMC's fortunes. The main offsetting risk is political rather than financial: Taiwan has been weighing tighter controls on AI chip exports to China to align with Washington, and any formal move could rattle sentiment around companies with mainland exposure even as it doesn't touch TSMC's own advanced-node business much.\n\nNext 12 months: slightly up. Wall Street analysts expect TSMC's revenue to grow around 34% next year, and the stock still trades near 20 times forward earnings versus a historical average closer to 28 times -- a gap that can close if AI infrastructure spending keeps proving out over the next year. TSMC alone controlled more than 70% of global foundry revenue in 2025, a moat competitors can't quickly close given how capacity-constrained advanced chipmaking is. That combination of growth and a still-reasonable multiple is a healthier setup than a market already pricing in perfection.\n\nNext 24 months: up. The structural case for Taiwan's market is really the structural case for TSMC: it is the manufacturing chokepoint behind essentially every leading AI chip design, from Nvidia's to AMD's, and that position doesn't change with any one earnings quarter. Some Wall Street forecasts see the stock's U.S. shares, recently around $417, climbing toward $600 by the end of 2027 on that logic. The risk to that view is concentration, not competition: Taiwan's economy and its stock market are unusually dependent on one company and one industry, so a cross-strait shock or a sharp change in U.S.-China chip policy would hit the index harder than it would hit a more diversified market.\n\nTaiwan Outlook take: this index moves on TSMC's news, not the general economic calendar -- October's earnings and 2027 capex guidance are the date to circle, and cross-strait chip-policy headlines are the risk to watch in between.",
+      "author": "J. Lindqvist",
+      "ts": "2026-09-18T15:05:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "chart": {
+        "key": "taiex"
+      },
+      "outlook": {
+        "threeMonth": "flat",
+        "sixMonth": "slight_up",
+        "twelveMonth": "slight_up",
+        "twentyFourMonth": "up"
+      }
+    },
+    {
+      "id": "a65",
+      "section": "sea",
+      "tier": "free",
+      "headline": "Southeast Asia outlook: Vietnam's FTSE upgrade lands Monday, and the flows are already positioning",
+      "dek": "Vietnam's VN-Index rose 0.7% Wednesday ahead of its September 21 reclassification to FTSE Secondary Emerging Market status. Kuonomics sees the upgrade's passive flows as a real near-term catalyst, tempered by tariff and currency risk further out.",
+      "body": "Vietnam's VN-Index closed at 1,822.77 Wednesday, up 0.7%, with investors positioning ahead of the country's reclassification to Secondary Emerging Market status on the FTSE Russell index -- a change that takes effect this Monday, September 21. About 28 Vietnamese stocks will gain inclusion in FTSE's emerging-market benchmarks, and analysts estimate roughly $0.8-1.0 billion in passive money will follow automatically, with several times that in active money that tends to follow a reclassification. It's the single biggest catalyst on the Southeast Asia calendar this year, and it lands within days rather than months.\n\nNext three months: slightly up. The FTSE money doesn't all arrive on day one -- passive funds phase in their rebalancing over the weeks after the effective date -- so the flows should keep supporting the market through the rest of this quarter. Vietnam also still trades cheap by regional standards, near 13 times forward earnings versus roughly 22 times in India and 15 times in Thailand, which gives this catalyst more room to work than it would in a market already priced for good news.\n\nNext six months: up. Consensus year-end targets from local brokerages cluster between 1,940 and 2,100, roughly 12-15% above where the index sits now, built on expected earnings growth of 15-18% next year on top of the reclassification flows. By six months out, both the passive-flow story and a chunk of that earnings growth should be visible in the numbers rather than just the forecast.\n\nNext 12 months: slightly up. Two structural risks argue against extending that momentum in a straight line. Vietnam's trade surplus with the U.S. is unusually large, making it a visible target if Washington leans harder on tariffs, and 2025's rally leaned heavily on real-estate names like Vingroup, a concentration that cuts both ways. A weakening Vietnamese dong would add a third drag, eating into dollar returns for the same foreign investors the FTSE upgrade is meant to attract.\n\nNext 24 months: up. Vietnam is trying to become Southeast Asia's technology hub, not just its factory floor -- FPT Corp. is the clearest local vehicle for that, and the UAE's G42 has committed to a $2 billion hyperscale data center in Ho Chi Minh City. Layered on top of an economy that grew roughly 8% in 2025 and a government targeting double-digit growth ahead, that gives the region's cheapest major market a genuine second growth engine beyond the export manufacturing it's known for, even if a 10%-plus GDP target this ambitious rarely lands exactly as planned.\n\nSoutheast Asia Outlook take: the FTSE upgrade is a real, dated catalyst rather than a vague hope, which is unusual for this region -- watch whether the promised passive flows actually show up in the weeks after Monday, since that will say more about the next year than any single GDP print.",
+      "author": "N. Suwannarat",
+      "ts": "2026-09-18T15:10:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "chart": {
+        "key": "vnindex"
+      },
+      "outlook": {
+        "threeMonth": "slight_up",
+        "sixMonth": "up",
+        "twelveMonth": "slight_up",
+        "twentyFourMonth": "up"
+      }
+    },
+    {
+      "id": "a66",
+      "section": "tech",
+      "tier": "free",
+      "headline": "Tech outlook: a rate shock and an AI-demand story are pulling in opposite directions",
+      "dek": "The Nasdaq wobbled this week as the Fed hiked and the 10-year yield brushed 5%, even as Intel jumped on price hikes and AI-driven demand. Kuonomics sees near-term chop giving way to a broader sector rerating over the next year.",
+      "body": "Tech stocks spent this week digesting a genuine shock: the Federal Reserve raised interest rates even as the 10-year Treasury yield briefly touched 5% and oil prices climbed, an unusual combination that sent the Nasdaq sliding before it partly recovered Wednesday as yields and oil retreated. Higher long-term rates matter more to tech than to most sectors, since they raise the discount rate applied to profits Wall Street expects years from now -- exactly the kind of profits AI-related valuations depend on. Intel, meanwhile, told a different story entirely: shares jumped more than 5% intraday toward $106 on plans for a roughly 10% price increase on PC chips in October, progress on its next-generation manufacturing process, and buzz that SK Hynix could lease space in Intel's Ohio plant for memory-chip production.\n\nNext three months: flat. A genuine rate shock and an AI-demand story pulling in opposite directions is a recipe for chop, not a clear trend. Markets need a few months to work out whether this week's yield spike was a one-off or the start of a less accommodative stretch, and that uncertainty argues for treading water rather than committing to a direction.\n\nNext six months: slightly up. The strongest evidence against an AI slowdown isn't a CEO's reassurance, it's usage data: infrastructure utilization is running near 100% and rental prices for even older AI accelerators are rising, which is hard to square with the idea that demand is cooling. As that kind of hard data accumulates over the coming months, it should outweigh this week's rate-driven wobble.\n\nNext 12 months: up. Semiconductor stocks currently trade around 19 times forward earnings, roughly in line with the broader market, despite earnings growth near 139% year over year -- a gap that looks too wide to hold if that growth keeps showing up in results. Intel's turnaround adds a second storyline beyond the usual Nvidia-centric one: real price increases, real manufacturing progress, and a potential foundry partner are fundamentals, not just AI-adjacent optimism, and a sector rerating tends to broaden out once more than one company is delivering.\n\nNext 24 months: slightly up. The longer this AI investment race runs, the more it resembles a standoff where every major player keeps spending because none can afford to fall behind -- a dynamic that supports chip demand regardless of whether the spending ultimately earns its cost of capital. That is good for the picks-and-shovels names over the next year, but it's also the source of real two-year risk: if the payoff on all that infrastructure spending disappoints before revenue catches up, a correction becomes more likely the longer the buildout outruns the returns.\n\nTech Outlook take: watch the 10-year yield as closely as any chip-company earnings report over the next few months -- this week showed how much a rate surprise alone can move this sector, independent of whether the underlying AI demand story is intact.",
+      "author": "J. Lindqvist",
+      "ts": "2026-09-18T15:15:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "chart": {
+        "key": "INTC"
+      },
+      "outlook": {
+        "threeMonth": "flat",
+        "sixMonth": "slight_up",
+        "twelveMonth": "up",
+        "twentyFourMonth": "slight_up"
       }
     }
   ],

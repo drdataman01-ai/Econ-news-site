@@ -98,3 +98,70 @@ Only use a key that already exists in `assets/js/market-history-data.js` (curren
 ```
 
 Leave `theoryKey`/`theoryBody` as empty strings unless the user explicitly wants a "Macroeconomic reasoning" panel tied to an existing framework in the site's theory library — this site's existing tech pieces have used frameworks like Schumpeterian growth theory and Tobin's Q, so those keys may already exist if the user wants to reuse them.
+
+## Full outlook post (multi-month forecast, distinct from the daily post above)
+
+Separate from the daily 120–180 word desk update above, this desk also
+publishes a longer-form outlook post periodically: a 400–500 word
+analysis that commits to an explicit call on the next 3, 6, 12, and 24
+months for the tech/semiconductor sector, rendered as a color-coded
+forecast chart above the article body. Both formats coexist on this
+desk — use the daily template for routine updates, and this one when
+the user asks for something like "write the tech outlook analysis,"
+"update the tech 3/6/12/24 month view," or "do the full tech outlook."
+Unlike the daily post, this format is about the sector's trajectory as
+a whole (rates, AI capex, valuation), even if it still anchors the
+evidence in specific companies and figures — it doesn't need to be
+about one earnings report.
+
+**Structure** (~400–500 words total):
+1. Opening paragraph: the current state of the sector — the macro
+   backdrop (rates, yields) alongside the AI/semiconductor demand
+   story — with exact figures and named sources, same evidentiary
+   standard as the daily post, just more room to set the scene.
+2. One paragraph per horizon (3-month, 6-month, 12-month, 24-month),
+   each opening with "Next [N] months: [flat/slightly up/up/down]."
+   and then giving the specific reasoning behind that call — a color
+   is a conclusion the paragraph has to earn, not a label. Vary the
+   calls across horizons where the reasoning actually supports it;
+   don't default to a straight line from flat to up, and don't be
+   afraid of a call that rises then tempers if a genuine longer-term
+   risk (e.g. an AI capex/ROI mismatch) argues for it.
+3. Closing line: "Tech Outlook take:" followed by one sentence naming
+   the single most important thing to watch.
+
+**The `outlook` field** — add this alongside the normal article fields
+to render the forecast chart:
+
+```json
+"outlook": {
+  "threeMonth": "flat",
+  "sixMonth": "slight_up",
+  "twelveMonth": "up",
+  "twentyFourMonth": "slight_up"
+}
+```
+
+Each value must be one of `down`, `flat`, `slight_up`, or `up` —
+defined once in `OUTLOOK_LEVELS` (`assets/js/config.js`) and shared
+across all five outlook desks (sp500, japan, taiwan, sea, tech), not
+redefined per desk. The site's `renderOutlookChart()`
+(`assets/js/charts.js`) reads this field and draws the line-and-color-
+strip forecast chart automatically, before the article body and
+before the historical trend chart — don't build a new chart per post,
+just supply this field. See `content/schema.md` for the full field
+reference.
+
+Still include the normal `chart` field too (default `INTC`, per the
+Chart field section above, or omit it if the post is genuinely
+sector-wide with no single company to anchor the historical chart to)
+— when present, the outlook chart and the historical trend chart both
+show on these posts, with the outlook chart first.
+
+**Voice**: same Fortune 500-executive audience and plain-language
+rules as the daily post above (including the banned-phrases list),
+just with room to develop the reasoning behind each horizon rather
+than compressing everything into one paragraph.
+
+**Byline**: same convention as the daily post — "J. Lindqvist," unless
+the user specifies otherwise.
