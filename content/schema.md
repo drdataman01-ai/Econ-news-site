@@ -40,6 +40,65 @@ code needs to change when you publish a new week.
 | `theoryKey` | no | One of the keys in `assets/js/theories.js` (e.g. `phillips`, `okun`, `islm`, `solow` — see that file for the full list). Leave as `""` or omit for no theory. |
 | `theoryBody` | no | Required if `theoryKey` is set. Plain text, paragraphs separated by `\n\n`. This is the article-specific reasoning; the theory's name, graph, and caption come automatically from `assets/js/theories.js`. |
 
+## S&P 500 Outlook chart (`section: "sp500"`)
+
+Any `sp500` article can carry an `sp500Outlook` object to render the
+standing S&P 500 outlook chart (`renderSP500OutlookChart()` in
+`charts.js`) above the article body, before `renderSP500Chart()`'s
+historical price chart. This is the reusable visual for S&P 500
+outlook posts going forward — reuse it via this field rather than
+building a new forecast graphic each time. Articles without this
+field (routine, non-outlook S&P 500 posts) just skip the chart, same
+as `theoryKey`.
+
+```json
+{
+  "id": "a62",
+  "section": "sp500",
+  "tier": "free",
+  "headline": "...",
+  "dek": "...",
+  "body": "...",
+  "author": "M. Halvorsen",
+  "ts": "2026-09-17T14:00:00.000Z",
+  "theoryKey": "",
+  "theoryBody": "",
+  "sp500Outlook": {
+    "threeMonth": "flat",
+    "sixMonth": "slight_up",
+    "twelveMonth": "slight_up",
+    "twentyFourMonth": "up"
+  }
+}
+```
+
+| Field | Required | Notes |
+|---|---|---|
+| `sp500Outlook` | no | Object with four keys below. Omit entirely for a routine S&P 500 post with no forecast call. |
+| `sp500Outlook.threeMonth` | yes, if `sp500Outlook` present | The 3-month call. |
+| `sp500Outlook.sixMonth` | yes, if `sp500Outlook` present | The 6-month call. |
+| `sp500Outlook.twelveMonth` | yes, if `sp500Outlook` present | The 12-month call. |
+| `sp500Outlook.twentyFourMonth` | yes, if `sp500Outlook` present | The 24-month call. |
+
+Each of the four calls above must be one of the ids in
+`SP500_OUTLOOK_LEVELS` (`assets/js/config.js`), which is the single
+source of truth for the label and color of each:
+
+| id | Label | Color |
+|---|---|---|
+| `down` | Down | Red |
+| `flat` | Flat | Yellow/gold |
+| `slight_up` | Slightly Up | Light green |
+| `up` | Up | Green |
+
+The chart draws these four calls as a line across the four horizons
+(so the shape of the line shows the trajectory of the view), then
+restates each horizon's call as a color strip directly underneath —
+readers can get the takeaway from the strip alone, without needing to
+read the line. A written call this confident deserves real reasoning
+behind it: treat each horizon's color as a conclusion your article
+body has to earn, not a decoration.
+
 ## Stock Position Desk (`section: "stockposition"`)
 
 This desk has two independent parts, and it's important to keep them

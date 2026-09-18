@@ -39,3 +39,21 @@ const POSITION_STYLES = [
   {id:'momentum', label:'Aggressive / Momentum', typicalPeriod:'3-6 weeks', typicalReturn:'40-80%'},
   {id:'catalyst', label:'Speculative / Catalyst', typicalPeriod:'Days-weeks (event-driven)', typicalReturn:'Wide / binary'}
 ];
+
+/* ------------------------------------------------------------------
+   S&P 500 Outlook chart — the four-color forecast scale.
+
+   Every S&P 500 outlook post can carry an `sp500Outlook` object with
+   a call for four horizons (three, six, twelve, and twenty-four
+   months out). Each call is one of these four ids, ordered worst to
+   best — that order also fixes each level's row position on the
+   outlook chart's y-axis (renderSP500OutlookChart in charts.js).
+   Single source of truth for the label, line/dot color, and the
+   color-strip legend shown under the chart.
+------------------------------------------------------------------- */
+const SP500_OUTLOOK_LEVELS = [
+  {id:'down', label:'Down', color:'#A93A2E', textColor:'#F7F5F0'},
+  {id:'flat', label:'Flat', color:'#93701F', textColor:'#F7F5F0'},
+  {id:'slight_up', label:'Slightly Up', color:'#7FAE8E', textColor:'#14181F'},
+  {id:'up', label:'Up', color:'#1E6B45', textColor:'#F7F5F0'}
+];

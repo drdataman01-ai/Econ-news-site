@@ -65,6 +65,27 @@ jobs:
                   if article.get('styleKey') not in valid_styles:
                       errors.append(f'Article "{label}": "styleKey" must be one of {", ".join(valid_styles)} for section "stockposition"')
 
+              # S&P 500 outlook posts can carry an "sp500Outlook" object
+              # (rendered as the forecast line + color-strip chart by
+              # renderSP500OutlookChart in charts.js). Optional, but when
+              # present all four horizons are required and must be one of
+              # the ids in SP500_OUTLOOK_LEVELS (config.js).
+              valid_outlook_levels = ('down', 'flat', 'slight_up', 'up')
+              outlook_horizons = ('threeMonth', 'sixMonth', 'twelveMonth', 'twentyFourMonth')
+              sp500_outlook = article.get('sp500Outlook')
+              if sp500_outlook is not None:
+                  if not isinstance(sp500_outlook, dict):
+                      errors.append(f'Article "{label}": "sp500Outlook" must be an object if present')
+                  else:
+                      missing_horizons = [h for h in outlook_horizons if h not in sp500_outlook]
+                      if missing_horizons:
+                          errors.append(f'Article "{label}": "sp500Outlook" missing horizon(s): {", ".join(missing_horizons)}')
+                      for h, level in sp500_outlook.items():
+                          if h not in outlook_horizons:
+                              errors.append(f'Article "{label}": "sp500Outlook.{h}" is not a recognized horizon')
+                          elif level not in valid_outlook_levels:
+                              errors.append(f'Article "{label}": "sp500Outlook.{h}" must be one of {", ".join(valid_outlook_levels)}')
+
           # Top-level "rankings" object (optional): the site owner's own
           # ranked picks per position style, shown as tables on the Stock
           # Position Desk page. When present, each of the five style keys

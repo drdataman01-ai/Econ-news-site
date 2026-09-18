@@ -757,6 +757,27 @@
       "ts": "2026-09-16T19:20:00.000Z",
       "theoryKey": "",
       "theoryBody": ""
+    },
+    {
+      "id": "a62",
+      "section": "sp500",
+      "tier": "free",
+      "headline": "S&P 500 outlook: a choppy stretch now, a brighter picture further out",
+      "dek": "With the index at 7,637 after this week's surprise rate hike, Kuonomics sees the next three months as a coin flip, gradually building toward a more confident case by 2028.",
+      "body": "The S&P 500 closed at 7,637.14 Wednesday, a day after the Federal Reserve raised interest rates for the first time since 2023 and the 10-year Treasury yield pushed above 5%. That combination -- a Fed that just turned more aggressive on inflation, and the government's own borrowing costs at their highest in years -- is now pulling against one of the stronger corporate earnings stretches in recent memory. How that tug-of-war resolves shapes every horizon below.\n\nNext three months: flat. Expect chop rather than a clear trend. September alone brings a cluster of Treasury debt auctions and tax-payment dates that can tighten short-term market liquidity, on top of this week's Fed meeting and the U.N. General Assembly -- three separate events capable of moving prices on their own. Outside estimates for where the index lands by year-end span a wide range, roughly 6,900 to 8,450, depending on which way bond yields break next. That's closer to a coin flip than a call in either direction.\n\nNext six months: slightly up. The shock of this week's rate hike should fade as markets adjust to it, the way past rate surprises have typically been absorbed within a couple of quarters. Corporate earnings, still growing faster than most forecasters expected a year ago, give the index a genuine floor -- even if higher rates keep a lid on how much investors are willing to pay for each dollar of those earnings.\n\nNext 12 months: slightly up, not fully bullish. Yardeni Research, among Wall Street's more optimistic shops, still sees the index near 8,400 by the middle of 2027 -- about 10% above Wednesday's close -- even after trimming its own 2026 target this week. But the Fed's updated projections show most officials expecting at least one more rate hike before year-end, a specific, real signal that borrowing costs could stay a headwind longer than the bulls are pricing in.\n\nNext 24 months: up. Over windows that long, earnings growth has historically mattered more to stock prices than any single rate-hiking cycle, and today's artificial-intelligence spending boom should have more time to show up in actual profits rather than just in guidance calls. That same boom is also the biggest risk to this view: a recent survey of professional investors found more than half now call AI-linked chip stocks the market's most crowded trade, and a pullback in that spending would remove one of the main engines behind the earnings growth this outlook leans on.\n\nS&P 500 Outlook take: the near-term picture is genuinely uncertain, and pretending otherwise would be dishonest. The more useful takeaway for a long-term portfolio is that the 24-month case matters more than how the next Fed meeting gets digested -- it rests on earnings, not on any one week's headlines.",
+      "author": "M. Halvorsen",
+      "ts": "2026-09-17T15:00:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "metrics": {
+        "close": 7637.14
+      },
+      "sp500Outlook": {
+        "threeMonth": "flat",
+        "sixMonth": "slight_up",
+        "twelveMonth": "slight_up",
+        "twentyFourMonth": "up"
+      }
     }
   ],
   "rankings": {
