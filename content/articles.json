@@ -862,6 +862,81 @@
         "twelveMonth": "up",
         "twentyFourMonth": "slight_up"
       }
+    },
+    {
+      "id": "a67",
+      "section": "fedwatch",
+      "tier": "free",
+      "headline": "October rate-hike odds tick up to 54% as Treasury yields ease",
+      "dek": "Prediction markets now lean toward a second straight Fed hike next month, even as Monday's Treasury yields eased on falling oil prices.",
+      "body": "Prediction markets on Polymarket now put the Federal Reserve's October 28-29 decision at 54% odds for another quarter-point hike, to 4.00%-4.25%, versus 45% for holding at the current 3.75%-4.00% range set two weeks ago -- the first time in five meetings the odds have leaned toward a second consecutive increase. Treasury yields eased Monday, with the 10-year slipping 2 basis points to 4.97% as oil prices dropped on hopes for a diplomatic breakthrough with Iran.\n\nThe near coin-flip reflects a Fed still weighing hot inflation readings against a labor market and growth picture that have both stayed resilient -- exactly the split that produced this month's hike in the first place.\n\nFed Watch take: watch Thursday's Trump-Xi summit for any oil-price or trade-policy surprise that moves yields before officials vote again next month.",
+      "author": "R. Costa",
+      "ts": "2026-09-21T18:00:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "metrics": {
+        "fedFundsRate": 3.875,
+        "yield10y": 4.97,
+        "moveOdds": 54,
+        "moveDirection": "hike"
+      }
+    },
+    {
+      "id": "a68",
+      "section": "japan",
+      "tier": "free",
+      "headline": "Tokyo shuts for three days as yen holds above 157 post-BOJ",
+      "dek": "With Japan's market closed through Wednesday for a holiday stretch, the yen's slide past 157 per dollar after Friday's rate hike remains the story to watch.",
+      "body": "Japan's stock market is closed Monday through Wednesday for Respect for the Aged Day, a bridge day, and the Autumn Equinox holiday -- its first extended break since the Bank of Japan raised its benchmark rate to 1.25% Friday, a 31-year high approved on a 7-2 vote. Despite the hike, the yen weakened to 157.03 per dollar.\n\nA rate increase usually strengthens a currency, but the Federal Reserve's own hike the same week kept U.S. rates far more attractive, so the yen remains a cheap currency to borrow for investing elsewhere, a trade known as the carry trade -- explaining why Friday's move pushed the yen down rather than up.\n\nJapan Outlook take: a three-day closure means whatever moves markets this week gets priced in all at once when Tokyo reopens Thursday -- watch whether yen weakness holds or reverses in that first session back.",
+      "author": "S. Okafor",
+      "ts": "2026-09-21T18:05:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "chart": {
+        "key": "nikkei225"
+      }
+    },
+    {
+      "id": "a69",
+      "section": "taiwan",
+      "tier": "free",
+      "headline": "TAIEX reclaims 47,500 as Philadelphia Semiconductor Index jumps 2.78%",
+      "dek": "Taiwan's benchmark climbed as much as 344 points Monday, tracking a global chip rally as TSMC, MediaTek, and ASE Technology all advanced.",
+      "body": "The TAIEX climbed as much as 344.13 points Monday, touching 47,524.88 before easing to a 0.55% gain, tracking Friday's 2.78% jump in the Philadelphia Semiconductor Index. TSMC reversed an early decline to close roughly 0.6% higher at NT$2,475; MediaTek jumped 3.93% to NT$4,895; and ASE Technology led major names with a 4.39% gain to NT$666.\n\nASE doesn't make chips itself -- it packages and tests them after manufacturing, a step known as outsourced assembly and test. Its outsized gain shows this rally reaching beyond chipmakers into the services that support them, a sign of broader demand rather than one stock pulling the index higher alone.\n\nTaiwan Outlook take: Nvidia's own 1.34% gain Friday suggests this chip rally has room to extend if Thursday's Trump-Xi summit brings any easing of U.S. export policy toward China.",
+      "author": "J. Lindqvist",
+      "ts": "2026-09-21T18:10:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "chart": {
+        "key": "taiex"
+      }
+    },
+    {
+      "id": "a70",
+      "section": "sea",
+      "tier": "free",
+      "headline": "Vietnam's VN-Index falls below 1,800 on its first day as an emerging market",
+      "dek": "A sell-the-news reaction met Vietnam's official FTSE Russell upgrade Monday, even as billions in reclassification-driven inflows are still expected.",
+      "body": "Vietnam's VN-Index fell below 1,800 points Monday, the same day FTSE Russell's upgrade of Vietnam from frontier to secondary emerging-market status officially took effect, as investors who had bought ahead of the widely expected change took profits once it arrived.\n\nThat \"sell the news\" pattern is common around a well-flagged, dated catalyst: once the anticipated good news actually lands, the price often already reflects it, so short-term traders cash out even though the passive and active fund flows tied to the upgrade haven't disappeared -- they typically show up over weeks, not in a single session.\n\nSoutheast Asia Outlook take: watch whether the VN-Index holds above 1,800 as those reclassification-driven flows actually begin arriving, rather than reading Monday's dip as the upgrade falling flat.",
+      "author": "N. Suwannarat",
+      "ts": "2026-09-21T18:15:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "chart": {
+        "key": "vnindex"
+      }
+    },
+    {
+      "id": "a71",
+      "section": "tech",
+      "tier": "free",
+      "headline": "Nvidia, AMD, Micron jump as Trump moves to ease AI chip export curbs",
+      "dek": "Chip stocks rallied Monday on reports the administration will roll back Biden-era AI export restrictions, ahead of Thursday's Trump-Xi summit.",
+      "body": "Nvidia rose 3% and AMD gained roughly 2% Monday, while Micron climbed nearly 4% to break above $1,050, after reports that the Trump administration plans to replace Biden-era tiered restrictions on AI chip exports with a more flexible framework. The Philadelphia Semiconductor Index climbed nearly 2% on the news.\n\nExport restrictions limit which countries can legally buy the most advanced AI chips. Loosening them would open new overseas demand for the same Nvidia, AMD, and Micron chips already selling briskly to U.S. data center customers, expanding who can buy rather than just adding more of the same buyers.\n\nTech Outlook take: watch Thursday's Trump-Xi summit, which Nvidia CEO Jensen Huang and OpenAI's Sam Altman are both expected to attend, for confirmation of the policy shift and any new AI cooperation terms.",
+      "author": "J. Lindqvist",
+      "ts": "2026-09-21T18:20:00.000Z",
+      "theoryKey": "",
+      "theoryBody": ""
     }
   ],
   "rankings": {
