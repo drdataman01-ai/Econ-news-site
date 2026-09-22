@@ -878,7 +878,8 @@
         "fedFundsRate": 3.875,
         "yield10y": 4.97,
         "moveOdds": 54,
-        "moveDirection": "hike"
+        "moveDirection": "hike",
+        "yield2y": 4.76
       }
     },
     {
@@ -935,6 +936,82 @@
       "body": "Nvidia rose 3% and AMD gained roughly 2% Monday, while Micron climbed nearly 4% to break above $1,050, after reports that the Trump administration plans to replace Biden-era tiered restrictions on AI chip exports with a more flexible framework. The Philadelphia Semiconductor Index climbed nearly 2% on the news.\n\nExport restrictions limit which countries can legally buy the most advanced AI chips. Loosening them would open new overseas demand for the same Nvidia, AMD, and Micron chips already selling briskly to U.S. data center customers, expanding who can buy rather than just adding more of the same buyers.\n\nTech Outlook take: watch Thursday's Trump-Xi summit, which Nvidia CEO Jensen Huang and OpenAI's Sam Altman are both expected to attend, for confirmation of the policy shift and any new AI cooperation terms.",
       "author": "J. Lindqvist",
       "ts": "2026-09-21T18:20:00.000Z",
+      "theoryKey": "",
+      "theoryBody": ""
+    },
+    {
+      "id": "a72",
+      "section": "fedwatch",
+      "tier": "free",
+      "headline": "October hike odds slip to 48% as traders eye a December move instead",
+      "dek": "Prediction markets flipped back toward a Fed hold next month after the central bank's own forecast left the timing of its next hike unclear.",
+      "body": "Prediction markets have swung back toward the Federal Reserve holding rates at its October 28-29 meeting, with \"no change\" odds near 52% versus roughly 48% for another quarter-point hike -- a reversal from earlier this week. The catalyst was the Fed's own forecast: officials voted 12-0 to hike to 3.75%-4.00% last week but signaled only one more quarter-point move before year-end, without saying whether that lands in October or December.\n\nThat ambiguity matters more than it sounds: markets still price an 88.5% chance of at least one more hike by December, so the real debate isn't whether the Fed moves again, just when.\n\nFed Watch take: watch the next core inflation and jobs reports closely -- they're likely to decide whether that final hike comes in five weeks or eleven.",
+      "author": "R. Costa",
+      "ts": "2026-09-22T18:00:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "metrics": {
+        "fedFundsRate": 3.875,
+        "yield2y": 4.76,
+        "yield10y": 4.96,
+        "moveOdds": 48,
+        "moveDirection": "hike"
+      }
+    },
+    {
+      "id": "a73",
+      "section": "japan",
+      "tier": "free",
+      "headline": "Tokyo remains closed as yen jumps on intervention signal",
+      "dek": "With Japan's market still shut for its holiday stretch, a \"rate check\" by Japanese officials sent the yen sharply higher overnight.",
+      "body": "Japan's stock market remains closed Tuesday, the second of three straight holidays, with the Nikkei 225 last trading Friday at 65,018.95, up 1.38%, even as the broader TOPIX slipped 0.07% -- a sign that day's rally was concentrated in a handful of semiconductor names rather than the market broadly. Overnight, the yen jumped more than one yen against the dollar after Japanese officials conducted a \"rate check,\" a call to banks for current exchange rates that's widely read as a warning shot just short of actual currency intervention.\n\nThe yen had weakened to around 157 per dollar even after Friday's rate hike, since Japan's 1.25% policy rate still sits far below the Federal Reserve's near-4% rate, keeping the currency cheap to borrow for investing elsewhere.\n\nJapan Outlook take: Thursday's reopening will be Tokyo's first chance to react to both the rate check and this week's Trump-Xi summit at once.",
+      "author": "S. Okafor",
+      "ts": "2026-09-22T18:05:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "chart": {
+        "key": "nikkei225"
+      }
+    },
+    {
+      "id": "a74",
+      "section": "taiwan",
+      "tier": "free",
+      "headline": "TAIEX sets record high above 48,600 before profit-taking trims the close",
+      "dek": "Taiwan's benchmark touched an all-time intraday peak Tuesday on an electronics-led rally, before TSMC's late reversal erased most of the gain.",
+      "body": "The TAIEX touched a record intraday high of 48,601.53 Tuesday before closing up a more modest 0.17% at 47,800.17, as TSMC reversed from an intraday high of NT$2,510 to finish down 0.81% at NT$2,460 -- a swing that alone cost the index roughly 400 points. MediaTek still gained 3.39% to NT$5,180 and ASE Technology added 4.52% to NT$693, while memory names Nanya and Winbond both declined.\n\nTSMC carries enough index weight that its late reversal can erase most of a broad rally on its own, even while other chip names keep climbing -- a reminder that a single day's headline index move and the health of the underlying rally aren't always the same thing.\n\nTaiwan Outlook take: whether TSMC's pullback was ordinary profit-taking after four straight winning sessions or something more will likely become clearer after Thursday's Trump-Xi summit, the next event that could reset the trend.",
+      "author": "J. Lindqvist",
+      "ts": "2026-09-22T18:10:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "chart": {
+        "key": "taiex"
+      }
+    },
+    {
+      "id": "a75",
+      "section": "sea",
+      "tier": "free",
+      "headline": "Vietnam's VN-Index dips a second day as post-upgrade profit-taking continues",
+      "dek": "The benchmark slipped 0.24% Tuesday, extending Monday's pullback even as sentiment across the rest of Asia stayed positive.",
+      "body": "Vietnam's VN-Index fell 0.24% to about 1,795 Tuesday, its second straight decline since Monday's official FTSE Russell upgrade took effect, weighed down by selling in banking and real estate names even after the index briefly reclaimed 1,800 at the open. U.S.-Iran tensions added a layer of global caution on top of the local profit-taking.\n\nA two-session pullback right after a major reclassification isn't unusual: index funds that now include Vietnam typically execute their buying over several weeks rather than on the first trading day, so this dip doesn't by itself say anything about whether those inflows are still coming.\n\nSoutheast Asia Outlook take: watch whether Vietnam's large-cap banking and real estate names stabilize this week -- those sectors, not the upgrade headline itself, are driving the index's day-to-day direction right now.",
+      "author": "N. Suwannarat",
+      "ts": "2026-09-22T18:15:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "chart": {
+        "key": "vnindex"
+      }
+    },
+    {
+      "id": "a76",
+      "section": "tech",
+      "tier": "free",
+      "headline": "Nasdaq hits record high as Meta, AMD, Intel surge on AI optimism",
+      "dek": "The Nasdaq jumped 2.3% to an all-time high Monday, with Meta up 11% and AMD and Intel both surging double digits ahead of Thursday's Trump-Xi summit.",
+      "body": "The Nasdaq Composite rose 2.3% to a record close Monday, with the S&P 500 up 1.5% and the Dow up 0.8%, as Meta jumped 11%, AMD gained 10%, and Intel surged 12%. Oil fell below $100 a barrel and bitcoin topped $86,000, an eight-month high, as investors piled back into the same AI-related trades that had wobbled earlier this month.\n\nThe rally is concentrated in the same companies whose enormous AI infrastructure spending had fueled worries about overspending just weeks ago. Monday's gains suggest investors are, for now, betting that spending pays off rather than backfires -- at least until Thursday's summit offers a clearer read on U.S.-China trade and technology policy.\n\nTech Outlook take: a rally built this fast on optimism alone can reverse just as quickly if Thursday's Trump-Xi summit disappoints -- watch that meeting more closely than any single earnings report this week.",
+      "author": "J. Lindqvist",
+      "ts": "2026-09-22T18:20:00.000Z",
       "theoryKey": "",
       "theoryBody": ""
     }
