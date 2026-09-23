@@ -992,9 +992,9 @@
       "id": "a75",
       "section": "sea",
       "tier": "free",
-      "headline": "Vietnam's VN-Index dips a second day as post-upgrade profit-taking continues",
-      "dek": "The benchmark slipped 0.24% Tuesday, extending Monday's pullback even as sentiment across the rest of Asia stayed positive.",
-      "body": "Vietnam's VN-Index fell 0.24% to about 1,795 Tuesday, its second straight decline since Monday's official FTSE Russell upgrade took effect, weighed down by selling in banking and real estate names even after the index briefly reclaimed 1,800 at the open. U.S.-Iran tensions added a layer of global caution on top of the local profit-taking.\n\nA two-session pullback right after a major reclassification isn't unusual: index funds that now include Vietnam typically execute their buying over several weeks rather than on the first trading day, so this dip doesn't by itself say anything about whether those inflows are still coming.\n\nSoutheast Asia Outlook take: watch whether Vietnam's large-cap banking and real estate names stabilize this week -- those sectors, not the upgrade headline itself, are driving the index's day-to-day direction right now.",
+      "headline": "Vietnam's VN-Index rebounds 0.96% as post-upgrade foreign buying resumes",
+      "dek": "Vietnam's benchmark reversed Monday's post-upgrade dip, with banking and real estate names leading Tuesday's gain.",
+      "body": "Vietnam's VN-Index rose 0.96% to 1,816.93 Tuesday, its strongest session since Monday's official FTSE Russell upgrade to secondary emerging-market status took effect, as buying returned to the banking and real estate names that had led Monday's pullback.\n\nThe bounce suggests Monday's dip was a brief pause rather than a sign that post-upgrade inflows are fading. Index funds that now include Vietnam, including an expected $2.5 billion from Vanguard, typically phase their buying in over several weeks rather than all at once, so a quick recovery is a reassuring early sign that money is arriving roughly on schedule.\n\nSoutheast Asia Outlook take: watch whether Wednesday extends the gain -- a second straight advance would be a clearer signal that the upgrade is translating into durable capital inflows rather than a one-time reclassification bump.",
       "author": "N. Suwannarat",
       "ts": "2026-09-22T18:15:00.000Z",
       "theoryKey": "",
@@ -1012,6 +1012,82 @@
       "body": "The Nasdaq Composite rose 2.3% to a record close Monday, with the S&P 500 up 1.5% and the Dow up 0.8%, as Meta jumped 11%, AMD gained 10%, and Intel surged 12%. Oil fell below $100 a barrel and bitcoin topped $86,000, an eight-month high, as investors piled back into the same AI-related trades that had wobbled earlier this month.\n\nThe rally is concentrated in the same companies whose enormous AI infrastructure spending had fueled worries about overspending just weeks ago. Monday's gains suggest investors are, for now, betting that spending pays off rather than backfires -- at least until Thursday's summit offers a clearer read on U.S.-China trade and technology policy.\n\nTech Outlook take: a rally built this fast on optimism alone can reverse just as quickly if Thursday's Trump-Xi summit disappoints -- watch that meeting more closely than any single earnings report this week.",
       "author": "J. Lindqvist",
       "ts": "2026-09-22T18:20:00.000Z",
+      "theoryKey": "",
+      "theoryBody": ""
+    },
+    {
+      "id": "a77",
+      "section": "fedwatch",
+      "tier": "free",
+      "headline": "October hike odds climb back to 54% as business growth hits 62-month high",
+      "dek": "A stronger-than-expected September flash PMI reading reversed Tuesday's shift toward a Fed pause, with rising input costs adding to the case for another rate increase.",
+      "body": "Fed funds futures now put the odds of an October rate hike at 54%, up from 48% Tuesday, after S&P Global's flash September survey showed U.S. business activity expanding at its fastest pace in 62 months. The composite reading, which combines manufacturing and services activity into one number, came in at 58.4 -- comfortably above forecasts of around 56.\n\nThat combination worries the Fed: the survey also showed input costs rising at their steepest rate in four years, driven mainly by higher fuel and transport costs. A hot economy paired with accelerating costs is the classic setup for a central bank to keep raising rates rather than pause, since strong growth reduces the risk that a hike tips the economy into a slowdown.\n\nThe 10-year Treasury yield held at 4.96% Tuesday and the 2-year at 4.71%, both still reflecting real uncertainty about which way the Fed goes. Watch Friday's PCE inflation report, the Fed's preferred inflation gauge, to see whether these cost pressures are actually showing up in the prices consumers pay.",
+      "author": "R. Costa",
+      "ts": "2026-09-23T18:00:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "metrics": {
+        "fedFundsRate": 3.875,
+        "yield2y": 4.71,
+        "yield10y": 4.96,
+        "moveOdds": 54,
+        "moveDirection": "hike"
+      }
+    },
+    {
+      "id": "a78",
+      "section": "japan",
+      "tier": "free",
+      "headline": "Yen holds near 157 as Tokyo's holiday shutdown enters its final day",
+      "dek": "Tokyo remains closed for a third and final session before reopening Thursday, with no sign yet of the currency intervention traders had been watching for.",
+      "body": "The Tokyo Stock Exchange stayed shut Wednesday, the last of three straight holidays making up Japan's \"Silver Week,\" leaving the Nikkei 225 frozen at Friday's close of 65,018.95. The dollar traded around 157 yen, little changed from Tuesday, after the yen had weakened more than 2% last week following the Bank of Japan's rate increase to 1.25%.\n\nTraders had flagged this week's closure as a risk period for currency intervention, since thin holiday trading makes it cheaper for Japan's Ministry of Finance to move the exchange rate. Officials stayed quiet through the shutdown, and the yen has held well short of the roughly 160-per-dollar level that triggered Japan's last intervention in the spring.\n\nTokyo reopens Thursday, giving investors their first chance since Friday to trade the Nikkei directly. Watch whether the index catches up to gains posted elsewhere in Asia this week or opens lower to reflect the yen's slide against the dollar.",
+      "author": "S. Okafor",
+      "ts": "2026-09-23T18:05:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "chart": {
+        "key": "nikkei225"
+      }
+    },
+    {
+      "id": "a79",
+      "section": "taiwan",
+      "tier": "free",
+      "headline": "TAIEX closes above 48,000 for the first time as TSMC rebounds",
+      "dek": "Taiwan's benchmark gained 0.75% Wednesday on renewed AI-chip demand optimism, even as trading volume thinned ahead of Friday's holiday.",
+      "body": "The TAIEX closed at a record 48,157.29 Wednesday, up 357 points or 0.75%, marking the first time the index has finished above 48,000. TSMC, which alone accounts for more than 40% of the index's value, rose 1.63% and rebounded from Tuesday's late reversal, while its U.S.-listed shares had climbed 1.54% overnight.\n\nAn analyst tied the gains to strong global demand for AI applications following positive export order data, extending the semiconductor sector's role as the main engine behind this month's rally. But trading volume fell to NT$856 billion from NT$1.07 trillion the prior session, a sign some investors are trimming positions rather than chasing the record.\n\nTaiwan's market closes Friday for the Mid-Autumn Festival holiday, and that pending three-day break is part of why volume thinned even as prices rose -- investors are wary of holding large positions into a long weekend when news could break while the market is shut. Watch whether the rally holds into Thursday's session or fades as the holiday approaches.",
+      "author": "J. Lindqvist",
+      "ts": "2026-09-23T18:10:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "chart": {
+        "key": "taiex"
+      }
+    },
+    {
+      "id": "a80",
+      "section": "sea",
+      "tier": "free",
+      "headline": "Vietnam's VN-Index slips 0.84% as banking-sector profit-taking resumes",
+      "dek": "The benchmark gave back Tuesday's rebound as banking stocks led selling, with rising global bond yields adding pressure on emerging-market flows.",
+      "body": "Vietnam's VN-Index fell 0.84% to 1,801.65 Wednesday, erasing most of Tuesday's 0.96% rebound, as banking stocks -- the index's heaviest-weighted sector -- led a broad pullback. The swing is the market's fourth directional reversal in as many sessions since Monday's official FTSE Russell upgrade to secondary emerging-market status took effect.\n\nRising Treasury yields globally, including in the U.S. and Japan following this week's rate moves, tend to pull short-term capital away from emerging markets like Vietnam and back toward safer, higher-yielding developed-market bonds. That headwind compounds the ordinary volatility that follows a major index reclassification, when funds rebalance their positions over weeks rather than all at once.\n\nSoutheast Asia Outlook take: this week's back-and-forth swings say more about positioning noise than direction -- watch whether the VN-Index can string together two consecutive gains, something it hasn't managed since the upgrade took effect Monday.",
+      "author": "N. Suwannarat",
+      "ts": "2026-09-23T18:15:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "chart": {
+        "key": "vnindex"
+      }
+    },
+    {
+      "id": "a81",
+      "section": "tech",
+      "tier": "free",
+      "headline": "Nasdaq closes at record high again as chip stocks extend gains, financials slip",
+      "dek": "The index rose 0.5% Tuesday to a second straight record, led by semiconductor names, even as a rebound in bond yields pulled bank stocks lower.",
+      "body": "The Nasdaq Composite closed at a record 27,244 Tuesday, up 0.5%, while the S&P 500 finished essentially flat and the Dow fell 0.36% to 51,864. Chip stocks rose about 2% as a group, with SanDisk up roughly 7% and Micron adding about 5%, extending the AI-infrastructure rally that has driven much of September's gains.\n\nFinancial stocks pulled the other way, falling 1.9% as a group -- JPMorgan Chase dropped 3.35% -- after a rebound in Treasury yields made it harder for lenders to profit from the gap between what they pay depositors and what they earn on loans. Cheaper oil and continued enthusiasm for AI-related demand offset that drag enough to keep the Nasdaq positive.\n\nThe split between rallying chipmakers and falling banks shows how sensitive markets have become to interest-rate expectations even during an otherwise bullish stretch. Watch whether Wednesday's economic data pushes yields further, which would test whether tech's rally can keep absorbing that pressure.",
+      "author": "J. Lindqvist",
+      "ts": "2026-09-23T18:20:00.000Z",
       "theoryKey": "",
       "theoryBody": ""
     }
