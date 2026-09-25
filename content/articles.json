@@ -1090,6 +1090,82 @@
       "ts": "2026-09-23T18:20:00.000Z",
       "theoryKey": "",
       "theoryBody": ""
+    },
+    {
+      "id": "a82",
+      "section": "fedwatch",
+      "tier": "free",
+      "headline": "October hike odds surge to 68% after Barr's hawkish comments",
+      "dek": "Fed Governor Michael Barr said more tightening is likely after August inflation ran hot, and Treasury yields jumped to their highest levels since 2007.",
+      "body": "Fed funds futures now price a 68% chance of an October rate hike, up sharply from 54% earlier this week, after Fed Governor Michael Barr said further tightening is likely if inflation doesn't cool. His comments landed alongside August's consumer price data, which showed prices up 3.4% from a year earlier -- well above the Fed's 2% target.\n\nBond markets reacted immediately: the 10-year Treasury yield jumped to 5.11%, its highest level since 2007, and the 2-year climbed to 4.85%. When a Fed official who votes on rate decisions says publicly that more hikes are likely, traders take that as a real signal rather than speculation, since it reflects the official's own read of incoming data rather than a market guess.\n\nToday brings two more data points that could move the odds further: August durable goods orders, expected to dip 0.3% overall while the core measure (which strips out volatile aircraft and defense orders) is expected to rise 0.6%, and the University of Michigan's consumer sentiment survey. Watch whether either report reinforces or challenges the hawkish narrative Barr just reinforced.",
+      "author": "R. Costa",
+      "ts": "2026-09-25T18:00:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "metrics": {
+        "fedFundsRate": 3.875,
+        "yield2y": 4.85,
+        "yield10y": 5.11,
+        "moveOdds": 68,
+        "moveDirection": "hike"
+      }
+    },
+    {
+      "id": "a83",
+      "section": "japan",
+      "tier": "free",
+      "headline": "Nikkei gains 0.76% in first session back, but rising bond yields cap the rally",
+      "dek": "Japan's benchmark closed at 65,513.94 Thursday in its first trade since the holiday, led by AI-linked names, as a jump in government bond yields kept gains in check.",
+      "body": "The Nikkei 225 rose 0.76% to close at 65,513.94 Thursday, its first session since Japan's three-day \"Silver Week\" holiday, as chipmakers and AI-linked stocks tracked overnight gains from Meta and Alibaba. SoftBank Group added 0.59% and Kioxia edged up slightly, both benefiting from their outsized weight in AI-related hardware.\n\nThe advance was more muted than the headline number suggests: Japan's 10-year government bond yield jumped 8 basis points to 3.055%, its highest in years, as part of a broader global bond selloff. Higher bond yields compete with stocks for investor money, since a safer government bond now pays more -- a headwind that offset some of the enthusiasm around AI names.\n\nJapan's yield jump mirrors an even sharper move in U.S. Treasurys this week, where the 10-year hit its highest level since 2007. Watch whether Japan's bond market continues to follow Washington's lead, since further increases in Japanese borrowing costs would pressure both the stock market and the yen.",
+      "author": "S. Okafor",
+      "ts": "2026-09-25T18:05:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "chart": {
+        "key": "nikkei225"
+      }
+    },
+    {
+      "id": "a84",
+      "section": "taiwan",
+      "tier": "free",
+      "headline": "Taiwan's market closes for the Mid-Autumn Festival after ending its 6-day win streak",
+      "dek": "The TAIEX fell 0.28% Thursday to snap a six-session rally before today's holiday, with turnover thinning further ahead of the long weekend.",
+      "body": "Taiwan's stock market is closed today for the Mid-Autumn Festival holiday, a day after the TAIEX fell 132.69 points, or 0.28%, to close at 48,024.6 Thursday -- ending a six-day winning streak that had carried the index to its first close above 48,000 on Wednesday. Turnover fell further to NT$736.6 billion, continuing the volume decline that began as investors grew cautious heading into today's closure.\n\nA pullback after six straight gains isn't unusual on its own, but the shrinking volume alongside it is the more telling signal: fewer investors were willing to take large positions into a three-day break, when news that could move the market -- on trade, on chips, on the broader AI trade -- has no local trading session to react to until Monday.\n\nWatch how TSMC and the rest of the semiconductor complex trade when the market reopens Monday, particularly in light of this week's surge in U.S. Treasury yields and any weekend developments from the Trump-Xi discussions on AI export policy.",
+      "author": "J. Lindqvist",
+      "ts": "2026-09-25T18:10:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "chart": {
+        "key": "taiex"
+      }
+    },
+    {
+      "id": "a85",
+      "section": "sea",
+      "tier": "free",
+      "headline": "Vietnam's VN-Index falls 1.47% as global bond yield surge hits emerging markets",
+      "dek": "The benchmark posted its third decline in four sessions since the FTSE upgrade, as a sharp jump in U.S. and Japanese bond yields pulled capital toward safer assets.",
+      "body": "Vietnam's VN-Index fell 1.47% to 1,775.09 Thursday, its steepest drop since the FTSE Russell upgrade took effect Monday and its third decline in four sessions. The sell-off tracked a broader risk-off move across emerging markets as U.S. Treasury yields jumped to their highest since 2007 and Japan's government bond yields climbed to multi-year highs.\n\nWhen safe government bonds in the U.S. and Japan suddenly pay noticeably more, some of the money that had been flowing into emerging markets like Vietnam for extra return has less reason to stay, since it can now earn a comparable yield with much less risk. That's a real headwind on top of the ordinary volatility that follows a major index reclassification.\n\nSoutheast Asia Outlook take: this week's swings have been more about global rate moves than anything specific to Vietnam. Watch U.S. Treasury yields over the coming days -- if they stabilize, the post-upgrade inflows this market is still expecting have a much better chance of showing up.",
+      "author": "N. Suwannarat",
+      "ts": "2026-09-25T18:15:00.000Z",
+      "theoryKey": "",
+      "theoryBody": "",
+      "chart": {
+        "key": "vnindex"
+      }
+    },
+    {
+      "id": "a86",
+      "section": "tech",
+      "tier": "free",
+      "headline": "Nasdaq holds steady as Meta's AI gains offset an Oracle plunge",
+      "dek": "The index barely budged Thursday, up just 0.01% and still below Tuesday's record, as Meta's AI monetization plans offset an Oracle slide tied to a stalled data center project.",
+      "body": "The Nasdaq Composite closed essentially flat Thursday, up 0.01% to 26,939.37 -- still about 1% below Tuesday's record close -- while the S&P 500 dipped 0.02% and the Dow fell 0.31%. Meta rose about 4% after detailing new monetization plans for its Muse AI agent, but Oracle tumbled on a Bloomberg report of a force majeure notice tied to one of its data center projects, raising fresh doubts about AI infrastructure spending.\n\nThe index's flat finish masks a bigger story: the 10-year Treasury yield hit its highest level since 2007 at roughly 5.11%, and the 30-year touched its highest since 2004. Higher borrowing costs make it more expensive to finance the data centers and chips behind the AI buildout -- exactly the kind of project Oracle's stumble put back in focus.\n\nCrude oil rose more than 3% on hopes for a Strait of Hormuz shipping deal, a reminder that this rally still depends on factors well outside any single company's earnings. Watch whether Oracle's stumble is an isolated contract issue or an early sign of wider strain in AI spending.",
+      "author": "J. Lindqvist",
+      "ts": "2026-09-25T18:20:00.000Z",
+      "theoryKey": "",
+      "theoryBody": ""
     }
   ],
   "rankings": {
